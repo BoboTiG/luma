@@ -1,0 +1,11 @@
+# Folders
+_build/
+htdocs/
+_live/
+__pycache__/
+.vscode/
+venv/
+
+# Files
+*.pickle
+*.doctree
