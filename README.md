@@ -1,6 +1,6 @@
-# Chris' personal website
+# Knowledge Base
 
-This is my personal website, built with Sphinx!
+This is part of my personal stack, built with Sphinx & Shibuya!
 
 ```shell
 python3.12 -m venv venv
