@@ -19,6 +19,7 @@ extensions = [
 ]
 html_theme = "shibuya"
 exclude_patterns = ['_build', "venv"]
+html_static_path = ["_static"]
 templates_path = ["_templates"]
 source_suffix = {
     '.rst': 'restructuredtext',
@@ -63,5 +64,5 @@ html_theme_options = {
 html_context = {
     "source_type": "github",
     "source_user": "BoboTiG",
-    "source_repo": "blog",
+    "source_repo": "kb",
 }
