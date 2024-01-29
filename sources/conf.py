@@ -5,7 +5,7 @@ from datetime import UTC, datetime
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "."))
 
 author = "Mickaël Schoentgen"
-project = "Tiger-222"
+project = "Knowledge Base &ndash; Tiger-222"
 this_year = datetime.now(tz=UTC).year
 copyright = f"2006-{this_year}, {author}"
 url = "https://www.tiger-222.fr"
@@ -34,12 +34,12 @@ html_theme = "shibuya"
 html_baseurl = f"{url}/"
 sitemap_url_scheme = "{link}"
 html_show_sourcelink = True
-html_favicon = "_static/icon-light.svg"
+html_favicon = "_static/favicon.ico"
 html_theme_options = {
     "accent_color": "purple",
     "logo_target": "/",
-    "light_logo": "_static/logo-light.svg",
-    "dark_logo": "_static/logo-dark.svg",
+    "light_logo": "_static/favicon.ico",
+    "dark_logo": "_static/favicon.ico",
     "globaltoc_expand_depth": 2,
 
     "og_image_url": f"{url}/icon.png",

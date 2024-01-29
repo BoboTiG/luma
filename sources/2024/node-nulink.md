@@ -1,6 +1,5 @@
 # Comment déployer un nœud NuLink ?
 
-
 ```{figure} /images/nulink-logo-light.svg
   :width: 340
   :height: 96
@@ -9,7 +8,7 @@
   :align: center
 
   Site web : [www.nulink.org](https://www.nulink.org)
-```
+
 ```{figure} /images/nulink-logo-dark.svg
   :width: 340
   :height: 96
@@ -92,7 +91,7 @@ Donc, sur ton PC, installe Geth :
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.13.11-8f7eb9cc.tar.gz \
     && tar -xzf geth-linux-amd64-1.13.11-8f7eb9cc.tar.gz \
     && cd geth-linux-amd64-1.13.11-8f7eb9cc \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 Et créé le compte :
@@ -100,7 +99,7 @@ Et créé le compte :
   :caption: 🖥️ Ordinateur (PC)
 
 ./geth account new --keystore ./keystore \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 ```{caution}
@@ -123,7 +122,7 @@ Quand tu auras reçu le 2<sup>nd</sup> email avec l'adresse IP du serveur, envoi
   :emphasize-lines: 1
 
 scp keystore/UTC--* root@ADRESSE_IP:/root \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 Puis connecte-toi en SSH au serveur (utilise le mot de passe que tu as définis sur Contabo  et remplace `ADRESSE_IP` par l'adresse IP du serveur) :
@@ -146,7 +145,7 @@ Mets à jour le système d'exploitation :
 apt update \
     && apt full-upgrade -y \
     && apt autoremove -y \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 Installe le pare-feu, puis redémarre :
@@ -172,7 +171,7 @@ curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/doc
         tee /etc/apt/sources.list.d/docker.list > /dev/null \
     && apt update \
     && apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 Pré-requis pour la prochaine étape :
@@ -183,7 +182,7 @@ Pré-requis pour la prochaine étape :
 mkdir nulink \
     && mv UTC--* nulink/ \
     && chmod -R 777 nulink \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 Enfin, installe NuLink :
@@ -192,7 +191,7 @@ Enfin, installe NuLink :
   :caption: ☁️ Serveur (VPS)
 
 docker pull nulink/nulink:latest \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 ---
@@ -230,7 +229,7 @@ Reconnecte-toi, et teste que les mots de passe sont visibles (tu devrais voir 3 
 
 echo $NULINK_KEYSTORE_PASSWORD \
     && echo $NULINK_OPERATOR_ETH_PASSWORD \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 Initialise NuLink (remplace `FICHIER_CLEF_PRIVEE` par le nom du fichier contenant la clef privée du compte *worker* ["UTC--xxx"] et `ADRESSE_WORKER` par l'addresse publique du compte *worker*) :
@@ -252,7 +251,7 @@ docker run -it --rm \
     --payment-network bsc_testnet \
     --operator-address ADRESSE_WORKER \
     --max-gas-price 10000000000 \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 ```{caution}
@@ -266,7 +265,7 @@ Depuis ton PC, récupère une copie de la clef privée (remplace `ADRESSE_IP` pa
   :emphasize-lines: 1
 
 scp root@ADRESSE_IP:'/root/nulink/keystore/*' . \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 ---
@@ -286,7 +285,7 @@ docker run --restart on-failure -d \
     -e NULINK_KEYSTORE_PASSWORD \
     -e NULINK_OPERATOR_ETH_PASSWORD 
     nulink/nulink nulink ursula run --no-block-until-ready \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 Pour voir les logs :
@@ -319,7 +318,7 @@ Lors d'une [mise à jour du nœud](https://github.com/NuLink-network/nulink-core
 docker stop ursula \
     && docker rm ursula \
     && docker pull nulink/nulink:latest \
-    && echo "OK"
+    && echo 'OK'
 ```
 
 Pour terminer, relance le [nœud](#execution).

@@ -19,37 +19,38 @@ Passons au code, maintenant.
 
 ---
 
-Nous aurons besoin du module [pyserial](https://pypi.org/project/pyserial) et très certainement des droits d'accès au port TTY émulé :
+Nous aurons besoin du module [pyserial](https://pypi.org/project/pyserial) :
 
-```{codeblock} shell
-sudo gpasswd -a $USER dialout
+```{code-block} shell
+python -m pip install pyserial
+```
+ 
+Et très certainement des droits d'accès au port TTY émulé :
+
+```{code-block} shell
+sudo gpasswd -a $USER dialout && exit
 # or
 # sudo chmod a+rw /dev/ttyUSB0
-
-python -m pip install pyserial
 ```
 
 Cette fonction établit la connexion avec l'onduleur :
 
-```{codeblock} python
+```{code-block} python
 import serial
 
 def init_serial(port: str) -> serial.Serial:
-    conn = serial.Serial(
+    return serial.Serial(
         port=port,
         baudrate=2400,
         bytesize=serial.EIGHTBITS,
         parity=serial.PARITY_NONE,
         stopbits=serial.STOPBITS_ONE,
     )
-    while not conn.is_open:
-        pass
-    return conn
 ```
 
 Celle-ci permet d'envoyer une commande à l'onduleur (comme vu dans le PDF partagé plus haut, une commande est une succession de 3 blocs : `COMMANDE+CRC+CR`, où `COMMANDE` est un mot clef comme par exemple « QID », `CRC` est la somme de contrôle de la commande envoyée, et `CR` est le caractère permettant de dire à l'onduleur que c'est la fin de l'instruction) :
 
-```{codeblock} python
+```{code-block} python
 def compute_crc(value: str) -> str:
     """
     >>> compute_crc("96332309100452")
@@ -67,13 +68,13 @@ def compute_crc(value: str) -> str:
 
 
 def send_command(conn: serial.Serial, command: str) -> bool:
-    full_command = command + compute_crc(command) + "\r"
+    full_command = f"{command}{compute_crc(command)}\r"
     return conn.write(serial.to_bytes(ord(c) for c in full_command)) == len(full_command)
 ```
 
 Enfn, nous pouvons récupérer la réponse de l'onduleur via cette dernière fonction :
 
-```{codeblock} python
+```{code-block} python
 def get_response(conn: serial.Serial) -> bytes:
     response = conn.read_until(expected=b"\r")
 
@@ -86,7 +87,7 @@ def get_response(conn: serial.Serial) -> bytes:
 
 Exemple d'utilisation avec la récupération du n° de série de l'onduleur :
 
-```{codeblock} python
+```{code-block} python
 >>> conn = init_serial("/dev/ttyUSB0")
 >>> send_command(conn, "QID")
 True
@@ -97,13 +98,13 @@ True
 
 ---
 
-J'ai rendu publique le code pour lire les métriques de l'onduleur, car le n° de série est facile à récupérer en comparaison des informations techniques envoyées en bloc, et ça se passe par là : [BoboTiG/python-wks-com|https://github.com/BoboTiG/python-wks-com]. Un aperçu :
+J'ai rendu publique le code pour lire les métriques de l'onduleur, car le n° de série est facile à récupérer en comparaison des informations techniques envoyées en bloc, et ça se passe par là : [BoboTiG/python-wks-com](https://github.com/BoboTiG/python-wks-com). Un aperçu :
 
-```{codeblock} shell
+```{code-block} shell
 python -m pip install 'git+https://github.com/BoboTiG/python-wks-com.git@main'
 ```
 
-```{codeblock} python
+```{code-block} python
 >>> from inverter_com import Inverter
 >>> inverter = Inverter("/dev/ttyUSB0")
 >>> inverter.send("QID")
@@ -111,9 +112,10 @@ python -m pip install 'git+https://github.com/BoboTiG/python-wks-com.git@main'
 ```
 
 Et il y a même un exécutable mis à disposition, une fois le module installé :
-```{codeblock} shell
+
+```{code-block} shell
+wks-read --help
 wks-read serial-no
-96332309100452
 ```
 
 Toutes les informations utiles se trouvent dans le dépôt GitHub ☺

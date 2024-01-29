@@ -14,3 +14,10 @@
     :glob:
 
     2023/*
+
+.. toctree::
+    :maxdepth: 2
+    :caption: 2022
+    :glob:
+
+    2022/*
