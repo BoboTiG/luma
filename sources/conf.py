@@ -17,8 +17,11 @@ extensions = [
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
 ]
+myst_enable_extensions = [
+    "replacements",
+    "tasklist",
+]
 html_theme = "shibuya"
-exclude_patterns = ["_build", "venv"]
 html_static_path = ["_static"]
 templates_path = ["_templates"]
 source_suffix = {
@@ -31,16 +34,11 @@ intersphinx_mapping = {
 
 html_title = project
 html_theme = "shibuya"
-html_baseurl = f"{url}/"
-sitemap_url_scheme = "{link}"
-html_show_sourcelink = True
 html_favicon = "_static/favicon.ico"
 html_theme_options = {
-    "accent_color": "purple",
-    "logo_target": "/kb",
-    "light_logo": "_static/favicon.ico",
-    "dark_logo": "_static/favicon.ico",
-    "og_image_url": f"{url}/icon.png",
+    "accent_color": "iris",
+    "light_logo": "../_static/favicon.ico",
+    "dark_logo": "../_static/favicon.ico",
     "twitter_creator": "__tiger222__",
     "twitter_site": "__tiger222__",
     "twitter_url": "https://twitter.com/__tiger222__",

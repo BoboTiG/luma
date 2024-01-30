@@ -7,7 +7,6 @@ dev_live() {
     sphinx-autobuild \
         --host '0.0.0.0' \
         --open-browser \
-        --ignore _build \
         "${SRC_DIR}" \
         '_live'
 }
