@@ -2,7 +2,7 @@
 
 Je vois régulièrement passer tout un tas de requêtes vers *detectportal.firefox.com*, mais ça ne m'est d'aucune utilité. Voici une configuration pour [Lighttpd](https://www.lighttpd.net) et [Pi-hole](https://pi-hole.net) afin de prévenir tout accès à ce domaine, tout en faisant croire aux appareils que la connexion est bien établie.
 
-## Prérequis
+## Pré-requis
 
 Du côté du système, nous aurons besoin d’installer ce paquet :
 
@@ -10,30 +10,49 @@ Du côté du système, nous aurons besoin d’installer ce paquet :
 sudo apt install lighttpd-modules-lua
 ```
 
-## Configuration de Lighttpd
+## Configuration
 
-Nous utiliserons le [mod magnet](https://redmine.lighttpd.net/projects/lighttpd/wiki/Mod_magnet) pour arriver à nos fins :
+### Lighttpd
+
+Nous utiliserons le [mod magnet](https://redmine.lighttpd.net/projects/lighttpd/wiki/Mod_magnet) pour arriver à nos fins.
+
+Configurons un nouveau site web :
 
 ```{code-block} shell
-sudo cat <<EOF > /etc/lighttpd/conf-available/16-detectportal.conf
+    :caption: /etc/lighttpd/conf-available/16-detectportal.conf
+
 $HTTP["host"] == "detectportal.firefox.com" {
     magnet.attract-raw-url-to = ( "/etc/lighttpd/scripts/200-success.lua" )
 }
 server.modules += ( "mod_magnet" )
-EOF && \
-    sudo ln -s \
-        /etc/lighttpd/conf-available/16-detectportal.conf \
-        /etc/lighttpd/conf-enabled/16-detectportal.conf \
-    && sudo mkdir -p /etc/lighttpd/scripts \
-    && sudo cat <<EOF > /etc/lighttpd/scripts/200-success.lua
+```
+
+Il va falloir activer ce nouveau site web, puis créer le dossier pour stocker le script Lua qui contiendra la logique de traitement de la requête :
+
+```{code-block} shell
+sudo ln -s \
+    /etc/lighttpd/conf-available/16-detectportal.conf \
+    /etc/lighttpd/conf-enabled/16-detectportal.conf \
+    && sudo mkdir -p /etc/lighttpd/scripts
+```
+
+Le script Lua en question :
+
+```{code-block} lua
+    :caption: /etc/lighttpd/scripts/200-success.lua
+
 lighty.r.resp_body.set({'success\n'})
 lighty.r.resp_header["Content-Type"] = "text/html"
 return 200
-EOF \
-    && sudo systemctl restart lighttpd
 ```
 
-## Configuration de Pi-hole
+Enfin, relancer Lighttpd :
+
+```{code-block} shell
+sudo systemctl restart lighttpd
+```
+
+### Pi-hole
 
 - Rendez-vous dans le menu « Local DNS » / « DNS Records » ;
 - Ajouter le domaine `detectportal.firefox.com` avec l'adresse IP de Pi-hole (par exemple `192.168.2.12`) ;
@@ -41,13 +60,11 @@ EOF \
 
 ## Test
 
-```{code-block} shell
-curl -v detectportal.firefox.com
-```
-
 Exemple de sortie console lorsque tout est correctement en place :
 
 ```{code-block} text
+    :caption: $ curl -v detectportal.firefox.com
+
 * Host detectportal.firefox.com:80 was resolved.
 * IPv6: 2600:1901:0:38d7::
 * IPv4: 192.168.2.12

@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 from datetime import UTC, datetime
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "."))
@@ -7,23 +7,23 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".")
 author = "Mickaël Schoentgen"
 project = "Knowledge Base"
 this_year = datetime.now(tz=UTC).year
-copyright = f"2006-{this_year}, {author}"
+copyright = f"2006-{this_year}, {author}"  # noqa:A001
 url = "https://www.tiger-222.fr"
 
 extensions = [
-    'myst_parser', 
+    "myst_parser",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
 ]
 html_theme = "shibuya"
-exclude_patterns = ['_build', "venv"]
+exclude_patterns = ["_build", "venv"]
 html_static_path = ["_static"]
 templates_path = ["_templates"]
 source_suffix = {
-    '.rst': 'restructuredtext',
-    '.md': 'markdown',
+    ".rst": "restructuredtext",
+    ".md": "markdown",
 }
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
@@ -40,29 +40,21 @@ html_theme_options = {
     "logo_target": "/kb",
     "light_logo": "_static/favicon.ico",
     "dark_logo": "_static/favicon.ico",
-    "globaltoc_expand_depth": 2,
-
     "og_image_url": f"{url}/icon.png",
     "twitter_creator": "__tiger222__",
     "twitter_site": "__tiger222__",
-
     "twitter_url": "https://twitter.com/__tiger222__",
     "github_url": "https://github.com/BoboTiG",
-
     "globaltoc_expand_depth": 2,
     "nav_links": [
-        {
-            "title": "Blog",
-            "url": url
-        },
-        {
-            "title": "Liens",
-            "url": f"{url}/links"
-        },
-    ]
+        {"title": "Blog", "url": url},
+        {"title": "Liens", "url": f"{url}/links"},
+    ],
 }
 html_context = {
     "source_type": "github",
     "source_user": "BoboTiG",
     "source_repo": "kb",
+    "source_docs_path": "/sources/",
+    "source_branch": "main",
 }

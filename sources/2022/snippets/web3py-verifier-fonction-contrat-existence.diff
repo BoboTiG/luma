@@ -1,0 +1,9 @@
++from eth_hash.auto import keccak
++
+ def has_function(contract_addr: str, signature: str) -> bool:
+     code = w3.eth.get_code(contract_addr).hex()
+-    fn_hash = w3.keccak(signature.encode()).hex()
+-    fn_hash = f"63{fn_hash[2:10]}"  # 0x63 is PUSH4
++    fn_hash = keccak(signature.encode()).hex()
++    fn_hash = f"63{fn_hash[:8]}"  # 0x63 is PUSH4
+     return fn_hash in code

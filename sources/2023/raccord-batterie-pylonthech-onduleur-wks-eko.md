@@ -1,8 +1,8 @@
 # Raccord d'une batterie Pylontech vers un onduleur WKS EKO Circle
 
-Suite à la réception du matériel pour la gestion de l'énergie fournie par les panneaux photovoltaïques, la configuration a pris un peu de temps, notamment à cause d'une fameuse **erreur 61** sur l'onduleur. Il s'agit du code d'erreur spécifiant que la **liaison avec la batterie est perdue**.
+Suite à la réception du matériel pour la gestion de l'énergie fournie par les panneaux photo-voltaïques, la configuration a pris un peu de temps, notamment à cause d'une fameuse **erreur 61** sur l'onduleur. Il s'agit du code d'erreur spécifiant que la **liaison avec la batterie est perdue**.
 
-Si le câble fourni est deffectueux, incorrectement câblé (ce qui était le cas), ou si une petite piqûre de rappel ne ferait pas de mal, voici quelques schémas pour simplifier tout ça.
+Si le câble fourni est défectueux, incorrectement câblé (ce qui était le cas), ou si une petite piqûre de rappel ne ferait pas de mal, voici quelques schémas pour simplifier tout ça.
 
 ---
 
@@ -53,7 +53,7 @@ Si batterie(s) *slave* il y a, mettre tout leurs DIP en position haute (OFF) :
 ## Sources
 
 - [File:RJ-45 TIA-568A Left.svg](https://commons.wikimedia.org/wiki/File:RJ-45_TIA-568A_Left.svg) ;
-- [Wattuneed : Schémas de montage photovoltaïque](https://www.wattuneed.com/fr/content/28-schema-de-montage-photovoltaique) ;
+- [Wattuneed : Schémas de montage photo-voltaïque](https://www.wattuneed.com/fr/content/28-schema-de-montage-photovoltaique) ;
 - Les fichiers SVG sont libres de droits, c'est cadeaux.
 
 ## Matériel
