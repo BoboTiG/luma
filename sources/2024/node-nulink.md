@@ -8,6 +8,7 @@
   :align: center
 
   Site web : [www.nulink.org](https://www.nulink.org)
+```
 
 ```{figure} /images/nulink-logo-dark.svg
   :width: 340
@@ -78,7 +79,7 @@ Le compte du *worker* **ne peut pas** être un compte ordinaire Metamask.
 ```
 
 ```{attention}
-Le mot de passe que tu créeras pour ce compte doit faire **8 caractères ou plus** ([source](https://github.com/NuLink-network/nulink-core/blob/v0.5.0_d98e1de/nulink/crypto/keystore.py#L228).)
+Le mot de passe que tu créeras pour ce compte doit faire **8 caractères ou plus** ([source](https://github.com/NuLink-network/nulink-core/blob/v0.5.0_d98e1de/nulink/crypto/keystore.py#L228)).
 ```
 
 Nous devons passer par Geth pour la création du compte.
