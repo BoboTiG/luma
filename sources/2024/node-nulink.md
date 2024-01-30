@@ -78,7 +78,7 @@ Le compte du *worker* **ne peut pas** être un compte ordinaire Metamask.
 ```
 
 ```{attention}
-Le mot de passe que tu créeras pour ce compte doit faire **8 caractères ou plus**.
+Le mot de passe que tu créeras pour ce compte doit faire **8 caractères ou plus** ([source](https://github.com/NuLink-network/nulink-core/blob/v0.5.0_d98e1de/nulink/crypto/keystore.py#L228).)
 ```
 
 Nous devons passer par Geth pour la création du compte.
@@ -125,7 +125,7 @@ scp keystore/UTC--* root@ADRESSE_IP:/root \
     && echo 'OK'
 ```
 
-Puis connecte-toi en SSH au serveur (utilise le mot de passe que tu as définis sur Contabo  et remplace `ADRESSE_IP` par l'adresse IP du serveur) :
+Puis connecte-toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo  et remplace `ADRESSE_IP` par l'adresse IP du serveur) :
 
 ```{code-block} shell
   :caption: 🖥️ Ordinateur (PC) ✍️
@@ -174,7 +174,7 @@ curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/doc
     && echo 'OK'
 ```
 
-Pré-requis pour la prochaine étape :
+Prérequis pour la prochaine étape :
 
 ```{code-block} shell
   :caption: ☁️ Serveur (VPS)
@@ -215,7 +215,7 @@ echo "export NULINK_KEYSTORE_PASSWORD='TON_MOT_DE_PASSE_POUR_NULINK'" >> ~/.prof
 echo "export NULINK_OPERATOR_ETH_PASSWORD='LE_MOT_DE_PASSE_DU_COMPTE_WORKER'" >> ~/.profile
 ```
 
-Tu dois te déconnecter pour prendr en compte les changements :
+Tu dois te déconnecter pour prendre en compte les changements :
 ```{code-block} shell
   :caption: ☁️ Serveur (VPS)
 
@@ -309,12 +309,13 @@ Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et
 
 ## Mises à Jour
 
-Lors d'une [mise à jour du nœud](https://github.com/NuLink-network/nulink-core/releases), voici les étapes à suivre pour appliquer les changements sur le serveur :
+Lors d'une [mise à jour du nœud](https://github.com/NuLink-network/nulink-core/releases), voici les étapes à suivre pour appliquer les changements sur le serveur.
+
+Suppression du conteneur actuel, puis installation de la dernière version :
 
 ```{code-block} shell
   :caption: ☁️ Serveur (VPS)
 
-# Suppression du conteneur actuel, puis installation de la dernière version
 docker stop ursula \
     && docker rm ursula \
     && docker pull nulink/nulink:latest \
