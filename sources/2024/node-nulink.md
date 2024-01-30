@@ -110,8 +110,15 @@ Le fichier de la clef privée se trouve dans le dossier **keystore** et se nomme
 
 ## Hébergement
 
-C'est l'heure de raquer : créé ton compte sur Contabo, et utilise [ce lien](https://contabo.com/en/vps/cloud-vps-2/?image=debian.329&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
+Créé ton compte sur Contabo, et utilise [ce lien](https://contabo.com/en/vps/cloud-vps-2/?image=debian.329&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
 À l'heure où j'écris ces lignes, la première facture est de 18,60 €, puis 11,40 €/mois.
+
+Si tu décides d'utiliser un autre fournisseur, voire un ordinateur local, voici la configuration sélectionnée :
+
+- 6 vCPU Cores
+- 16 GB RAM
+- 200 GB NVMe
+- Debian 12
 
 Quand tu auras reçu le 2{sup}`nd` email avec l'adresse IP du serveur, envoie le fichier de la clef privée (remplace `ADRESSE_IP` par l'adresse IP du serveur) :
 
@@ -132,7 +139,7 @@ ssh root@ADRESSE_IP
 
 ---
 
-## Installation
+### Installation
 
 Mets à jour le système d'exploitation :
 
@@ -176,7 +183,7 @@ Enfin, installe NuLink :
 
 ---
 
-## Configuration
+### Configuration
 
 ```{tip}
 Envoie maintenant un peu de tBNB sur le compte du *worker*.
@@ -236,9 +243,9 @@ Depuis ton PC, récupère une copie de la clef privée (remplace `ADRESSE_IP` pa
 
 ---
 
-## Exécution
+### Exécution
 
-Et c'est parti, démarre ton nœud :
+Et c'est parti, démarre le nœud :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
@@ -258,18 +265,11 @@ Si tu vois « *Working ~ Keep Ursula Online!* » et/ou « *learn_from_teacher_no
 
 ---
 
-## Lier les Comptes
+### Mises à Jour
 
-Le site web pour la gestion du staking est [https://dashboard.testnet.nulink.org/staking](https://dashboard.testnet.nulink.org/staking).
-Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et renseigne l'adresse du compte *worker*. Et voilà !
+Ceci est à effectuer seulement lors d'une [mise à jour du nœud](https://github.com/NuLink-network/nulink-core/releases).
 
----
-
-## Mises à Jour
-
-Lors d'une [mise à jour du nœud](https://github.com/NuLink-network/nulink-core/releases), voici les étapes à suivre pour appliquer les changements sur le serveur.
-
-Suppression du conteneur actuel, puis installation de la dernière version :
+D'abord, supprime le conteneur actuel, puis installe la dernière version :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
@@ -277,7 +277,14 @@ Suppression du conteneur actuel, puis installation de la dernière version :
     :language: shell
 ```
 
-Pour terminer, relance le [nœud](#execution).
+Enfin, relance le [nœud](#execution).
+
+---
+
+## Lier les Comptes
+
+Le site web pour la gestion du staking est [https://dashboard.testnet.nulink.org/staking](https://dashboard.testnet.nulink.org/staking).
+Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et renseigne l'adresse du compte *worker*. Et voilà !
 
 ---
 
