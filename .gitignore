@@ -2,6 +2,7 @@
 _build/
 htdocs/
 _live/
+.mypy_cache/
 .ruff_cache/
 .vscode/
 venv/

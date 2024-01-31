@@ -1,4 +1,4 @@
-personal_ws-1.1 fr 129 
+personal_ws-1.1 fr 139 
 AVAX
 Add
 Android
@@ -7,6 +7,7 @@ BMS
 BoboTiG
 Bottle
 COM
+ChainID
 Circle
 Contabo
 Cores
@@ -17,6 +18,7 @@ DNS
 Debian
 EKO
 EVO
+Ethereum
 FTM
 Fantom
 GB
@@ -64,9 +66,11 @@ SSH
 SVG
 Server
 Shaarli
+Symbol
 TIA
 TTY
 Trader
+URL
 USB
 UTC
 Ursula
@@ -74,10 +78,13 @@ VCELINK
 VPS
 Virtual
 WKS
+WSS
 Wattuneed
+WebSocket
 Wi-Fi
 Working
 Zsh
+account-pwd.txt
 battery
 blacklist
 blanc-marron
@@ -87,9 +94,12 @@ cliquer
 configurateur
 cronjob
 debug
+dev
 email
+fork
 framework
 from
+genesis
 hash
 infos
 inverter

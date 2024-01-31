@@ -18,6 +18,7 @@ extensions = [
     # "sphinx_togglebutton",
 ]
 myst_enable_extensions = [
+    "deflist",
     "replacements",
     "tasklist",
 ]
