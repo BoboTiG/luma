@@ -7,7 +7,8 @@ Partons de cet exemple inspiré de la description du projet sur GitHub :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
     :caption: app.py
-    :lines: 6,108-116
+    :linenos:
+    :lines: 5,108-116
     :language: python
 ```
 
@@ -35,31 +36,30 @@ Le cache en lui-même aura besoin de ces fonctions (c'est une façon de faire, �
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
     :caption: Imports & constante
-    :lines: 1-4,7-8
+    :lines: 1-3,6-7
 ```
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :lines: 1-4,7-8
-  :pyobject: get_from_cache
+    :pyobject: get_from_cache
     :language: python
 ```
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-  :pyobject: store_in_cache
+    :pyobject: store_in_cache
     :language: python
 ```
 
 Bien sûr, qui dit cache, dit invalidation de cache. Cette fonction sera utile donc :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-  :pyobject: invalidate_caches
+    :pyobject: invalidate_caches
     :language: python
 ```
 
 Et voici le code du cache, qui n'est autre qu'un décorateur :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-  :pyobject: cache
+    :pyobject: cache
     :language: python
 ```
 
@@ -68,18 +68,22 @@ Le clef du cache est déterminée suivant le chemin de la requête (ex : `/hello
 Avec cette information, un hash est généré via la fonction `small_hash()` que voici, inspirée de la [version PHP smallHash() écrite pour Shaarli](https://github.com/sebsauvage/Shaarli/blob/029f75f180f79cd581786baf1b37e810da1adfc3/index.php#L228-L241) (idem, c'est un exemple et libre à chacun de tout chambouler) :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-  :pyobject: php_crc32
+    :pyobject: php_crc32
     :language: python
 ```
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-  :pyobject: small_hash
+    :pyobject: small_hash
     :language: python
 ```
 
 Dernière étape, utiliser le décorateur :
 
 ```{code-block} diff
+    :caption: app.py diff
+   :linenos:
+   :lineno-start: 3
+
  @bottle.route("/hello/<name>")
 +@cache
  def index(name: str) -> str:

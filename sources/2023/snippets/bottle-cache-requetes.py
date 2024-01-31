@@ -1,5 +1,4 @@
 from collections.abc import Callable
-from datetime import UTC
 from pathlib import Path
 from typing import Any
 
@@ -24,7 +23,7 @@ def store_in_cache(cache_key: str, response: str, info: bool = True) -> None:
     from zlib import compress
 
     if info:
-        from datetime import datetime
+        from datetime import UTC, datetime
 
         today = datetime.now(tz=UTC)
         response += f"<!-- Cached: {today} -->"
