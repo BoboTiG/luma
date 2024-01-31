@@ -2,22 +2,29 @@
 :description: Base de connaissances / Knowledge base.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: 2024
     :glob:
 
     2024/*
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: 2023
     :glob:
 
     2023/*
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: 2022
     :glob:
 
     2022/*
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 2020
+    :glob:
+
+    2020/*

@@ -8,7 +8,7 @@ Partons de cet exemple inspiré de la description du projet sur GitHub :
 ```{literalinclude} snippets/bottle-cache-requetes.py
     :caption: app.py
     :linenos:
-    :lines: 5,108-116
+    :lines: 5,107-115
     :language: python
 ```
 
