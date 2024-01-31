@@ -13,11 +13,13 @@ url = "https://www.tiger-222.fr"
 extensions = [
     "myst_parser",
     "sphinx_copybutton",
+    "sphinx.ext.intersphinx",
     # "sphinx_design",
     # "sphinx_tabs.tabs",
-    # "sphinx_togglebutton",
+    "sphinx_togglebutton",
 ]
 myst_enable_extensions = [
+    "attrs_inline",
     "deflist",
     "replacements",
     "tasklist",

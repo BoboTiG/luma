@@ -28,3 +28,10 @@
     :glob:
 
     2020/*
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 2017
+    :glob:
+
+    2017/*
