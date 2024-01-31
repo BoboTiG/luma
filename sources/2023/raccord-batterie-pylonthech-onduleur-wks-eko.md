@@ -66,5 +66,8 @@ Si batterie(s) *slave* il y a, mettre tout leurs DIP en position haute (OFF) :
 
 ## Historique
 
-- 2024-01-27 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/12/16/23/12/04-raccord-dune-batterie-pylontech-vers-un-onduleur-wks-eko-circle).
-- 2023-12-16 : Premier jet.
+2024-01-27
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/12/16/23/12/04-raccord-dune-batterie-pylontech-vers-un-onduleur-wks-eko-circle).
+
+2023-12-16
+: Premier jet.

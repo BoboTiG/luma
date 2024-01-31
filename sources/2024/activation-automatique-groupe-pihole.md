@@ -31,5 +31,8 @@ Et insérer ces lignes (à adapter selon les besoins, [Crontab.guru](https://cro
 
 ## Historique
 
-- 2024-01-27 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2024/01/09/00/32/31-activation-automatique-dun-groupe-sur-pi-hole).
-- 2024-01-09 : Premier jet.
+2024-01-27
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2024/01/09/00/32/31-activation-automatique-dun-groupe-sur-pi-hole).
+
+2024-01-09
+: Premier jet.

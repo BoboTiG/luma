@@ -47,8 +47,17 @@ PS : J'avais partagé ces infos sur [cette issue](https://github.com/ethereum/we
 
 ## Historique
 
-- 2024-01-27 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/23/21/24/20-python-web3-decoder-les-logs-dun-transfert).
-- 2022-03-07 : Simplification du code : utilisation de `web3.logs.DISCARD` plutôt que de filtrer les avertissements.
-- 2022-03-01 : Aération du code monolithique.
-- 2022-02-25 : Prise en compte des transferts utilisant le *coin* de la *blockchain* (AVAX sur Avalanche, FTM sur Fantom, etc.).
-- 2022-02-23 : Premier jet.
+2024-01-27
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/23/21/24/20-python-web3-decoder-les-logs-dun-transfert).
+
+2022-03-07
+: Simplification du code : utilisation de `web3.logs.DISCARD` plutôt que de filtrer les avertissements.
+
+2022-03-01
+: Aération du code monolithique.
+
+2022-02-25
+: Prise en compte des transferts utilisant le *coin* de la *blockchain* (AVAX sur Avalanche, FTM sur Fantom, etc.).
+
+2022-02-23
+: Premier jet.

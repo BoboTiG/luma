@@ -90,5 +90,8 @@ success
 
 ## Historique
 
-- 2024-01-27 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2024/01/09/18/34/35-configuration-lighttpd-pour-contenir-le-trafic-vers-detectportalfirefoxcom).
-- 2024-01-09 : Premier jet.
+2024-01-27
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2024/01/09/18/34/35-configuration-lighttpd-pour-contenir-le-trafic-vers-detectportalfirefoxcom).
+
+2024-01-09
+: Premier jet.

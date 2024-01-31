@@ -115,5 +115,8 @@ Et les suivants le sont :
 
 ## Historique
 
-- 2024-01-27 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/10/17/09/02/58-bottle-un-cache-pour-les-requetes).
-- 2023-10-17 : Premier jet.
+2024-01-27
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/10/17/09/02/58-bottle-un-cache-pour-les-requetes).
+
+2023-10-17
+: Premier jet.

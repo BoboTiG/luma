@@ -290,4 +290,5 @@ Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et
 
 ## Historique
 
-- 2024-01-27 : Premier jet.
+2024-01-27
+: Premier jet.
