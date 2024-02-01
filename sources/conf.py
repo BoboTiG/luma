@@ -43,6 +43,8 @@ source_suffix = {
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
 }
+togglebutton_hint = "Cliquer pour afficher"
+togglebutton_hint_hide = "Cliquer pour cacher"
 
 html_title = project
 html_theme = "shibuya"
