@@ -48,7 +48,7 @@ Où `FILE` est un des fichiers  *UTC--…* du dossier *dev/node/keystore*.
 
 Pour la suite, admettons que nous ayons créé ce compte :
 
-- adresse publique : `0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC` 
+- adresse publique : `0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC`
 - clef privée : `56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027`
 
 ## Initialisation

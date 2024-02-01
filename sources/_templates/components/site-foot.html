@@ -1,0 +1,27 @@
+<footer class="sy-foot">
+    <div class="sy-foot-inner sy-container mx-auto">
+        {% include "partials/footer.html" %}
+        <div class="sy-foot-reserved md:flex justify-between items-center">
+            <div class="sy-foot-copyright">
+                {%- if show_copyright -%}
+                <p>{{ copyright }}</p>
+                {% endif %}
+                <p>
+                    Fait avec amour,
+                    {% if show_sphinx %}
+                    <a href="https://www.sphinx-doc.org/">Sphinx</a> et
+                    {% endif %}
+                    le thème <a href="https://shibuya.lepture.com">Shibuya</a>.
+                </p>
+            </div>
+            <div class="sy-foot-socials">
+                {%- if theme_github_url %}
+                <a href="{{ theme_github_url }}" aria-label="GitHub"><i class="i-icon github"></i></a>
+                {%- endif %}
+                {%- if theme_twitter_url %}
+                <a href="{{ theme_twitter_url }}" aria-label="X (Twitter)"><i class="i-icon x-twitter"></i></a>
+                {%- endif %}
+            </div>
+        </div>
+    </div>
+</footer>
