@@ -43,7 +43,7 @@ Idem pour les {py:obj}`f-string` :
 ````{admonition} Benchmark
     :class: dropdown
 
-Code :
+Script :
 
 ```{literalinclude} snippets/python-tricks.py
     :caption: bench.py
@@ -74,10 +74,8 @@ Résultats :
     :language: python
 ```
 
-````{admonition} Benchmark
+````{admonition} Résultats du benchmark
     :class: dropdown
-
-Résultats :
 
 ```{code-block} shell
 # text = 'azerty', the 1st condition is True

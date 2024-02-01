@@ -62,6 +62,10 @@ Dans notre cas, le compte aura `1 000 000 $ETH`.
 Les adresses ne doivent pas être préfixées de `0x`.
 ```
 
+```{todo}
+Voir si les données sont toujours d'actualité. Par exemple, il y a plus de clefs dans le [dépôt officiel](https://github.com/ethereum/go-ethereum/blob/master/cmd/devp2p/internal/ethtest/testdata/genesis.json).
+```
+
 ```{code-block} json
     :caption: dev/genesis.json
     :emphasize-lines: 20
