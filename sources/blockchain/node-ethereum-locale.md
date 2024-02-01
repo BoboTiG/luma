@@ -1,6 +1,6 @@
-# Nœud Ethereum local
+# Nœud Ξthereum local
 
-Voyons comment mettre en place un nœud Ethereum local avec [Go Ethereum](https://geth.ethereum.org). Il sera réellement local, c'est-à-dire qu'il ne s'agira pas d'un *fork* qui se synchronisera avec le réseau Ethereum.
+Voyons comment mettre en place un nœud Ethereum local avec [Go Ethereum](https://geth.ethereum.org) (plus connu sous son nom raccourci : **Geth**).
 
 ## Installation
 
@@ -13,18 +13,28 @@ Il vous faudra un système d'exploitation sous GNU/Linux, puis :
 
 ## Comptes
 
-Pour créer un compte, utilisez cette commande (sans mot de passe):
+Pour créer un compte, utilisez cette commande (sans mot de passe) :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 14-17
+    :lines: 14
     :language: shell
 ```
+
+````{hint}
+Vous pouvez aussi importer un compte existant :
+
+```{literalinclude} snippets/node-ethereum-locale.sh
+    :lines: 15
+    :language: shell
+```
+````
 
 Un fichier *UTC--…* sera créé dans le dossier *dev/node/keystore*.
 À partir de celui-ci, vous pouvez utiliser ce script Python pour récupérer la clef privée :
 
 ```{literalinclude} snippets/node-ethereum-locale.py
     :caption: dev/get-private-key.py
+    :emphasize-lines: 10
     :language: python
 ```
 
@@ -36,11 +46,21 @@ python dev/get-private-key.py FILE
 
 Où `FILE` est un des fichiers  *UTC--…* du dossier *dev/node/keystore*.
 
-Pour la suite, admettons que nous ayons créé le compte ayant l'adresse `0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC` et la clef privée `56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027`.
+Pour la suite, admettons que nous ayons créé ce compte :
+
+- adresse publique : `0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC` 
+- clef privée : `56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027`
 
 ## Initialisation
 
-Créez le fichier qui servira à définir le bloc *genesis* :
+Créez le fichier qui servira à définir le bloc *genesis*.
+
+La balance des comptes est à définir dans la section `alloc`.
+Dans notre cas, le compte aura `1 000 000 $ETH`.
+
+```{attention}
+Les adresses ne doivent pas être préfixées de `0x`.
+```
 
 ```{code-block} json
     :caption: dev/genesis.json
@@ -72,31 +92,28 @@ Créez le fichier qui servira à définir le bloc *genesis* :
 }
 ```
 
-La balance des comptes est à définir dans la section `alloc`. Notez que l'adresse ne doit pas être précédée de "0x".
-Dans notre cas, le compte aura `1 000 000 $ETH`, je suis généreux ☻
-
-Ensuite, lancez cette commande pour (ré)initialiser le nœud :
+Ensuite, lancez cette commande pour  (ou réinitialiser) le nœud :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 18-19
+    :lines: 17-18
     :language: shell
 ```
 
 ## Démarrage
 
-Démarrez le nœud :
+Démarrez le nœud (pensez à adapter l'adresse publique du compte) :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 21-36
-    :emphasize-lines: 12
+    :lines: 20-35
+    :emphasize-lines: 12-13
     :language: shell
 ```
 
-Notes :
-
-- *dev/account-pwd.txt* est un fichier vide, étant donné que je n'ai pas défini de mot de passe à la création du compte. Sinon, il devrait contenir le mot de passe.
-- `--httpi.api` : j'ai ajouté `net` pour faire plaisir à Metamask, mais sinon `eth,web3` suffit.
+```{note}
+- `dev/account-pwd.txt` est un fichier qui contient le mot de passe (en l'occurrance, il est vide) ;
+- `--httpi.api` : j'ai ajouté `net` pour faire plaisir à Metamask, mais sinon `eth,web3` suffit ;
 - `--mine*`: requis pour la validation des transactions.
+```
 
 Détails de notre blockchain locale :
 

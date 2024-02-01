@@ -13,6 +13,7 @@ while true; do
         echo "Vidéo dans ${n}s..."
         sleep 1
     done
+
     omxplayer -o hdmi \
         --no-osd \
         --no-keys \
@@ -22,7 +23,7 @@ while true; do
         "${stream}"
 done
 
-sudo apt-get install omxplayer
+sudo apt install omxplayer
 
 omxplayer -o hdmi URL
 

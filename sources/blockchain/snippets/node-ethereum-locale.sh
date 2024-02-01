@@ -12,8 +12,7 @@ wget "https://gethstore.blob.core.windows.net/builds/${GETH_FOLDER}.tar.gz" \
     && hash
 
 geth --datadir 'dev/node' account new
-# or to import an existing key:
-# geth --datadir 'dev/node' account import 'UTC--…'
+geth --datadir 'dev/node' account import 'UTC--…'
 
 rm -rf 'dev/node/geth' \
     && geth --datadir 'dev/node' init 'dev/genesis.json'

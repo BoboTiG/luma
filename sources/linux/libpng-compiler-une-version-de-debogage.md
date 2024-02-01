@@ -1,4 +1,4 @@
-# libpng : compiler une version de débogage
+# Compiler une version de débogage de libpng
 
 ## Télécharger
 

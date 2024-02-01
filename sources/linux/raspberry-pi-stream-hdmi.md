@@ -6,25 +6,36 @@ Pour ce faire, nous utiliserons un **Raspberry Pi** (abrégé Rpi par la suite) 
 ## Le Flux Vidéo
 
 Première étape, la plus hasardeuse et plus ou moins complexe : récupérer l'adresse du flux vidéo. Cet article ne décrira pas comment le faire puisque la méthode changera suivant la marque de la caméra, voire même suivant le modèle au sein d'une même marque.
-Adresse du flux vidéo : `http://$ip/live/0/mjpeg.jpg`.
 
-L'accès au flux est sécurisé par une authentification simple à l'aide d'un nom d'utilisateur et d'un mot de passe, donc l'adresse complète du flux vidéo : `http://$user:$password@$ip/live/0/mjpeg.jpg`.
+Format d'adresse du flux vidéo :
+
+```{code-block} text
+http://IP/live/0/mjpeg.jpg
+```
+
+````{note}
+Si l''accès au flux est sécurisé par une authentification simple à l'aide d'un nom d'utilisateur et d'un mot de passe, l'adresse complète du flux vidéo sera plutôt de ce type :
+
+```{code-block} text
+http://USER:PASSWORD@IP/live/0/mjpeg.jpg
+```
+````
 
 ---
 
 ## Mise en Place
 
-Une [Raspbian minimale](https://www.tiger-222.fr/?d=2016/01/04/17/25/32-raspbian-installation-minimale) fera très bien l'affaire sur votre Rpi. Il suffit d'installer [OMXPlayer](https://github.com/popcornmix/omxplayer), un lecteur vidéo spécialement conçu pour le processeur graphique (GPU) du Rpi :
+Une [Raspbian minimale](https://www.tiger-222.fr/?d=2016/01/04/17/25/32-raspbian-installation-minimale) fera très bien l'affaire sur votre Rpi. Nous allons installer [OMXPlayer](https://github.com/popcornmix/omxplayer), un lecteur vidéo spécialement conçu pour le processeur graphique (GPU) du Rpi :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :lines: 25
+    :lines: 26
     :language: shell
 ```
 
-Ensuite, la ligne de commande pour lire le flux vidéo vers la sortie HDMI :
+Ensuite, voici la ligne de commande pour lire le flux vidéo vers la sortie HDMI :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :lines: 27
+    :lines: 28
     :language: shell
 ```
 
@@ -32,19 +43,19 @@ Ensuite, la ligne de commande pour lire le flux vidéo vers la sortie HDMI :
 
 ## Script Complet
 
-Pour lancer automatiquement l'affichage de la caméra sur l'écran, placez ces lignes de code dans un fichier :
+Ci-dessous est le script complet qui lancera automatiquement l'affichage de la caméra sur l'écran :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :caption: /opt/stream-hdmi.sh
-    :lines: 1-23
+    :lines: 1-24
     :language: shell
 ```
 
-Notes :
-
-- `sleep 10` est très important, sans ça, la commande OMXPlayer s'arrête sur un « *Aborted* » ;
-- `--aidx` permet de choisir la piste audio ; passer **-1** désactive l'audio ;
-- l'utilité du `while true` est de relancer OMXPlayer en cas de rupture du flux vidéo de la part de la caméra.
+```{note}
+- `sleep 10`{l=shell} est important, sans ça, OMXPlayer s'arrête sur une erreur « *Aborted* » ;
+- `--aidx`{l=shell} permet de choisir la piste audio (**-1** pour désactiver l'audio) ;
+- l'utilité du `while true`{l=shell} est de relancer OMXPlayer en cas de rupture du flux vidéo de la part de la caméra.
+```
 
 ---
 
@@ -55,7 +66,7 @@ Notes :
 Un exemple concret avec la caméra de surveillance [D-Link DCS-2210](http://www.dlink.com/fr/fr/support/product/dcs-2210-full-hd-poe-day-night-camera) :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :lines: 29-32
+    :lines: 30-33
     :language: shell
 ```
 
@@ -75,19 +86,19 @@ Plusieurs solutions s'offrent à nous :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :caption: ~/.profile
-    :lines: 34
-    :language: shell
-```
-
-```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :caption: /etc/cron.d/stream-hdmi
     :lines: 35
     :language: shell
 ```
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
+    :caption: /etc/cron.d/stream-hdmi
+    :lines: 36
+    :language: shell
+```
+
+```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :caption: /etc/rc.local
-    :lines: 37-39
+    :lines: 38-40
     :language: shell
 ```
 

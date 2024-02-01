@@ -2,50 +2,31 @@
 :description: Base de connaissances / Knowledge base.
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 2024
+    :caption: 👾 Blockchain
     :glob:
 
-    2024/*
+    blockchain/*
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 2023
+    :caption: 🧰 Do It Yourself
     :glob:
 
-    2023/*
+    diy/*
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 2022
+    :caption: 🐧 GNU/Linux
     :glob:
 
-    2022/*
+    linux/*
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 2020
+    :caption: 🪟 Microsoft Windows
     :glob:
 
-    2020/*
+    windows/*
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 2017
+    :caption: 🐍 Python
     :glob:
 
-    2017/*
-
-.. toctree::
-    :maxdepth: 1
-    :caption: 2016
-    :glob:
-
-    2016/*
-
-.. toctree::
-    :maxdepth: 1
-    :caption: 2015
-    :glob:
-
-    2015/*
+    python/*
