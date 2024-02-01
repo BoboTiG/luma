@@ -48,9 +48,11 @@ Notes :
 
 ---
 
-## Exemple : DCS-2210
+## Exemple
 
-Un exemple concrêt avec la caméra de surveillance [D-Link DCS-2210](http://www.dlink.com/fr/fr/support/product/dcs-2210-full-hd-poe-day-night-camera) :
+### D-Link DCS-2210
+
+Un exemple concret avec la caméra de surveillance [D-Link DCS-2210](http://www.dlink.com/fr/fr/support/product/dcs-2210-full-hd-poe-day-night-camera) :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :lines: 29-32
@@ -98,7 +100,7 @@ Plusieurs solutions s'offrent à nous :
 
 2016-11-19
 : Suppression de l'argument `--loop` (convient pour les fichiers, pas les flux).
-: Ajout de l'[exemple D-Link DCS-2210](#exemple-dcs-2210).
+: Ajout de l'[exemple D-Link DCS-2210](#d-link-dcs-2210).
 
 2016-06-23
 : Utilisation de l'argument `--aidx`.

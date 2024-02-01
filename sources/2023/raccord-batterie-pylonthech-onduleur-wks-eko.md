@@ -50,19 +50,17 @@ Si batterie(s) *slave* il y a, mettre tout leurs DIP en position haute (OFF) :
 
 ---
 
-## Sources
+## 🎣 Sources
 
 - [File:RJ-45 TIA-568A Left.svg](https://commons.wikimedia.org/wiki/File:RJ-45_TIA-568A_Left.svg) ;
 - [Wattuneed : Schémas de montage photo-voltaïque](https://www.wattuneed.com/fr/content/28-schema-de-montage-photovoltaique) ;
 - Les fichiers SVG sont libres de droits, c'est cadeaux.
 
-## Matériel
+## 🧰 Matériel
 
 - [pince à sertir RJ45 (VCELINK GJ671BL)](https://www.amazon.fr/dp/B08NX12GJ5) ;
 - [pince coupante de précision (VCELINK)](https://www.amazon.fr/dp/B09SL2TCH7) ;
 - [connecteurs RJ45](https://www.amazon.fr/dp/B0857FL8G6).
-
----
 
 ## 📜 Historique
 

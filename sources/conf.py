@@ -2,6 +2,11 @@ import os
 import sys
 from datetime import UTC, datetime
 
+from pygments.lexers.web import PhpLexer
+from sphinx.highlighting import lexers
+
+lexers["php"] = PhpLexer(startinline=True, linenos=1)
+
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "."))
 
 author = "Mickaël Schoentgen"
@@ -13,7 +18,6 @@ url = "https://www.tiger-222.fr"
 extensions = [
     "myst_parser",
     "sphinx_copybutton",
-    "sphinx.ext.intersphinx",
     # "sphinx_design",
     # "sphinx_tabs.tabs",
     "sphinx_togglebutton",
@@ -31,9 +35,6 @@ templates_path = ["_templates"]
 source_suffix = {
     ".rst": "restructuredtext",
     ".md": "markdown",
-}
-intersphinx_mapping = {
-    "python": ("https://docs.python.org/3", None),
 }
 
 html_title = project
