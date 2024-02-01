@@ -15,7 +15,6 @@ build_blog() {
     [ -d "${DST_DIR}" ] && /bin/rm -rv "${DST_DIR}"
 
     sphinx-build \
-        -d . \
         -E \
         --color \
         "${SRC_DIR}" \
@@ -23,6 +22,7 @@ build_blog() {
 
     # Remove unnecessary files
     /bin/rm -v "${DST_DIR}/.buildinfo"
+    /bin/rm -rv "${DST_DIR}/.doctrees"
     /bin/rm -v "${DST_DIR}/genindex.html"
     /bin/rm -v "${DST_DIR}/objects.inv"
     /bin/rm -rv "${DST_DIR}/_sources"
