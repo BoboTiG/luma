@@ -19,9 +19,10 @@ language = "fr"
 extensions = [
     "myst_parser",
     "sphinx_copybutton",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.todo",
     # "sphinx_design",
     # "sphinx_tabs.tabs",
-    "sphinx.ext.todo",
     "sphinx_togglebutton",
 ]
 myst_enable_extensions = [
@@ -38,6 +39,9 @@ templates_path = ["_templates"]
 source_suffix = {
     ".rst": "restructuredtext",
     ".md": "markdown",
+}
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),
 }
 
 html_title = project
