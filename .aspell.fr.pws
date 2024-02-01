@@ -1,4 +1,4 @@
-personal_ws-1.1 fr 157 
+personal_ws-1.1 fr 160 
 AVAX
 Add
 Android
@@ -28,6 +28,7 @@ Geth
 Gio
 Git
 GitHub
+Gogs
 HTTP
 ICUSB
 IP
@@ -73,6 +74,7 @@ SystemRescueCD
 TIA
 TTY
 Trader
+Téléchargement
 URL
 USB
 UTC
@@ -90,6 +92,7 @@ WebSocket
 Wi-Fi
 Windows
 Working
+ZIP
 Zsh
 account-pwd.txt
 batch

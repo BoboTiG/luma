@@ -38,6 +38,13 @@
 
 .. toctree::
     :maxdepth: 1
+    :caption: 2016
+    :glob:
+
+    2016/*
+
+.. toctree::
+    :maxdepth: 1
     :caption: 2015
     :glob:
 
