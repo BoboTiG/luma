@@ -2,8 +2,8 @@
 
 Commençons par nous connecter à la boîte de messagerie :
 
-```{important}
-TODO : Supprimer les commentaires `type: ignore[...]` et corriger/retester le code.
+```{todo}
+Supprimer les commentaires `type: ignore[...]` et corriger/retester le code.
 ```
 
 ```{literalinclude} snippets/python-imaplib-suppression-des-doublons.py

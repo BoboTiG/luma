@@ -21,6 +21,7 @@ extensions = [
     "sphinx_copybutton",
     # "sphinx_design",
     # "sphinx_tabs.tabs",
+    "sphinx.ext.todo",
     "sphinx_togglebutton",
 ]
 myst_enable_extensions = [
@@ -29,6 +30,7 @@ myst_enable_extensions = [
     "replacements",
     "tasklist",
 ]
+todo_include_todos = True
 html_theme = "shibuya"
 html_css_files = ["custom.css"]
 html_static_path = ["_static"]
