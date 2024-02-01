@@ -1,4 +1,4 @@
-personal_ws-1.1 fr 160 
+personal_ws-1.1 fr 163 
 AVAX
 Add
 Android
@@ -53,6 +53,7 @@ Online
 PC
 PDF
 PHP
+PNG
 PS
 Pi-hole
 Powerlevel
@@ -111,6 +112,7 @@ cronjob
 debug
 dev
 double-cliquez
+débogage
 email
 fork
 framework
@@ -125,6 +127,7 @@ l'URL
 l'Utilisateur
 l'onduleur
 learn
+libpng
 logs
 magnet
 master

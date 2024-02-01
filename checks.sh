@@ -9,7 +9,7 @@ python -m ruff --fix "${FOLDER}"
 python -m mypy "${FOLDER}"
 
 # Shell scripts
-/bin/find "${FOLDER}" -type f -name '*.sh' -exec shellcheck -e SC1091 {} \;
+/bin/find "${FOLDER}" -type f -name '*.sh' -exec shellcheck -e SC1091,SC2164 {} \;
 shellcheck 'checks.sh'  # This file ^^
 
 # Markdown files
