@@ -109,7 +109,7 @@ Et voilà !
 
 ---
 
-## Historique
+## 📜 Historique
 
 2024-01-31
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/28/15/49/31-noeud-ethereum-local).

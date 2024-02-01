@@ -107,7 +107,7 @@ Vous pouvez supprimer les zéros ajoutés pour les différentes fonctions du mod
 
 ---
 
-## Historique
+## 📜 Historique
 
 2024-02-01
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2017/10/09/09/46/44-python-tricks).

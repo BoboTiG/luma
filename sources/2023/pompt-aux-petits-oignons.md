@@ -88,7 +88,7 @@ Aperçu :
 
 ---
 
-## Historique
+## 📜 Historique
 
 2024-01-27
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/11/26/11/00/16-un-prompt-aux-petits-oignons).

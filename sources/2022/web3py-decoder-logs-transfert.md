@@ -45,7 +45,7 @@ PS : J'avais partagé ces infos sur [cette issue](https://github.com/ethereum/we
 
 ---
 
-## Historique
+## 📜 Historique
 
 2024-01-27
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/23/21/24/20-python-web3-decoder-les-logs-dun-transfert).

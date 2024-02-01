@@ -20,7 +20,7 @@ Nada !
 
 ---
 
-## Historique
+## 📜 Historique
 
 2024-01-27
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/03/11/17/29/46-python-web3-determiner-si-un-contrat-contient-une-fonction-donnee).

@@ -75,7 +75,7 @@ Exemple de sortie console lorsque tout est correctement en place :
 
 ---
 
-## Historique
+## 📜 Historique
 
 2024-01-27
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2024/01/09/09/59/17-configuration-lighttpd-pour-contenir-le-trafic-vers-connectivitycheckgstaticcom).
