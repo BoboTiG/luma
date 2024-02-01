@@ -63,6 +63,8 @@ Résultats :
 
 ````
 
+---
+
 ## {py:obj}`str.startswith` & {py:obj}`str.endswith`
 
 {py:obj}`str.startswith` et {py:obj}`str.endswith` peuvent prendre un {py:obj}`tuple` en paramètre :
