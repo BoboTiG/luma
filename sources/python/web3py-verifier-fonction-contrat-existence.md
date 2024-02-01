@@ -14,8 +14,6 @@ Utilisation :
     :language: python
 ```
 
-Nada !
-
 [Version anglaise](https://ethereum.stackexchange.com/a/123607/95322) très courte.
 
 ---

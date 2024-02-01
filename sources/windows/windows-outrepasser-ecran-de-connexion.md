@@ -1,6 +1,10 @@
 # Windows : Outrepasser l'écran de connexion
 
-Il existe une astuce, valable depuis un bail, qui permet d'avoir un **accès privilégié à l'invite de commande** (ou console, ou terminal) à l'écran de connexion de l'utilisateur. Il s'agit du bon vieux `Utilman.exe`. Utilman est l'utilitaire qui donne accès aux options d'ergonomie, la petite icône en bas à gauche de l'écran de connexion. L'idée est de le substituer à l'invite de commande (`cmd.exe`) et de créer un nouvel utilisateur.
+Il existe une astuce, valable depuis un bail, qui permet d'avoir un **accès privilégié à l'invite de commande** (ou console, ou terminal) à l'écran de connexion de l'utilisateur. Il s'agit du bon vieux `Utilman.exe`. L'idée est de le substituer à l'invite de commande (`cmd.exe`) et de créer un nouvel utilisateur.
+
+```{hint}
+Utilman est l'utilitaire qui donne accès aux options d'ergonomie, la petite icône en bas à gauche de l'écran de connexion.
+```
 
 ## Substitution de `Utilman.exe`
 
@@ -38,7 +42,7 @@ Voilà, vous avez **un accès privilégié à l'invite de commande** !
 
 ## Création de l'Utilisateur
 
-Vous voilà dans l'invite de commande. Voici les commandes pour créer un nouvel utilisateur, disons **Bob** :
+Vous voilà dans l'invite de commande. Voici les commandes pour créer un nouvel utilisateur, disons Bob :
 
 ```{literalinclude} snippets/windows-outrepasser-ecran-de-connexion.bat
     :lines: 3-6

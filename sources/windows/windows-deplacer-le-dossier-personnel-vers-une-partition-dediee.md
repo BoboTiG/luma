@@ -1,5 +1,7 @@
 # Windows : Déplacer le dossier personnel vers une partition dédiée
 
+## Le Script
+
 Pour un gain de place ou pour séparer les données utilisateur du système d'exploitation, ce script batch peut être utile.
 
 Voici ce qu'il fait :
@@ -17,13 +19,25 @@ Pensez à adapter la partition à la ligne spécifiant `set new_folder=...` (ici
     :language: batch
 ```
 
+## Utilisation
+
 Pour l'utiliser :
 
 - copiez-le à la racine de la nouvelle partition ;
 - double-cliquez & patientez ;
 - redémarrez l'ordinateur.
 
-Testé et approuvé sur Windows Vista, 7, 8, 8.1 et 10.
+## Testé et Approuvé
+
+- Windows Vista
+- Windows 7
+- Windows 8
+- Windows 8.1
+- Windows 10
+
+```{todo}
+Windows 11
+```
 
 ---
 

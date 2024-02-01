@@ -32,7 +32,9 @@ password='password'
 ip='192.168.0.24'
 url='/video/mjpg.cgi?profileid=2'
 
+# (...)
 sh /opt/stream-hdmi.sh &
+
 @reboot USER sh /opt/stream-hdmi.sh &
 
 # (...)

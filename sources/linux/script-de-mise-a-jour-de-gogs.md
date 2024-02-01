@@ -1,6 +1,6 @@
 # Script de mise à jour de Gogs
 
-Voici un script qui permet de mettre à jour [Gogs](https://gogs.io), un serveur Git parfait à installer chez soi, en l'occurrence sur un Raspberry Pi 2.
+Voici un script qui permet de mettre à jour [Gogs](https://gogs.io), un serveur Git à installer chez soi, en l'occurrence sur un Raspberry Pi 2.
 
 ```{literalinclude} snippets/script-de-mise-a-jour-de-gogs.sh
     :caption: update-gogs.sh

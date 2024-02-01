@@ -1,11 +1,15 @@
 # Un prompt aux petits oignons
 
+## Installation
+
 Installation de [Oh My Zsh](https://ohmyz.sh), [Powerlevel10k](https://github.com/romkatv/powerlevel10k), et de quelques plugins :
 
 ```{literalinclude} snippets/pompt-aux-petits-oignons.sh
     :lines: 2-
     :language: shell
 ```
+
+## Configuration
 
 Ajouter ces lignes au fichier `$HOME/.zshrc` :
 
@@ -37,7 +41,7 @@ exec $SHELL
 
 Le configurateur de Powerlevel10k devrait se lancer, ensuite c'est terminé.
 
-Pour information,  le contenu final du fichier `$HOME/.zshrc` serait quelque chose comme :
+Pour information, le contenu final du fichier `$HOME/.zshrc` serait quelque chose comme :
 
 ```{code-block} shell
       :caption: ~/.zshrc
@@ -80,10 +84,10 @@ typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_WITH_PYENV=true
 typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION='🐍'
 ```
 
-Aperçu :
+## Aperçu
 
 ```{figure} /images/zsh-omz-powerlevel10k.png
-  :align: center
+ :align: center
 ```
 
 ---

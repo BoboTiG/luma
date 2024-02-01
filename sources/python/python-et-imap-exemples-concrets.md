@@ -7,7 +7,9 @@ Commençons par nous connecter à la boîte de messagerie :
     :language: python
 ```
 
-{py:func}`imaplib.IMAP4.select` permet de sélectionner le *dossier* où sont stockés les messages. Par défaut, on ne passe aucun argument, mais pour Gmail, on pourrait utiliser `conn.select('Inbox')`{l=python}.
+```{tip}
+{py:func}`imaplib.IMAP4.select` permet de sélectionner le *dossier* où sont stockés les messages. Par défaut, on ne passe aucun argument, mais pour Gmail, on pourrait utiliser `conn.select("Inbox")`{l=python}.
+```
 
 Nous allons maintenant récupérer les identifiants des messages non lus. Pour faire les choses correctement, nous utiliserons la commande {py:func}`imaplib.IMAP4.uid` qui fonctionne avec des identifiants uniques pour chaque message.
 

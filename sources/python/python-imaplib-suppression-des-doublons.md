@@ -80,8 +80,8 @@ msg['Message-ID'] = make_msgid()
 Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`](https://www.php.net/manual/function.mail.php) de PHP :
 
 ```{code-block} php
-$msg_id = sprintf("<%s-%s@%s>", uniqid(time()), md5($from.$to), $_SERVER['SERVER_NAME']);
-$headers[] = "Message-ID: $msg_id";
+$msg_id = sprintf('<%s-%s@%s>', uniqid(time()), md5($from.$to), $_SERVER['SERVER_NAME']);
+$headers[] = 'Message-ID: '.$msg_id;
 ```
 ````
 

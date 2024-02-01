@@ -14,7 +14,7 @@ http://IP/live/0/mjpeg.jpg
 ```
 
 ````{note}
-Si l''accès au flux est sécurisé par une authentification simple à l'aide d'un nom d'utilisateur et d'un mot de passe, l'adresse complète du flux vidéo sera plutôt de ce type :
+Si l'accès au flux est sécurisé par une authentification simple à l'aide d'un nom d'utilisateur et d'un mot de passe, l'adresse complète du flux vidéo sera plutôt de ce genre :
 
 ```{code-block} text
 http://USER:PASSWORD@IP/live/0/mjpeg.jpg
@@ -25,7 +25,7 @@ http://USER:PASSWORD@IP/live/0/mjpeg.jpg
 
 ## Mise en Place
 
-Une [Raspbian minimale](https://www.tiger-222.fr/?d=2016/01/04/17/25/32-raspbian-installation-minimale) fera très bien l'affaire sur votre Rpi. Nous allons installer [OMXPlayer](https://github.com/popcornmix/omxplayer), un lecteur vidéo spécialement conçu pour le processeur graphique (GPU) du Rpi :
+Une [Raspbian minimale](https://www.tiger-222.fr/?d=2016/01/04/17/25/32-raspbian-installation-minimale) fera l'affaire sur votre Rpi. Nous allons installer [OMXPlayer](https://github.com/popcornmix/omxplayer), un lecteur vidéo spécialement conçu pour le processeur graphique (GPU) du Rpi :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :lines: 26
@@ -86,19 +86,19 @@ Plusieurs solutions s'offrent à nous :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :caption: ~/.profile
-    :lines: 35
+    :lines: 35-36
     :language: shell
 ```
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :caption: /etc/cron.d/stream-hdmi
-    :lines: 36
+    :lines: 38
     :language: shell
 ```
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :caption: /etc/rc.local
-    :lines: 38-40
+    :lines: 40-42
     :language: shell
 ```
 

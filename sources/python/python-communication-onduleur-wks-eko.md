@@ -1,17 +1,15 @@
 # Python : Communiquer avec un onduleur WKS EVO Circle via le port série
 
-Niveau matériel, il nous faut :
+## 🧰 Matériel
 
 - un onduleur WKS EVO Circle et le câble série fourni
 - un adaptateur USB vers série DB9 RS232 - Mâle / Mâle (ICUSB232V2)
 - une machine pour exécuter le code Python (PC portable, Raspberry Pi, etc.)
 
-Pour l'installation :
+## Installation
 
 - raccorder le câble série fourni avec l'adaptateur USB/série
 - brancher le câble dans le port **COM** de l'onduleur, puis l'autre côté dans un port USB de la machine
-
-Passons au code, maintenant.
 
 ## Code
 
@@ -62,7 +60,8 @@ Enfin, nous pouvons récupérer la réponse de l'onduleur via cette dernière fo
 Exemple d'utilisation avec la récupération du n° de série de l'onduleur :
 
 ```{literalinclude} snippets/python-communication-onduleur-wks-eko.py
-    :lines: 43-46
+    :lines: 45-49
+    :dedent:
     :language: python
 ```
 
@@ -74,11 +73,10 @@ J'ai rendu publique le code pour lire les métriques de l'onduleur, car le n° d
 python -m pip install 'git+https://github.com/BoboTiG/python-wks-com.git@main'
 ```
 
-```{code-block} python
->>> from inverter_com import Inverter
->>> inverter = Inverter("/dev/ttyUSB0")
->>> inverter.send("QID")
-'96332309100452'
+```{literalinclude} snippets/python-communication-onduleur-wks-eko.py
+    :lines: 54-57
+    :dedent:
+    :language: python
 ```
 
 Et il y a même un exécutable mis à disposition, une fois le module installé :

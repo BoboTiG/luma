@@ -40,7 +40,20 @@ def get_response(conn: serial.Serial) -> str:
     return response.decode(encoding="latin1")
 
 
-conn = init_serial("/dev/ttyUSB0")
-assert send_command(conn, "QID")
-serial_number = get_response(conn)
-assert serial_number == "96332309100452"  # example
+def example() -> None:
+    """
+    >>> conn = init_serial("/dev/ttyUSB0")
+    >>> send_command(conn, "QID")
+    True
+    >>> get_response(conn)
+    '96332309100452'
+    """
+
+
+def module() -> None:
+    """
+    >>> from inverter_com import Inverter
+    >>> inverter = Inverter("/dev/ttyUSB0")
+    >>> inverter.send("QID")
+    '96332309100452'
+    """
