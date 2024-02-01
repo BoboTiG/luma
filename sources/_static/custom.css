@@ -1,0 +1,9 @@
+/* Hide the left navbar. */
+aside#lside, aside .lside-overlay, button[aria-controls="lside"] {
+    display: none;
+}
+
+/* Give more width to the main container. */
+main.sy-main {
+    width: 100%;
+}

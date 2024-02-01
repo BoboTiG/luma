@@ -25,6 +25,7 @@ myst_enable_extensions = [
     "tasklist",
 ]
 html_theme = "shibuya"
+html_css_files = ["custom.css"]
 html_static_path = ["_static"]
 templates_path = ["_templates"]
 source_suffix = {
