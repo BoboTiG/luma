@@ -31,6 +31,7 @@ myst_enable_extensions = [
     "replacements",
     "tasklist",
 ]
+suppress_warnings = ["myst.xref_missing"]
 todo_include_todos = True
 html_theme = "shibuya"
 html_css_files = ["custom.css"]
