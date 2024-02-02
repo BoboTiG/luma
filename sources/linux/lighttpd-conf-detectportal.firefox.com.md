@@ -1,6 +1,6 @@
 # Configuration Lighttpd pour contenir le trafic vers detectportal.firefox.com
 
-Je vois régulièrement passer tout un tas de requêtes vers *detectportal.firefox.com*, mais ça ne m'est d'aucune utilité. Voici une configuration pour [Lighttpd](https://www.lighttpd.net) et [Pi-hole](https://pi-hole.net) afin de prévenir tout accès à ce domaine, tout en faisant croire aux appareils que la connexion est bien établie.
+Voici une configuration pour [Lighttpd](https://www.lighttpd.net) couplée à [Pi-hole](https://pi-hole.net) afin de prévenir tout accès à ce domaine, tout en faisant croire aux appareils que la connexion est bien établie.
 
 ## Pré-requis
 

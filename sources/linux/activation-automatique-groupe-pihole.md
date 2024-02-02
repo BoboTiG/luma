@@ -1,6 +1,6 @@
 # Activation automatique d'un groupe sur Pi-hole
 
-Le contexte est simple : j'ai un Mac pour le boulot, et il s'avère qu'il communique en permanence avec Apple et d'autres serveurs même lorsqu'il est **censé être en veille**. Donc, aux grands maux les gros moyens : coupure de tout le trafic hors des heures de travail.
+L'idée est de couper tout le trafic hors des heures de travail.
 L'idée peut être appliquée à d'autres fins comme bloquer l'accès aux réseaux sociaux pendant les heures de travail/cours, etc.
 
 Pour mon exemple, dans [Pi-hole](https://pi-hole.net), j'ai ajouté un groupe "work" et placé le Mac dans ce dernier.

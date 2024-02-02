@@ -1,6 +1,6 @@
 # Configuration Lighttpd pour contenir le trafic vers connectivitycheck.gstatic.com
 
-Tous les smartphones Android vont taper sur *connectivitycheck.gstatic.com* pour savoir si la connexion Wi-Fi est bien établie. Comme je n'ai pas besoin de cette information, et que le nombre de requêtes est ahurissant, voici une configuration pour [Lighttpd](https://www.lighttpd.net) et [Pi-hole](https://pi-hole.net) afin de prévenir tout accès à ce domaine, tout en faisant croire aux appareils que la connexion est bien établie.
+Voici une configuration pour [Lighttpd](https://www.lighttpd.net) couplée à [Pi-hole](https://pi-hole.net) afin de prévenir tout accès à ce domaine, tout en faisant croire aux appareils que la connexion est bien établie.
 
 ## Pré-requis
 
