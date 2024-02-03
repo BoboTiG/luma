@@ -4,7 +4,7 @@
  :width: 340
   :height: 96
   :alt: NuLink Logo
-  :class: light-only
+  :figclass: light-only
   :align: center
 
   Site web : [www.nulink.org](https://www.nulink.org)
@@ -14,7 +14,7 @@
  :width: 340
   :height: 96
   :alt: NuLink Logo
-  :class: dark-only
+  :figclass: dark-only
   :align: center
 
   Site web : [www.nulink.org](https://www.nulink.org)
