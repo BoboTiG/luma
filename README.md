@@ -1,6 +1,6 @@
-![](sources/_static/logo.svg)
-
 # Base de Connaissances du [Luma](https://fr.wiktionary.org/wiki/luma)
+
+![Logo](sources/_static/logo.svg)
 
 Site web complet pour le partage de connaissances.
 
