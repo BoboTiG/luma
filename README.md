@@ -28,7 +28,7 @@ python -m pip install -r requirements.txt
 ./build.sh [live]
 ```
 
-Les fichiers finaux se trouveront dans le dossier "htdocs".
+Les fichiers finaux se trouveront dans le dossier "luma".
 
 ## Crédits
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SRC_DIR='sources'
-DST_DIR='htdocs'
+DST_DIR='luma'
 
 dev_live() {
     sphinx-autobuild \

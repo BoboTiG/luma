@@ -1,7 +1,7 @@
 # Folders
 _build/
-htdocs/
 _live/
+luma/
 .mypy_cache/
 .ruff_cache/
 .vscode/
