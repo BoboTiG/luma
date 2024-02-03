@@ -1,6 +1,6 @@
 # Comment déployer un nœud NuLink ?
 
-```{figure} ../images/nulink-logo-light.svg
+```{figure} images/nulink-logo-light.svg
  :width: 340
   :height: 96
   :alt: NuLink Logo
@@ -10,7 +10,7 @@
   Site web : [www.nulink.org](https://www.nulink.org)
 ```
 
-```{figure} ../images/nulink-logo-dark.svg
+```{figure} images/nulink-logo-dark.svg
  :width: 340
   :height: 96
   :alt: NuLink Logo

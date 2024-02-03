@@ -86,7 +86,7 @@ typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION='🐍'
 
 ## Aperçu
 
-```{figure} ../images/zsh-omz-powerlevel10k.png
+```{figure} images/zsh-omz-powerlevel10k.png
  :align: center
 ```
 
