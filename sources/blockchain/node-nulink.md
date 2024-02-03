@@ -20,7 +20,7 @@
   Site web : [www.nulink.org](https://www.nulink.org)
 ```
 
-Ce guide est une traduction libre et simplifiée de la documentation officielle pour le déploiement d'un nœud NuLink, plus communément appelé *node validator*, *worker node* ou encore *staker node*.
+Ce guide est une traduction libre et simplifiée de la [documentation officielle](https://docs.nulink.org/products/stakers/nulink_worker/) pour le déploiement d'un nœud NuLink, plus communément appelé *node validator*, *worker node* ou encore *staker node*.
 
 Configuration minimale requise :
 
