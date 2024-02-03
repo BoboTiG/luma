@@ -34,6 +34,6 @@ jobs:
         # Mirror the locally generated website to the production server
         run: |
           lftp \
-            -e 'mirror --delete --only-missing -en --reverse ./luma ${{ secrets.SFTP_PATH }} ; quit' \
+            -e 'mirror --delete --transfer-all --reverse --verbose=1 ./luma ${{ secrets.SFTP_PATH }} ; quit' \
             -u '${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }}' \
             sftp://${{ secrets.SFTP_URL }}
