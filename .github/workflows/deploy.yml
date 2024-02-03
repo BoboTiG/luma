@@ -27,6 +27,10 @@ jobs:
         run: ./build.sh
       - name: Automation
         run: |
+          # Prevent "Fatal error: Host key verification failed"
+          ssh-keyscan -t rsa ${{ secrets.SFTP_URL }} >> ~/.ssh/known_hosts
+
+          # Mirror the locally generated website to the production server
           lftp \
             -e 'mirror --delete --only-missing -en --reverse ./luma ${{ secrets.SFTP_PATH }} ; quit' \
             -u '${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }}' \
