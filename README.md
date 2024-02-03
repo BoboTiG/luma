@@ -12,7 +12,7 @@ Toutes les contributions sont bienvenues.
 
 ## Technique
 
-### Setup
+### Prérequis
 
 ```shell
 python3.12 -m venv venv
@@ -23,7 +23,7 @@ python3.12 -m venv venv
 
 ```shell
 python -m pip install -U pip
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-tests.txt
 ```
 
 ### Génération du Site
