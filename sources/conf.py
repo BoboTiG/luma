@@ -10,7 +10,7 @@ lexers["php"] = PhpLexer(startinline=True, linenos=1)
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "."))
 
 author = "Mickaël Schoentgen"
-project = "Knowledge Base"
+project = "Base de connaissances du luma"
 this_year = datetime.now(tz=UTC).year
 copyright = f"2006-{this_year}, {author}"  # noqa:A001
 url = "https://www.tiger-222.fr"
@@ -49,11 +49,10 @@ togglebutton_hint_hide = "Cliquer pour cacher"
 
 html_title = project
 html_theme = "shibuya"
-html_favicon = "_static/logo.svg"
+html_favicon = "_static/favicon.svg"
+html_logo = "_static/logo.svg"
 html_theme_options = {
     "accent_color": "iris",
-    "light_logo": "../_static/logo-light.svg",
-    "dark_logo": "../_static/logo-dark.svg",
     "twitter_creator": "__tiger222__",
     "twitter_site": "__tiger222__",
     "twitter_url": "https://twitter.com/__tiger222__",

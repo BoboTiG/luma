@@ -15,6 +15,8 @@ shellcheck 'checks.sh'  # This file ^^
 # Markdown files
 python -m pymarkdown --disable-rules line-length fix -r "${FOLDER}"
 python -m pymarkdown --disable-rules line-length scan -r "${FOLDER}"
+python -m pymarkdown --disable-rules line-length scan -r 'README.md'
 
 # Spelling (requires the `aspell-fr` package to be installed)
-/bin/find "${FOLDER}" -type f -name '*.md' -exec aspell --home-dir='.' --mode='markdown' --lang='fr' --dont-backup check  {} \;
+/bin/find "${FOLDER}" -type f -name '*.md' -exec aspell --home-dir='.' --mode='markdown' --lang='fr' --dont-backup check {} \;
+aspell --home-dir='.' --mode='markdown' --lang='fr' --dont-backup check 'README.md'

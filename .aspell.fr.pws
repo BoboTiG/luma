@@ -1,4 +1,4 @@
-personal_ws-1.1 fr 186 
+personal_ws-1.1 fr 194 
 AVAX
 Aborted
 Add
@@ -48,11 +48,13 @@ Left.svg
 Lighttpd
 Linux
 Lua
+Luma
 MOVE
 MPEG
 Mainnet
 MesloLGS
 Metamask
+Monaspace
 My
 NF
 NLK
@@ -62,6 +64,7 @@ NuLink
 OK
 OMXPlayer
 Online
+OpenClipart
 PC
 PDF
 PHP
@@ -83,7 +86,9 @@ Rpi
 SSH
 SVG
 Server
+Setup
 Shaarli
+Shibuya
 Symbol
 SystemRescueCD
 TIA
@@ -128,6 +133,7 @@ dev
 double-cliquez
 débogage
 email
+favicon
 fork
 frame
 framework
@@ -135,6 +141,7 @@ from
 func
 genesis
 hash
+htdocs
 identifiants
 infos
 inverter
@@ -146,6 +153,7 @@ l'onduleur
 learn
 libpng
 logs
+luma
 magnet
 master
 mod
