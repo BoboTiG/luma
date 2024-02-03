@@ -35,4 +35,4 @@ jobs:
           lftp \
             -e 'mirror --delete --only-missing -en --reverse ./luma ${{ secrets.SFTP_PATH }} ; quit' \
             -u '${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }}' \
-            ${{ secrets.SFTP_URL }}
+            sftp://${{ secrets.SFTP_URL }}
