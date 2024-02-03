@@ -29,7 +29,7 @@ jobs:
         run: |
           # Prevent "Fatal error: Host key verification failed"
           mkdir -p ~/.ssh
-          ssh-keyscan -t rsa ${{ secrets.SFTP_URL }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.SFTP_URL }} >> ~/.ssh/known_hosts
 
           # Mirror the locally generated website to the production server
           lftp \
