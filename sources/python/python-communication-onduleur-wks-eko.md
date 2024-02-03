@@ -74,7 +74,7 @@ python -m pip install 'git+https://github.com/BoboTiG/python-wks-com.git@main'
 ```
 
 ```{literalinclude} snippets/python-communication-onduleur-wks-eko.py
-    :lines: 54-57
+    :lines: 55-58
     :dedent:
     :language: python
 ```
