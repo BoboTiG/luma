@@ -68,5 +68,5 @@ html_context = {
     "source_user": "BoboTiG",
     "source_repo": "luma",
     "source_docs_path": "/sources/",
-    "source_branch": "main",
+    "source_version": "main",
 }
