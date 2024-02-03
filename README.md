@@ -4,6 +4,10 @@
 
 Site web complet pour le partage de connaissances.
 
+## Qualité
+
+Les qualité et fiabilité des morceaux de code sont garanties grâce à plusieurs outils spécialisés, et ça se passe dans le fichier [`checks.sh`](checks.sh).
+
 Toutes les contributions sont bienvenues.
 
 ## Technique
