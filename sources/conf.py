@@ -49,11 +49,11 @@ togglebutton_hint_hide = "Cliquer pour cacher"
 
 html_title = project
 html_theme = "shibuya"
-html_favicon = "_static/favicon.ico"
+html_favicon = "_static/logo.svg"
 html_theme_options = {
     "accent_color": "iris",
-    "light_logo": "../_static/favicon.ico",
-    "dark_logo": "../_static/favicon.ico",
+    "light_logo": "../_static/logo-light.svg",
+    "dark_logo": "../_static/logo-dark.svg",
     "twitter_creator": "__tiger222__",
     "twitter_site": "__tiger222__",
     "twitter_url": "https://twitter.com/__tiger222__",
