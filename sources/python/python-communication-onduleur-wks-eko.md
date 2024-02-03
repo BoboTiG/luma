@@ -60,7 +60,7 @@ Enfin, nous pouvons récupérer la réponse de l'onduleur via cette dernière fo
 Exemple d'utilisation avec la récupération du n° de série de l'onduleur :
 
 ```{literalinclude} snippets/python-communication-onduleur-wks-eko.py
-    :lines: 44-49
+    :lines: 45-49
     :dedent:
     :language: python
 ```
