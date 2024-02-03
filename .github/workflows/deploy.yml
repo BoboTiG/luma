@@ -28,6 +28,6 @@ jobs:
       - name: Automation
         run: |
           lftp \
-            -e 'mirror --delete --only-missing -en --reverse ./luma ${{ SFTP_PATH }} ; quit' \
+            -e 'mirror --delete --only-missing -en --reverse ./luma ${{ secrets.SFTP_PATH }} ; quit' \
             -u '${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }}' \
             ${{ secrets.SFTP_URL }}
