@@ -1,6 +1,10 @@
-# Base de Connaissances du Luma
+![](sources/_static/logo.svg)
+
+# Base de Connaissances du [Luma](https://fr.wiktionary.org/wiki/luma)
 
 Site web complet pour le partage de connaissances.
+
+Toutes les contributions sont bienvenues.
 
 ## Technique
 
@@ -32,5 +36,3 @@ Les fichiers finaux se trouveront dans le dossier "htdocs".
 - thème : [Shibuya](https://shibuya.lepture.com)
 - police d'écriture : [Monaspace Argon](https://monaspace.githubnext.com)
 - logo : [OpenClipart n° 302148](https://openclipart.org/detail/302148) (le favicon est un dérivé de la même image)
-
-Et pour information : [luma](https://fr.wiktionary.org/wiki/luma).

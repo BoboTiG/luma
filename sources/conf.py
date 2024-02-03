@@ -66,7 +66,7 @@ html_theme_options = {
 html_context = {
     "source_type": "github",
     "source_user": "BoboTiG",
-    "source_repo": "kb",
+    "source_repo": "luma",
     "source_docs_path": "/sources/",
     "source_branch": "main",
 }
