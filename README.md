@@ -34,6 +34,12 @@ python -m pip install -r requirements.txt
 
 Les fichiers finaux se trouveront dans le dossier "luma".
 
+## Déploiement
+
+Le déploiement est 100% automatisé.
+
+[![Deploy](https://github.com/BoboTiG/luma/actions/workflows/deploy.yml/badge.svg)](https://github.com/BoboTiG/luma/actions/workflows/deploy.yml)
+
 ## Crédits
 
 - moteur : [Sphinx](https://www.sphinx-doc.org)
