@@ -25,13 +25,14 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Generate
         run: ./build.sh
-      - name: Automation
+      - name: Setup SSH
+        # Prevent "Fatal error: Host key verification failed"
         run: |
-          # Prevent "Fatal error: Host key verification failed"
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.SFTP_URL }} >> ~/.ssh/known_hosts
-
-          # Mirror the locally generated website to the production server
+      - name: Automation
+        # Mirror the locally generated website to the production server
+        run: |
           lftp \
             -e 'mirror --delete --only-missing -en --reverse ./luma ${{ secrets.SFTP_PATH }} ; quit' \
             -u '${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }}' \

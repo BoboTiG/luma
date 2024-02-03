@@ -1,10 +1,6 @@
-mypy==1.8.0
 myst-parser==2.0.0
-pymarkdownlnt==0.9.16
-ruff==0.2.0
 shibuya==2024.1.17
 sphinx==7.2.6
-sphinx-autobuild==2021.3.14
 sphinx-copybutton==0.5.2
 # sphinx-design==0.5.0
 # sphinx-tabs==3.4.5
