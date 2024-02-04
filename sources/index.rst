@@ -37,3 +37,4 @@
 
 .. contributors:: BoboTiG/luma
     :avatars:
+    :exclude: dependabot[bot]

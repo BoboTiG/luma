@@ -22,6 +22,7 @@ CSS_FILES = [
     "shibuya",
     "copybutton",
     "togglebutton",
+    "sphinx_contributors",
     "custom",
 ]
 JS_FILES = [
