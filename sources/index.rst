@@ -30,3 +30,10 @@
     :glob:
 
     python/*
+
+-----
+
+💖 **Contributeurs**
+
+.. contributors:: BoboTiG/luma
+    :avatars:

@@ -18,6 +18,7 @@ language = "fr"
 
 extensions = [
     "myst_parser",
+    "sphinx_contributors",
     "sphinx_copybutton",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",

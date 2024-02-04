@@ -1,9 +1,26 @@
 /* Hide the left navbar. */
-aside#lside, aside .lside-overlay, button[aria-controls="lside"] {
+aside#lside,
+aside .lside-overlay,
+button[aria-controls="lside"] {
     display: none;
 }
 
 /* Give more width to the main container. */
 main.sy-main {
     width: 100%;
+}
+
+.sphinx-contributors img {
+    border-radius: 50%;
+    margin-bottom: 1em;
+    box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075),
+        0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+.sphinx-contributors p {
+    margin: 0;
 }
