@@ -10,7 +10,8 @@ Fonction bien utile qui renverra `True` si une fonction donnée est présente da
 Utilisation :
 
 ```{literalinclude} snippets/web3py-verifier-fonction-contrat-existence.py
-    :lines: 14-16
+    :lines: 16-20
+    :dedent:
     :language: python
 ```
 

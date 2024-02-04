@@ -11,6 +11,11 @@ def has_function(contract_addr: str, signature: str) -> bool:
     return fn_hash in code
 
 
-contract_addr = "0x00e1656e45f18ec6747F5a8496Fd39B50b38396D"  # random
-assert has_function(contract_addr, "transfer(address,uint256)")
-assert not has_function(contract_addr, "rugMeDaddy(address)")
+def check() -> None:
+    """
+    >>> contract_addr = "0x00e1656e45f18ec6747F5a8496Fd39B50b38396D"  # random
+    >>> has_function(contract_addr, "transfer(address,uint256)")
+    True
+    >>> has_function(contract_addr, "rugMeDaddy(address)")
+    False
+    """

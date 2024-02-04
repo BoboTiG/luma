@@ -39,7 +39,7 @@ ignore = [
     "BLE001",
     "C90",
     "COM",
-    "D",  # TODO
+    "D",
     "E501",
     "EM",
     "ERA",
@@ -48,13 +48,11 @@ ignore = [
     "INP001",
     "G",
     "ISC001",
-    "PGH003",  # TODO
-    "PTH",  # TODO
     "PL",
     "RUF001",
     "RUF002",
     "RUF003",
-    "S",  # TODO
+    "S",
     "SLF",
     "T201",
     "TD",
