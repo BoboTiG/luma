@@ -26,6 +26,9 @@ build_blog() {
     /bin/rm -v "${DST_DIR}/genindex.html"
     /bin/rm -v "${DST_DIR}/objects.inv"
     /bin/rm -rv "${DST_DIR}/_sources"
+
+    # Minify files
+    python minify.py "${DST_DIR}"
 }
 
 [ "${1}" == 'live' ] && dev_live || build_blog
