@@ -31,5 +31,4 @@ geth \
     --unlock '0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC' \
     --password 'dev/account-pwd.txt' \
     --mine \
-    --miner.threads '1' \
-    --miner.noverify
+    --miner.etherbase '0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC'

@@ -34,7 +34,7 @@ Un fichier *UTC--…* sera créé dans le dossier *dev/node/keystore*.
 
 ```{literalinclude} snippets/node-ethereum-locale.py
     :caption: dev/get-private-key.py
-    :emphasize-lines: 10
+    :emphasize-lines: 14
     :language: python
 ```
 
@@ -62,13 +62,9 @@ Dans notre cas, le compte aura `1 000 000 $ETH`.
 Les adresses ne doivent pas être préfixées de `0x`.
 ```
 
-```{todo}
-Voir si les données sont toujours d'actualité. Par exemple, il y a plus de clefs dans le [dépôt officiel](https://github.com/ethereum/go-ethereum/blob/master/cmd/devp2p/internal/ethtest/testdata/genesis.json).
-```
-
 ```{code-block} json
     :caption: dev/genesis.json
-    :emphasize-lines: 20
+    :emphasize-lines: 33
 
 {
     "config": {
@@ -84,15 +80,34 @@ Voir si les données sont toujours d'actualité. Par exemple, il y a plus de cle
         "istanbulBlock": 0,
         "muirGlacierBlock": 0,
         "berlinBlock": 0,
-        "londonBlock": 0
+        "londonBlock": 0,
+        "arrowGlacierBlock": 0,
+        "grayGlacierBlock": 0,
+        "mergeNetsplitBlock": 0,
+        "shanghaiTime": 0,
+        "cancunTime": 0,
+        "terminalTotalDifficulty": 0,
+        "terminalTotalDifficultyPassed": true,
+        "ethash": {}
     },
-    "difficulty": "0x1",
-    "gasLimit": "0xffffffffffff",
+    "nonce": "0x0",
+    "timestamp": "0x0",
+    "extraData": "0x",
+    "gasLimit": "0x23f3e20",
+    "difficulty": "0x10000",
+    "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x0000000000000000000000000000000000000000",
     "alloc": {
         "8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC": {
-          "balance": "1000000000000000000000000"
+            "balance": "1000000000000000000000000"
         }
-    }
+    },
+    "number": "0x0",
+    "gasUsed": "0x0",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "baseFeePerGas": null,
+    "excessBlobGas": null,
+    "blobGasUsed": null
 }
 ```
 
@@ -109,7 +124,7 @@ Démarrez le nœud (pensez à adapter l'adresse publique du compte) :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
     :lines: 20-35
-    :emphasize-lines: 12-13
+    :emphasize-lines: 12-13,15
     :language: shell
 ```
 
@@ -131,6 +146,10 @@ Et voilà !
 ---
 
 ## 📜 Historique
+
+2024-02-04
+: Revue de l'article.
+: Simplification du script Python pour récupérer la clef privée du compte.
 
 2024-01-31
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/28/15/49/31-noeud-ethereum-local).
