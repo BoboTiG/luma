@@ -8,6 +8,7 @@ Supprimer les commentaires `type: ignore[...]` et corriger/retester le code.
 
 ```{literalinclude} snippets/python-imaplib-suppression-des-doublons.py
     :caption: imap-delete-duplicate.py
+    :lines: 1-124
     :language: python
 ```
 
@@ -70,18 +71,20 @@ Re&AOc-us
 ````{note}
 Pour ajouter le bon Message-ID aux courriels envoyés par les functions du module {py:mod}`smtplib` de Python :
 
-```{code-block} python
-from email.utils import make_msgid
-msg['Message-ID'] = make_msgid()
+```{literalinclude} snippets/python-imaplib-suppression-des-doublons.py
+    :lines: 129-130
+    :dedent:
+    :language: python
 ```
 ````
 
 ````{note}
 Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`](https://www.php.net/manual/function.mail.php) de PHP :
 
-```{code-block} php
-$msg_id = sprintf('<%s-%s@%s>', uniqid(time()), md5($from.$to), $_SERVER['SERVER_NAME']);
-$headers[] = 'Message-ID: '.$msg_id;
+```{literalinclude} snippets/python-imaplib-suppression-des-doublons.php
+    :lines: 2-
+    :dedent:
+    :language: php
 ```
 ````
 

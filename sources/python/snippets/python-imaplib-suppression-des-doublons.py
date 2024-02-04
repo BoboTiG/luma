@@ -122,3 +122,10 @@ if __name__ == "__main__":
         exit(1)
 
     exit(main(sys.argv[1], sys.argv[2]))
+
+
+def msg_id() -> None:
+    """
+    >>> from email.utils import make_msgid
+    >>> msg["Message-ID"] = make_msgid()
+    """
