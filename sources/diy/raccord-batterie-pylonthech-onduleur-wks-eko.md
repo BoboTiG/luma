@@ -24,6 +24,10 @@ Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS*
   :align: center
 ```
 
+```{todo}
+Fournir une image adaptée au thème sombre.
+```
+
 ### Côté Batterie
 
 Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que 2 pins : les n° 7 (blanc-marron) et 8 (marron) :
@@ -34,6 +38,10 @@ Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS
 
 ```{hint}
 De ce côté-là, il est possible de laisser un câble RJ45 d'origine avec les 8 pins.
+```
+
+```{todo}
+Fournir une image adaptée au thème sombre.
 ```
 
 ---
