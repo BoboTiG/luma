@@ -18,8 +18,8 @@ Ce morceau de code supprimera tous les tags datant de plus de 21 jours.
 
 ## 🎣 Sources
 
-- [https://stackoverflow.com/questions/48629441/remove-remote-git-tags-older-than-x-months/48669841#48669841](https://stackoverflow.com/a/48669841/1117028)
-- [https://stackoverflow.com/questions/4946785/how-to-find-the-difference-in-days-between-two-dates/6948865#6948865](https://stackoverflow.com/a/6948865/1117028)
+- [Remove remote git tags older than X months](https://stackoverflow.com/a/48669841/1117028)
+- [How to find the difference in days between two dates?](https://stackoverflow.com/a/6948865/1117028)
 
 ## 📜 Historique
 

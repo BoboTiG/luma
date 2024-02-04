@@ -1,4 +1,4 @@
-personal_ws-1.1 fr 209 
+personal_ws-1.1 fr 227 
 AVAX
 Aborted
 Add
@@ -40,6 +40,7 @@ Gogs
 HDMI
 HTTP
 Host
+How
 ICUSB
 IMAP
 IP
@@ -86,6 +87,7 @@ RS
 Rabby
 Raspberry
 Raspbian
+Remove
 Rpi
 SFTP
 SSH
@@ -115,6 +117,7 @@ WKS
 WSS
 Wattuneed
 WebSocket
+What's
 Wi-Fi
 Windows
 Working
@@ -125,25 +128,31 @@ account-pwd.txt
 area
 batch
 battery
+between
 blacklist
 blanc-marron
 blockchain
 blog
+by
 cliquer
 cliquez
 configurateur
 copiez-le
 cronjob
+days
 debug
 deploy
 deploy.yml
 dev
+difference
 double-cliquez
 débogage
 email
 error
+example
 failed
 favicon
+find
 fork
 frame
 framework
@@ -154,6 +163,7 @@ git
 hash
 htdocs
 identifiants
+imaplib
 infos
 inverter
 key
@@ -170,9 +180,11 @@ luma
 magnet
 master
 mod
+months
 node
 now
 obj
+older
 onduleur
 photo-voltaïque
 photo-voltaïques
@@ -182,6 +194,7 @@ py
 pyserial
 python-wks-com
 quality
+remote
 routeur
 shell
 size
@@ -194,9 +207,13 @@ stream
 sup
 tags
 teacher
+than
+the
 thereum
+to
 tokens
 tricks
+two
 téléchargeons
 télécharger
 vCPU
@@ -204,6 +221,7 @@ validator
 verification
 web
 window
+with
 work
 worker
 workflow

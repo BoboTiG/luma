@@ -125,7 +125,7 @@ Il n'y a pas de commande "MOVE", if faut donc faire une copie puis supprimer :
 
 ## 🎣 Sources
 
-- [https://yuji.wordpress.com/2011/06/22/python-imaplib-imap-example-with-gmail](https://yuji.wordpress.com/2011/06/22/python-imaplib-imap-example-with-gmail/)
+- [Python — imaplib IMAP example with Gmail](https://yuji.wordpress.com/2011/06/22/python-imaplib-imap-example-with-gmail/)
 
 ## 📜 Historique
 

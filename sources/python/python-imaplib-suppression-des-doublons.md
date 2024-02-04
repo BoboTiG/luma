@@ -89,7 +89,7 @@ $headers[] = 'Message-ID: '.$msg_id;
 
 ## 🎣 Sources
 
-- [https://stackoverflow.com/questions/14483861/whats-the-issue-with-message-id-in-email-sent-by-php](https://stackoverflow.com/questions/14483861/whats-the-issue-with-message-id-in-email-sent-by-php)
+- [What's the issue with `Message-Id` in email sent by PHP?](https://stackoverflow.com/q/14483861/1117028)
 
 ## 📜 Historique
 
