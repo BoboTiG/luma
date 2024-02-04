@@ -1,6 +1,9 @@
 :layout: landing
 :description: Base de connaissances du luma.
 
+Base de Connaissances du Luma
+=============================
+
 .. figure:: _static/logo.svg
     :width: 340
     :height: 96
