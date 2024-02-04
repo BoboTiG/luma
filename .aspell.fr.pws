@@ -1,4 +1,4 @@
-personal_ws-1.1 fr 196 
+personal_ws-1.1 fr 209 
 AVAX
 Aborted
 Add
@@ -30,6 +30,7 @@ Frame
 GB
 GJ
 GPU
+Gandi
 Geth
 Gio
 Git
@@ -38,6 +39,7 @@ Gmail
 Gogs
 HDMI
 HTTP
+Host
 ICUSB
 IMAP
 IP
@@ -85,6 +87,7 @@ Rabby
 Raspberry
 Raspbian
 Rpi
+SFTP
 SSH
 SVG
 Server
@@ -115,6 +118,7 @@ WebSocket
 Wi-Fi
 Windows
 Working
+YAML
 ZIP
 Zsh
 account-pwd.txt
@@ -131,10 +135,14 @@ configurateur
 copiez-le
 cronjob
 debug
+deploy
+deploy.yml
 dev
 double-cliquez
 débogage
 email
+error
+failed
 favicon
 fork
 frame
@@ -142,17 +150,20 @@ framework
 from
 func
 genesis
+git
 hash
 htdocs
 identifiants
 infos
 inverter
+key
 keystore
 l'URL
 l'Utilisateur
 l'audio
 l'onduleur
 learn
+lftp
 libpng
 logs
 luma
@@ -190,8 +201,10 @@ téléchargeons
 télécharger
 vCPU
 validator
+verification
 web
 window
 work
 worker
+workflow
 xxx

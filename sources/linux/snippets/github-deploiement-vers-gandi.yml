@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: sudo apt install -y lftp
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.SFTP_URL }} >> ~/.ssh/known_hosts
+
+      - name: Automation
+        run: |
+          lftp \
+            -e 'mirror --delete --transfer-all --reverse --verbose=1 ./FOLDER ${{ secrets.SFTP_PATH }} ; quit' \
+            -u '${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }}' \
+            'sftp://${{ secrets.SFTP_URL }}'

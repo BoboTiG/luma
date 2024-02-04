@@ -42,10 +42,20 @@ check_spelling_files() {
     check_spelling_file 'README.md'
 }
 
+check_yaml_file() {
+    yamllint -d relaxed "${1}"
+}
+
+check_yaml_files() {
+    check_yaml_file "${FOLDER}"
+    check_yaml_file '.github'
+}
+
 main() {
     check_python_files
     check_shell_files
     check_markdown_files
+    check_yaml_files
     check_spelling_files
 }
 
