@@ -1,5 +1,11 @@
 :layout: landing
-:description: Base de connaissances / Knowledge base.
+:description: Base de connaissances du luma.
+
+.. figure:: _static/logo.svg
+    :width: 340
+    :height: 96
+    :alt: Logo
+    :align: center
 
 .. toctree::
     :caption: 👾 Blockchain
