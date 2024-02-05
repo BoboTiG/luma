@@ -123,7 +123,7 @@ Ensuite, lancez cette commande pour  (ou réinitialiser) le nœud :
 Démarrez le nœud (pensez à adapter l'adresse publique du compte) :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 20-35
+    :lines: 20-34
     :emphasize-lines: 12-13,15
     :language: shell
 ```
