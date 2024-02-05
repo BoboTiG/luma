@@ -10,6 +10,11 @@ main.sy-main {
     width: 100%;
 }
 
+section#base-de-connaissances-du-luma h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
 .sphinx-contributors img {
     border-radius: 50%;
     margin-bottom: 1em;

@@ -1,8 +1,8 @@
 :layout: landing
 :description: Base de connaissances du luma.
 
-Base de Connaissances du Luma
-=============================
+Base de Connaissances du `Luma`_
+================================
 
 .. figure:: _static/logo.svg
     :width: 340
@@ -47,3 +47,5 @@ Base de Connaissances du Luma
 .. contributors:: BoboTiG/luma
     :avatars:
     :exclude: dependabot[bot]
+
+.. _Luma: https://fr.wiktionary.org/wiki/luma
