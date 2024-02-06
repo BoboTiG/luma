@@ -111,7 +111,7 @@ Plusieurs solutions s'offrent à nous :
 
 2016-11-19
 : Suppression de l'argument `--loop` (convient pour les fichiers, pas les flux).
-: Ajout de l'[exemple D-Link DCS-2210](#d-link-dcs-2210).
+: Ajout de l'exemple [D-Link DCS-2210](#d-link-dcs-2210).
 
 2016-06-23
 : Utilisation de l'argument `--aidx`.
