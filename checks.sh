@@ -32,7 +32,11 @@ check_markdown_files() {
 
 check_spelling_file() {
     # Requires the `aspell-fr` package to be installed
-    aspell --home-dir='.' --mode='markdown' --lang='fr' --dont-backup check "${1}"
+    if [ "${CI:-false}" = "true" ]; then
+        aspell --home-dir='.' --mode='markdown' --lang='fr' --dont-backup list < "${1}"
+    else
+        aspell --home-dir='.' --mode='markdown' --lang='fr' --dont-backup check "${1}"
+    fi
 }
 
 check_spelling_files() {
