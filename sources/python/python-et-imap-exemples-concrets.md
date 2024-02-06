@@ -1,4 +1,4 @@
-# Python et IMAP : exemples concrets
+# Python et IMAP : Exemples concrets
 
 Commençons par nous connecter à la boîte de messagerie :
 
