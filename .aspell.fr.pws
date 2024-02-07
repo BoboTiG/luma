@@ -1,4 +1,4 @@
-personal_ws-1.1 fr 227 
+personal_ws-1.1 fr 239 
 AVAX
 Aborted
 Add
@@ -14,6 +14,7 @@ Circle
 Contabo
 Cores
 Crontab.guru
+Cygwin
 D-Link
 DB
 DCS
@@ -48,6 +49,7 @@ Imports
 JPEG
 Joe
 Keep
+L'implémentation
 Left.svg
 Lighttpd
 Linux
@@ -87,6 +89,7 @@ RS
 Rabby
 Raspberry
 Raspbian
+ReactOS
 Remove
 Rpi
 SFTP
@@ -97,6 +100,7 @@ Setup
 Shaarli
 Shibuya
 Symbol
+System
 SystemRescueCD
 TIA
 TTY
@@ -139,11 +143,14 @@ cliquez
 configurateur
 copiez-le
 cronjob
+d'Intervalle
 days
 debug
 deploy
 deploy.yml
 dev
+diff
+diff.c
 difference
 double-cliquez
 débogage
@@ -181,6 +188,7 @@ magnet
 master
 mod
 months
+méta-données
 node
 now
 obj
@@ -188,16 +196,20 @@ older
 onduleur
 photo-voltaïque
 photo-voltaïques
+ping.c
+pinger
 plugins
 présélectionnée
 py
 pyserial
 python-wks-com
 quality
+reactos
 remote
 routeur
 shell
 size
+sleep
 smallHash
 smartphones
 stake
