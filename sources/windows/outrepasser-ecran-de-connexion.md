@@ -15,21 +15,21 @@ Ensuite, montez la partition qui contient Windows.
 
 Pour lister les différentes partitions :
 
-```{literalinclude} snippets/windows-outrepasser-ecran-de-connexion.sh
+```{literalinclude} snippets/outrepasser-ecran-de-connexion.sh
     :lines: 3
     :language: shell
 ```
 
 Monter la bonne partition :
 
-```{literalinclude} snippets/windows-outrepasser-ecran-de-connexion.sh
+```{literalinclude} snippets/outrepasser-ecran-de-connexion.sh
     :lines: 5
     :language: shell
 ```
 
 ### Substituer `Utilman.exe`
 
-```{literalinclude} snippets/windows-outrepasser-ecran-de-connexion.sh
+```{literalinclude} snippets/outrepasser-ecran-de-connexion.sh
  :lines: 7-9
     :language: shell
 ```
@@ -44,14 +44,14 @@ Voilà, vous avez **un accès privilégié à l'invite de commande** !
 
 Vous voilà dans l'invite de commande. Voici les commandes pour créer un nouvel utilisateur, disons Bob :
 
-```{literalinclude} snippets/windows-outrepasser-ecran-de-connexion.bat
+```{literalinclude} snippets/outrepasser-ecran-de-connexion.bat
     :lines: 3-6
     :language: batch
 ```
 
 Vous pouvez assigner Bob au groupe *administrateurs* :
 
-```{literalinclude} snippets/windows-outrepasser-ecran-de-connexion.bat
+```{literalinclude} snippets/outrepasser-ecran-de-connexion.bat
     :lines: 8-9
     :language: batch
 ```
@@ -63,7 +63,7 @@ Il ne reste plus qu'à vous connecter à l'aide de l'identifiant Bob.
 ## 📜 Historique
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2015/08/19/12/04/21-windows-outrepasser-lecran-de-connexion).
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2015/08/19/12/04/21-outrepasser-lecran-de-connexion).
 
 2015-08-19
 : Premier jet.

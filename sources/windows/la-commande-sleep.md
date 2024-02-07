@@ -8,7 +8,7 @@
 
 Windows est livré avec une commande qui s'appelle `timeout`, située dans le dossier "C:\Windows\System32", et qui pourrait faire l'affaire. Par exemple, pour faire une pause de 5 secondes :
 
-```{literalinclude} snippets/la-commande-sleep-pour-windows.bat
+```{literalinclude} snippets/la-commande-sleep.bat
     :lines: 3
     :language: batch
 ```
@@ -24,7 +24,7 @@ Ce problème arrive lorsque Cygwin est installé. Dans ce cas, il s'agira de l'e
 
 Un correctif possible est d'utiliser le chemin complet de l'exécutable :
 
-```{literalinclude} snippets/la-commande-sleep-pour-windows.bat
+```{literalinclude} snippets/la-commande-sleep.bat
     :lines: 4
     :language: batch
 ```
@@ -35,7 +35,7 @@ Un correctif possible est d'utiliser le chemin complet de l'exécutable :
 
 Il existe une alternative universelle : `ping`. C'est une astuce vieille comme Windows, mais qu'il fallait connaître :
 
-```{literalinclude} snippets/la-commande-sleep-pour-windows.bat
+```{literalinclude} snippets/la-commande-sleep.bat
     :lines: 6
     :language: batch
 ```
@@ -47,7 +47,7 @@ Comme `ping` utilise un [intervalle de 1 seconde](seconde-d-intervalle) entre ch
 
 L'implémentation de [ReactOS](https://reactos.org) permet de le vérifier :
 
-```{literalinclude} snippets/la-commande-sleep-pour-windows.c
+```{literalinclude} snippets/la-commande-sleep.c
     :caption: ping.c
     :language: c
 ```
@@ -61,7 +61,7 @@ L'implémentation de [ReactOS](https://reactos.org) permet de le vérifier :
 ## 📜 Historique
 
 2024-02-07
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2019/10/17/16/53/57-la-commande-sleep-pour-windows).
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2019/10/17/16/53/57-la-commande-sleep).
 
 2020-08-08
 : Premier jet.

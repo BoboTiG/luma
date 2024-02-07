@@ -13,7 +13,7 @@ Voici ce qu'il fait :
 
 Pensez à adapter la partition à la ligne spécifiant `set new_folder=...` (ici `D:`).
 
-```{literalinclude} snippets/windows-deplacer-le-dossier-personnel-vers-une-partition-dediee.bat
+```{literalinclude} snippets/deplacer-le-dossier-personnel-vers-une-partition-dediee.bat
     :caption: move-current-user-folder.bat
     :emphasize-lines: 4
     :language: batch
@@ -44,7 +44,7 @@ Windows 11
 ## 📜 Historique
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2015/03/06/10/49/14-windows-deplacer-le-dossier-personnel-vers-une-partition-dediee).
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2015/03/06/10/49/14-deplacer-le-dossier-personnel-vers-une-partition-dediee).
 
 2015-03-06
 : Premier jet.
