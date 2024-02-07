@@ -1,8 +1,9 @@
-personal_ws-1.1 fr 241 
+personal_ws-1.1 fr 254 
 AVAX
 Aborted
 Add
 Android
+Author
 BL
 BMS
 BoboTiG
@@ -13,6 +14,8 @@ ChainID
 Circle
 Contabo
 Cores
+CreationDate
+Creator
 Crontab.guru
 Cygwin
 D-Link
@@ -34,6 +37,7 @@ GJ
 GPU
 Gandi
 Geth
+GhostScript
 Gio
 Git
 GitHub
@@ -50,6 +54,7 @@ Imports
 JPEG
 Joe
 Keep
+Keywords
 L'implémentation
 Left.svg
 Lighttpd
@@ -61,6 +66,7 @@ MPEG
 Mainnet
 MesloLGS
 Metamask
+ModDate
 Monaspace
 My
 NF
@@ -74,12 +80,14 @@ Online
 OpenClipart
 PC
 PDF
+PDFtk
 PHP
 PNG
 PS
 Pi-hole
 Powerlevel
 Private
+Producer
 Pré-requis
 Prérequis
 Pylontech
@@ -91,6 +99,8 @@ Rabby
 Raspberry
 Raspbian
 ReactOS
+Redimensionner
+Redimensionnons
 Remove
 Rpi
 SFTP
@@ -100,12 +110,15 @@ Server
 Setup
 Shaarli
 Shibuya
+Subject
 Symbol
 System
 SystemRescueCD
 TIA
 TTY
+Title
 Trader
+Trapped
 Téléchargement
 URL
 USB
