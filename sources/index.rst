@@ -40,12 +40,16 @@ Base de Connaissances du `Luma`_
 
     python/*
 
------
 
-💖 **Contributeurs** & **Contributrices**
+.. raw:: html
+
+    <div class="toctree-wrapper compound">
+        <p class="caption" role="heading"><span class="caption-text">💖 Contributeurs & Contributrices</span></p>
+    </div>
 
 .. contributors:: BoboTiG/luma
     :avatars:
     :exclude: dependabot[bot]
+
 
 .. _Luma: https://fr.wiktionary.org/wiki/luma
