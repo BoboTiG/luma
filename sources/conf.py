@@ -23,7 +23,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     # "sphinx_design",
-    # "sphinx_tabs.tabs",
+    "sphinx_tabs.tabs",
     "sphinx_togglebutton",
 ]
 myst_enable_extensions = [
