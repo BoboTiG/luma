@@ -42,7 +42,7 @@ Base de Connaissances du `Luma`_
 
 -----
 
-💖 **Contributeurs**
+💖 **Contributeurs** & **Contributrices**
 
 .. contributors:: BoboTiG/luma
     :avatars:
