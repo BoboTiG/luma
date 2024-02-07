@@ -1,9 +1,9 @@
-# Zelda : Ocarina of Time
+# The Legend of Zelda : Ocarina of Time
 
 ```{figure} images/the-legend-of-zelda-ocarina-of-time.svg
  :width: 500
   :height: 240
-  :alt: The Legend of Zelda Ocarina of Time
+  :alt: The Legend of Zelda - Ocarina of Time
   :align: center
 ```
 
@@ -27,7 +27,7 @@
 - [ ] Ecaille d'or (adulte) : Lac Hylia, pêcher un poiscaille de 19 livres
 - [ ] Renforcer l'endurance (Gantelets d'or) : Fontaine Royale des Fées au Château de Ganon
 - [ ] ! 50 flèches (adulte, Epona) : Forteresse Gerudo : faire un scrore de 1500 au stand d'archerie montée
-- [ ] Epée de Biggoron : finir la quête de l'épée
+- [ ] Epée de Biggoron : finir la [quête de l'épée](#epee-de-biggoron)
 
 ---
 
