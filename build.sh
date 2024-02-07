@@ -4,6 +4,8 @@ SRC_DIR='sources'
 DST_DIR='luma'
 
 dev_live() {
+    [ -d '_live' ] && /bin/rm -rv '_live'
+
     sphinx-autobuild \
         --host '0.0.0.0' \
         --open-browser \
@@ -40,4 +42,8 @@ build_blog() {
     python minify.py
 }
 
-[ "${1}" == 'live' ] && dev_live || build_blog
+if [ "${1}" == 'live' ]; then
+    dev_live
+else
+    build_blog
+fi

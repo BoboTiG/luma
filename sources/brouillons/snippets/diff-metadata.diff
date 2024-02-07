@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index 320d951..644d2b7 100644
+--- a/setup.py
++++ b/setup.py
+@@ -71,6 +71,7 @@ if is_macos or os.getenv("FORCE_MACOS_MACHINE", "0") == "1":
+                 "-Wno-newline-eof",
+                 # required w/Xcode 5.1+ and above because of '-mno-fused-madd'
+                 "-Wno-error=unused-command-line-argument",
++                "-mmacosx-version-min=10.13",
+             ],
+         ),
+     ]

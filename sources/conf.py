@@ -71,3 +71,7 @@ html_context = {
     "source_docs_path": "/sources/",
     "source_version": "main",
 }
+
+# Do not include drafts when deploying to production
+if sys.argv[0].endswith("sphinx-build"):
+    exclude_patterns = ["brouillons/**"]

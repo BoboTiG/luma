@@ -11,6 +11,12 @@ Base de Connaissances du `Luma`_
     :align: center
 
 .. toctree::
+    :caption: 🚧 Brouillons
+    :glob:
+
+    brouillons/*
+
+.. toctree::
     :caption: 👾 Blockchain
     :glob:
 
