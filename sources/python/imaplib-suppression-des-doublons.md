@@ -6,7 +6,7 @@ Commençons par nous connecter à la boîte de messagerie :
 Supprimer les commentaires `type: ignore[...]` et corriger/retester le code.
 ```
 
-```{literalinclude} snippets/python-imaplib-suppression-des-doublons.py
+```{literalinclude} snippets/imaplib-suppression-des-doublons.py
     :caption: imap-delete-duplicate.py
     :lines: 1-124
     :language: python
@@ -71,7 +71,7 @@ Re&AOc-us
 ````{note}
 Pour ajouter le bon Message-ID aux courriels envoyés par les functions du module {py:mod}`smtplib` de Python :
 
-```{literalinclude} snippets/python-imaplib-suppression-des-doublons.py
+```{literalinclude} snippets/imaplib-suppression-des-doublons.py
     :lines: 129-130
     :dedent:
     :language: python
@@ -81,7 +81,7 @@ Pour ajouter le bon Message-ID aux courriels envoyés par les functions du modul
 ````{note}
 Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`](https://www.php.net/manual/function.mail.php) de PHP :
 
-```{literalinclude} snippets/python-imaplib-suppression-des-doublons.php
+```{literalinclude} snippets/imaplib-suppression-des-doublons.php
     :lines: 2-
     :dedent:
     :language: php
@@ -97,7 +97,7 @@ Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`]
 ## 📜 Historique
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/02/05/18/00/41-python-imaplib-suppression-des-doublons).
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/02/05/18/00/41-imaplib-suppression-des-doublons).
 
 2016-02-08
 : Optimisation et correction, certains dossiers sont inaccessibles ("[Gmail]" par exemple).

@@ -2,7 +2,7 @@
 
 Commençons par nous connecter à la boîte de messagerie :
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
     :lines: 2-21
     :language: python
 ```
@@ -13,7 +13,7 @@ Commençons par nous connecter à la boîte de messagerie :
 
 Nous allons maintenant récupérer les identifiants des messages non lus. Pour faire les choses correctement, nous utiliserons la commande {py:func}`imaplib.IMAP4.uid` qui fonctionne avec des identifiants uniques pour chaque message.
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
     :lines: 23-25
     :language: python
 ```
@@ -22,7 +22,7 @@ Nous allons maintenant récupérer les identifiants des messages non lus. Pour f
 
 Pour finir, avec ces identifiants, téléchargeons le contenu des messages :
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
     :lines: 27-30
     :language: python
 ```
@@ -37,77 +37,77 @@ Du moment que la commande {py:func}`imaplib.IMAP4.fetch` est utilisée, le messa
 
 ### Marquer un message comme lu
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 32
     :language: python
 ```
 
 ### Marquer plusieurs messages comme lus
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 34
     :language: python
 ```
 
 ### Marquer un message comme non lu
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 36
     :language: python
 ```
 
 ### Récupérer les messages non lus et ayant un sujet particulier
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 38-40
     :language: python
 ```
 
 ### Récupérer les messages d'un certain émetteur
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 42-44
     :language: python
 ```
 
 ### Récupérer les messages pour un certain destinataire
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 46-48
     :language: python
 ```
 
 ### Récupérer les messages d'un certain émetteur pour un certain destinataire
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 50-52
     :language: python
 ```
 
 ### Récupérer les messages à partir d'une certaine date et ayant un sujet particulier
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 1,53-59
     :language: python
 ```
 
 ### Gmail : récupérer les messages contenant une pièce jointe
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 61-63
     :language: python
 ```
 
 ### Supprimer un ou plusieurs messages
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 65-66
     :language: python
 ```
 
 ### Copier un ou plusieurs messages
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
  :lines: 68-69
     :language: python
 ```
@@ -116,7 +116,7 @@ Du moment que la commande {py:func}`imaplib.IMAP4.fetch` est utilisée, le messa
 
 Il n'y a pas de commande "MOVE", if faut donc faire une copie puis supprimer :
 
-```{literalinclude} snippets/python-et-imap-exemples-concrets.py
+```{literalinclude} snippets/imap-exemples-concrets.py
     :lines: 68-69,65-66
     :language: python
 ```
@@ -130,7 +130,7 @@ Il n'y a pas de commande "MOVE", if faut donc faire une copie puis supprimer :
 ## 📜 Historique
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/01/21/16/35/09-python-et-imap-exemple-concret).
+: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/01/21/16/35/09-imap-exemple-concret).
 
 2018-09-23
 : Ajout de l'exemple [Supprimer un ou plusieurs messages](#supprimer-un-ou-plusieurs-messages).

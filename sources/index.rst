@@ -17,6 +17,12 @@ Base de Connaissances du `Luma`_
     blockchain/*
 
 .. toctree::
+    :caption: 🐛 Développement
+    :glob:
+
+    dev/*
+
+.. toctree::
     :caption: 🧰 Do It Yourself
     :glob:
 
