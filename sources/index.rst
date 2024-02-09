@@ -35,17 +35,16 @@ Base de Connaissances du `Luma`_
     diy/*
 
 .. toctree::
-    :caption: 🎮 Jeux-vidéos
-    :glob:
-
-    jeux/*
-
-
-.. toctree::
     :caption: 🐧 GNU/Linux
     :glob:
 
     linux/*
+
+.. toctree::
+    :caption: 🎮 Jeux-vidéos
+    :glob:
+
+    jeux/*
 
 .. toctree::
     :caption: 🪟 Microsoft Windows
