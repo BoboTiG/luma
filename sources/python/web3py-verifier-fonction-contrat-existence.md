@@ -4,7 +4,7 @@ Fonction qui renverra `True` si une fonction donnée est présente dans un contr
 
 ```{literalinclude} snippets/web3py-verifier-fonction-contrat-existence.py
     :lines: 1-11
-    :emphazise-lines: 4
+    :emphasize-lines: 4
     :language: python
 ```
 
