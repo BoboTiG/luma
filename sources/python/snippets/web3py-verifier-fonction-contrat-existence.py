@@ -1,7 +1,7 @@
 from eth_hash.auto import keccak
 from web3 import HTTPProvider, Web3
 
-W3 = Web3(HTTPProvider("<RPC_URL>"))
+W3 = Web3(HTTPProvider("RPC_URL"))
 
 
 def has_function(contract_addr: str, signature: str) -> bool:
