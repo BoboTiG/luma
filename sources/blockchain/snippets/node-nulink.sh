@@ -11,7 +11,7 @@ wget "https://gethstore.blob.core.windows.net/builds/${GETH_FOLDER}.tar.gz" \
 ./geth account new --keystore ./keystore \
     && echo 'OK'
 
-scp keystore/UTC--* root@ADRESSE_IP:/root \
+scp keystore/UTC--* nulink:/root \
     && echo 'OK'
 
 apt update \
@@ -64,7 +64,7 @@ docker run -it --rm \
     --max-gas-price 10000000000 \
     && echo 'OK'
 
-scp root@ADRESSE_IP:'/root/nulink/keystore/*' . \
+scp nulink:'/root/nulink/keystore/*' . \
     && echo 'OK'
 
 docker run --restart on-failure -d \
@@ -81,3 +81,12 @@ docker stop ursula \
     && docker rm ursula \
     && docker pull nulink/nulink:latest \
     && echo 'OK'
+
+cat << EOF >> ~/.ssh/config
+Host nulink
+    User root
+    HostName ADDRESSE_IP
+    Port 22
+EOF
+
+docker logs -f ursula

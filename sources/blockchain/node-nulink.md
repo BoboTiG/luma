@@ -120,23 +120,63 @@ Si tu décides d'utiliser un autre fournisseur, voire un ordinateur local, voici
 - 200 GB NVMe
 - Debian 12
 
-Quand tu auras reçu le 2{sup}`nd` email avec l'adresse IP du serveur, envoie le fichier de la clef privée (remplace `ADRESSE_IP` par l'adresse IP du serveur) :
+### Configuration SSH
+
+Quand tu auras pris connaissance de l'adresse IP du serveur, configure l'accès SSH sur ta machine (remplace `ADRESSE_IP` par l'adresse IP du serveur) :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: 🖥️ Ordinateur (PC) ✍️
-    :lines: 14-16
+    :lines: 85-90
     :language: shell
-    :emphasize-lines: 1
+    :emphasize-lines: 4
 ```
 
-### Connexion
+Maintenant, quand tu devras communiquer avec, ou te connecter, au serveur, tu n'auras qu'à utiliser `nulink` au lieu de saisir l'adresse IP à chaque fois.
 
-Connecte toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo  et remplace `ADRESSE_IP` par l'adresse IP du serveur) :
+````{admonition} Commandes avant/après
+    :class: dropdown
+    :type: hint
+
+Avant :
 
 ```{code-block} shell
     :caption: 🖥️ Ordinateur (PC) ✍️
 
 ssh root@ADRESSE_IP
+scp root@ADRESSE_IP:PATH/TO/FILE FILE
+scp FILE root@ADRESSE_IP:PATH/TO/FILE
+```
+
+Dorénavant :
+
+```{code-block} shell
+    :caption: 🖥️ Ordinateur (PC)
+
+ssh nulink
+scp nulink:PATH/TO/FILE FILE
+scp FILE nulink:PATH/TO/FILE
+```
+
+````
+
+### Sauvegarde la Clef Privée
+
+Envoie le fichier de la clef privée depuis ton ordinateur vers le serveur :
+
+```{literalinclude} snippets/node-nulink.sh
+    :caption: 🖥️ Ordinateur (PC)
+    :lines: 14-16
+    :language: shell
+```
+
+### Connexion
+
+Connecte toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo) :
+
+```{code-block} shell
+    :caption: 🖥️ Ordinateur (PC)
+
+ssh nulink
 ```
 
 ---
@@ -197,7 +237,7 @@ Enfin, installe NuLink :
 
 ### Configuration
 
-```{tip}
+```{warning}
 Envoie maintenant un peu de tBNB sur le compte du *worker*.
 ```
 
@@ -223,7 +263,7 @@ Tu dois te déconnecter pour prendre en compte les changements :
 exit
 ```
 
-Reconnecte toi, et teste que les mots de passe sont visibles (tu devrais voir 3 lignes avec les 2 mots de passes et "OK") :
+[Reconnecte toi](#connexion), et teste que les mots de passe sont visibles (tu devrais voir 3 lignes avec les 2 mots de passes et "OK") :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
@@ -244,13 +284,12 @@ Initialise NuLink (remplace `FICHIER_CLEF_PRIVEE` par le nom du fichier contenan
 Garde bien les informations en sécurité (les douze mots de la *seed phrase* et le fichier contenant la clef privée).
 ```
 
-Depuis ton PC, récupère une copie de la clef privée (remplace `ADRESSE_IP` par l'adresse IP du serveur) :
+Depuis ton PC, récupère une copie de la clef privée :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: 🖥️ Ordinateur (PC) ✍️
+    :caption: 🖥️ Ordinateur (PC)
     :lines: 67-69
     :language: shell
-    :emphasize-lines: 1
 ```
 
 ---
@@ -269,10 +308,10 @@ Et c'est parti, démarre le nœud :
 
 Pour suivre ce qu'il se passe sur le nœud :
 
-```{code-block} shell
+```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
-
-docker logs -f ursula
+    :lines: 92
+    :language: shell
 ```
 
 Si tu vois « *Working ~ Keep Ursula Online!* » et/ou « *learn_from_teacher_node stop now RELAX.* », ça veut dire que tout fonctionne nickel. Félicitations !
@@ -283,7 +322,7 @@ Si tu vois « *Working ~ Keep Ursula Online!* » et/ou « *learn_from_teacher_no
 
 Ceci est à effectuer seulement lors d'une [mise à jour du conteneur](https://hub.docker.com/r/nulink/nulink/tags).
 
-Action à faire dans l'ordre :
+Action à faire dans l'ordre sur le serveur :
 
 1. [mets à jour le système](#mise-a-jour) ;
 2. supprime le conteneur actuel, puis installe la dernière version :
@@ -308,7 +347,8 @@ Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et
 ## 📜 Historique
 
 2024-02-10
-: Mise à jour de l'adresse NLKTest (`0xa22bfb00be8938c50833bfd2444ec721a9eeacc1` → `0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9`)
+: [Simplification](#configuration-ssh) des étapes nécessitant SSH.
+: Mise à jour de l'adresse du token NLKTest (`0xa22bfb00be8938c50833bfd2444ec721a9eeacc1` → `0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9`)
 
 2024-01-27
 : Premier jet.
