@@ -22,7 +22,7 @@
 
 Ce guide est une traduction libre et simplifiée de la [documentation officielle](https://docs.nulink.org/products/stakers/nulink_worker/) pour le déploiement d'un nœud NuLink, plus communément appelé *node validator*, *worker node* ou encore *staker node*.
 
-Configuration minimale requise :
+## Configuration Requise
 
 - système d'exploitation : **Debian** GNU/Linux
 - architecture : x86-64
@@ -33,7 +33,7 @@ Configuration minimale requise :
 
 À savoir, il te faudra 2 comptes :
 1. un compte *staker* qui *stake* ses [NLK](https://testnet.bscscan.com/token/0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9), n'importe quel compte Metamask ou Rabby fait l'affaire ;
-2. un compte *worker* qui sera lié au compte *staker* (on parle de *bond* en anglais), et nous allons voir tout de suite comment le générer.
+2. un compte *worker* qui sera lié au compte *staker* (on parle de *bond* en anglais), et nous verrons comment le créer par la suite.
 
 ---
 
@@ -263,7 +263,7 @@ Tu dois te déconnecter pour prendre en compte les changements :
 exit
 ```
 
-[Reconnecte toi](#connexion), et teste que les mots de passe sont visibles (tu devrais voir 3 lignes avec les 2 mots de passes et "OK") :
+[Reconnecte toi](#connexion), et teste que les mots de passe sont visibles (tu devrais voir 3 lignes avec les 2 mots de passe et "OK") :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
@@ -348,7 +348,7 @@ Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et
 
 2024-02-10
 : [Simplification](#configuration-ssh) des étapes nécessitant SSH.
-: Mise à jour de l'adresse du token NLKTest (`0xa22bfb00be8938c50833bfd2444ec721a9eeacc1` → `0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9`)
+: Mise à jour de l'adresse du token NLKTest (`0xa22bfb00be8938c50833bfd2444ec721a9eeacc1` → `0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9`) suite à la migration de la phase 1 aux phases 2 & 3.
 
 2024-01-27
 : Premier jet.
