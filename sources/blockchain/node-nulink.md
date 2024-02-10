@@ -129,7 +129,9 @@ Quand tu auras reçu le 2{sup}`nd` email avec l'adresse IP du serveur, envoie le
     :emphasize-lines: 1
 ```
 
-Puis connecte toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo  et remplace `ADRESSE_IP` par l'adresse IP du serveur) :
+### Connexion
+
+Connecte toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo  et remplace `ADRESSE_IP` par l'adresse IP du serveur) :
 
 ```{code-block} shell
     :caption: 🖥️ Ordinateur (PC) ✍️
@@ -141,6 +143,8 @@ ssh root@ADRESSE_IP
 
 ### Installation
 
+#### Mise à Jour
+
 Mets à jour le système d'exploitation :
 
 ```{literalinclude} snippets/node-nulink.sh
@@ -148,6 +152,8 @@ Mets à jour le système d'exploitation :
     :lines: 17-20
     :language: shell
 ```
+
+#### Pare-feu
 
 Installe le pare-feu, puis redémarre :
 
@@ -157,13 +163,19 @@ Installe le pare-feu, puis redémarre :
     :language: shell
 ```
 
-Patiente quelques secondes, reconnecte toi, puis installe Docker :
+Patiente quelques secondes et [reconnecte toi](#connexion) au serveur.
+
+#### Docker
+
+Installe Docker :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
     :lines: 27-34
     :language: shell
 ```
+
+#### NuLink
 
 Pré-requis pour la prochaine étape :
 
@@ -253,7 +265,9 @@ Et c'est parti, démarre le nœud :
     :language: shell
 ```
 
-Pour voir les logs :
+#### Logs
+
+Pour suivre ce qu'il se passe sur le nœud :
 
 ```{code-block} shell
     :caption: ☁️ Serveur (VPS)
@@ -269,7 +283,10 @@ Si tu vois « *Working ~ Keep Ursula Online!* » et/ou « *learn_from_teacher_no
 
 Ceci est à effectuer seulement lors d'une [mise à jour du conteneur](https://hub.docker.com/r/nulink/nulink/tags).
 
-D'abord, supprime le conteneur actuel, puis installe la dernière version :
+Action à faire dans l'ordre :
+
+1. [mets à jour le système](#mise-a-jour) ;
+2. supprime le conteneur actuel, puis installe la dernière version :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
@@ -277,7 +294,7 @@ D'abord, supprime le conteneur actuel, puis installe la dernière version :
     :language: shell
 ```
 
-Enfin, relance le [nœud](#execution).
+1. enfin, relance le [nœud](#execution).
 
 ---
 
