@@ -32,7 +32,7 @@ Configuration minimale requise :
 - le port 9951 ouvert.
 
 À savoir, il te faudra 2 comptes :
-1. un compte *staker* qui *stake* ses [NLK](https://testnet.bscscan.com/token/0xa22bfb00be8938c50833bfd2444ec721a9eeacc1), n'importe quel compte Metamask ou Rabby fait l'affaire ;
+1. un compte *staker* qui *stake* ses [NLK](https://testnet.bscscan.com/token/0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9), n'importe quel compte Metamask ou Rabby fait l'affaire ;
 2. un compte *worker* qui sera lié au compte *staker* (on parle de *bond* en anglais), et nous allons voir tout de suite comment le générer.
 
 ---
@@ -289,6 +289,9 @@ Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et
 ---
 
 ## 📜 Historique
+
+2024-02-10
+: Mise à jour de l'adresse NLKTest (`0xa22bfb00be8938c50833bfd2444ec721a9eeacc1` → `0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9`)
 
 2024-01-27
 : Premier jet.
