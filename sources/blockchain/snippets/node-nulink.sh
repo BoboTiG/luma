@@ -22,6 +22,7 @@ apt update \
 apt install -y ufw \
     && ufw allow ssh \
     && ufw allow 9151/tcp \
+    && ufw enable \
     && reboot
 
 curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc \

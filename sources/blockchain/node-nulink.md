@@ -159,7 +159,7 @@ Installe le pare-feu, puis redémarre :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 22-25
+    :lines: 22-26
     :language: shell
 ```
 
@@ -171,7 +171,7 @@ Installe Docker :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 27-34
+    :lines: 28-35
     :language: shell
 ```
 
@@ -181,7 +181,7 @@ Pré-requis pour la prochaine étape :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 36-39
+    :lines: 37-40
     :language: shell
 ```
 
@@ -189,7 +189,7 @@ Enfin, installe NuLink :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 41-42
+    :lines: 42-43
     :language: shell
 ```
 
@@ -205,13 +205,13 @@ Enregistre les mots de passe pour plus tard :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS) ✍️
-    :lines: 44
+    :lines: 45
     :language: shell
 ```
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS) ✍️
-    :lines: 45
+    :lines: 46
     :language: shell
 ```
 
@@ -227,7 +227,7 @@ Reconnecte toi, et teste que les mots de passe sont visibles (tu devrais voir 3 
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 47-49
+    :lines: 48-50
     :language: shell
 ```
 
@@ -235,7 +235,7 @@ Initialise NuLink (remplace `FICHIER_CLEF_PRIVEE` par le nom du fichier contenan
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS) ✍️
-    :lines: 51-64
+    :lines: 52-65
     :language: shell
     :emphasize-lines: 7,12
 ```
@@ -248,7 +248,7 @@ Depuis ton PC, récupère une copie de la clef privée (remplace `ADRESSE_IP` pa
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: 🖥️ Ordinateur (PC) ✍️
-    :lines: 66-68
+    :lines: 67-69
     :language: shell
     :emphasize-lines: 1
 ```
@@ -261,7 +261,7 @@ Et c'est parti, démarre le nœud :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 69-77
+    :lines: 70-78
     :language: shell
 ```
 
@@ -290,7 +290,7 @@ Action à faire dans l'ordre :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 79-82
+    :lines: 80-83
     :language: shell
 ```
 
