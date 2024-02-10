@@ -267,7 +267,7 @@ Si tu vois « *Working ~ Keep Ursula Online!* » et/ou « *learn_from_teacher_no
 
 ### Mises à Jour
 
-Ceci est à effectuer seulement lors d'une [mise à jour du nœud](https://github.com/NuLink-network/nulink-core/releases).
+Ceci est à effectuer seulement lors d'une [mise à jour du conteneur](https://hub.docker.com/r/nulink/nulink/tags).
 
 D'abord, supprime le conteneur actuel, puis installe la dernière version :
 
