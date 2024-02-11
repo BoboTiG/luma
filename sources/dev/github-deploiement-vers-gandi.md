@@ -67,7 +67,7 @@ Voici le script YAML complet :
 
 ### Exemple Complet
 
-Un exemple spécifique à Python, utilisé par ce site même, peut être visible par ici : [BoboTiG/luma:deploy](https://github.com/BoboTiG/luma/blob/main/.github/workflows/deploy.yml).
+Un exemple spécifique à Python, utilisé par ce site même, peut être visible par ici : [BoboTiG/luma deploy.yml](https://github.com/BoboTiG/luma/blob/main/.github/workflows/deploy.yml).
 
 ## 📜 Historique
 
