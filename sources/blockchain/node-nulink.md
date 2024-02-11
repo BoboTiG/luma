@@ -135,7 +135,6 @@ Maintenant, quand tu devras communiquer avec, ou te connecter, au serveur, tu n'
 
 ````{admonition} Commandes avant/après
     :class: dropdown
-    :type: hint
 
 Avant :
 
@@ -185,7 +184,7 @@ ssh nulink
 
 #### Mise à Jour
 
-Mets à jour le système d'exploitation :
+Mets à jour le système d'exploitation, puis redémarre :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
@@ -193,17 +192,17 @@ Mets à jour le système d'exploitation :
     :language: shell
 ```
 
+Patiente quelques secondes et [reconnecte toi](#connexion) au serveur.
+
 #### Pare-feu
 
-Installe le pare-feu, puis redémarre :
+Installe le pare-feu :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)
     :lines: 22-26
     :language: shell
 ```
-
-Patiente quelques secondes et [reconnecte toi](#connexion) au serveur.
 
 #### Docker
 

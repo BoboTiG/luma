@@ -17,13 +17,13 @@ scp keystore/UTC--* nulink:/root \
 apt update \
     && apt full-upgrade -y \
     && apt autoremove -y \
-    && echo 'OK'
+    && reboot
 
 apt install -y ufw \
     && ufw allow ssh \
     && ufw allow 9151/tcp \
     && ufw enable \
-    && reboot
+    && echo 'OK'
 
 curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc \
     && echo \
