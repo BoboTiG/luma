@@ -23,6 +23,7 @@ CSS_FILES = [
     "copybutton",
     "togglebutton",
     "sphinx_contributors",
+    "tabs",
     "custom",
 ]
 JS_FILES = [
@@ -34,6 +35,7 @@ JS_FILES = [
     "togglebutton",
     "language_data",
     "searchtools",
+    "tabs",
     "shibuya",
 ]
 
