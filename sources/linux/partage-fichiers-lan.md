@@ -6,15 +6,9 @@ Rendez-vous dans le dossier contenant les fichiers à partager et exécutez une 
 
 `````{tabs}
 
-````{tab} Python 3
+````{tab} Python
 ```{code-block} shell
 python -m http.server 8080 [-d FOLDER]
-```
-````
-
-````{tab} Python 2
-```{code-block} shell
-python -m SimpleHTTPServer 8080 [-d FOLDER]
 ```
 ````
 
@@ -30,6 +24,9 @@ php -S 0.0.0.0:8080 [-t FOLDER]
 ---
 
 ## 📜 Historique
+
+2024-02-13
+: Suppression du code Python 2.
 
 2024-02-07
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2018/12/18/10/01/39-partager-simplement-ses-fichiers-en-lan).
