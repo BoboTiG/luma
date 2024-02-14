@@ -87,7 +87,7 @@
 
 ---
 
-## 🕷️ Skulltulas d'or
+## 🕷️ Skulltulas d'Or
 
 1. [ ] Arbre Mojo
 2. [ ] Arbre Mojo
