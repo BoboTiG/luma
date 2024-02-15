@@ -10,11 +10,13 @@ main.sy-main {
     width: 100%;
 }
 
+/* Home page title. */
 section#base-de-connaissances-du-luma h1 {
     text-align: center;
     font-size: 2em;
 }
 
+/* Home page contributors. */
 .sphinx-contributors img {
     border-radius: 50%;
     margin-bottom: 1em;
