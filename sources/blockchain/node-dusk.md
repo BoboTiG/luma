@@ -234,7 +234,7 @@ Staking address: [REDACTED]
 ```
 ````
 
-```{note}
+```{hint}
 La commande précédente peut être utilisée à plusieurs reprises pour augmenter le nombre de *tokens* à *staker*.
 ```
 
@@ -258,11 +258,24 @@ Enfin, lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu'au
     :language: shell
 ```
 
+La commande ci-dessous permet de voir tous les blocs créés :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 40
+    :language: shell
+```
+
 ```{astuce}
 Plus il y a de *tokens* en *staking*, plus il y a de chances d'être sélectionné.
 ```
 
 ---
+
+## 🔗 Liens Utiles
+
+- [Statistiques (API)](https://api.dusk.network/v1/stats)
+- [Statistiques avec carte des nœuds](https://explorer.dusk.network/charts)
 
 ## 📜 Historique
 
