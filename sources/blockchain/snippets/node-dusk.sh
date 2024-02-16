@@ -32,9 +32,10 @@ service rusk start
 
 grep 'block accepted' /var/log/rusk.log | tail -1
 
-rusk-wallet balance
+rusk-wallet balance --spendable
 rusk-wallet stake --amt 1000
 rusk-wallet stake-info
+rusk-wallet stake-info --reward
 
 tail -F /var/log/rusk.log | grep 'execute_state_transition'
 grep 'execute_state_transition' /var/log/rusk.log

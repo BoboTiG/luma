@@ -248,13 +248,21 @@ Pour vérifier le nombre de *tokens* en *staking* (peut être aussi vérifié vi
     :language: shell
 ```
 
+Et pour connaître le montant des récompenses accumulées :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 38
+    :language: shell
+```
+
 ### Participation
 
 Enfin, lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu'au minimum 2 époques sont passées (ou 4 320 blocs), cette commande permet de voir quand le nœud est sélectionné pour créer un bloc :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 39
+    :lines: 40
     :language: shell
 ```
 
@@ -262,7 +270,7 @@ La commande ci-dessous permet de voir tous les blocs créés :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 40
+    :lines: 41
     :language: shell
 ```
 
