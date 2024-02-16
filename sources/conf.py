@@ -23,7 +23,6 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     # "sphinx_design",
-    "sphinx_reredirects",
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
 ]
@@ -79,8 +78,3 @@ exclude_patterns = ["**/_*"]
 # Do not include drafts when deploying to production
 if sys.argv[0].endswith("sphinx-build"):
     exclude_patterns.append("brouillons/**")
-
-# Redirections
-redirects = {
-    "blockchain/node-nulink.html": "testnet/node-nulink.html",
-}

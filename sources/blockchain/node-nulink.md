@@ -1,6 +1,6 @@
-# Comment déployer un nœud NuLink ?
+# [testnet] Comment déployer un nœud NuLink ?
 
-```{figure} ../images/nulink-logo.svg
+```{figure} images/nulink-logo.svg
  :width: 340
   :height: 96
   :alt: NuLink Logo
@@ -28,7 +28,7 @@ Ce guide est une traduction libre et simplifiée de la [documentation officielle
 
 ## Avant-propos
 
-```{include} ../_node-avant-propos.md
+```{include} _node-avant-propos.md
 ```
 
 ---

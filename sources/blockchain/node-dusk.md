@@ -1,12 +1,16 @@
-# Comment déployer un nœud Dusk ?
+# [testnet] Comment déployer un nœud Dusk ?
 
-```{figure} ../images/dusk-logo.svg
+```{figure} images/dusk-logo.svg
  :width: 96
   :height: 96
   :alt: Dusk Logo
   :align: center
 
   Site web : [dusk.network](https://dusk.network)
+```
+
+```{note}
+Ce document est valide du 15 février 2024 au 15 mars 2024.
 ```
 
 Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/itn/node-running-guide) pour le déploiement d'un nœud Dusk, plus communément appelé *node provisioner*.
@@ -22,7 +26,7 @@ Ce guide est une traduction libre et légèrement modifiée de la [documentation
 
 ## Avant-propos
 
-```{include} ../_node-avant-propos.md
+```{include} _node-avant-propos.md
 ```
 
 ---
