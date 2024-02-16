@@ -192,7 +192,7 @@ Afin de savoir combien il y a de *tokens* sur le *wallet* :
 
 #### *Stake*
 
-Pour l'exemple, plaçons 1 000 tDUSK en *stake* (c'est le minimum) :
+Pour l'exemple, plaçons 1 000 tDUSK en *staking* (c'est le minimum) :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
