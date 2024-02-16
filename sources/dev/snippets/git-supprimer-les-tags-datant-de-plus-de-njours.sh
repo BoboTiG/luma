@@ -3,7 +3,7 @@
 # Today's timestamp
 current_date=$(date -d "00:00" +%s)
 
-# For each tag ...
+# For each tag …
 while IFS= read -r tag; do
     # ${tag} syntax is "name date"
     release_version="$(echo "${tag}" | cut -d' ' -f1)"

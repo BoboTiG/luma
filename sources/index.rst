@@ -23,6 +23,18 @@ Base de Connaissances du `Luma`_
     blockchain/*
 
 .. toctree::
+    :caption: 👾 Blockchain / Mainnet
+    :glob:
+
+    blockchain/mainnet/*
+
+.. toctree::
+    :caption: 👾 Blockchain / Testnet
+    :glob:
+
+    blockchain/testnet/*
+
+.. toctree::
     :caption: 🐛 Développement
     :glob:
 

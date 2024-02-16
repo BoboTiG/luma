@@ -1,6 +1,6 @@
 # Comment déployer un nœud NuLink ?
 
-```{figure} images/nulink-logo.svg
+```{figure} ../images/nulink-logo.svg
  :width: 340
   :height: 96
   :alt: NuLink Logo
@@ -28,35 +28,7 @@ Ce guide est une traduction libre et simplifiée de la [documentation officielle
 
 ## Avant-propos
 
-Les futures commandes à taper dans une console sont précédées par une légende pour indiquer sur quel environnement elles doivent être exécutées.
-
-Exemple avec une commande qui devra être tapée dans la console de ton ordinateur (PC) :
-
-```{code-block} shell
-    :caption: 🖥️ Ordinateur (PC)
-
-echo "Coucou depuis l'ordi !"
-```
-
-Et une commande qui devra être tapée dans la console du serveur (VPS, pour *Virtual Private Server*) sur lequel le nœud sera déployé :
-
-```{code-block} shell
-    :caption: ☁️ Serveur (VPS)
-
-echo 'Coucou depuis le serveur !'
-```
-
-```{tip}
-Chaque commande peut être copiée/collée directement depuis cet article vers ta console (il y a une icône qui apparait en haut à droite de chaque bloc de code quand la souris passe dessus).
-Quand il y a une partie de la commande a modifier manuellement :
-- je le préciserai en amont ;
-- la légende du bloc de code contiendra l'émoji ✍️ ;
-- la/les ligne en question sera surlignée.
-```
-
-```{tip}
-Afin de vérifier qu'une commande se soit terminée avec succès, tu dois voir que la dernière ligne affichée dans la console, après l'avoir exécutée, devra être "OK".
-Si ce n'est pas le cas, il y a eu une erreur.
+```{include} ../_node-avant-propos.md
 ```
 
 ---
@@ -120,33 +92,6 @@ Quand tu auras pris connaissance de l'adresse IP du serveur, configure l'accès 
     :emphasize-lines: 4
 ```
 
-Maintenant, quand tu devras communiquer avec, ou te connecter, au serveur, tu n'auras qu'à utiliser `nulink` au lieu de saisir l'adresse IP à chaque fois.
-
-````{admonition} Commandes avant/après
-    :class: dropdown
-
-Avant :
-
-```{code-block} shell
-    :caption: 🖥️ Ordinateur (PC) ✍️
-
-ssh root@ADRESSE_IP
-scp root@ADRESSE_IP:PATH/TO/FILE FILE
-scp FILE root@ADRESSE_IP:PATH/TO/FILE
-```
-
-Dorénavant :
-
-```{code-block} shell
-    :caption: 🖥️ Ordinateur (PC)
-
-ssh nulink
-scp nulink:PATH/TO/FILE FILE
-scp FILE nulink:PATH/TO/FILE
-```
-
-````
-
 ### Sauvegarde la Clef Privée
 
 Envoie le fichier de la clef privée depuis ton ordinateur vers le serveur :
@@ -185,7 +130,7 @@ Patiente quelques secondes et [reconnecte toi](#connexion) au serveur.
 
 #### Pare-feu
 
-Installe le pare-feu :
+Installe et configure le pare-feu pour autoriser **seulement** les connexions entrantes sur les ports SSH et du nœud :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)

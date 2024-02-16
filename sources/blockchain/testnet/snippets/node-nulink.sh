@@ -85,7 +85,7 @@ docker stop ursula \
 cat << EOF >> ~/.ssh/config
 Host nulink
     User root
-    HostName ADDRESSE_IP
+    HostName ADRESSE_IP
     Port 22
 EOF
 

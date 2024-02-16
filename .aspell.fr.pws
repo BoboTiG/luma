@@ -1,4 +1,4 @@
-personal_ws-1.1 fr 291 
+personal_ws-1.1 fr 294 
 AVAX
 Aborted
 Add
@@ -190,6 +190,7 @@ d'Hyrule
 d'Impa
 d'Intervalle
 d'Or
+d'affilée
 days
 debug
 deploy
@@ -249,6 +250,7 @@ photo-voltaïques
 ping.c
 pinger
 plugins
+provisioner
 présélectionnée
 py
 pyserial
@@ -283,6 +285,7 @@ télécharger
 vCPU
 validator
 verification
+wallet
 web
 window
 with

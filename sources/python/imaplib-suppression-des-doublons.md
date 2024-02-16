@@ -3,7 +3,7 @@
 Commençons par nous connecter à la boîte de messagerie :
 
 ```{todo}
-Supprimer les commentaires `type: ignore[...]` et corriger/retester le code.
+Supprimer les commentaires `type: ignore[…]` et corriger/retester le code.
 ```
 
 ```{literalinclude} snippets/imaplib-suppression-des-doublons.py

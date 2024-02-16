@@ -78,7 +78,7 @@ PageMediaNumber: 1
 PageMediaRotation: 0
 PageMediaRect: 0 8.58 1,057.5 1,696.08
 PageMediaDimensions: 1,057.5 1,687.5
-...
+…
 ```
 
 Modifier les première lignes ou ajouter les méta-données manquantes (parmi : *Title*, *Author*, *Subject*, *Keywords*, *Creator*, *Producer*, *CreationDate*, *ModDate* et *Trapped*):
@@ -109,7 +109,7 @@ PageMediaNumber: 1
 PageMediaRotation: 0
 PageMediaRect: 0 8.58 1,057.5 1,696.08
 PageMediaDimensions: 1,057.5 1,687.5
-...
+…
 ```
 
 Générer un nouveau PDF comportant les nouvelles méta-données :

@@ -11,7 +11,7 @@ Voici ce qu'il fait :
 - changement des chemins dans la base de registre ;
 - suppression des anciens dossiers.
 
-Pensez à adapter la partition à la ligne spécifiant `set new_folder=...` (ici `D:`).
+Pensez à adapter la partition à la ligne spécifiant `set new_folder=…` (ici `D:`).
 
 ```{literalinclude} snippets/deplacer-le-dossier-personnel-vers-une-partition-dediee.bat
     :caption: move-current-user-folder.bat

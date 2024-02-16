@@ -10,7 +10,7 @@ static void fill_metainfo(
     int *must_show_header,
     int use_color
 ) {
-    /* (...) */
+    /* (…) */
     strbuf_addf(
         msg,
         "%s%sindex %s..%s",

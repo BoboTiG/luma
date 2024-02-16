@@ -49,7 +49,7 @@ def purge(conn: IMAP, folder: str) -> None:
         raise IMAP.error(ret)
 
     # data est une liste contenant UID, taille et Message-ID, entre autres.
-    # Pour chaque message...
+    # Pour chaque message…
     for idx in range(0, len(data), 2):
         # Il se peut que le message n'aie pas de Message-ID, c'est souvent le cas
         # de ceux envoyés par la fonction PHP mail() ou Python smtplib.
@@ -96,7 +96,7 @@ def main(server: str, user: str) -> int:
         return 1
 
     try:
-        # Pour chaque dossier...
+        # Pour chaque dossier…
         for infos in data:
             # infos contient plusieurs informations plus ou moins utiles.
             # Cependant, certains dossiers ne sont pas sélectionnables, on zappe.
