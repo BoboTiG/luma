@@ -23,6 +23,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     # "sphinx_design",
+    "sphinx_new_tab_link",
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
 ]
