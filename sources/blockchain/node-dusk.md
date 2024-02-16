@@ -100,6 +100,11 @@ Installer et configurer le pare-feu pour autoriser **seulement** les connexions 
     :language: shell
 ```
 
+#### Serveur NTP
+
+```{include} _node-ntp.md
+```
+
 #### Dusk
 
 Télécharger et exécuter le script d'installation automatique pour Dusk :
@@ -276,6 +281,20 @@ La commande ci-dessous permet de voir tous les blocs créés :
 
 ```{astuce}
 Plus il y a de *tokens* en *staking*, plus il y a de chances d'être sélectionné.
+```
+
+### Débogage
+
+Section pour les cas où le système ne fonctionne pas comme prévu.
+
+#### Reset
+
+Si nécessaire, repartir de zéro :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 44-49
+    :language: shell
 ```
 
 ---

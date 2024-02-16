@@ -40,3 +40,10 @@ rusk-wallet stake-info --reward
 tail -F /var/log/rusk.log | grep 'execute_state_transition'
 grep 'execute_state_transition' /var/log/rusk.log
 grep -A 100 -C 100 'execute_state_transition' /var/log/rusk.log | sed -r 's/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g'
+
+service rusk stop \
+    && rm -rvf /opt/dusk/rusk/chain.db \
+    && rm -rvf /opt/dusk/rusk/state \
+    && rm -rvf ~/.dusk/rusk-wallet/cache \
+    && service rusk start \
+    && echo 'OK'
