@@ -205,7 +205,7 @@ Quand les deux blocs sont presque identiques, cela voudra dire que le nœud est 
 ## Staking
 
 ```{attention}
-Lors du premier lancement, ne commencer à *staker* des *tokens* que lorsque le nœud approche la fin de sa [synchronisation](#synchronisation).
+Lors du premier lancement, ne commencer à *staker* des *tokens* que lorsque le nœud approche la fin de sa [synchronisation](#synchronisation) (quand il reste moins de 4 320 blocs à récupérer).
 ```
 
 C'est la dernière étape pour pouvoir créer des blocs et participer au réseau.
