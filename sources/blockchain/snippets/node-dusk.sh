@@ -13,7 +13,7 @@ apt update \
     && reboot
 
 apt install -y ufw \
-    && ufw allow ssh \
+    && ufw limit ssh \
     && ufw allow 8080/tcp \
     && ufw allow 9000/udp \
     && ufw enable \

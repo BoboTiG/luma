@@ -279,6 +279,9 @@ Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et
 
 ## 📜 Historique
 
+2024-02-17
+: Règle SSH du pare-feu plus protectrice.
+
 2024-02-10
 : [Simplification](#configuration-ssh) des étapes nécessitant SSH.
 : Mise à jour de l'adresse du token NLKTest (`0xa22bfb00be8938c50833bfd2444ec721a9eeacc1` → `0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9`) suite à la migration de la phase 1 aux phases 2 & 3.

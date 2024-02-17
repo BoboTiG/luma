@@ -322,5 +322,8 @@ Si nécessaire, repartir de zéro :
 
 ## 📜 Historique
 
+2024-02-17
+: Règle SSH du pare-feu plus protectrice.
+
 2024-02-16
 : Premier jet.

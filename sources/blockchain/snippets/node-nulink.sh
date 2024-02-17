@@ -20,7 +20,7 @@ apt update \
     && reboot
 
 apt install -y ufw \
-    && ufw allow ssh \
+    && ufw limit ssh \
     && ufw allow 9151/tcp \
     && ufw enable \
     && echo 'OK'
