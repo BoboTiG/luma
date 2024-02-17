@@ -119,7 +119,7 @@ Télécharger et exécuter le script d'installation automatique pour Dusk :
 
 ## Configuration
 
-### Stocker le Mot de Passe
+### Mot de Passe
 
 Stocker le mot de passe du *wallet* Dusk afin de ne plus avoir à la taper pour toutes les futures commandes `rusk-wallet …` ([source](https://github.com/dusk-network/wallet-cli/blob/v0.21.0/src/bin/README.md#headless-mode)) :
 
