@@ -76,9 +76,9 @@ ssh dusk
 
 ---
 
-### Installation
+## Installation
 
-#### Mise à Jour
+### Mise à Jour
 
 Mettre à jour le système d'exploitation, puis redémarrer :
 
@@ -90,7 +90,7 @@ Mettre à jour le système d'exploitation, puis redémarrer :
 
 Patienter quelques secondes et se [reconnecter](#connexion) au serveur.
 
-#### Pare-feu
+### Pare-feu
 
 Installer et configurer le pare-feu pour autoriser **seulement** les connexions entrantes sur les ports SSH et du nœud :
 
@@ -100,12 +100,12 @@ Installer et configurer le pare-feu pour autoriser **seulement** les connexions 
     :language: shell
 ```
 
-#### Serveur NTP
+### Serveur NTP
 
 ```{include} _node-ntp.md
 ```
 
-#### Dusk
+### Dusk
 
 Télécharger et exécuter le script d'installation automatique pour Dusk :
 
@@ -117,9 +117,9 @@ Télécharger et exécuter le script d'installation automatique pour Dusk :
 
 ---
 
-### Configuration
+## Configuration
 
-#### Importer le Compte
+### Importer le Compte
 
 ```{attention}
 Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun **séparé par un espace**.
@@ -131,7 +131,7 @@ Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun *
     :language: shell
 ```
 
-#### Exporter la Clef de Consensus
+### Exporter la Clef de Consensus
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
@@ -149,7 +149,7 @@ Puis stocker le mot de passe de la clef de consensus :
 
 ---
 
-### Exécution
+## Exécution
 
 Et c'est parti, démarrons le nœud :
 
@@ -159,7 +159,7 @@ Et c'est parti, démarrons le nœud :
     :language: shell
 ```
 
-#### Logs
+### Logs
 
 Pour suivre la synchronisation du nœud :
 
@@ -181,11 +181,11 @@ En relançant la commande plusieurs fois d'affilée, on devrait voir que `height
 
 ---
 
-### Staking
+## Staking
 
 C'est la dernière étape pour pouvoir créer des blocs et participer au réseau.
 
-#### Balance
+### Balance
 
 Afin de savoir combien il y a de *tokens* sur le *wallet* :
 
@@ -195,7 +195,7 @@ Afin de savoir combien il y a de *tokens* sur le *wallet* :
     :language: shell
 ```
 
-#### *Stake*
+### *Stake*
 
 Pour l'exemple, plaçons 1 000 tDUSK en *staking* (c'est le minimum) :
 
@@ -243,7 +243,7 @@ Staking address: [REDACTED]
 La commande précédente peut être utilisée à plusieurs reprises pour augmenter le nombre de *tokens* à *staker*.
 ```
 
-#### Vérification
+### Vérification
 
 Pour vérifier le nombre de *tokens* en *staking* (peut être aussi vérifié via le *wallet* Dusk) :
 
@@ -261,7 +261,9 @@ Et pour connaître le montant des récompenses accumulées :
     :language: shell
 ```
 
-### Participation
+---
+
+## Participation
 
 Enfin, lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu'au minimum 2 époques sont passées (ou 4 320 blocs), cette commande permet de voir quand le nœud est sélectionné pour créer un bloc :
 
@@ -283,11 +285,21 @@ La commande ci-dessous permet de voir tous les blocs créés :
 Plus il y a de *tokens* en *staking*, plus il y a de chances d'être sélectionné.
 ```
 
-### Débogage
+### *Slashing*
+
+Le *slashing* est un système de protection qui pénalise les mauvais comportements. Lorsque ça [arrive](https://github.com/dusk-network/rusk/issues/1415) au nœud, une partie des récompenses est perdue, et s'il n'y en a pas, alors la participation au réseau est stoppée jusqu'à l'époque suivante.
+
+#### Raisons
+
+Dans l'immédiat, la seule raison connue est lorsqu'un pair trouve que le nœud a mis trop de temps pour valider un bloc. Il n'y a rien à faire pour éviter ça, juste espérer qu'avoir un [serveur NTP](#serveur-ntp) performant aide à prévenir cela.
+
+---
+
+## Débogage
 
 Section pour les cas où le système ne fonctionne pas comme prévu.
 
-#### Reset
+### Reset
 
 Si nécessaire, repartir de zéro :
 
