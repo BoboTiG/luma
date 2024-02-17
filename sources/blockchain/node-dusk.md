@@ -122,7 +122,7 @@ Télécharger et exécuter le script d'installation automatique pour Dusk :
 #### Importer le Compte
 
 ```{attention}
-Les 12 mots de la *seed phrase* doivent être entrés en **minusule**, chacun **séparé par un espace**.
+Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun **séparé par un espace**.
 ```
 
 ```{literalinclude} snippets/node-dusk.sh
