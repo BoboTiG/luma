@@ -269,14 +269,6 @@ Enfin, lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu'au
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 40
-    :language: shell
-```
-
-La commande ci-dessous permet de voir tous les blocs créés :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
     :lines: 41
     :language: shell
 ```
@@ -312,6 +304,62 @@ Si nécessaire, repartir de zéro :
     :lines: 44-49
     :language: shell
 ```
+
+### Règles du Pare-feu
+
+Liste des règles actives :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 52
+    :language: shell
+```
+
+Voici la sortie attendue :
+
+```{code-block}
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     LIMIT IN    Anywhere
+8080/tcp                   ALLOW IN    Anywhere
+9000/udp                   ALLOW IN    Anywhere
+9000:9005/udp              ALLOW IN    Anywhere
+22/tcp (v6)                LIMIT IN    Anywhere (v6)
+8080/tcp (v6)              ALLOW IN    Anywhere (v6)
+9000/udp (v6)              ALLOW IN    Anywhere (v6)
+9000:9005/udp (v6)         ALLOW IN    Anywhere (v6)
+```
+
+Liste des ports réellement ouverts :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 51
+    :language: shell
+```
+
+````{admonition} Exemple de sortie
+    :class: toggle
+
+```{code-block}
+    :emphasize-lines: 8-9
+
+COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+sshd      530    root    3u  IPv4   2288      0t0  TCP *:22 (LISTEN)
+sshd      530    root    4u  IPv6   2290      0t0  TCP *:22 (LISTEN)
+chronyd 37323 _chrony    5u  IPv4 264489      0t0  UDP 127.0.0.1:323
+chronyd 37323 _chrony    6u  IPv6 264490      0t0  UDP [::1]:323
+rusk    38995    dusk   23u  IPv4 269825      0t0  UDP *:46317
+rusk    38995    dusk   24u  IPv6 269826      0t0  UDP *:41981
+rusk    38995    dusk   25u  IPv4 269827      0t0  UDP ADRESSE_IP:9000
+rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
+```
+````
 
 ---
 

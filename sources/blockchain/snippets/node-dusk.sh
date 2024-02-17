@@ -47,3 +47,6 @@ service rusk stop \
     && rm -rvf ~/.dusk/rusk-wallet/cache \
     && service rusk start \
     && echo 'OK'
+
+lsof -i -P -n
+ufw status verbose
