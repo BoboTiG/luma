@@ -111,7 +111,7 @@ Télécharger et exécuter le script d'installation automatique pour Dusk :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 22-23
+    :lines: 22-24
     :language: shell
 ```
 
@@ -119,26 +119,24 @@ Télécharger et exécuter le script d'installation automatique pour Dusk :
 
 ## Configuration
 
-````{admonition} Optionnel
-    :class: seealso
+### Stocker le Mot de Passe
 
-Il peut être intéressant de stocker le mot de passe du *wallet* Dusk afin de ne plus avoir à la taper pour toutes les futures commandes `rusk-wallet …` ([source](https://github.com/dusk-network/wallet-cli/blob/v0.21.0/src/bin/README.md#headless-mode)) :
+Stocker le mot de passe du *wallet* Dusk afin de ne plus avoir à la taper pour toutes les futures commandes `rusk-wallet …` ([source](https://github.com/dusk-network/wallet-cli/blob/v0.21.0/src/bin/README.md#headless-mode)) :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS) ✍️
     :emphasize-lines: 1
-    :lines: 54-55
+    :lines: 55-56
     :language: shell
 ```
 
-Se [reconnecter](#connexion), et tester que le mot de passe est visible (le mot de passe devrait s'afficher, suivi de "OK") :
+Se [reconnecter](#connexion), et tester que le mot de passe est visible (il devrait s'afficher, suivi de "OK") :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 57-58
+    :lines: 58-59
     :language: shell
 ```
-````
 
 ### Importer le Compte
 
@@ -148,23 +146,15 @@ Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun *
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 25
+    :lines: 26
     :language: shell
 ```
 
-### Exporter la Clef de Consensus
+### Exporter les Clefs de Consensus
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 27
-    :language: shell
-```
-
-Puis stocker le mot de passe de la clef de consensus :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 29
+    :lines: 28-29
     :language: shell
 ```
 
@@ -176,7 +166,7 @@ Et c'est parti, démarrons le nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 31
+    :lines: 32
     :language: shell
 ```
 
@@ -186,23 +176,37 @@ Pour suivre la synchronisation du nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 33
+    :lines: 34
     :language: shell
 ```
 
-En relançant la commande plusieurs fois d'affilée, on devrait voir que `height` augmente. À la fin, il devra avoir la même valeur que celle de [l'explorateur de blocs](https://explorer.dusk.network).
+### Synchronisation
 
-````{admonition} Exemple de ligne de log (height vaut 240)
-    :class: toggle
+Cette commande renvoie le dernier bloc de la blockchain :
 
-```{code-block}
-2024-02-16T06:19:48.992610Z  INFO node::chain::acceptor: event="block accepted" height=240 iter=0 hash="2e9a03c5472e7813...c456b476b266c62f" txs=0 state_hash="f67d16bde7a6c1bb...1a4dc2788b2b5138" fsv_bitset=32924659 ssv_bitset=16412031 block_time=3 generator="xEXp8qBarpXnVD9D" dur_ms=7 label="Final" ffr=false
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 65
+    :language: shell
 ```
-````
+
+Et celle-ci renvoie le dernier bloc synchronisé par le nœud :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 61-63
+    :language: shell
+```
+
+Quand les deux blocs sont presque identiques, cela voudra dire que le nœud est synchronisé.
 
 ---
 
 ## Staking
+
+```{attention}
+Lors du premier lancement, ne commencer à *staker* des *tokens* que lorsque le nœud approche la fin de sa [synchronisation](#synchronisation).
+```
 
 C'est la dernière étape pour pouvoir créer des blocs et participer au réseau.
 
@@ -212,7 +216,7 @@ Afin de savoir combien il y a de *tokens* sur le *wallet* :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 35
+    :lines: 36
     :language: shell
 ```
 
@@ -222,7 +226,7 @@ Pour l'exemple, plaçons 1 000 tDUSK en *staking* (c'est le minimum) :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 36
+    :lines: 37
     :language: shell
 ```
 
@@ -270,7 +274,7 @@ Pour vérifier le nombre de *tokens* en *staking* (peut être aussi vérifié vi
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 37
+    :lines: 38
     :language: shell
 ```
 
@@ -278,7 +282,7 @@ Et pour connaître le montant des récompenses accumulées :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 38
+    :lines: 39
     :language: shell
 ```
 
@@ -290,7 +294,7 @@ Enfin, lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu'au
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 41
+    :lines: 42
     :language: shell
 ```
 
@@ -322,7 +326,7 @@ Si nécessaire, repartir de zéro :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 44-49
+    :lines: 45-50
     :language: shell
 ```
 
@@ -332,7 +336,7 @@ Liste des règles actives :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 52
+    :lines: 53
     :language: shell
 ```
 
@@ -360,7 +364,7 @@ Liste des ports réellement ouverts :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 51
+    :lines: 52
     :language: shell
 ```
 

@@ -19,18 +19,19 @@ apt install -y ufw \
     && ufw enable \
     && echo 'OK'
 
-curl --proto '=https' --tlsv1.2 -sSfL https://github.com/dusk-network/itn-installer/releases/download/v0.1.0/itn-installer.sh | bash \
+apt install -y jq net-tools unzip \
+    && curl --proto '=https' --tlsv1.2 -sSfL https://github.com/dusk-network/itn-installer/releases/download/v0.1.0/itn-installer.sh | bash \
     && echo 'OK'
 
 rusk-wallet restore
 
-rusk-wallet export -d /opt/dusk/conf -n consensus.keys
+rusk-wallet export -d /opt/dusk/conf -n consensus.keys \
+    && echo "DUSK_CONSENSUS_KEYS_PASS=${RUSK_WALLET_PWD}" > /opt/dusk/services/dusk.conf
 
-/opt/dusk/bin/setup_consensus_pwd.sh
 
 service rusk start
 
-grep 'block accepted' /var/log/rusk.log | tail -1
+tail -f /var/log/rusk.log
 
 rusk-wallet balance --spendable
 rusk-wallet stake --amt 1000
@@ -56,3 +57,9 @@ echo "export RUSK_WALLET_PWD='MOT_DE_PASSE_DU_WALLET'" >> ~/.profile \
 
 echo "${RUSK_WALLET_PWD}" \
     && echo 'OK'
+
+curl -s 'http://127.0.0.1:8080/02/Chain' \
+    --data-raw '{"topic":"gql","data":"query{block(height:-1){header{height}}}"}' \
+    | jq '.block.header.height'
+
+curl -s 'https://api.dusk.network/v1/stats' | jq '.lastBlock'
