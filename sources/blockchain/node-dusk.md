@@ -119,6 +119,27 @@ Télécharger et exécuter le script d'installation automatique pour Dusk :
 
 ## Configuration
 
+````{admonition} Optionnel
+    :class: seealso
+
+Il peut être intéressant de stocker le mot de passe du *wallet* Dusk afin de ne plus avoir à la taper pour toutes les futures commandes `rusk-wallet …` :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS) ✍️
+    :emphasize-lines: 1
+    :lines: 54-55
+    :language: shell
+```
+
+Se [reconnecter](#connexion), et tester que le mot de passe est visible (le mot de passe devrait s'afficher, suivi de "OK") :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 57-58
+    :language: shell
+```
+````
+
 ### Importer le Compte
 
 ```{attention}

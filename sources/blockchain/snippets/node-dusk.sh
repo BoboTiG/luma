@@ -50,3 +50,9 @@ service rusk stop \
 
 lsof -i -P -n
 ufw status verbose
+
+echo "export RUSK_WALLET_PWD='MOT_DE_PASSE_DU_WALLET'" >> ~/.profile \
+    && exit
+
+echo "${RUSK_WALLET_PWD}" \
+    && echo 'OK'
