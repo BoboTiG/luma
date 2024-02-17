@@ -299,6 +299,10 @@ Dans l'immédiat, la seule raison connue est lorsqu'un pair trouve que le nœud 
 
 Section pour les cas où le système ne fonctionne pas comme prévu.
 
+### *Block Mode Error*
+
+Le mot de passe entré pour la commande `rusk-wallet …` est incorrect.
+
 ### Reset
 
 Si nécessaire, repartir de zéro :
