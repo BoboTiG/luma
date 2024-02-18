@@ -198,7 +198,7 @@ Et celle-ci renvoie le dernier bloc synchronisé par le nœud :
     :language: shell
 ```
 
-Quand les deux blocs sont presque identiques, cela voudra dire que le nœud est synchronisé.
+Quand les deux blocs sont identiques, cela voudra dire que le nœud est synchronisé.
 
 ---
 
