@@ -222,7 +222,7 @@ Afin de savoir combien il y a de *tokens* sur le *wallet* :
 
 ### *Stake*
 
-Pour l'exemple, plaçons 1 000 tDUSK en *staking* (c'est le minimum) :
+Pour l'exemple, plaçons 1 000 tDUSK en *staking* (c'est le minimum requis, lien vers le [faucet](https://docs.dusk.network/itn/testnet-faucet/)) :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
@@ -264,9 +264,18 @@ Staking address: [REDACTED]
 ```
 ````
 
-```{hint}
-La commande précédente peut être utilisée à plusieurs reprises pour augmenter le nombre de *tokens* à *staker*.
+````{hint}
+La commande précédente **ne peut pas** être utilisée à plusieurs reprises pour augmenter le nombre de *tokens* à *staker*.
+
+Voici la procédure pour *staker* plus de *tokens* (remplacer `AMOUNT` par le nombre de *tokens*) :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS) ✍️
+    :lines: 67-68
+    :emphasize-lines: 2
+    :language: shell
 ```
+````
 
 ### Vérification
 
