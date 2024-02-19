@@ -13,7 +13,7 @@ Pour l'exemple, disons que les pages 301, 302 et 303 du fichier source sont en m
 
 ## Redimensionner
 
-Pour vérifier que toutes les pages ont les même marges :
+Pour vérifier que toutes les pages ont les mêmes marges :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
     :lines: 12
@@ -54,7 +54,7 @@ GhostScript permet de réduire grandement le poids du fichier final :
 
 ## Personnaliser les Méta-données
 
-Exporter les méta-données actuelles dans le fichier `metadata.txt` :
+Exporter les métadonnées actuelles dans le fichier `metadata.txt` :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
     :lines: 39
@@ -81,7 +81,7 @@ PageMediaDimensions: 1,057.5 1,687.5
 …
 ```
 
-Modifier les première lignes ou ajouter les méta-données manquantes (parmi : *Title*, *Author*, *Subject*, *Keywords*, *Creator*, *Producer*, *CreationDate*, *ModDate* et *Trapped*):
+Modifier les premières lignes ou ajouter les métadonnées manquantes (parmi : *Title*, *Author*, *Subject*, *Keywords*, *Creator*, *Producer*, *CreationDate*, *ModDate* et *Trapped*) :
 
 ```{code-block}
     :emphasize-lines: 1-9

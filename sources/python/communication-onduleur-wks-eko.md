@@ -34,7 +34,7 @@ Cette fonction établit la connexion avec l'onduleur :
     :language: python
 ```
 
-Celle-ci permet d'envoyer une commande à l'onduleur (comme vu dans le PDF partagé plus haut, une commande est une succession de 3 blocs : `COMMANDE+CRC+CR`, où `COMMANDE` est un mot clef comme par exemple « QID », `CRC` est la somme de contrôle de la commande envoyée, et `CR` est le caractère permettant de dire à l'onduleur que c'est la fin de l'instruction) :
+Celle-ci permet d'envoyer une commande à l'onduleur (comme vu dans le PDF partagé plus haut, une commande est une succession de 3 blocs : `COMMANDE+CRC+CR`, où `COMMANDE` est un mot clef comme « QID », `CRC` est la somme de contrôle de la commande envoyée, et `CR` est le caractère permettant de dire à l'onduleur que c'est la fin de l'instruction) :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
     :pyobject: send_command

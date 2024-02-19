@@ -222,7 +222,7 @@ Afin de savoir combien il y a de *tokens* sur le *wallet* :
 
 ### *Stake*
 
-Pour l'exemple, plaçons 1 000 tDUSK en *staking* (c'est le minimum requis, lien vers le [faucet](https://docs.dusk.network/itn/testnet-faucet/)) :
+Pour l'exemple, plaçons 1 000 tDUSK en *staking* (c'est le minimum requis, lien vers le [fausset](https://docs.dusk.network/itn/testnet-faucet/)) :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
@@ -317,7 +317,7 @@ Le *slashing* est un système de protection qui pénalise les mauvais comporteme
 
 #### Raisons
 
-Dans l'immédiat, la seule raison connue est lorsqu'un pair trouve que le nœud a mis trop de temps pour valider un bloc. Il n'y a rien à faire pour éviter ça, juste espérer qu'avoir un [serveur NTP](#serveur-ntp) performant aide à prévenir cela.
+Dans l'immédiat, la seule raison connue est quand un pair trouve que le nœud a mis trop de temps pour valider un bloc. Il n'y a rien à faire pour éviter ça, juste espérer qu'avoir un [serveur NTP](#serveur-ntp) performant aide à prévenir cela.
 
 ---
 
@@ -329,7 +329,7 @@ Section pour les cas où le système ne fonctionne pas comme prévu.
 
 Le mot de passe entré pour la commande `rusk-wallet …` est incorrect.
 
-### Reset
+### Repartir de Zéro
 
 Si nécessaire, repartir de zéro :
 
@@ -403,6 +403,9 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 - [Statistiques avec carte des nœuds](https://explorer.dusk.network/charts)
 
 ## 📜 Historique
+
+2024-02-19
+: Mise à jour de la version du script d'installation de Dusk (`0.1.0` → `0.1.1`).
 
 2024-02-17
 : Règle SSH du pare-feu plus protectrice.

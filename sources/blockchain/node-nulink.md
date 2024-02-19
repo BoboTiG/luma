@@ -13,14 +13,15 @@ Ce guide est une traduction libre et simplifiée de la [documentation officielle
 
 ## Configuration Requise
 
-- système d'exploitation : **Debian** GNU/Linux
-- architecture : x86-64
-- espace disque : 30 Gio NVMe
-- mémoire : 4 Gio de RAM
-- une adresse IP statique ;
-- le port 9951 ouvert.
+- Système d'exploitation : **Debian** GNU/Linux ;
+- Architecture : x86-64 ;
+- Espace disque : 30 Gio NVMe ;
+- Mémoire : 4 Gio de RAM ;
+- Une adresse IP statique ;
+- Le port 9951 ouvert.
 
-À savoir, il te faudra 2 comptes :
+À savoir, il te faudra deux comptes :
+
 1. un compte *staker* qui *stake* ses [NLK](https://testnet.bscscan.com/token/0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9), n'importe quel compte Metamask ou Rabby fait l'affaire ;
 2. un compte *worker* qui sera lié au compte *staker* (on parle de *bond* en anglais), et nous verrons comment le créer par la suite.
 
@@ -104,7 +105,7 @@ Envoie le fichier de la clef privée depuis ton ordinateur vers le serveur :
 
 ### Connexion
 
-Connecte toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo) :
+Connecte-toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo) :
 
 ```{code-block} shell
     :caption: 🖥️ Ordinateur (PC)
@@ -126,7 +127,7 @@ Mets à jour le système d'exploitation, puis redémarre :
     :language: shell
 ```
 
-Patiente quelques secondes et [reconnecte toi](#connexion) au serveur.
+Patiente quelques secondes et [reconnecte-toi](#connexion) au serveur.
 
 #### Pare-feu
 
@@ -196,7 +197,7 @@ Tu dois te déconnecter pour prendre en compte les changements :
 exit
 ```
 
-[Reconnecte toi](#connexion), et teste que les mots de passe sont visibles (tu devrais voir 3 lignes avec les 2 mots de passe et "OK") :
+[Reconnecte-toi](#connexion), et teste que les mots de passe sont visibles (tu devrais voir 3 lignes avec les 2 mots de passe et "OK") :
 
 ```{literalinclude} snippets/node-nulink.sh
     :caption: ☁️ Serveur (VPS)

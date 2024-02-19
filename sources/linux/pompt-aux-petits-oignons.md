@@ -39,7 +39,7 @@ Relancer le shell :
 exec $SHELL
 ```
 
-Le configurateur de Powerlevel10k devrait se lancer, ensuite c'est terminé.
+Le configurateur de Powerlevel10k devrait se lancer, ensuite, c'est terminé.
 
 Pour information, le contenu final du fichier `$HOME/.zshrc` serait quelque chose comme :
 

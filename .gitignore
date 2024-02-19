@@ -4,7 +4,6 @@ _live/
 luma/
 .mypy_cache/
 .ruff_cache/
-.vscode/
 venv/
 
 # Files

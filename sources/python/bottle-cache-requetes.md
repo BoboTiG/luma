@@ -63,7 +63,7 @@ Et voici le code du cache, qui n'est autre qu'un décorateur :
     :language: python
 ```
 
-Le clef du cache est déterminée suivant le chemin de la requête (ex : `/hello/Mickaël`) ; il est possible de prendre en compte plus de détails comme les paramètres passés à l'URL, entre autres. Aussi, si Bottle est en mode *debug*, alors le cache est ignoré.
+La clef du cache est déterminée suivant le chemin de la requête (ex : `/hello/Mickaël`) ; il est possible de prendre en compte plus de détails comme les paramètres passés à l'URL, entre autres. Aussi, si Bottle est en mode débogage, alors le cache est ignoré.
 
 Avec cette information, un hash est généré via la fonction `small_hash()`{l=python} que voici, inspirée de la [version PHP smallHash() écrite pour Shaarli](https://github.com/sebsauvage/Shaarli/blob/029f75f180f79cd581786baf1b37e810da1adfc3/index.php#L228-L241) (idem, c'est un exemple et libre à chacun de tout chambouler) :
 

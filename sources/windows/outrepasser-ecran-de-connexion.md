@@ -10,7 +10,7 @@ Utilman est l'utilitaire qui donne accès aux options d'ergonomie, la petite ic�
 
 ### Monter la Partition
 
-Commencez par démarrer sur un système d'exploitation alternatif, du genre [SystemRescueCD](http://www.sysresccd.org), à partir d'une clef USB ou d'un CD. Tout autre distribution GNU/Linux fera l'affaire, question de goût.
+Commencez par démarrer sur un système d'exploitation alternatif, du genre [SystemRescueCD](http://www.sysresccd.org), à partir d'une clef USB ou d'un CD. Toute autre distribution GNU/Linux fera l'affaire, question de goût.
 Ensuite, montez la partition qui contient Windows.
 
 Pour lister les différentes partitions :
@@ -34,7 +34,7 @@ Monter la bonne partition :
     :language: shell
 ```
 
-Finalement, redémarrez sur Windows et cliquez sur l'icône « *Option d'ergonomie* ».
+Finalement, redémarrez sur Windows et cliquez sur l'icône "*Option d'ergonomie*".
 
 Voilà, vous avez **un accès privilégié à l'invite de commande** !
 

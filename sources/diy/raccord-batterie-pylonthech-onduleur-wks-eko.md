@@ -6,7 +6,7 @@ Un câblage incorrect ou un câble défectueux peuvent mener à voir une `Erreur
 
 ## Liaison
 
-Pour que l'onduleur ([WKS EKO Circle](https://www.wattuneed.com/fr/onduleurs-et-convertisseurs/25678-onduleur-hybride-wks-evo-56kva-48v-0768563819193.html)) puisse communiquer avec la ou les batteries ([Pylontech US5000](https://en.pylontech.com.cn/products/c23/134.html)), nous modifierons un [câble RJ45](images/rj45.svg)).
+Pour que l'onduleur ([WKS EKO Circle](https://www.wattuneed.com/fr/onduleurs-et-convertisseurs/25678-onduleur-hybride-wks-evo-56kva-48v-0768563819193.html)) puisse communiquer avec la ou les batteries ([Pylontech US5000](https://en.pylontech.com.cn/products/c23/134.html)), nous modifierons un [câble RJ45](images/rj45.svg).
 
 Ci-dessous, le schéma d'installation concentré sur la connexion ([cliquer ici pour télécharger le schéma complet](images/schema-communication-onduleur-wks-eko-circle-vers-batterie-pylontech-complet.jpg)) :
 
@@ -16,7 +16,7 @@ Ci-dessous, le schéma d'installation concentré sur la connexion ([cliquer ici 
 
 ### Côté Onduleur
 
-Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS**, et il ne comporte que 2 pins : les n° 3 (marron) et 5 (blanc-marron) :
+Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS**, et il ne comporte que 2 pins : les n° 3 (marron) et 5 (blanc marron) :
 
 ```{figure} images/rj45-rs485-inverter.svg
   :align: center
@@ -28,7 +28,7 @@ Fournir une image adaptée au thème sombre.
 
 ### Côté Batterie
 
-Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que 2 pins : les n° 7 (blanc-marron) et 8 (marron) :
+Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que 2 pins : les n° 7 (blanc marron) et 8 (marron) :
 
 ```{figure} images/rj45-rs485-battery.svg
   :align: center
@@ -52,7 +52,7 @@ Dernier point, sur la batterie *master*, bien vérifier que les DIP 4, 3 et 2 so
   :align: center
 ```
 
-Si batterie(s) *slave* il y a, mettre tout leurs DIP en position haute (OFF) :
+Si batterie(s) *slave* il y a, mettre tous leurs DIP en position haute (OFF) :
 
 ```{figure} images/battery-pylontech-dip-slave.svg
   :align: center
@@ -68,9 +68,9 @@ Si batterie(s) *slave* il y a, mettre tout leurs DIP en position haute (OFF) :
 
 ## 🧰 Matériel
 
-- [pince à sertir RJ45 (VCELINK GJ671BL)](https://www.amazon.fr/dp/B08NX12GJ5) ;
-- [pince coupante de précision (VCELINK)](https://www.amazon.fr/dp/B09SL2TCH7) ;
-- [connecteurs RJ45](https://www.amazon.fr/dp/B0857FL8G6).
+- [Pince à sertir RJ45 (VCELINK GJ671BL)](https://www.amazon.fr/dp/B08NX12GJ5) ;
+- [Pince coupante de précision (VCELINK)](https://www.amazon.fr/dp/B09SL2TCH7) ;
+- [Connecteurs RJ45](https://www.amazon.fr/dp/B0857FL8G6).
 
 ## 📜 Historique
 

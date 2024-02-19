@@ -2,10 +2,10 @@
 
 Ce morceau de code supprimera tous les tags datant de plus de 21 jours.
 
-À adapter selon les besoin :
+À adapter selon les besoins :
 
-- ligne 13 : la limite du nombre de jours ;
-- ligne 18 : le filtrage (optionnel) sur le nom des tags (seuls ceux commençant par *alpha-* sont pris en compte, dans cet exemple).
+- Ligne 13 : la limite du nombre de jours ;
+- Ligne 18 : le filtrage (optionnel) sur le nom des tags (seuls ceux commençant par *alpha-* sont pris en compte, dans cet exemple).
 
 ```{literalinclude} snippets/git-supprimer-les-tags-datant-de-plus-de-njours.sh
     :lines: 3-

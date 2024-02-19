@@ -13,7 +13,7 @@ Il vous faudra un système d'exploitation sous GNU/Linux, puis :
 
 ## Comptes
 
-Pour créer un compte, utilisez cette commande (sans mot de passe) :
+Pour créer un compte, utilisez cette commande (sans définir de mot de passe) :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
     :lines: 14
@@ -44,7 +44,7 @@ Un fichier *UTC--…* sera créé dans le dossier *dev/node/keystore*.
 python dev/get-private-key.py FILE
 ```
 
-Où `FILE` est un des fichiers  *UTC--…* du dossier *dev/node/keystore*.
+Où `FILE` est un des fichiers *UTC--…* du dossier *dev/node/keystore*.
 
 Pour la suite, admettons que nous ayons créé ce compte :
 
@@ -111,7 +111,7 @@ Les adresses ne doivent pas être préfixées de `0x`.
 }
 ```
 
-Ensuite, lancez cette commande pour  (ou réinitialiser) le nœud :
+Ensuite, lancez cette commande pour initialiser (ou réinitialiser) le nœud :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
     :lines: 17-18
@@ -136,10 +136,10 @@ Démarrez le nœud (pensez à adapter l'adresse publique du compte) :
 
 Détails de notre blockchain locale :
 
-- RPC HTTP URL: `http://127.0.0.1:8545/`
-- RPC WSS URL: `ws://127.0.0.1:8546`
-- ChainID: `1234` (`0x4d2`)
-- Symbol: `ETH`
+- RPC HTTP URL: `http://127.0.0.1:8545/` ;
+- RPC WSS URL: `ws://127.0.0.1:8546` ;
+- ChainID: `1234` (`0x4d2`) ;
+- Symbol: `ETH`.
 
 Et voilà !
 
@@ -156,7 +156,7 @@ Et voilà !
 : Mise à jour de Geth (`1.10.17-25c9b49` → `1.13.11-8f7eb9cc`).
 
 2022-04-21
-: Activation du RPC WebSocket.
+: Activation du RPC *web socket*.
 
 2022-03-01
 : Mise à jour de Geth (`1.10.16-20356e57` → `1.10.17-25c9b49f`).

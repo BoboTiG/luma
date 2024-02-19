@@ -6,7 +6,7 @@
 
 ## `timeout`
 
-Windows est livré avec une commande qui s'appelle `timeout`, située dans le dossier "C:\Windows\System32", et qui pourrait faire l'affaire. Par exemple, pour faire une pause de 5 secondes :
+Windows est livré avec une commande qui s'appelle `timeout`, située dans le dossier `C:\Windows\System32`, et qui pourrait faire l'affaire. Par exemple, pour faire une pause de 5 secondes :
 
 ```{literalinclude} snippets/la-commande-sleep.bat
     :lines: 3
@@ -20,7 +20,7 @@ timeout: invalid time interval ‘/t’
 Try 'timeout --help' for more information.
 ```
 
-Ce problème arrive lorsque Cygwin est installé. Dans ce cas, il s'agira de l'exécutable fourni par Cygwin et non celui de Windows. Ceci est du fait que Cygwin modifie le chemin de recherche des exécutables et prend l'ascendance sur les dossiers du système. Et il s'avère que la version de la commande `timeout` de Cygwin ne prend pas les même arguments.
+Ce problème arrive lorsque Cygwin est installé. Dans ce cas, il s'agira de l'exécutable fourni par Cygwin et non celui de Windows. Ceci est du fait que Cygwin modifie le chemin de recherche des exécutables et prend l'ascendance sur les dossiers du système. Et il s'avère que la version de la commande `timeout` de Cygwin ne prend pas les mêmes arguments.
 
 Un correctif possible est d'utiliser le chemin complet de l'exécutable :
 
@@ -41,9 +41,9 @@ Il existe une alternative universelle : `ping`. C'est une astuce vieille comme W
 ```
 
 L'idée, c'est de *pinger* l'adresse locale N fois pour une pause de N secondes.
-Comme `ping` utilise un [intervalle de 1 seconde](seconde-d-intervalle) entre chaque essai, il faut utiliser `-n N+1` pour simuler une pause de N secondes. Dans cet exemple, `-n 6` permet donc de faire une pause de 5 secondes.
+Comme `ping` utilise un [intervalle de une seconde](seconde-d-intervalle) entre chaque essai, il faut utiliser `-n N+1` pour simuler une pause de N secondes. Dans cet exemple, `-n 6` permet donc de faire une pause de 5 secondes.
 
-### 1 Seconde d'Intervalle ?
+### Une Seconde d'Intervalle ?
 
 L'implémentation de [ReactOS](https://reactos.org) permet de le vérifier :
 

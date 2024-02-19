@@ -5,7 +5,7 @@ Pour ce faire, nous utiliserons un **Raspberry Pi** (abrégé Rpi par la suite) 
 
 ## Le Flux Vidéo
 
-Première étape, la plus hasardeuse et plus ou moins complexe : récupérer l'adresse du flux vidéo. Cet article ne décrira pas comment le faire puisque la méthode changera suivant la marque de la caméra, voire même suivant le modèle au sein d'une même marque.
+Première étape, la plus hasardeuse et plus ou moins complexe : récupérer l'adresse du flux vidéo. Cet article ne décrira pas comment le faire puisque la méthode changera suivant la marque de la caméra, voire suivant le modèle au sein d'une même marque.
 
 Format d'adresse du flux vidéo :
 

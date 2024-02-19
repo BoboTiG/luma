@@ -30,22 +30,6 @@ check_markdown_files() {
     check_markdown_file 'README.md'
 }
 
-check_spelling_file() {
-    # Requires the `aspell-fr` package to be installed
-    if [ "${CI:-false}" = "true" ]; then
-        aspell --home-dir='.' --mode='markdown' --lang='fr' --dont-backup list < "${1}"
-    else
-        aspell --home-dir='.' --mode='markdown' --lang='fr' --dont-backup check "${1}"
-    fi
-}
-
-check_spelling_files() {
-    for file in $(/bin/find "${FOLDER}" -type f -name '*.md'); do
-        check_spelling_file "${file}"
-    done
-    check_spelling_file 'README.md'
-}
-
 check_yaml_file() {
     yamllint -d relaxed "${1}"
 }
@@ -60,7 +44,6 @@ main() {
     check_shell_files
     check_markdown_files
     check_yaml_files
-    check_spelling_files
 }
 
 main

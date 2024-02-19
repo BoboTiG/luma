@@ -6,10 +6,10 @@ Pour un gain de place ou pour séparer les données utilisateur du système d'ex
 
 Voici ce qu'il fait :
 
-- création des nouveaux dossiers dans la partition de données ;
-- **déplacement** des données personnelles depuis les anciens dossiers vers les nouveaux ;
-- changement des chemins dans la base de registre ;
-- suppression des anciens dossiers.
+- Création des nouveaux dossiers dans la partition de données ;
+- **Déplacement** des données personnelles depuis les anciens dossiers vers les nouveaux ;
+- Changement des chemins dans la base de registre ;
+- Suppression des anciens dossiers.
 
 Pensez à adapter la partition à la ligne spécifiant `set new_folder=…` (ici `D:`).
 
@@ -23,9 +23,9 @@ Pensez à adapter la partition à la ligne spécifiant `set new_folder=…` (ici
 
 Pour l'utiliser :
 
-- copiez-le à la racine de la nouvelle partition ;
-- double-cliquez & patientez ;
-- redémarrez l'ordinateur.
+- Copiez-le à la racine de la nouvelle partition ;
+- Double-cliquez & patientez ;
+- Redémarrez l'ordinateur.
 
 ## Testé et Approuvé
 

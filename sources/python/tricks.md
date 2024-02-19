@@ -122,4 +122,4 @@ Vous pouvez supprimer les zéros ajoutés pour les différentes fonctions du mod
 : Ajout de [`time` & `datetime`](#time-datetime).
 
 2017-10-09
-: Premier jet avec [`str.startswith()` & `str.endswith()`](#str-startswith-str-endswith) et [`pow()`](#pow), mieux vaut publier maintenant que jamais ☺
+: Premier jet avec [`str.startswith()` & `str.endswith()`](#str-startswith-str-endswith) et [`pow()`](#pow), il vaut mieux publier maintenant que jamais ☺
