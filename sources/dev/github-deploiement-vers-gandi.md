@@ -53,7 +53,7 @@ Maintenant que les étapes sont connues, nous utiliserons un *workflow* GitHub p
 
 ### Secrets
 
-Dans les paramètres du dépôt GitHub, déclarer 4 secrets identiques aux [constantes](#constantes) déclarées plus haut.
+Dans les paramètres du dépôt GitHub, déclarer des secrets identiques aux [constantes](#constantes) déclarées plus haut.
 
 ### *Workflow*
 
