@@ -47,6 +47,7 @@ Ci-dessous est le script complet qui lancera automatiquement l'affichage de la c
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
     :caption: /opt/stream-hdmi.sh
+    :emphasize-lines: 3-6
     :lines: 1-24
     :language: shell
 ```
