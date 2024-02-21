@@ -19,7 +19,7 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.SFTP_URL }} >> ~/.ssh/known_hosts
 
-      - name: Automation
+      - name: Mirror
         run: |
           lftp \
             -e 'mirror --delete --transfer-all --reverse --verbose=1 ./FOLDER ${{ secrets.SFTP_PATH }} ; quit' \
