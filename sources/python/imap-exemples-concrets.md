@@ -114,7 +114,7 @@ Du moment que la commande {py:func}`imaplib.IMAP4.fetch` est utilisée, le messa
 
 ### Déplacer un ou plusieurs messages
 
-Il n'y a pas de commande `MOVE`, if faut donc faire une copie puis supprimer :
+La commande `MOVE` n'existe pas ; pour l'émuler, if faut faire une copie puis supprimer les originaux :
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
     :lines: 68-69,65-66
