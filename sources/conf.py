@@ -23,6 +23,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     # "sphinx_design",
+    "sphinx_last_updated_by_git",
     "sphinx_new_tab_link",
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
@@ -79,3 +80,7 @@ exclude_patterns = ["**/_*"]
 # Do not include drafts when deploying to production
 if sys.argv[0].endswith("sphinx-build"):
     exclude_patterns.append("brouillons/**")
+
+# sphinx-last-updated-by-git
+git_last_updated_timezone = UTC
+html_last_updated_fmt = "%Y-%m-%d %H:%M:%S UTC"

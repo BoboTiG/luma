@@ -16,6 +16,15 @@ section#base-de-connaissances-du-luma h1 {
     font-size: 2em;
 }
 
+/* Article last updated. */
+#last-updated {
+    text-align: right;
+    padding: .5em;
+    border-right: 2px solid var(--yue-c-link-border-1);
+    border-radius: 5px;
+    cursor: help;
+}
+
 /* Home page contributors. */
 .sphinx-contributors img {
     border-radius: 50%;
