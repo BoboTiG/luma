@@ -20,7 +20,7 @@ apt install -y ufw \
     && echo 'OK'
 
 apt install -y jq net-tools unzip \
-    && curl --proto '=https' --tlsv1.2 -sSfL https://github.com/dusk-network/itn-installer/releases/download/v0.1.1/itn-installer.sh | bash \
+    && curl --proto '=https' --tlsv1.2 -sSfL https://github.com/dusk-network/itn-installer/releases/download/v0.1.2/itn-installer.sh | bash \
     && echo 'OK'
 
 rusk-wallet restore
@@ -78,12 +78,15 @@ rusk-wallet --state 'http://127.0.0.1:8080' balance
 # [Option, select a commit or tagged release]
 
 # cd rusk \
-#     && make keys \
-#     && make wasm \
+#     && rm -rfv target \
+#     && make keys wasm \
 #     && cargo b --release -p rusk \
-#     && cp -v target/release/rusk /opt/dusk/bin/rusk
+#     && target/release/rusk --version \
+#     && read -p 'Continue (CTRL+C to cancel)? ' \
+#     && service rusk stop \
+#     && mv -v /opt/dusk/bin/rusk/opt/dusk/bin/rusk.old \
+#     && cp -v target/release/rusk /opt/dusk/bin/rusk \
+#     && service rusk start \
 #     && echo 'OK'
-
-
 
 # installer rusk-wallet
