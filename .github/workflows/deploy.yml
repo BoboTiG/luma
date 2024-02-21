@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           lfs: true
       - uses: actions/setup-python@v5
         with:
@@ -32,8 +33,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.SFTP_URL }} >> ~/.ssh/known_hosts
-      - name: Automation
-        # Mirror the locally generated website to the production server
+      - name: Mirror
         run: |
           lftp \
             -e 'mirror --delete --transfer-all --reverse --verbose=1 ./luma ${{ secrets.SFTP_PATH }} ; quit' \
