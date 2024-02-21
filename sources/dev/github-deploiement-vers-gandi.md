@@ -13,7 +13,7 @@ Nous utiliserons [lftp](https://lftp.yar.ru/lftp-man.html) pour l'envoi des fich
 
 ## Manuel
 
-Pas directement lié à GitHub, ces étapes peuvent servir à déployer depuis n'importe quelle machine.
+Les étapes suivantes peuvent servir à déployer depuis n'importe quelle machine et ne sont pas liées à GitHub.
 
 ### Constantes
 
