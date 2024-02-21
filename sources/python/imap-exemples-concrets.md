@@ -27,7 +27,7 @@ Pour finir, avec ces identifiants, téléchargeons le contenu des messages :
     :language: python
 ```
 
-```{note}
+```{attention}
 Du moment que la commande {py:func}`imaplib.IMAP4.fetch` est utilisée, le message concerné est marqué comme lu.
 ```
 
