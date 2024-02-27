@@ -22,10 +22,6 @@ Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS*
   :align: center
 ```
 
-```{todo}
-Fournir une image adaptée au thème sombre.
-```
-
 ### Côté Batterie
 
 Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que 2 pins : les n° 7 (blanc marron) et 8 (marron) :
@@ -36,10 +32,6 @@ Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS
 
 ```{tip}
 De ce côté-là, il est possible de laisser un câble RJ45 d'origine avec les 8 pins.
-```
-
-```{todo}
-Fournir une image adaptée au thème sombre.
 ```
 
 ---
@@ -73,6 +65,9 @@ Si batterie(s) *slave* il y a, mettre tous leurs DIP en position haute (OFF) :
 - [Connecteurs RJ45](https://www.amazon.fr/dp/B0857FL8G6).
 
 ## 📜 Historique
+
+2024-02-27
+: Les fichiers SVG des câbles RJ45 s'adaptent automatiquement au thème sombre.
 
 2024-01-27
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/12/16/23/12/04-raccord-dune-batterie-pylontech-vers-un-onduleur-wks-eko-circle).
