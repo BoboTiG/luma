@@ -5,7 +5,7 @@ FOLDER='sources'
 
 check_python_files() {
     python -m ruff format "${FOLDER}" ./*.py
-    python -m ruff --fix "${FOLDER}" ./*.py
+    python -m ruff check --fix "${FOLDER}" ./*.py
     python -m mypy "${FOLDER}" ./*.py
 }
 
