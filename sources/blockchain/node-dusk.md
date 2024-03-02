@@ -43,15 +43,20 @@ Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
 
 ## Hébergement
 
-Créé un compte sur Contabo, et utiliser [ce lien](https://contabo.com/en/vps/cloud-vps-2/?image=debian.329&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
-À l'heure où j'écris ces lignes, la première facture est de 18,60 €, puis 11,40 €/mois.
+Créé un compte sur Contabo, et utiliser [ce lien](https://contabo.com/en/vps/cloud-vps-2/?addons=1634&image=debian.329&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
+À l'heure où j'écris ces lignes, la première facture est de 21,12 €, puis 13,92 €/mois.
 
 Vérifier la configuration sélectionnée :
 
-- 6 vCPU Cores
-- 16 GB RAM
-- 200 GB NVMe
-- Debian 12
+- CPU : 6 vCPU Cores
+- RAM : 16 GB RAM
+- *Region* : United Kingdom
+- *Storage Type* : 200 GB NVMe
+- *Image*: Debian 12
+
+```{attention}
+Ne pas choisir la région *European Union (Germany)* car il y a des soucis avec leur DNS et la synchonisation du nœud sera problématique voire impossible.
+```
 
 ### Configuration SSH
 
@@ -362,11 +367,9 @@ To                         Action      From
 22/tcp                     LIMIT IN    Anywhere
 8080/tcp                   ALLOW IN    Anywhere
 9000/udp                   ALLOW IN    Anywhere
-9000:9005/udp              ALLOW IN    Anywhere
 22/tcp (v6)                LIMIT IN    Anywhere (v6)
 8080/tcp (v6)              ALLOW IN    Anywhere (v6)
 9000/udp (v6)              ALLOW IN    Anywhere (v6)
-9000:9005/udp (v6)         ALLOW IN    Anywhere (v6)
 ```
 
 Liste des ports réellement ouverts :
@@ -406,6 +409,7 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 2024-01-02
 : Mise à jour de la version du script d'installation de Dusk (`0.1.5` → `0.1.6`).
+: Changement de région pour le serveur (*European Union (Germany)* → *United Kingdom*) pour pallier les soucis de DNS.
 
 2024-02-29
 : Mise à jour de la version du script d'installation de Dusk (`0.1.4` → `0.1.5`).
