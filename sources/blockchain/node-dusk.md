@@ -404,6 +404,9 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 ## 📜 Historique
 
+2024-01-02
+: Mise à jour de la version du script d'installation de Dusk (`0.1.5` → `0.1.6`).
+
 2024-02-29
 : Mise à jour de la version du script d'installation de Dusk (`0.1.4` → `0.1.5`).
 
