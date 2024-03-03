@@ -87,9 +87,9 @@ ssh dusk
 
 Mettre à jour le système d'exploitation, puis redémarrer :
 
-```{literalinclude} snippets/node-dusk.sh
+```{literalinclude} snippets/_node-os-upgrade.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 10-13
+    :lines: 2-7
     :language: shell
 ```
 
@@ -406,6 +406,9 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 - [Statistiques avec carte des nœuds](https://explorer.dusk.network/charts)
 
 ## 📜 Historique
+
+2024-03-03
+: Installation de `unattended-upgrades` pour garder le système d'exploitation à jour et réduire le temps de maintenance.
 
 2024-01-02
 : Mise à jour de la version du script d'installation de Dusk (`0.1.5` → `0.1.6`).

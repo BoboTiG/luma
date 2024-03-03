@@ -121,9 +121,9 @@ ssh nulink
 
 Mets à jour le système d'exploitation, puis redémarre :
 
-```{literalinclude} snippets/node-nulink.sh
+```{literalinclude} snippets/_node-os-upgrade.sh
     :caption: ☁️ Serveur (VPS)
-    :lines: 17-20
+    :lines: 2-7
     :language: shell
 ```
 
@@ -279,6 +279,9 @@ Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et
 ---
 
 ## 📜 Historique
+
+2024-03-03
+: Installation de `unattended-upgrades` pour garder le système d'exploitation à jour et réduire le temps de maintenance.
 
 2024-02-17
 : Règle SSH du pare-feu plus protectrice.
