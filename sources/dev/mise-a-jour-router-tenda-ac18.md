@@ -31,7 +31,7 @@ Pour effectuer une mise à jour et repartir sur des bases saines, c'est-à-dire 
 : Mise à jour `2023.5` → `2024.1`.
 
 2023-12-25
-: Mise à jour 2023.4 → 2023.5.
+: Mise à jour `2023.4` → `2023.5`.
 
 2023-11-19
 : Mise à jour `2020.1` → `2023.4` (il y a eu plusieurs mises à jour intermédiaires, mais je n'ai pas gardé de trace).
