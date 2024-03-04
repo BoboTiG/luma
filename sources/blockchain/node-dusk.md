@@ -332,7 +332,7 @@ Section pour les cas où le système ne fonctionne pas comme prévu.
 
 ### *Block Mode Error*
 
-Le mot de passe entré pour la commande `rusk-wallet …` est incorrect.
+Relancer la commande pour [exporter les clefs de consensus](#exporter-les-clefs-de-consensus).
 
 ### Repartir de Zéro
 
