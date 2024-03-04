@@ -8,7 +8,7 @@ Site web complet pour le partage de connaissances.
 
 La qualité, et la fiabilité des morceaux de code, sont garanties grâce à plusieurs outils spécialisés, et ça se passe dans le fichier [`checks.sh`](checks.sh).
 
-Les fautes de frappe et de grammaire sont corrigées en temps réel grâce à [LanguageTool](https://languagetool.org). Pour ce faire, installer l'extension VS Code et démarrer ce conteneur :
+Les fautes de frappe et de grammaire sont corrigées en temps réel grâce à [LanguageTool](https://languagetool.org). Pour ce faire, installer l'extension VS Code `davidlday.languagetool-linter` et démarrer ce conteneur :
 
 ```shell
 docker run -p 8081:8010 silviof/docker-languagetool
