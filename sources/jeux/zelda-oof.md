@@ -1,4 +1,4 @@
-# The Legend of Zelda : Ocarina of Time
+# The Legend of Zelda: Ocarina of Time
 
 ```{figure} images/the-legend-of-zelda-ocarina-of-time.svg
  :width: 500
