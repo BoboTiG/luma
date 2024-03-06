@@ -391,6 +391,7 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 2024-03-06
 : Ajout de la section [commandes](#commandes).
+: Mise à jour de la version du script d'installation de Dusk (`0.1.6` → `0.1.7`).
 
 2024-03-03
 : Installation de `unattended-upgrades` pour garder le système d'exploitation à jour et réduire le temps de maintenance.
