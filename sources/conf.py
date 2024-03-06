@@ -56,6 +56,7 @@ html_favicon = "_static/favicon.svg"
 html_logo = "_static/logo.svg"
 html_theme_options = {
     "accent_color": "iris",
+    "page_layout": "compact",
     "twitter_creator": "__tiger222__",
     "twitter_site": "__tiger222__",
     "twitter_url": "https://twitter.com/__tiger222__",

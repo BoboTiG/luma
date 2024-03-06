@@ -3,6 +3,7 @@
 Setup:
 python -m pip install eth-account
 """
+
 import sys
 from binascii import b2a_hex
 from pathlib import Path

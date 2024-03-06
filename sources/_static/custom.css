@@ -1,15 +1,3 @@
-/* Hide the left navbar. */
-aside#lside,
-aside .lside-overlay,
-button[aria-controls="lside"] {
-    display: none;
-}
-
-/* Give more width to the main container. */
-main.sy-main {
-    width: 100%;
-}
-
 /* Home page title. */
 section#base-de-connaissances-du-luma h1 {
     text-align: center;
