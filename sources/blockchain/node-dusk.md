@@ -122,6 +122,58 @@ Télécharger et exécuter le script d'installation automatique pour Dusk :
 
 ---
 
+## Commandes
+
+Ces commandes seront pratiques plus tard afin de déterminer l'état du nœud :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 72-83
+    :langue: shell
+```
+
+Charger les commandes :
+
+```{literalinclude} snippets/node-dusk.sh
+    :caption: ☁️ Serveur (VPS)
+    :lines: 84
+    :langue: shell
+```
+
+### `balance`
+
+Connaître le nombre de tDUSK disponible sur le *wallet*.
+
+### `stake-info`
+
+Vérifier le nombre de *tokens* en *staking*.
+
+### `rewards`
+
+Connaître le montant des récompenses accumulées.
+
+### `logs`
+
+Pour suivre la synchronisation du nœud.
+
+### `chosen`
+
+Lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu'au minimum 2 époques sont passées, cette commande permet de voir quand le nœud est sélectionné pour créer un bloc.
+
+### `current`
+
+Cette commande renvoie le dernier bloc de la blockchain.
+
+### `latest`
+
+Retourne le dernier bloc synchronisé par le nœud.
+
+### `blocks`
+
+Affiche le résult des commandes `latest` et `current`.
+
+---
+
 ## Configuration
 
 ### Mot de Passe
@@ -135,7 +187,7 @@ Stocker le mot de passe du *wallet* Dusk afin de ne plus avoir à la taper pour 
     :language: shell
 ```
 
-Se [reconnecter](#connexion), et tester que le mot de passe est visible (il devrait s'afficher, suivi de "OK") :
+Tester que le mot de passe est visible (il devrait s'afficher, suivi de "OK") :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
@@ -175,36 +227,6 @@ Et c'est parti, démarrons le nœud :
     :language: shell
 ```
 
-### Logs
-
-Pour suivre la synchronisation du nœud :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 34
-    :language: shell
-```
-
-### Synchronisation
-
-Cette commande renvoie le dernier bloc de la blockchain :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 65
-    :language: shell
-```
-
-Et celle-ci renvoie le dernier bloc synchronisé par le nœud :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 61-63
-    :language: shell
-```
-
-Quand les deux blocs sont identiques, cela voudra dire que le nœud est synchronisé.
-
 ---
 
 ## Staking
@@ -214,16 +236,6 @@ Lors du premier lancement, ne commencer à *staker* des *tokens* que lorsque le 
 ```
 
 C'est la dernière étape pour pouvoir créer des blocs et participer au réseau.
-
-### Balance
-
-Afin de savoir combien il y a de *tokens* sur le *wallet* :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 36
-    :language: shell
-```
 
 ### *Stake*
 
@@ -281,36 +293,6 @@ Voici la procédure pour *staker* plus de *tokens* (remplacer `AMOUNT` par le no
     :language: shell
 ```
 ````
-
-### Vérification
-
-Pour vérifier le nombre de *tokens* en *staking* (peut être aussi vérifié via le *wallet* Dusk) :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 38
-    :language: shell
-```
-
-Et pour connaître le montant des récompenses accumulées :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 39
-    :language: shell
-```
-
----
-
-## Participation
-
-Enfin, lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu'au minimum 2 époques sont passées (ou 4 320 blocs), cette commande permet de voir quand le nœud est sélectionné pour créer un bloc :
-
-```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 42
-    :language: shell
-```
 
 ```{astuce}
 Plus il y a de *tokens* en *staking*, plus il y a de chances d'être sélectionné.
@@ -406,6 +388,9 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 - [Statistiques avec carte des nœuds](https://explorer.dusk.network/charts)
 
 ## 📜 Historique
+
+2024-03-06
+: Ajout de la section [commandes](#commandes).
 
 2024-03-03
 : Installation de `unattended-upgrades` pour garder le système d'exploitation à jour et réduire le temps de maintenance.

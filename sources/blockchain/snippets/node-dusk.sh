@@ -53,7 +53,7 @@ lsof -i -P -n
 ufw status verbose
 
 echo "export RUSK_WALLET_PWD='MOT_DE_PASSE_DU_WALLET'" >> ~/.profile \
-    && exit
+    && source "${HOME}/.profile"
 
 echo "${RUSK_WALLET_PWD}" \
     && echo 'OK'
@@ -68,6 +68,20 @@ rusk-wallet unstake \
     && rusk-wallet stake --amt AMOUNT
 
 rusk-wallet --state 'http://127.0.0.1:8080' balance
+
+cat << EOF >> ~/.profile
+
+# Dusk specific commands
+alias balance='rusk-wallet balance --spendable'
+alias stake-info='rusk-wallet stake-info'
+alias rewards='rusk-wallet stake-info --reward'
+alias logs='tail -f /var/log/rusk.log'
+alias chosen='grep execute_state_transition /var/log/rusk.log'
+alias current='curl -s http://127.0.0.1:8080/02/Chain --data-raw '"'"'{"topic":"gql","data":"query{block(height:-1){header{height}}}"}'"'"' | jq .block.header.height'
+alias latest='curl -s https://api.dusk.network/v1/stats | jq .lastBlock'
+alias blocks='echo "Current: \$(current)" ; echo "Latest : \$(latest)"'
+EOF
+source "${HOME}/.profile"
 
 # install rusk
 # apt install clang gcc git libssl-dev make pkg-config rustc \
