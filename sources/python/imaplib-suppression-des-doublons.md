@@ -1,4 +1,4 @@
-# Python et IMAP : suppression des doublons
+# Python et IMAP : Suppression des doublons
 
 Commençons par nous connecter à la boîte de messagerie :
 
