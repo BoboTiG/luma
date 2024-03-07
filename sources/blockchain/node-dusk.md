@@ -154,7 +154,7 @@ Connaître le montant des récompenses accumulées.
 
 ### `logs`
 
-Pour suivre la synchronisation du nœud.
+Afficher les *logs* pour suivre l'avancée de la synchronisation du nœud.
 
 ### `chosen`
 
@@ -162,7 +162,7 @@ Lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu'au minimu
 
 ### `current`
 
-Cette commande renvoie le dernier bloc de la blockchain.
+Cette commande renvoie le dernier bloc de la *blockchain*.
 
 ### `latest`
 
