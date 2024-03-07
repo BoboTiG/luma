@@ -129,7 +129,7 @@ Ces commandes seront pratiques plus tard afin de déterminer l'état du nœud :
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
     :lines: 72-83
-    :langue: shell
+    :language: shell
 ```
 
 Charger les commandes :
@@ -137,7 +137,7 @@ Charger les commandes :
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
     :lines: 84
-    :langue: shell
+    :language: shell
 ```
 
 ### `balance`
