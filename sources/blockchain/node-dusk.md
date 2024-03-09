@@ -142,11 +142,11 @@ Charger les commandes :
 
 ### `balance`
 
-Connaître le nombre de tDUSK disponible sur le *wallet*.
+Affiche le nombre de tDUSK disponible sur le *wallet*.
 
 ### `stake-info`
 
-Vérifier le nombre de *tokens* en *staking*.
+Affiche le nombre de *tokens* en *staking*.
 
 ### `rewards`
 
@@ -154,7 +154,7 @@ Connaître le montant des récompenses accumulées.
 
 ### `logs`
 
-Afficher les *logs* pour suivre l'avancée de la synchronisation du nœud.
+Affiche les *logs* pour suivre l'avancée de la synchronisation du nœud.
 
 ### `chosen`
 
@@ -170,7 +170,7 @@ Retourne le dernier bloc synchronisé par le nœud.
 
 ### `blocks`
 
-Affiche le résult des commandes `latest` et `current`.
+Affiche le résultat des commandes `latest` et `current`.
 
 ---
 
