@@ -44,7 +44,7 @@ Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
 ## Hébergement
 
 Créé un compte sur Contabo, et utiliser [ce lien](https://contabo.com/en/vps/cloud-vps-2/?addons=1634&image=debian.329&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
-À l'heure où j'écris ces lignes, la première facture est de 21,12 €, puis 13,92 €/mois.
+À l'heure où j'écris ces lignes, la première facture est de 21,12 €, puis 15,06 €/mois.
 
 Vérifier la configuration sélectionnée :
 
