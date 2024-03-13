@@ -144,17 +144,9 @@ Charger les commandes :
 
 Affiche le nombre de tDUSK disponible sur le *wallet*.
 
-### `stake-info`
+### `blocks`
 
-Affiche le nombre de *tokens* en *staking*.
-
-### `rewards`
-
-Connaître le montant des récompenses accumulées.
-
-### `logs`
-
-Affiche les *logs* pour suivre l'avancée de la synchronisation du nœud.
+Affiche le résultat des commandes [`latest`](#latest) et [`current`](#current).
 
 ### `chosen`
 
@@ -168,9 +160,17 @@ Cette commande renvoie le dernier bloc de la *blockchain*.
 
 Retourne le dernier bloc synchronisé par le nœud.
 
-### `blocks`
+### `logs`
 
-Affiche le résultat des commandes `latest` et `current`.
+Affiche les *logs* pour suivre l'avancée de la synchronisation du nœud.
+
+### `rewards`
+
+Connaître le montant des récompenses accumulées.
+
+### `stake-info`
+
+Affiche le nombre de *tokens* en *staking*.
 
 ---
 
@@ -390,6 +390,7 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 ## 📜 Historique
 
 2024-03-13
+: Tri alphabétique des [commandes](#commandes).
 : Mise à jour de la version du script d'installation de Dusk (`0.1.7` → `0.1.8`).
 
 2024-03-08
