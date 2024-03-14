@@ -20,7 +20,7 @@ apt install -y ufw \
     && echo 'OK'
 
 apt install -y jq net-tools unzip \
-    && curl -L https://github.com/dusk-network/itn-installer/releases/download/v0.1.8/itn-installer.sh | sh \
+    && curl -sL https://github.com/dusk-network/itn-installer/releases/download/v0.1.8/itn-installer.sh | sh \
     && echo 'OK'
 
 rusk-wallet restore
