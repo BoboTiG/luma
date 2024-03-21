@@ -10,7 +10,7 @@
 ```
 
 ```{note}
-Ce document est valide du 15 février 2024 au 15 mars 2024.
+Ce document est valide du 15 février 2024 au 21 mars 2024.
 ```
 
 Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/itn/node-running-guide) pour le déploiement d'un nœud Dusk, plus communément appelé *node provisioner*.
