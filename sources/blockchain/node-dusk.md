@@ -9,10 +9,6 @@
   Site web : [dusk.network](https://dusk.network)
 ```
 
-```{note}
-Ce document est valide du 15 février 2024 au 21 mars 2024.
-```
-
 Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/itn/node-running-guide) pour le déploiement d'un nœud Dusk, plus communément appelé *node provisioner*.
 
 ## [Configuration Requise](https://docs.dusk.network/getting-started/node-setup/node-requirements#provisioner-specifications)
@@ -388,6 +384,9 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 - [Statistiques avec carte des nœuds](https://explorer.dusk.network/charts)
 
 ## 📜 Historique
+
+2024-03-25
+: Mise à jour de la version du script d'installation de Dusk (`0.1.9` → `0.2.0`) pour la migration depuis l'ITN2 vers le *testnet* "Nocturne".
 
 2024-03-16
 : Mise à jour de la version du script d'installation de Dusk (`0.1.8` → `0.1.9`).
