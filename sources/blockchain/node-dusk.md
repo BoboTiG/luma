@@ -138,7 +138,7 @@ Charger les commandes :
 
 ### `balance`
 
-Affiche le nombre de tDUSK disponible sur le *wallet*.
+Affiche le nombre de nDUSK disponible sur le *wallet*.
 
 ### `blocks`
 
@@ -235,7 +235,7 @@ C'est la dernière étape pour pouvoir créer des blocs et participer au réseau
 
 ### *Stake*
 
-Pour l'exemple, plaçons 1 000 tDUSK en *staking* (c'est le minimum requis, lien vers le [fausset](https://docs.dusk.network/itn/testnet-faucet/)) :
+Pour l'exemple, plaçons 1 000 nDUSK en *staking* (c'est le minimum requis, lien vers le [fausset](https://docs.dusk.network/itn/testnet-faucet/)) :
 
 ```{literalinclude} snippets/node-dusk.sh
     :caption: ☁️ Serveur (VPS)
@@ -386,7 +386,7 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 ## 📜 Historique
 
 2024-03-25
-: Mise à jour de la version du script d'installation de Dusk (`0.1.9` → `0.2.0`) pour la migration depuis l'ITN2 vers le *testnet* "Nocturne".
+: Mise à jour de la version du script d'installation de Dusk (`0.1.9` → `0.2.0`) pour la migration depuis l'ITN vers le *testnet* "Nocturne".
 
 2024-03-16
 : Mise à jour de la version du script d'installation de Dusk (`0.1.8` → `0.1.9`).
