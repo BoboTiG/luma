@@ -2,11 +2,6 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-from pygments.lexers.web import PhpLexer
-from sphinx.highlighting import lexers
-
-lexers["php"] = PhpLexer(startinline=True, linenos=1)
-
 sys.path.insert(0, f"{Path(__file__).parent}.")
 
 author = "Mickaël Schoentgen"
