@@ -6,7 +6,7 @@ L'astuce réside dans le fait qu'il ne peut pas avoir d'espace dans une URL. L'e
 
 `````{tabs}
 
-````{tab} javaScript
+````{tab} JavaScript
 ```{code-block} javascript
 text = text.replace(/(https?:\/\/[^\s<"]+)/g, '< href="$1">$1</a>');
 ```
