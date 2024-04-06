@@ -7,7 +7,7 @@ sys.path.insert(0, f"{Path(__file__).parent}.")
 author = "Mickaël Schoentgen"
 project = "Base de connaissances du luma"
 this_year = datetime.now(tz=UTC).year
-copyright = f"2006-{this_year}, {author}"  # noqa:A001
+copyright = f"2023-{this_year}, {author}"  # noqa:A001
 url = "https://www.tiger-222.fr"
 language = "fr"
 
