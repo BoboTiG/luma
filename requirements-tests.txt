@@ -2,5 +2,5 @@
 mypy==1.9.0
 pymarkdownlnt==0.9.18
 ruff==0.3.7
-sphinx-autobuild==2024.2.4
+sphinx-autobuild==2024.4.13
 yamllint==1.35.1
