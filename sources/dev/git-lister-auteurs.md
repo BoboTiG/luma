@@ -1,8 +1,8 @@
 # Lister les auteurs et coauteurs d'un dépôt git
 
 ```{literalinclude} snippets/git-lister-auteurs.sh
-    :lines: 3-
-    :language: shell
+:lines: 3-
+:language: shell
 ```
 
 ---

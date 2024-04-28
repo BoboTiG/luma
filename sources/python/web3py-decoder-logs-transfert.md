@@ -8,22 +8,22 @@ Voici une solution, en prenant pour l'exemple [cette transaction](https://snowtr
 Imports et constantes :
 
 ```{literalinclude} snippets/web3py-decoder-logs-transfert.py
-    :lines: 1-26
-    :language: python
+:lines: 1-26
+:language: python
 ```
 
 Récupération et décodage des *logs* :
 
 ```{literalinclude} snippets/web3py-decoder-logs-transfert.py
-    :lines: 28-38
-    :language: python
+:lines: 28-38
+:language: python
 ```
 
 Enfin, quelques idées de traitement des *logs* :
 
 ```{literalinclude} snippets/web3py-decoder-logs-transfert.py
-    :lines: 40-53
-    :language: python
+:lines: 40-53
+:language: python
 ```
 
 Pour la démonstration, voici ce qui sera affiché :

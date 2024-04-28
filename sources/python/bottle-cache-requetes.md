@@ -6,10 +6,10 @@ Nous allons voir comment ajouter un cache à certaines requêtes.
 Partons de cet exemple inspiré de la description du projet sur GitHub :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :caption: app.py
-    :linenos:
-    :lines: 5,107-115
-    :language: python
+:caption: app.py
+:linenos:
+:lines: 5,107-115
+:language: python
 ```
 
 Démarrons le serveur local :
@@ -21,7 +21,7 @@ python app.py
 Et voyons que ça fonctionne :
 
 ```{code-block} html
-    :caption: $ curl 'http://localhost:8080/hello/Mickaël'
+:caption: $ curl 'http://localhost:8080/hello/Mickaël'
 
 <b>Hello Mickaël</b>
 ```
@@ -35,32 +35,32 @@ L'idée est la suivante : lorsqu'une requête est faite sur `/hello/NAME`, la r�
 Le cache en lui-même aura besoin de ces fonctions (c'est une façon de faire, à adapter selon le besoin) :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :caption: Imports & constante
-    :lines: 1-3,6-7
+:caption: Imports & constante
+:lines: 1-3,6-7
 ```
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :pyobject: get_from_cache
-    :language: python
+:pyobject: get_from_cache
+:language: python
 ```
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :pyobject: store_in_cache
-    :language: python
+:pyobject: store_in_cache
+:language: python
 ```
 
 Bien sûr, qui dit cache, dit invalidation de cache. Cette fonction sera utile donc :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :pyobject: invalidate_caches
-    :language: python
+:pyobject: invalidate_caches
+:language: python
 ```
 
 Et voici le code du cache, qui n'est autre qu'un décorateur :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :pyobject: cache
-    :language: python
+:pyobject: cache
+:language: python
 ```
 
 La clef du cache est déterminée suivant le chemin de la requête (ex : `/hello/Mickaël`) ; il est possible de prendre en compte plus de détails comme les paramètres passés à l'URL, entre autres. Aussi, si Bottle est en mode débogage, alors le cache est ignoré.
@@ -68,21 +68,21 @@ La clef du cache est déterminée suivant le chemin de la requête (ex : `/hello
 Avec cette information, un hash est généré via la fonction `small_hash()`{l=python} que voici, inspirée de la [version PHP smallHash() écrite pour Shaarli](https://github.com/sebsauvage/Shaarli/blob/029f75f180f79cd581786baf1b37e810da1adfc3/index.php#L228-L241) (idem, c'est un exemple et libre à chacun de tout chambouler) :
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :pyobject: php_crc32
-    :language: python
+:pyobject: php_crc32
+:language: python
 ```
 
 ```{literalinclude} snippets/bottle-cache-requetes.py
-    :pyobject: small_hash
-    :language: python
+:pyobject: small_hash
+:language: python
 ```
 
 Dernière étape, utiliser le décorateur :
 
 ```{code-block} diff
-    :caption: app.py diff
-   :linenos:
-   :lineno-start: 3
+:caption: app.py diff
+:linenos:
+:lineno-start: 3
 
  @bottle.route("/hello/<name>")
 +@cache
@@ -97,7 +97,7 @@ Dernière étape, utiliser le décorateur :
 Le premier appel n'est pas en cache :
 
 ```{code-block} html
-    :caption: $ curl 'http://localhost:8080/hello/Mickaël'
+:caption: $ curl 'http://localhost:8080/hello/Mickaël'
 
 <b>Hello Mickaël</b>
 ```
@@ -105,7 +105,7 @@ Le premier appel n'est pas en cache :
 Et les suivants le sont :
 
 ```{code-block} html
-    :caption: $ curl 'http://localhost:8080/hello/Mickaël'
+:caption: $ curl 'http://localhost:8080/hello/Mickaël'
 
 <b>Hello Mickaël</b>
 <!-- Cached: 2023-10-17 07:08:41.510318+00:00 -->

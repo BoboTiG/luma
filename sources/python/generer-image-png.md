@@ -5,17 +5,17 @@ Voici une fonction bien pratique pour créer une image au format PNG. La valeur 
 ## Imports
 
 ```{literalinclude} snippets/generer-image-png.py
-    :caption: generer-image-png.py
-    :lines: 1-4
-    :language: python
+:caption: generer-image-png.py
+:lines: 1-4
+:language: python
 ```
 
 ## La fonction
 
 ```{literalinclude} snippets/generer-image-png.py
-    :caption: generer-image-png.py
-    :pyobject: generate_random_png
-    :language: python
+:caption: generer-image-png.py
+:pyobject: generate_random_png
+:language: python
 ```
 
 ## Validation
@@ -23,13 +23,13 @@ Voici une fonction bien pratique pour créer une image au format PNG. La valeur 
 Pour vérifier la validité des fichiers générés :
 
 ```{literalinclude} snippets/generer-image-png.sh
-    :lines: 3-4
-    :language: shell
+:lines: 3-4
+:language: shell
 ```
 
 ```{literalinclude} snippets/generer-image-png.sh
-    :lines: 6-7
-    :language: shell
+:lines: 6-7
+:language: shell
 ```
 
 ---

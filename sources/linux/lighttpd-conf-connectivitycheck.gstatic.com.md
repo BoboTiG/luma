@@ -19,7 +19,7 @@ Du côté de Lighttpd, nous utiliserons le [mod magnet](https://redmine.lighttpd
 Configurons un nouveau site web :
 
 ```{code-block} shell
-    :caption: /etc/lighttpd/conf-available/16-connectivitycheck.conf
+:caption: /etc/lighttpd/conf-available/16-connectivitycheck.conf
 
 $HTTP["host"] == "connectivitycheck.gstatic.com" {
     $HTTP["url"] == "/generate_204" {
@@ -54,7 +54,7 @@ sudo ln -s \
 Exemple de sortie console lorsque tout est correctement en place :
 
 ```{code-block} text
-    :caption: $ curl -v connectivitycheck.gstatic.com/generate_204
+:caption: $ curl -v connectivitycheck.gstatic.com/generate_204
 
 * Host connectivitycheck.gstatic.com:80 was resolved.
 * IPv6: 2a00:1450:4007:80d::2003

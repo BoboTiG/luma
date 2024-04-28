@@ -19,7 +19,7 @@ Nous utiliserons le [mod magnet](https://redmine.lighttpd.net/projects/lighttpd/
 Configurons un nouveau site web :
 
 ```{code-block} shell
-    :caption: /etc/lighttpd/conf-available/16-detectportal.conf
+:caption: /etc/lighttpd/conf-available/16-detectportal.conf
 
 $HTTP["host"] == "detectportal.firefox.com" {
     magnet.attract-raw-url-to = ( "/etc/lighttpd/scripts/200-success.lua" )
@@ -39,7 +39,7 @@ sudo ln -s \
 Le script Lua en question :
 
 ```{code-block} lua
-    :caption: /etc/lighttpd/scripts/200-success.lua
+:caption: /etc/lighttpd/scripts/200-success.lua
 
 lighty.r.resp_body.set({'success\n'})
 lighty.r.resp_header["Content-Type"] = "text/html"
@@ -63,7 +63,7 @@ sudo systemctl restart lighttpd
 Exemple de sortie console lorsque tout est correctement en place :
 
 ```{code-block} text
-    :caption: $ curl -v detectportal.firefox.com
+:caption: $ curl -v detectportal.firefox.com
 
 * Host detectportal.firefox.com:80 was resolved.
 * IPv6: 2600:1901:0:38d7::

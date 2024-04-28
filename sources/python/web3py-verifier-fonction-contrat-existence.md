@@ -1,19 +1,19 @@
 # Python, Web3 : Déterminer si un contrat contient une fonction donnée
 
-Fonction qui renverra `True` si une fonction donnée est présente dans un contrat (adapter `RPC_URL`) :
+Fonction Python qui renverra `True` si une fonction donnée est présente dans un contrat (adapter `RPC_URL`) :
 
 ```{literalinclude} snippets/web3py-verifier-fonction-contrat-existence.py
-    :lines: 1-11
-    :emphasize-lines: 4
-    :language: python
+:lines: 1-11
+:emphasize-lines: 4
+:language: python
 ```
 
 Utilisation :
 
 ```{literalinclude} snippets/web3py-verifier-fonction-contrat-existence.py
-    :lines: 16-20
-    :dedent:
-    :language: python
+:lines: 16-20
+:dedent:
+:language: python
 ```
 
 [Version anglaise](https://ethereum.stackexchange.com/a/123607/95322) très courte.
@@ -29,7 +29,7 @@ Utilisation :
 : Code plus rapide et supportant Web3.py v6+ :
 
   ```{literalinclude} snippets/web3py-verifier-fonction-contrat-existence.diff
-    :language: diff
+  :language: diff
   ```
 
 - Avant : `0,0677` sec

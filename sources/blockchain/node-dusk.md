@@ -1,12 +1,12 @@
 # [testnet] Comment déployer un nœud Dusk ?
 
 ```{figure} images/dusk-logo.svg
- :width: 96
-  :height: 96
-  :alt: Dusk Logo
-  :align: center
+:width: 96
+:height: 96
+:alt: Dusk Logo
+:align: center
 
-  Site web : [dusk.network](https://dusk.network)
+Site web : [dusk.network](https://dusk.network)
 ```
 
 Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/itn/node-running-guide) pour le déploiement d'un nœud Dusk, plus communément appelé *node provisioner*.
@@ -59,10 +59,10 @@ Ne pas choisir la région *European Union (Germany)* car il y a des soucis avec 
 Lorsque le serveur sera opérationnel et que son adresse IP sera connue, configurons l'accès SSH sur le PC (remplacer `ADRESSE_IP` par l'adresse IP du serveur) :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: 🖥️ Ordinateur (PC) ✍️
-    :lines: 3-8
-    :language: shell
-    :emphasize-lines: 4
+:caption: 🖥️ Ordinateur (PC) ✍️
+:lines: 3-8
+:language: shell
+:emphasize-lines: 4
 ```
 
 ### Connexion
@@ -70,7 +70,7 @@ Lorsque le serveur sera opérationnel et que son adresse IP sera connue, configu
 Se connecter en SSH au serveur (utiliser le mot de passe que défini sur Contabo) :
 
 ```{code-block} shell
-    :caption: 🖥️ Ordinateur (PC)
+:caption: 🖥️ Ordinateur (PC)
 
 ssh dusk
 ```
@@ -84,9 +84,9 @@ ssh dusk
 Mettre à jour le système d'exploitation, puis redémarrer :
 
 ```{literalinclude} snippets/_node-os-upgrade.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 2-7
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 2-7
+:language: shell
 ```
 
 Patienter quelques secondes et se [reconnecter](#connexion) au serveur.
@@ -96,9 +96,9 @@ Patienter quelques secondes et se [reconnecter](#connexion) au serveur.
 Installer et configurer le pare-feu pour autoriser **seulement** les connexions entrantes sur les ports SSH et du nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 15-20
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 15-20
+:language: shell
 ```
 
 ### Serveur NTP
@@ -111,9 +111,9 @@ Installer et configurer le pare-feu pour autoriser **seulement** les connexions 
 Télécharger et exécuter le script d'installation automatique pour Dusk :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 22-24
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 22-24
+:language: shell
 ```
 
 ---
@@ -123,17 +123,17 @@ Télécharger et exécuter le script d'installation automatique pour Dusk :
 Ces commandes seront pratiques plus tard afin de déterminer l'état du nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 72-83
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 72-83
+:language: shell
 ```
 
 Charger les commandes :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 84
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 84
+:language: shell
 ```
 
 ### `balance`
@@ -177,18 +177,18 @@ Affiche le nombre de *tokens* en *staking*.
 Stocker le mot de passe du *wallet* Dusk afin de ne plus avoir à la taper pour toutes les futures commandes `rusk-wallet …` ([source](https://github.com/dusk-network/wallet-cli/blob/v0.21.0/src/bin/README.md#headless-mode)) :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS) ✍️
-    :emphasize-lines: 1
-    :lines: 55-56
-    :language: shell
+:caption: ☁️ Serveur (VPS) ✍️
+:emphasize-lines: 1
+:lines: 55-56
+:language: shell
 ```
 
 Tester que le mot de passe est visible (il devrait s'afficher, suivi de "OK") :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 58-59
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 58-59
+:language: shell
 ```
 
 ### Importer le Compte
@@ -198,17 +198,17 @@ Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun *
 ```
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 26
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 26
+:language: shell
 ```
 
 ### Exporter les Clefs de Consensus
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 28-29
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 28-29
+:language: shell
 ```
 
 ---
@@ -218,9 +218,9 @@ Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun *
 Et c'est parti, démarrons le nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 32
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 32
+:language: shell
 ```
 
 ---
@@ -238,13 +238,13 @@ C'est la dernière étape pour pouvoir créer des blocs et participer au réseau
 Pour l'exemple, plaçons 1 000 nDUSK en *staking* (c'est le minimum requis, lien vers le [fausset](https://docs.dusk.network/itn/testnet-faucet/)) :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 37
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 37
+:language: shell
 ```
 
 ````{admonition} Exemple de sortie
-    :class: toggle
+:class: toggle
 
 ```{code-block}
 ✔ Please enter wallet password: · [hidden]
@@ -283,10 +283,10 @@ La commande précédente **ne peut pas** être utilisée à plusieurs reprises p
 Voici la procédure pour *staker* plus de *tokens* (remplacer `AMOUNT` par le nombre de *tokens*) :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS) ✍️
-    :lines: 67-68
-    :emphasize-lines: 2
-    :language: shell
+:caption: ☁️ Serveur (VPS) ✍️
+:lines: 67-68
+:emphasize-lines: 2
+:language: shell
 ```
 ````
 
@@ -317,9 +317,9 @@ Relancer la commande pour [exporter les clefs de consensus](#exporter-les-clefs-
 Si nécessaire, repartir de zéro :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 45-50
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 45-50
+:language: shell
 ```
 
 ### Règles du Pare-feu
@@ -327,9 +327,9 @@ Si nécessaire, repartir de zéro :
 Liste des règles actives :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 53
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 53
+:language: shell
 ```
 
 Voici la sortie attendue :
@@ -353,16 +353,16 @@ To                         Action      From
 Liste des ports réellement ouverts :
 
 ```{literalinclude} snippets/node-dusk.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 52
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 52
+:language: shell
 ```
 
 ````{admonition} Exemple de sortie
-    :class: toggle
+:class: toggle
 
 ```{code-block}
-    :emphasize-lines: 8-9
+:emphasize-lines: 8-9
 
 COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 sshd      530    root    3u  IPv4   2288      0t0  TCP *:22 (LISTEN)

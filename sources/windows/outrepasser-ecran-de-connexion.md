@@ -16,22 +16,22 @@ Ensuite, montez la partition qui contient Windows.
 Pour lister les différentes partitions :
 
 ```{literalinclude} snippets/outrepasser-ecran-de-connexion.sh
-    :lines: 3
-    :language: shell
+:lines: 3
+:language: shell
 ```
 
 Monter la bonne partition :
 
 ```{literalinclude} snippets/outrepasser-ecran-de-connexion.sh
-    :lines: 5
-    :language: shell
+:lines: 5
+:language: shell
 ```
 
 ### Substituer `Utilman.exe`
 
 ```{literalinclude} snippets/outrepasser-ecran-de-connexion.sh
- :lines: 7-9
-    :language: shell
+:lines: 7-9
+:language: shell
 ```
 
 Finalement, redémarrez sur Windows et cliquez sur l'icône "*Option d'ergonomie*".
@@ -45,15 +45,15 @@ Voilà, vous avez **un accès privilégié à l'invite de commande** !
 Vous voilà dans l'invite de commande. Voici les commandes pour créer un nouvel utilisateur, disons Bob :
 
 ```{literalinclude} snippets/outrepasser-ecran-de-connexion.bat
-    :lines: 3-6
-    :language: batch
+:lines: 3-6
+:language: batch
 ```
 
 Vous pouvez assigner Bob au groupe *administrateurs* :
 
 ```{literalinclude} snippets/outrepasser-ecran-de-connexion.bat
-    :lines: 8-9
-    :language: batch
+:lines: 8-9
+:language: batch
 ```
 
 Il ne reste plus qu'à vous connecter à l'aide de l'identifiant Bob.

@@ -7,8 +7,8 @@
 Pour l'exemple, disons que les pages 301, 302 et 303 du fichier source sont en mode paysage alors que toutes les autres sont en mode portrait. Voici comment réorienter ces 3 pages :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
-    :lines: 3-10
-    :language: shell
+:lines: 3-10
+:language: shell
 ```
 
 ## Redimensionner
@@ -16,8 +16,8 @@ Pour l'exemple, disons que les pages 301, 302 et 303 du fichier source sont en m
 Pour vérifier que toutes les pages ont les mêmes marges :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
-    :lines: 12
-    :language: shell
+:lines: 12
+:language: shell
 ```
 
 Exemple de sortie :
@@ -30,8 +30,8 @@ Exemple de sortie :
 Redimensionnons toutes les pages :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
-    :lines: 13-15
-    :language: shell
+:lines: 13-15
+:language: shell
 ```
 
 ## Fusionner
@@ -39,8 +39,8 @@ Redimensionnons toutes les pages :
 Pour fusionner plusieurs fichiers PDF en un seul :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
-    :lines: 17-22
-    :language: shell
+:lines: 17-22
+:language: shell
 ```
 
 ## Optimiser
@@ -48,8 +48,8 @@ Pour fusionner plusieurs fichiers PDF en un seul :
 GhostScript permet de réduire grandement le poids du fichier final :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
-    :lines: 32-37
-    :language: shell
+:lines: 32-37
+:language: shell
 ```
 
 ## Personnaliser les Méta-données
@@ -57,8 +57,8 @@ GhostScript permet de réduire grandement le poids du fichier final :
 Exporter les métadonnées actuelles dans le fichier `metadata.txt` :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
-    :lines: 39
-    :language: shell
+:lines: 39
+:language: shell
 ```
 
 Le contenu du fichier ressemble à ça :
@@ -84,7 +84,7 @@ PageMediaDimensions: 1,057.5 1,687.5
 Modifier les premières lignes ou ajouter les métadonnées manquantes (parmi : *Title*, *Author*, *Subject*, *Keywords*, *Creator*, *Producer*, *CreationDate*, *ModDate* et *Trapped*) :
 
 ```{code-block}
-    :emphasize-lines: 1-9
+:emphasize-lines: 1-9
 
 InfoBegin
 InfoKey: Title
@@ -115,8 +115,8 @@ PageMediaDimensions: 1,057.5 1,687.5
 Générer un nouveau PDF comportant les nouvelles méta-données :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
-    :lines: 40
-    :language: shell
+:lines: 40
+:language: shell
 ```
 
 ---

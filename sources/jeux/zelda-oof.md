@@ -1,10 +1,10 @@
 # The Legend of Zelda: Ocarina of Time
 
 ```{figure} images/the-legend-of-zelda-ocarina-of-time.svg
- :width: 500
-  :height: 240
-  :alt: The Legend of Zelda - Ocarina of Time
-  :align: center
+:width: 500
+:height: 240
+:alt: The Legend of Zelda - Ocarina of Time
+:align: center
 ```
 
 ## 📈 Améliorations
