@@ -14,9 +14,9 @@ Voici ce qu'il fait :
 Pensez à adapter la partition à la ligne spécifiant `set new_folder=…` (ici `D:`).
 
 ```{literalinclude} snippets/deplacer-le-dossier-personnel-vers-une-partition-dediee.bat
-    :caption: move-current-user-folder.bat
-    :emphasize-lines: 4
-    :language: batch
+:caption: move-current-user-folder.bat
+:emphasize-lines: 4
+:language: batch
 ```
 
 ## Utilisation

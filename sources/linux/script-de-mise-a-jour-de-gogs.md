@@ -3,23 +3,23 @@
 Voici un script qui permet de mettre à jour [Gogs](https://gogs.io), un serveur Git à installer chez soi, en l'occurrence sur un Raspberry Pi 2.
 
 ```{literalinclude} snippets/script-de-mise-a-jour-de-gogs.sh
-    :caption: update-gogs.sh
-    :lines: 1-38
-    :language: shell
+:caption: update-gogs.sh
+:lines: 1-38
+:language: shell
 ```
 
 Rendre le script exécutable :
 
 ```{literalinclude} snippets/script-de-mise-a-jour-de-gogs.sh
-    :lines: 41
-    :language: shell
+:lines: 41
+:language: shell
 ```
 
 À utiliser tel que :
 
 ```{literalinclude} snippets/script-de-mise-a-jour-de-gogs.sh
-    :lines: 42
-    :language: shell
+:lines: 42
+:language: shell
 ```
 
 ---

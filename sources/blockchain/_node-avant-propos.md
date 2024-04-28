@@ -4,7 +4,7 @@ Les futures commandes à taper dans une console sont précédées par une légen
 Exemple avec une commande qui devra être tapée dans la console de l'ordinateur (PC) :
 
 ```{code-block} shell
-    :caption: 🖥️ Ordinateur (PC)
+:caption: 🖥️ Ordinateur (PC)
 
 echo 'Coucou depuis le PC !'
 ```
@@ -12,7 +12,7 @@ echo 'Coucou depuis le PC !'
 Et une commande qui devra être tapée dans la console du serveur (VPS, pour *Virtual Private Server*) sur lequel le nœud sera déployé :
 
 ```{code-block} shell
-    :caption: ☁️ Serveur (VPS)
+:caption: ☁️ Serveur (VPS)
 
 echo 'Coucou depuis le serveur !'
 ```

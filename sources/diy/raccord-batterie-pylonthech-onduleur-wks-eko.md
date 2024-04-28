@@ -11,7 +11,7 @@ Pour que l'onduleur ([WKS EKO Circle](https://www.wattuneed.com/fr/onduleurs-et-
 Ci-dessous, le schéma d'installation concentré sur la connexion ([cliquer ici pour télécharger le schéma complet](images/schema-communication-onduleur-wks-eko-circle-vers-batterie-pylontech-complet.jpg)) :
 
 ```{figure} images/schema-communication-onduleur-wks-circle-vers-batterie-pylontech-zoom.jpg
-  :align: center
+:align: center
 ```
 
 ### Côté Onduleur
@@ -19,7 +19,7 @@ Ci-dessous, le schéma d'installation concentré sur la connexion ([cliquer ici 
 Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS**, et il ne comporte que 2 pins : les n° 3 (marron) et 5 (blanc marron) :
 
 ```{figure} images/rj45-rs485-inverter.svg
-  :align: center
+:align: center
 ```
 
 ### Côté Batterie
@@ -27,7 +27,7 @@ Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS*
 Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que 2 pins : les n° 7 (blanc marron) et 8 (marron) :
 
 ```{figure} images/rj45-rs485-battery.svg
-  :align: center
+:align: center
 ```
 
 ```{tip}
@@ -41,13 +41,13 @@ De ce côté-là, il est possible de laisser un câble RJ45 d'origine avec les 8
 Dernier point, sur la batterie *master*, bien vérifier que les DIP 4, 3 et 2 sont en position haute (OFF), et 1 en position basse (ON) :
 
 ```{figure} images/battery-pylontech-dip-master.svg
-  :align: center
+:align: center
 ```
 
 Si batterie(s) *slave* il y a, mettre tous leurs DIP en position haute (OFF) :
 
 ```{figure} images/battery-pylontech-dip-slave.svg
-  :align: center
+:align: center
 ```
 
 ---

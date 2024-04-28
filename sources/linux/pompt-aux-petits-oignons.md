@@ -5,8 +5,8 @@
 Installation de [Oh My Zsh](https://ohmyz.sh), [Powerlevel10k](https://github.com/romkatv/powerlevel10k), et de quelques plugins :
 
 ```{literalinclude} snippets/pompt-aux-petits-oignons.sh
-    :lines: 2-
-    :language: shell
+:lines: 2-
+:language: shell
 ```
 
 ## Configuration
@@ -14,7 +14,7 @@ Installation de [Oh My Zsh](https://ohmyz.sh), [Powerlevel10k](https://github.co
 Ajouter ces lignes au fichier `$HOME/.zshrc` :
 
 ```{code-block} shell
-      :caption: ~/.zshrc
+:caption: ~/.zshrc
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME='powerlevel10k/powerlevel10k'
@@ -44,7 +44,7 @@ Le configurateur de Powerlevel10k devrait se lancer, ensuite, c'est terminé.
 Pour information, le contenu final du fichier `$HOME/.zshrc` serait quelque chose comme :
 
 ```{code-block} shell
-      :caption: ~/.zshrc
+:caption: ~/.zshrc
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -73,7 +73,7 @@ source $HOME/.profile
 Dernières touches, j'ai modifié ces options dans `$HOME/.p10k.zsh` :
 
 ```{code-block} shell
-      :caption: ~/.p10k.zsh
+:caption: ~/.p10k.zsh
 
 # Python - pyenv
 typeset -g POWERLEVEL9K_PYENV_PROMPT_ALWAYS_SHOW=true
@@ -87,7 +87,7 @@ typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION='🐍'
 ## Aperçu
 
 ```{figure} images/zsh-omz-powerlevel10k.png
- :align: center
+:align: center
 ```
 
 ---

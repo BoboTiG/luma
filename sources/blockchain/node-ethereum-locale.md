@@ -7,8 +7,8 @@ Voyons comment mettre en place un nœud Ethereum local avec [Go Ethereum](https:
 Il vous faudra un système d'exploitation sous GNU/Linux, puis :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 3-12
-    :language: shell
+:lines: 3-12
+:language: shell
 ```
 
 ## Comptes
@@ -16,16 +16,16 @@ Il vous faudra un système d'exploitation sous GNU/Linux, puis :
 Pour créer un compte, utilisez cette commande (sans définir de mot de passe) :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 14
-    :language: shell
+:lines: 14
+:language: shell
 ```
 
 ````{hint}
 Vous pouvez aussi importer un compte existant :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 15
-    :language: shell
+:lines: 15
+:language: shell
 ```
 ````
 
@@ -33,9 +33,9 @@ Un fichier *UTC--…* sera créé dans le dossier *dev/node/keystore*.
 À partir de celui-ci, vous pouvez utiliser ce script Python pour récupérer la clef privée :
 
 ```{literalinclude} snippets/node-ethereum-locale.py
-    :caption: dev/get-private-key.py
-    :emphasize-lines: 14
-    :language: python
+:caption: dev/get-private-key.py
+:emphasize-lines: 15
+:language: python
 ```
 
 À lancer tel que :
@@ -63,8 +63,8 @@ Les adresses ne doivent pas être préfixées de `0x`.
 ```
 
 ```{code-block} json
-    :caption: dev/genesis.json
-    :emphasize-lines: 33
+:caption: dev/genesis.json
+:emphasize-lines: 33
 
 {
     "config": {
@@ -114,8 +114,8 @@ Les adresses ne doivent pas être préfixées de `0x`.
 Ensuite, lancez cette commande pour initialiser (ou réinitialiser) le nœud :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 17-18
-    :language: shell
+:lines: 17-18
+:language: shell
 ```
 
 ## Démarrage
@@ -123,9 +123,9 @@ Ensuite, lancez cette commande pour initialiser (ou réinitialiser) le nœud :
 Démarrez le nœud (pensez à adapter l'adresse publique du compte) :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
-    :lines: 20-34
-    :emphasize-lines: 12-13,15
-    :language: shell
+:lines: 20-34
+:emphasize-lines: 12-13,15
+:language: shell
 ```
 
 ```{note}

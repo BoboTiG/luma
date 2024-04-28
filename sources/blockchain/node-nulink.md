@@ -1,10 +1,10 @@
 # [testnet] Comment déployer un nœud NuLink ?
 
 ```{figure} images/nulink-logo.svg
- :width: 340
-  :height: 96
-  :alt: NuLink Logo
-  :align: center
+:width: 340
+:height: 96
+:alt: NuLink Logo
+:align: center
 
   Site web : [www.nulink.org](https://www.nulink.org)
 ```
@@ -49,17 +49,17 @@ Nous devons passer par Geth pour la création du compte.
 Donc, sur ton PC, installe Geth :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: 🖥️ Ordinateur (PC)
-    :lines: 3-9
-    :language: shell
+:caption: 🖥️ Ordinateur (PC)
+:lines: 3-9
+:language: shell
 ```
 
 Et créé le compte :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: 🖥️ Ordinateur (PC)
-    :lines: 11-12
-    :language: shell
+:caption: 🖥️ Ordinateur (PC)
+:lines: 11-12
+:language: shell
 ```
 
 ```{caution}
@@ -87,10 +87,10 @@ Si tu décides d'utiliser un autre fournisseur, voire un ordinateur local, voici
 Quand tu auras pris connaissance de l'adresse IP du serveur, configure l'accès SSH sur ta machine (remplace `ADRESSE_IP` par l'adresse IP du serveur) :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: 🖥️ Ordinateur (PC) ✍️
-    :lines: 85-90
-    :language: shell
-    :emphasize-lines: 4
+:caption: 🖥️ Ordinateur (PC) ✍️
+:lines: 85-90
+:language: shell
+:emphasize-lines: 4
 ```
 
 ### Sauvegarde la Clef Privée
@@ -98,9 +98,9 @@ Quand tu auras pris connaissance de l'adresse IP du serveur, configure l'accès 
 Envoie le fichier de la clef privée depuis ton ordinateur vers le serveur :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: 🖥️ Ordinateur (PC)
-    :lines: 14-16
-    :language: shell
+:caption: 🖥️ Ordinateur (PC)
+:lines: 14-16
+:language: shell
 ```
 
 ### Connexion
@@ -108,7 +108,7 @@ Envoie le fichier de la clef privée depuis ton ordinateur vers le serveur :
 Connecte-toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo) :
 
 ```{code-block} shell
-    :caption: 🖥️ Ordinateur (PC)
+:caption: 🖥️ Ordinateur (PC)
 
 ssh nulink
 ```
@@ -122,9 +122,9 @@ ssh nulink
 Mets à jour le système d'exploitation, puis redémarre :
 
 ```{literalinclude} snippets/_node-os-upgrade.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 2-7
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 2-7
+:language: shell
 ```
 
 Patiente quelques secondes et [reconnecte-toi](#connexion) au serveur.
@@ -134,9 +134,9 @@ Patiente quelques secondes et [reconnecte-toi](#connexion) au serveur.
 Installe et configure le pare-feu pour autoriser **seulement** les connexions entrantes sur les ports SSH et du nœud :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 22-26
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 22-26
+:language: shell
 ```
 
 #### Docker
@@ -144,9 +144,9 @@ Installe et configure le pare-feu pour autoriser **seulement** les connexions en
 Installe Docker :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 28-35
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 28-35
+:language: shell
 ```
 
 #### NuLink
@@ -154,17 +154,17 @@ Installe Docker :
 Pré-requis pour la prochaine étape :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 37-40
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 37-40
+:language: shell
 ```
 
 Enfin, installe NuLink :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 42-43
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 42-43
+:language: shell
 ```
 
 ---
@@ -178,21 +178,21 @@ Envoie maintenant un peu de tBNB sur le compte du *worker*.
 Enregistre les mots de passe pour plus tard :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS) ✍️
-    :lines: 45
-    :language: shell
+:caption: ☁️ Serveur (VPS) ✍️
+:lines: 45
+:language: shell
 ```
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS) ✍️
-    :lines: 46
-    :language: shell
+:caption: ☁️ Serveur (VPS) ✍️
+:lines: 46
+:language: shell
 ```
 
 Tu dois te déconnecter pour prendre en compte les changements :
 
 ```{code-block} shell
-    :caption: ☁️ Serveur (VPS)
+:caption: ☁️ Serveur (VPS)
 
 exit
 ```
@@ -200,18 +200,18 @@ exit
 [Reconnecte-toi](#connexion), et teste que les mots de passe sont visibles (tu devrais voir 3 lignes avec les 2 mots de passe et "OK") :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 48-50
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 48-50
+:language: shell
 ```
 
 Initialise NuLink (remplace `FICHIER_CLEF_PRIVEE` par le nom du fichier contenant la clef privée du compte *worker* ["UTC--xxx"] et `ADRESSE_WORKER` par l'adresse publique du compte *worker*) :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS) ✍️
-    :lines: 52-65
-    :language: shell
-    :emphasize-lines: 7,12
+:caption: ☁️ Serveur (VPS) ✍️
+:lines: 52-65
+:language: shell
+:emphasize-lines: 7,12
 ```
 
 ```{caution}
@@ -221,9 +221,9 @@ Garde bien les informations en sécurité (les douze mots de la *seed phrase* et
 Depuis ton PC, récupère une copie de la clef privée :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: 🖥️ Ordinateur (PC)
-    :lines: 67-69
-    :language: shell
+:caption: 🖥️ Ordinateur (PC)
+:lines: 67-69
+:language: shell
 ```
 
 ---
@@ -233,9 +233,9 @@ Depuis ton PC, récupère une copie de la clef privée :
 Et c'est parti, démarre le nœud :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 70-78
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 70-78
+:language: shell
 ```
 
 #### Logs
@@ -243,9 +243,9 @@ Et c'est parti, démarre le nœud :
 Pour suivre ce qu'il se passe sur le nœud :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 92
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 92
+:language: shell
 ```
 
 Si tu vois « *Working ~ Keep Ursula Online!* » et/ou « *learn_from_teacher_node stop now RELAX.* », ça veut dire que tout fonctionne nickel. Félicitations !
@@ -262,9 +262,9 @@ Action à faire dans l'ordre sur le serveur :
 2. supprime le conteneur actuel, puis installe la dernière version :
 
 ```{literalinclude} snippets/node-nulink.sh
-    :caption: ☁️ Serveur (VPS)
-    :lines: 80-83
-    :language: shell
+:caption: ☁️ Serveur (VPS)
+:lines: 80-83
+:language: shell
 ```
 
 1. enfin, relance le [nœud](#execution).

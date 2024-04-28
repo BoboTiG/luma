@@ -28,15 +28,15 @@ http://USER:PASSWORD@IP/live/0/mjpeg.jpg
 Une [Raspbian minimale](https://www.tiger-222.fr/?d=2016/01/04/17/25/32-raspbian-installation-minimale) fera l'affaire sur votre Rpi. Nous allons installer [OMXPlayer](https://github.com/popcornmix/omxplayer), un lecteur vidéo spécialement conçu pour le processeur graphique (GPU) du Rpi :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :lines: 26
-    :language: shell
+:lines: 26
+:language: shell
 ```
 
 Ensuite, voici la ligne de commande pour lire le flux vidéo vers la sortie HDMI :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :lines: 28
-    :language: shell
+:lines: 28
+:language: shell
 ```
 
 ---
@@ -46,10 +46,10 @@ Ensuite, voici la ligne de commande pour lire le flux vidéo vers la sortie HDMI
 Ci-dessous est le script complet qui lancera automatiquement l'affichage de la caméra sur l'écran :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :caption: /opt/stream-hdmi.sh
-    :emphasize-lines: 3-6
-    :lines: 1-24
-    :language: shell
+:caption: /opt/stream-hdmi.sh
+:emphasize-lines: 3-6
+:lines: 1-24
+:language: shell
 ```
 
 ```{note}
@@ -67,8 +67,8 @@ Ci-dessous est le script complet qui lancera automatiquement l'affichage de la c
 Un exemple concret avec la caméra de surveillance [D-Link DCS-2210](http://www.dlink.com/fr/fr/support/product/dcs-2210-full-hd-poe-day-night-camera) :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :lines: 30-33
-    :language: shell
+:lines: 30-33
+:language: shell
 ```
 
 Le flux choisi est le profile n°2, configuré comme tel :
@@ -86,21 +86,21 @@ Le flux choisi est le profile n°2, configuré comme tel :
 Plusieurs solutions s'offrent à nous :
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :caption: ~/.profile
-    :lines: 35-36
-    :language: shell
+:caption: ~/.profile
+:lines: 35-36
+:language: shell
 ```
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :caption: /etc/cron.d/stream-hdmi
-    :lines: 38
-    :language: shell
+:caption: /etc/cron.d/stream-hdmi
+:lines: 38
+:language: shell
 ```
 
 ```{literalinclude} snippets/raspberry-pi-stream-hdmi.sh
-    :caption: /etc/rc.local
-    :lines: 40-42
-    :language: shell
+:caption: /etc/rc.local
+:lines: 40-42
+:language: shell
 ```
 
 ---

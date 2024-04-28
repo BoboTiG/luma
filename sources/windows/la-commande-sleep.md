@@ -9,8 +9,8 @@
 Windows est livré avec une commande qui s'appelle `timeout`, située dans le dossier `C:\Windows\System32`, et qui pourrait faire l'affaire. Par exemple, pour faire une pause de 5 secondes :
 
 ```{literalinclude} snippets/la-commande-sleep.bat
-    :lines: 3
-    :language: batch
+:lines: 3
+:language: batch
 ```
 
 Cependant, bien que cette commande fonctionnera la plupart du temps, il se peut que cette erreur survienne :
@@ -25,8 +25,8 @@ Ce problème arrive lorsque Cygwin est installé. Dans ce cas, il s'agira de l'e
 Un correctif possible est d'utiliser le chemin complet de l'exécutable :
 
 ```{literalinclude} snippets/la-commande-sleep.bat
-    :lines: 4
-    :language: batch
+:lines: 4
+:language: batch
 ```
 
 ---
@@ -36,8 +36,8 @@ Un correctif possible est d'utiliser le chemin complet de l'exécutable :
 Il existe une alternative universelle : `ping`. C'est une astuce vieille comme Windows, mais qu'il fallait connaître :
 
 ```{literalinclude} snippets/la-commande-sleep.bat
-    :lines: 6
-    :language: batch
+:lines: 6
+:language: batch
 ```
 
 L'idée, c'est de *pinger* l'adresse locale N fois pour une pause de N secondes.
@@ -48,8 +48,8 @@ Comme `ping` utilise un [intervalle de une seconde](seconde-d-intervalle) entre 
 L'implémentation de [ReactOS](https://reactos.org) permet de le vérifier :
 
 ```{literalinclude} snippets/la-commande-sleep.c
-    :caption: ping.c
-    :language: c
+:caption: ping.c
+:language: c
 ```
 
 ---

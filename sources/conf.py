@@ -24,7 +24,6 @@ extensions = [
     "sphinx.ext.todo",
     # "sphinx_design",
     "sphinx_last_updated_by_git",
-    "sphinx_new_tab_link",
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
 ]
@@ -34,6 +33,7 @@ myst_enable_extensions = [
     "replacements",
     "tasklist",
 ]
+myst_links_external_new_tab = True
 suppress_warnings = ["myst.xref_missing"]
 todo_include_todos = True
 html_theme = "shibuya"

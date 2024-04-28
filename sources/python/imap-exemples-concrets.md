@@ -3,8 +3,8 @@
 Commençons par nous connecter à la boîte de messagerie :
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
-    :lines: 2-21
-    :language: python
+:lines: 2-21
+:language: python
 ```
 
 ```{tip}
@@ -14,8 +14,8 @@ Commençons par nous connecter à la boîte de messagerie :
 Nous allons maintenant récupérer les identifiants des messages non lus. Pour faire les choses correctement, nous utiliserons la commande {py:func}`imaplib.IMAP4.uid` qui fonctionne avec des identifiants uniques pour chaque message.
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
-    :lines: 23-25
-    :language: python
+:lines: 23-25
+:language: python
 ```
 
 `uids` contiendra, par exemple, `[b'9263', b'9264', b'9265']`{l=python}.
@@ -23,8 +23,8 @@ Nous allons maintenant récupérer les identifiants des messages non lus. Pour f
 Pour finir, avec ces identifiants, téléchargeons le contenu des messages :
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
-    :lines: 27-30
-    :language: python
+:lines: 27-30
+:language: python
 ```
 
 ```{attention}
@@ -38,78 +38,78 @@ Du moment que la commande {py:func}`imaplib.IMAP4.fetch` est utilisée, le messa
 ### Marquer un message comme lu
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 32
-    :language: python
+:lines: 32
+:language: python
 ```
 
 ### Marquer plusieurs messages comme lus
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 34
-    :language: python
+:lines: 34
+:language: python
 ```
 
 ### Marquer un message comme non lu
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 36
-    :language: python
+:lines: 36
+:language: python
 ```
 
 ### Récupérer les messages non lus et ayant un sujet particulier
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 38-40
-    :language: python
+:lines: 38-40
+:language: python
 ```
 
 ### Récupérer les messages d'un certain émetteur
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 42-44
-    :language: python
+:lines: 42-44
+:language: python
 ```
 
 ### Récupérer les messages pour un certain destinataire
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 46-48
-    :language: python
+:lines: 46-48
+:language: python
 ```
 
 ### Récupérer les messages d'un certain émetteur pour un certain destinataire
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 50-52
-    :language: python
+:lines: 50-52
+:language: python
 ```
 
 ### Récupérer les messages à partir d'une certaine date et ayant un sujet particulier
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 1,53-59
-    :language: python
+:lines: 1,53-59
+:language: python
 ```
 
 ### Gmail : récupérer les messages contenant une pièce jointe
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 61-63
-    :language: python
+:lines: 61-63
+:language: python
 ```
 
 ### Supprimer un ou plusieurs messages
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 65-66
-    :language: python
+:lines: 65-66
+:language: python
 ```
 
 ### Copier un ou plusieurs messages
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
- :lines: 68-69
-    :language: python
+:lines: 68-69
+:language: python
 ```
 
 ### Déplacer un ou plusieurs messages
@@ -117,8 +117,8 @@ Du moment que la commande {py:func}`imaplib.IMAP4.fetch` est utilisée, le messa
 La commande `MOVE` n'existe pas ; pour l'émuler, if faut faire une copie puis supprimer les originaux :
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
-    :lines: 68-69,65-66
-    :language: python
+:lines: 68-69,65-66
+:language: python
 ```
 
 ---

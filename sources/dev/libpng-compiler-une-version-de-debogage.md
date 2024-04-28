@@ -3,8 +3,8 @@
 ## Télécharger
 
 ```{literalinclude} snippets/libpng-compiler-une-version-de-debogage.sh
- :lines: 3-4
-    :language: shell
+:lines: 3-4
+:language: shell
 ```
 
 ## Compiler
@@ -12,8 +12,8 @@
 La partie importante permettant d'activer le débogage est `CPPFLAGS=-DPNG_DEBUG=2` :
 
 ```{literalinclude} snippets/libpng-compiler-une-version-de-debogage.sh
-    :lines: 6-8
-    :language: shell
+:lines: 6-8
+:language: shell
 ```
 
 ## Tester
@@ -21,8 +21,8 @@ La partie importante permettant d'activer le débogage est `CPPFLAGS=-DPNG_DEBUG
 Remplacer `IMAGE` par un fichier PNG :
 
 ```{literalinclude} snippets/libpng-compiler-une-version-de-debogage.sh
-    :lines: 10
-    :language: shell
+:lines: 10
+:language: shell
 ```
 
 ---

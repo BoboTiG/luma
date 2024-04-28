@@ -30,29 +30,29 @@ sudo gpasswd -a $USER dialout && exit
 Cette fonction établit la connexion avec l'onduleur :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
-    :lines: 1-11
-    :language: python
+:lines: 1-11
+:language: python
 ```
 
 Celle-ci permet d'envoyer une commande à l'onduleur (comme vu dans le PDF partagé plus haut, une commande est une succession de 3 blocs : `COMMANDE+CRC+CR`, où `COMMANDE` est un mot clef comme « QID », `CRC` est la somme de contrôle de la commande envoyée, et `CR` est le caractère permettant de dire à l'onduleur que c'est la fin de l'instruction) :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
-    :pyobject: send_command
-    :language: python
+:pyobject: send_command
+:language: python
 ```
 
 Pour calculer la somme de contrôle :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
-    :pyobject: compute_crc
-    :language: python
+:pyobject: compute_crc
+:language: python
 ```
 
 Enfin, nous pouvons récupérer la réponse de l'onduleur via cette dernière fonction :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
-    :pyobject: get_response
-    :language: python
+:pyobject: get_response
+:language: python
 ```
 
 ### Exemple
@@ -60,9 +60,9 @@ Enfin, nous pouvons récupérer la réponse de l'onduleur via cette dernière fo
 Exemple d'utilisation avec la récupération du n° de série de l'onduleur :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
-    :lines: 45-49
-    :dedent:
-    :language: python
+:lines: 45-49
+:dedent:
+:language: python
 ```
 
 ## Module Spécifique
@@ -74,9 +74,9 @@ python -m pip install 'git+https://github.com/BoboTiG/python-wks-com.git@main'
 ```
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
-    :lines: 55-58
-    :dedent:
-    :language: python
+:lines: 55-58
+:dedent:
+:language: python
 ```
 
 Et il y a même un exécutable mis à disposition, une fois le module installé :

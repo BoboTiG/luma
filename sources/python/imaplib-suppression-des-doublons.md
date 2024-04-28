@@ -7,15 +7,15 @@ Supprimer les commentaires `type: ignore[…]` et corriger/retester le code.
 ```
 
 ```{literalinclude} snippets/imaplib-suppression-des-doublons.py
-    :caption: imap-delete-duplicate.py
-    :lines: 1-124
-    :language: python
+:caption: imap-delete-duplicate.py
+:lines: 1-124
+:language: python
 ```
 
 Et voici ce que ça donne en situation réelle :
 
 ```{code-block} text
-    :caption: $ python imap-delete-duplicate.py 'mail.gandi.net' 'test@jmsinfo.co'
+:caption: $ python imap-delete-duplicate.py 'mail.gandi.net' 'test@jmsinfo.co'
 
 Password:
 Drafts
@@ -34,7 +34,7 @@ INBOX/Droit du travail
 Et avec une grosse boîte de messagerie :
 
 ```{code-block} text
-    :caption: $ time python imap-delete-duplicate.py 'imap.gmail.com' 'test@gmail.com'
+:caption: $ time python imap-delete-duplicate.py 'imap.gmail.com' 'test@gmail.com'
 
 Password:
 Archives
@@ -72,9 +72,9 @@ Re&AOc-us
 Pour ajouter le bon Message-ID aux courriels envoyés par les functions du module {py:mod}`smtplib` de Python :
 
 ```{literalinclude} snippets/imaplib-suppression-des-doublons.py
-    :lines: 129-130
-    :dedent:
-    :language: python
+:lines: 129-130
+:dedent:
+:language: python
 ```
 ````
 
@@ -82,9 +82,9 @@ Pour ajouter le bon Message-ID aux courriels envoyés par les functions du modul
 Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`](https://www.php.net/manual/function.mail.php) de PHP :
 
 ```{literalinclude} snippets/imaplib-suppression-des-doublons.php
-    :lines: 2-
-    :dedent:
-    :language: php
+:lines: 2-
+:dedent:
+:language: php
 ```
 ````
 

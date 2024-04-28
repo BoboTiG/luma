@@ -5,17 +5,17 @@
 Vous pouvez spécifier un séparateur des milliers pour {py:func}`format` :
 
 ```{literalinclude} snippets/tricks.py
-    :lines: 7-10
-    :dedent:
-    :language: python
+:lines: 7-10
+:dedent:
+:language: python
 ```
 
 Idem pour les {py:obj}`f-string` :
 
 ```{literalinclude} snippets/tricks.py
-    :lines: 11-14
-    :dedent:
-    :language: python
+:lines: 11-14
+:dedent:
+:language: python
 ```
 
 ---
@@ -25,8 +25,8 @@ Idem pour les {py:obj}`f-string` :
 {py:func}`pow` peut prendre un 3{sup}`ème` argument pour calculer `pow(x, y) % z`{l=python} :
 
 ```{literalinclude} snippets/tricks.py
-    :lines: 19-25
-    :language: python
+:lines: 19-25
+:language: python
 ```
 
 ---
@@ -36,25 +36,25 @@ Idem pour les {py:obj}`f-string` :
 {py:func}`re.sub` peut être utilisée pour remplacer plusieurs caractères dans un texte (évitant ainsi d'avoir à enchaîner les appels à {py:obj}`str.replace` ou au plus coûteux {py:obj}`str.translate`) :
 
 ```{literalinclude} snippets/tricks.py
-    :lines: 1,3,28-30
-    :language: python
+:lines: 1,3,28-30
+:language: python
 ```
 
 ````{admonition} Benchmark
-    :class: dropdown
+:class: dropdown
 
 Script :
 
 ```{literalinclude} snippets/tricks.py
-    :caption: bench.py
-    :lines: 1,31-62
-    :language: python
+:caption: bench.py
+:lines: 1,31-62
+:language: python
 ```
 
 Résultats :
 
 ```{code-block} shell
-    :caption: $ python3.8 bench.py
+:caption: $ python3.8 bench.py
 
 0.041965347016230226  # str.replace()
 0.10586143494583666  # re.sub()
@@ -70,12 +70,12 @@ Résultats :
 {py:obj}`str.startswith` et {py:obj}`str.endswith` peuvent prendre un {py:obj}`tuple` en paramètre :
 
 ```{literalinclude} snippets/tricks.py
-    :lines: 65-80
-    :language: python
+:lines: 65-80
+:language: python
 ```
 
 ````{admonition} Résultats du benchmark
-    :class: dropdown
+:class: dropdown
 
 ```{code-block} shell
 # text = 'azerty', the 1st condition is True
@@ -100,9 +100,9 @@ Option 2: 0.186 usec
 Vous pouvez supprimer les zéros ajoutés pour les différentes fonctions du module {py:mod}`time` qui prennent un format en entrée (valable pour {py:mod}`datetime` également) :
 
 ```{literalinclude} snippets/tricks.py
-    :lines: 85-90
-    :dedent:
-    :language: python
+:lines: 85-90
+:dedent:
+:language: python
 ```
 
 ---
