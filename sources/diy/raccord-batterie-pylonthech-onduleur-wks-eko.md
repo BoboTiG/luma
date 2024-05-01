@@ -16,7 +16,7 @@ Ci-dessous, le schéma d'installation concentré sur la connexion ([cliquer ici 
 
 ### Côté Onduleur
 
-Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS**, et il ne comporte que 2 pins : les n° 3 (marron) et 5 (blanc marron) :
+Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS**, et il ne comporte que deux pins : les n° **3** (marron) et **5** (blanc marron) :
 
 ```{figure} images/rj45-rs485-inverter.svg
 :align: center
@@ -24,7 +24,7 @@ Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS*
 
 ### Côté Batterie
 
-Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que 2 pins : les n° 7 (blanc marron) et 8 (marron) :
+Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que deux pins : les n° **7** (blanc marron) et **8** (marron) :
 
 ```{figure} images/rj45-rs485-battery.svg
 :align: center
