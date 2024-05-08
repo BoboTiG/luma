@@ -24,6 +24,7 @@ extensions = [
     "sphinx.ext.todo",
     # "sphinx_design",
     "sphinx_last_updated_by_git",
+    "notfound.extension",
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
 ]
@@ -85,3 +86,10 @@ if sys.argv[0].endswith("sphinx-build"):
 # sphinx-last-updated-by-git
 git_last_updated_timezone = UTC
 html_last_updated_fmt = "%Y-%m-%d %H:%M:%S UTC"
+
+# sphinx-notfound-page
+notfound_context = {
+    "title": "Elle est où la page ?",
+    "body": '<h1><a href="https://www.youtube.com/watch?v=wV4wepiucf4" target="_blank">Elle est où la page ?</a></h1><p>¯\\_(ツ)_/¯</p><p>La page en question ne semble pas, ou plus, exister.</p>',
+}
+notfound_urls_prefix = ""
