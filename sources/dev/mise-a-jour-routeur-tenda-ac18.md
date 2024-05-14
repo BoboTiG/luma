@@ -10,16 +10,16 @@
 Pour effectuer une mise à jour simple :
 
 1. Décompresser l'archive pour récupérer le fichier `.trx` ;
-2. Dans "*Administration / Upgrade*", sélectionner le fichier `.trx` ;
+2. Dans {menuselection}`Administration --> Upgrade`, sélectionner le fichier `.trx` ;
 3. Attendre que le routeur redémarre.
 
 ## Remise à Zéro
 
 Pour effectuer une mise à jour et repartir sur des bases saines, c'est-à-dire tout supprimer et repartir de zéro :
 
-1. Exporter la configuration depuis "*Administration / Configuration*" ;
+1. Exporter la configuration depuis {menuselection}`Administration --> Configuration` ;
 2. Décompresser l'archive pour récupérer le fichier `.trx` ;
-3. Dans "*Administration / Upgrade"*, sélectionner le fichier `.trx` et cocher "*After flashing, erase all data in NVRAM memory*" ;
+3. Dans {menuselection}`Administration --> Upgrade`, sélectionner le fichier `.trx` et cocher "*After flashing, erase all data in NVRAM memory*" ;
 4. Quand le redémarrage du routeur est terminé, réimporter la configuration depuis [192.168.1.1](http://192.168.1.1/) (`root:admin`).
 
 ---

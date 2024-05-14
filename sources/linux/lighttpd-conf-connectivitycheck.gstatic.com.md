@@ -45,7 +45,7 @@ sudo ln -s \
 
 ### Pi-hole
 
-- Rendez-vous dans le menu « Local DNS » / « DNS Records » ;
+- Rendez-vous dans le menu {menuselection}`Local DNS --> DNS Records` ;
 - Ajouter le domaine `connectivitycheck.gstatic.com` avec l'adresse IP de Pi-hole (par exemple `192.168.2.12`) ;
 - Cliquer sur « Add ».
 

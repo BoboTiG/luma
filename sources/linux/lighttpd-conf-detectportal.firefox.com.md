@@ -54,7 +54,7 @@ sudo systemctl restart lighttpd
 
 ### Pi-hole
 
-- Rendez-vous dans le menu « Local DNS » / « DNS Records » ;
+- Rendez-vous dans le menu {menuselection}`Local DNS --> DNS Records` ;
 - Ajouter le domaine `detectportal.firefox.com` avec l'adresse IP de Pi-hole (par exemple `192.168.2.12`) ;
 - Cliquer sur « Add ».
 
