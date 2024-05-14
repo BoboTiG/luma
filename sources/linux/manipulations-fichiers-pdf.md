@@ -2,6 +2,15 @@
 
 [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit) est un outil puissant pour la manipulation de fichiers PDF.
 
+## Déprotéger
+
+Adméttons que le fichier PDF soit protégé par mot de passe, et que celui-ci est connu. Voici comment en faire une copie non protégée :
+
+```{literalinclude} snippets/manipulations-fichiers-pdf.sh
+:lines: 42
+:language: shell
+```
+
 ## Orienter
 
 Pour l'exemple, disons que les pages 301, 302 et 303 du fichier source sont en mode paysage alors que toutes les autres sont en mode portrait. Voici comment réorienter ces 3 pages :
@@ -122,6 +131,9 @@ Générer un nouveau PDF comportant les nouvelles méta-données :
 ---
 
 ## 📜 Historique
+
+2024-05-14
+: Ajout de la section [Déprotéger](#deproteger).
 
 2024-02-07
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2019/12/07/14/59/33-manipulation-de-fichiers-pdf).

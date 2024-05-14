@@ -38,3 +38,5 @@ gs \
 
 pdftk 'FILE_SOURCE.pdf' dump_data_utf8 output 'metadata.txt'
 pdftk 'FILE_SOURCE.pdf' update_info_utf8 'metadata.txt' output 'NEW_FILE.pdf'
+
+pdftk 'FILE_SOURCE.pdf' input_pw PROMPT output 'NEW_FILE.pdf'
