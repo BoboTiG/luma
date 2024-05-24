@@ -92,4 +92,4 @@ notfound_context = {
     "title": "Elle est où la page ?",
     "body": '<h1><a href="https://www.youtube.com/watch?v=wV4wepiucf4" target="_blank">Elle est où la page ?</a></h1><p>¯\\_(ツ)_/¯</p><p>La page en question ne semble pas, ou plus, exister.</p>',
 }
-notfound_urls_prefix = ""
+notfound_urls_prefix = None
