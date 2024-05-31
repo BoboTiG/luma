@@ -2,7 +2,7 @@
 
 ## Liens
 
-- *Firmware* : [2024.1](https://freshtomato.org/downloads/freshtomato-arm/2024/2024.1/freshtomato-TendaAC18-K26ARM-2024.1-AIO-64K.zip) ([MD5](https://freshtomato.org/downloads/freshtomato-arm/2024/2024.1/MD5SUM) = `4176204900125a6d4415211c92c00410`) ;
+- *Firmware* : [2024.2](https://freshtomato.org/downloads/freshtomato-arm/2024/2024.2/freshtomato-TendaAC18-K26ARM-2024.2-AIO-64K.zip) ([MD5](https://freshtomato.org/downloads/freshtomato-arm/2024/2024.2/MD5SUM) = `95ec8af09a08916cbb0165b0272664a5`) ;
 - [CHANGELOG](https://bitbucket.org/pedro311/freshtomato-arm/src/arm-master/CHANGELOG).
 
 ## Mise à jour Simple
@@ -25,6 +25,9 @@ Pour effectuer une mise à jour et repartir sur des bases saines, c'est-à-dire 
 ---
 
 ## 📜 Historique
+
+2024-06-01
+: Mise à jour `2024.1` → `2024.2`.
 
 2024-03-04
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2020/02/10/14/23/58-tenda-ac18-ac1900).
