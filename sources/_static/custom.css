@@ -6,6 +6,7 @@ section#base-de-connaissances-du-luma h1 {
 
 /* Article last updated. */
 #last-updated {
+    margin-top: 2em;
     text-align: right;
     padding: .1em .5em;
     border-right: 2px solid var(--yue-c-link-border-1);
