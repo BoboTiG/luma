@@ -1,6 +1,6 @@
 -r requirements.txt
 mypy==1.11.0
 pymarkdownlnt==0.9.21
-ruff==0.5.4
+ruff==0.5.5
 sphinx-autobuild==2024.4.16
 yamllint==1.35.1
