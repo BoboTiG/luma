@@ -129,7 +129,7 @@ Démarrez le nœud (pensez à adapter l'adresse publique du compte) :
 ```
 
 ```{note}
-- `dev/account-pwd.txt` est un fichier qui contient le mot de passe (en l'occurrance, il est vide) ;
+- `dev/account-pwd.txt` est un fichier qui contient le mot de passe (en l'occurrence, il est vide) ;
 - `--httpi.api` : j'ai ajouté `net` pour faire plaisir à Metamask, mais sinon `eth,web3` suffit ;
 - `--mine*`: requis pour la validation des transactions.
 ```
