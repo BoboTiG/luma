@@ -6,7 +6,7 @@ DST_DIR='luma'
 dev_live() {
     [ -d '_live' ] && /bin/rm -rv '_live'
 
-    sphinx-autobuild \
+    python -m sphinx_autobuild \
         --host '0.0.0.0' \
         --open-browser \
         "${SRC_DIR}" \
@@ -16,7 +16,8 @@ dev_live() {
 build_blog() {
     [ -d "${DST_DIR}" ] && /bin/rm -rv "${DST_DIR}"
 
-    sphinx-build \
+    python -m sphinx \
+        'build' \
         -E \
         --color \
         "${SRC_DIR}" \
