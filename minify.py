@@ -1,6 +1,7 @@
 import re
 from functools import partial
 from pathlib import Path
+from shutil import rmtree
 from subprocess import check_output
 
 import minify_html
@@ -38,6 +39,39 @@ JS_FILES = [
     "tabs",
     "shibuya",
 ]
+ORPHAN_FOLDERS = [
+    ".buildinfo",
+    ".doctrees",
+    "genindex.html",
+    "objects.inv",
+    "_sources",
+    "_static/base-stemmer.js",
+    "_static/basic.css",
+    "_static/check-solid.svg",
+    "_static/copy-button.svg",
+    "_static/copybutton_funcs.js",
+    "_static/file.png",
+    "_static/french-stemmer.js",
+    "_static/minus.png",
+    "_static/translations.js",
+]
+
+
+def delete_orphans() -> int:
+    total_size = 0
+
+    for path in ORPHAN_FOLDERS:
+        full_path = PATH / path
+        if full_path.is_dir():
+            for file in full_path.glob("*"):
+                total_size += file.stat().st_size
+            rmtree(full_path)
+        else:
+            total_size += full_path.stat().st_size
+            full_path.unlink(missing_ok=True)
+        print(f"Deleted {full_path.parent}/{full_path.name} (-100.00%)", flush=True)
+
+    return total_size
 
 
 def merge_css() -> None:
@@ -64,7 +98,16 @@ def merge_js() -> None:
 
 
 def main() -> None:
+    orphan_saved = 0
+    minify_saved = 0
+    merge_saved = 0
     total_saved = 0
+
+    print(flush=True)
+
+    orphan_saved = delete_orphans()
+    total_saved += orphan_saved
+    print(f"Saved {orphan_saved / 1024:,.02f} Kio\n", flush=True)
 
     for file in PATH.glob("**/*"):
         if not file.is_file() or ".min." in file.name or not (minifier := MINIFIER.get(file.suffix)):
@@ -77,11 +120,12 @@ def main() -> None:
 
         size_old = len(content)
         size_new = file.write_text(minified)
-        total_saved += size_old - size_new
+        minify_saved += size_old - size_new
         diff = 100 - (size_new * 100 / size_old)
-        print(f"Minified {file.name} (-{diff:.2f}%)", flush=True)
+        print(f"Minified {file.parent}/{file.name} (-{diff:.2f}%)", flush=True)
 
-    print(f"Saved {total_saved:,} bytes", flush=True)
+    total_saved += minify_saved
+    print(f"Saved {minify_saved / 1024:,.02f} Kio\n", flush=True)
 
     merge_css()
     merge_js()
@@ -94,7 +138,7 @@ def main() -> None:
 
         for line, fname in REGEXP_CSS(content):
             if not injected_css:
-                path = "/".join(p for p in fname.split("/")[:-1])
+                path = "/".join(fname.split("/")[:-1])
                 final_css = f"<link href={path}/styles.css?v={CURRENT_COMMIT} rel=stylesheet>"
                 merged = merged.replace(line, final_css, 1)
                 injected_css = True
@@ -103,7 +147,7 @@ def main() -> None:
 
         for line, fname in REGEXP_JS(content):
             if not injected_js:
-                path = "/".join(p for p in fname.split("/")[:-1])
+                path = "/".join(fname.split("/")[:-1])
                 final_js = f"<script src={path}/scripts.js?v={CURRENT_COMMIT}></script>"
                 merged += final_js
                 injected_js = True
@@ -111,10 +155,13 @@ def main() -> None:
 
         size_new = file.write_text(merged)
         diff = 100 - (size_new * 100 / size_old)
-        total_saved += size_old - size_new
-        print(f"Merged {file.name} (-{diff:.2f}%)", flush=True)
+        merge_saved += size_old - size_new
+        print(f"Merged {file.parent}/{file.name} (-{diff:.2f}%)", flush=True)
 
-    print(f"Saved {total_saved:,} bytes", flush=True)
+    total_saved += merge_saved
+    print(f"Saved {merge_saved / 1024:,.02f} Kio\n", flush=True)
+
+    print(f"TOTAL saved {total_saved / 1024:,.02f} Kio", flush=True)
 
 
 if __name__ == "__main__":
