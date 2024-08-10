@@ -35,7 +35,7 @@ python -m pip install -r requirements-tests.txt
 ### Génération du Site
 
 ```shell
-./build.sh [live]
+./build.sh [--live]
 ```
 
 Les fichiers finaux se trouveront dans le dossier "luma".

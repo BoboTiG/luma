@@ -42,7 +42,7 @@ build_blog() {
     python minify.py
 }
 
-if [ "${1}" == 'live' ]; then
+if [ "${1}" == '--live' ]; then
     dev_live
 else
     build_blog
