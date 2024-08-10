@@ -2,7 +2,7 @@
 
 ## Liens
 
-- *Firmware* : [2024.2](https://freshtomato.org/downloads/freshtomato-arm/2024/2024.2/freshtomato-TendaAC18-K26ARM-2024.2-AIO-64K.zip) ([MD5](https://freshtomato.org/downloads/freshtomato-arm/2024/2024.2/MD5SUM) = `95ec8af09a08916cbb0165b0272664a5`) ;
+- *Firmware* : [2024.3](https://freshtomato.org/downloads/freshtomato-arm/2024/2024.3/freshtomato-TendaAC18-K26ARM-2024.3-AIO-64K.zip) ([MD5](https://freshtomato.org/downloads/freshtomato-arm/2024/2024.3/MD5SUM) = `c06381c8a1b14ebad900144abc8cdd78`) ;
 - [CHANGELOG](https://bitbucket.org/pedro311/freshtomato-arm/src/arm-master/CHANGELOG).
 
 ## Mise à jour Simple
@@ -27,6 +27,9 @@ Pour effectuer une mise à jour et repartir sur des bases saines, c'est-à-dire 
 ---
 
 ## 📜 Historique
+
+2024-08-10
+: Mise à jour `2024.2` → `2024.3`.
 
 2024-05-31
 : Mise à jour `2024.1` → `2024.2`.
