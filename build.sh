@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 
 SRC_DIR='sources'
 DST_DIR='luma'
@@ -26,7 +27,7 @@ build_blog() {
     python minify.py
 }
 
-if [ "${1}" == '--live' ]; then
+if [ "${1:-}" == '--live' ]; then
     dev_live
 else
     build_blog
