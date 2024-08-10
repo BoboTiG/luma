@@ -6,7 +6,7 @@ Site web complet pour le partage de connaissances.
 
 ## Qualité
 
-La qualité, et la fiabilité des morceaux de code, sont garanties grâce à plusieurs outils spécialisés, et ça se passe dans le fichier [`checks.sh`](checks.sh).
+La qualité, et la fiabilité des morceaux de code, sont garanties grâce à plusieurs outils spécialisés, et ça se passe dans le fichier [checks.sh](checks.sh).
 
 Les fautes de frappe et de grammaire sont corrigées en temps réel grâce à [LanguageTool](https://languagetool.org). Pour ce faire, installer l'extension VS Code `davidlday.languagetool-linter` et démarrer ce conteneur :
 
@@ -38,7 +38,7 @@ python -m pip install -r requirements-tests.txt
 ./build.sh [--live]
 ```
 
-Les fichiers finaux se trouveront dans le dossier "luma".
+Les fichiers finaux se trouveront dans le dossier [luma](./luma).
 
 ## Déploiement
 
