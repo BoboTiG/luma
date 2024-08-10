@@ -31,7 +31,7 @@ check_markdown_files() {
 }
 
 check_yaml_file() {
-    yamllint -d relaxed "${1}"
+    python -m yamllint -s -d relaxed "${1}"
 }
 
 check_yaml_files() {
