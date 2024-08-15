@@ -23,6 +23,12 @@ Base de Connaissances du `Luma`_
     blockchain/*
 
 .. toctree::
+    :caption: 👨‍🔧 Dépannage Informatique
+    :glob:
+
+    depannage/*
+
+.. toctree::
     :caption: 🐛 Développement
     :glob:
 
