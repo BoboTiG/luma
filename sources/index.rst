@@ -47,7 +47,7 @@ Base de Connaissances du `Luma`_
     linux/*
 
 .. toctree::
-    :caption: 🎮 Jeux-vidéos
+    :caption: 🎮 Jeux-Vidéos
     :glob:
 
     jeux/*
