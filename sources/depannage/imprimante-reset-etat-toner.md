@@ -20,7 +20,7 @@ Voici la procédure à suivre pour indiquer à l'imprimante qu'un nouveau toner 
   - "Y" pour jaune.
 - `${TYPE}` peut être :
   - "STD" pour capacité standarde ;
-  - "HC" pour grande capacité. 
+  - "HC" pour grande capacité.
 
 Exemple pour le noir standard : `K.TRN-STD`.
 
