@@ -10,7 +10,7 @@ Site web : [larbrerouge.org](https://www.larbrerouge.org)
 `````{admonition} Notes à propos de la prononciation
 :class: toggle
 
-Dans l'usage des dictonnaires *lakota* modernes, la prononciation s'entend comme suit :
+Dans l'usage des dictionnaires *lakota* modernes, la prononciation s'entend comme suit :
 
 ````{grid} 2
 
