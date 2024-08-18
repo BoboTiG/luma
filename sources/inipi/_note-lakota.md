@@ -1,3 +1,4 @@
+<!-- pyml disable-next-line first-line-heading -->
 ```{figure} images/arbre-rouge.png
 :width: 96
 :alt: L'arbre rouge

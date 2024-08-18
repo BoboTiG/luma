@@ -21,8 +21,8 @@ check_shell_files() {
 }
 
 check_markdown_file() {
-    python -m pymarkdown --disable-rules line-length fix -r "${1}"
-    python -m pymarkdown --disable-rules line-length scan -r "${1}"
+    python -m pymarkdown fix -r "${1}"
+    python -m pymarkdown scan -r "${1}"
 }
 
 check_markdown_files() {

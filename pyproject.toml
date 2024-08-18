@@ -19,6 +19,9 @@ disallow_untyped_calls = true
 
 strict_equality = true
 
+[tool.pymarkdown]
+plugins.md013.enabled = false
+
 [tool.ruff]
 exclude = [
     ".git",

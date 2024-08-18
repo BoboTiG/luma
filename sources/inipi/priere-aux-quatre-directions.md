@@ -2,6 +2,7 @@
 layout: simple
 ---
 
+<!-- pyml disable-next-line no-inline-html -->
 # La prière aux quatre directions ou le chant de la Sweat Lodge des femmes
 
 <figure class="no-print">
