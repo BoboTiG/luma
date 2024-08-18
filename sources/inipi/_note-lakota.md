@@ -15,18 +15,20 @@ Dans l'usage des dictonnaires *lakota* modernes, la prononciation s'entend comme
 ````{grid} 2
 
 ```{grid-item}
-- **c** comme "tch"
-- **ġ** comme "dj"
-- **ḣ** comme "r"
+- **c** → "tch"
+- **ġ** → "dj"
+- **ḣ** → "r"
 ```
 
 ```{grid-item}
-- **ǩ** comme "cr"
-- **š** comme "ch"
-- **ṫ** comme "tr"
+- **ǩ** → "cr"
+- **š** → "ch"
+- **ṫ** → "tr"
 ```
 
 ````
 
-Les femmes prononcent les finales **o** en "é", exemples : *ce'kiyay**o*** → *ce'kiyay**e***, *yankel**o*** → *yankel**e***.<br>
+Les femmes prononcent les finales **o** en "é", exemples :
+- *ce'kiyay**o*** → *ce'kiyay**e***
+- *yankel**o*** → *yankel**e***
 `````
