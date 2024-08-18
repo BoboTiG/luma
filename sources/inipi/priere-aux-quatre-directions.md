@@ -14,7 +14,8 @@ Ce'kiyay**o**, ce'kiyay**o**<br>
 ahi'tonwan yanke<br>
 oha e **o**…
 
-Wiyoḣpetakiyahe tonwanyo *(<small>Ouest</small>)*<br>
+*(<small>Ouest</small>)*<br>
+Wiyoḣpetakiyahe tonwanyo<br>
 &nbsp;&nbsp;&nbsp; *<small>(corps à répéter après chaque direction)</small>*<br>
 &nbsp;&nbsp;&nbsp; ni Ṫunkăsila<br>
 &nbsp;&nbsp;&nbsp; ahi'tonwan yankel**o**<br>
@@ -22,19 +23,24 @@ Wiyoḣpetakiyahe tonwanyo *(<small>Ouest</small>)*<br>
 &nbsp;&nbsp;&nbsp; ahi'tonwan yanke<br>
 &nbsp;&nbsp;&nbsp; oha e **o**…
 
-Waziyatakiyahe tonwanyo *(<small>Nord</small>)*<br>
+*(<small>Nord</small>)*<br>
+Waziyatakiyahe tonwanyo<br>
 &nbsp;&nbsp;&nbsp;&nbsp;…
 
-Iwiyohiyanpatakiyahe tonwanyo *(<small>Est</small>)*<br>
+*(<small>Est</small>)*<br>
+Iwiyohiyanpatakiyahe tonwanyo<br>
 &nbsp;&nbsp;&nbsp;&nbsp;…
 
-Itokanatakiyahe tonwanyo *(<small>Sud</small>)*<br>
+*(<small>Sud</small>)*<br>
+Itokanatakiyahe tonwanyo<br>
 &nbsp;&nbsp;&nbsp;&nbsp;…
 
-Wakăntakiyahe tonwanyo *(<small>Ciel</small>)*<br>
+*(<small>Ciel</small>)*<br>
+Wakăntakiyahe tonwanyo<br>
 &nbsp;&nbsp;&nbsp;&nbsp;…
 
-Makătakiyahe tonwanyo *(<small>Terre</small>)*<br>
+*(<small>Terre</small>)*<br>
+Makătakiyahe tonwanyo<br>
 &nbsp;&nbsp;&nbsp;&nbsp;…
 
 -- Enseignement d'Archie Fire Lame Deer

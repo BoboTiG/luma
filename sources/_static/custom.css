@@ -36,3 +36,15 @@ section#base-de-connaissances-du-luma h1 {
         display: none
     }
 }
+
+@media (max-width: 500px) {
+    .yue blockquote.pull-quote {
+        padding-left: 1rem;
+        padding-right: 0;
+    }
+
+    .yue blockquote.pull-quote .attribution {
+        text-align: center;
+        font-size: 1rem;
+    }
+}
