@@ -24,10 +24,12 @@ CSS_FILES = [
     "copybutton",
     "togglebutton",
     "sphinx_contributors",
+    "sphinx-design.min",
     "tabs",
     "custom",
 ]
 JS_FILES = [
+    "design-tabs",
     "documentation_options",
     "doctools",
     "sphinx_highlight",
@@ -45,6 +47,7 @@ ORPHAN_FOLDERS = [
     "genindex.html",
     "objects.inv",
     "_sources",
+    "_sphinx_design_static",
     "_static/base-stemmer.js",
     "_static/basic.css",
     "_static/check-solid.svg",

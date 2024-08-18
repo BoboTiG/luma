@@ -30,3 +30,9 @@ section#base-de-connaissances-du-luma h1 {
 .sphinx-contributors p {
     margin: 0;
 }
+
+@media print {
+    .no-print {
+        display: none
+    }
+}

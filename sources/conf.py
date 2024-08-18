@@ -22,7 +22,7 @@ extensions = [
     "sphinx_copybutton",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
-    # "sphinx_design",
+    "sphinx_design",
     "sphinx_last_updated_by_git",
     "notfound.extension",
     "sphinx_tabs.tabs",

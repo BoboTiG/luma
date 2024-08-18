@@ -47,6 +47,12 @@ Base de Connaissances du `Luma`_
     linux/*
 
 .. toctree::
+    :caption: 🦅 Inipi, le Chant de la Terre
+    :glob:
+
+    inipi/*
+
+.. toctree::
     :caption: 🎮 Jeux-Vidéos
     :glob:
 
