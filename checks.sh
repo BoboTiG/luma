@@ -21,13 +21,27 @@ check_shell_files() {
 }
 
 check_markdown_file() {
-    python -m pymarkdown fix -r "${1}"
-    python -m pymarkdown scan -r "${1}"
+    local file="${1}"
+    shift
+
+    python -m pymarkdown fix "${file}"
+    python -m pymarkdown "$@" scan "${file}"
 }
 
 check_markdown_files() {
-    check_markdown_file "${FOLDER}"
+    local disabled_rules
+    local filename
+    
     check_markdown_file 'README.md'
+
+    for file in $(/bin/find "${FOLDER}" -type f -name '*.md'); do
+        disabled_rules=()
+        if [ "$(dirname "${file}")" = "sources/inipi" ]; then
+            filename="$(basename "${file}")"
+            [ "${filename:0:1}" = '_' ] || disabled_rules=(-d 'md003,md022,md041')
+        fi
+        check_markdown_file "${file}" "${disabled_rules[@]}"
+    done
 }
 
 check_yaml_file() {
