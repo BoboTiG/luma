@@ -7,7 +7,7 @@ layout: simple
 <!-- pyml disable-next-line no-inline-html -->
 <figure class="no-print">
     <figcaption>Version chantée par Archie Fire Lame Deer</figcaption>
-    <audio controls preload="none" src="audio/archie_fire_lame_deer-priere-aux-quatre-directions.opus"></audio>
+    <audio controls preload="none" src="audio/archie_fire_lame_deer-priere_aux_quatre_directions.opus"></audio>
 </figure>
 
 ```{pull-quote}
