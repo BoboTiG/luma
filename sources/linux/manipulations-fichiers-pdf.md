@@ -2,9 +2,15 @@
 
 [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit) est un outil puissant pour la manipulation de fichiers PDF.
 
+Il existe aussi un service en ligne, avec possibilité d'auto-hébergement, se nommant [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) et qui propose une vaste panoplie d'actions sur les fichiers PDF, comme l'ajout d'une signature ou d'un filigrane, par exemple. Voici une instance disponible : [3n1 Tech Solutions](https://pdf.3n1tech.com/?lang=fr_FR).
+
+## Sécuriser
+
+Avant toute chose, si un document provient d'une source douteuse, [Dangerzone](https://dangerzone.rocks) permettra de l'assainir.
+
 ## Déprotéger
 
-Adméttons que le fichier PDF soit protégé par mot de passe, et que celui-ci est connu. Voici comment en faire une copie non protégée :
+Admettons que le fichier PDF soit protégé par mot de passe, et que celui-ci est connu. Voici comment en faire une copie non protégée :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
 :lines: 42
@@ -54,7 +60,7 @@ Pour fusionner plusieurs fichiers PDF en un seul :
 
 ## Optimiser
 
-GhostScript permet de réduire grandement le poids du fichier final :
+`GhostScript` permet de réduire grandement le poids du fichier final :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
 :lines: 32-37
@@ -131,6 +137,10 @@ Générer un nouveau PDF comportant les nouvelles méta-données :
 ---
 
 ## 📜 Historique
+
+2024-08-30
+: Ajout de la section [Sécuriser](#securiser).
+: Ajout des informations sur Stirling-PDF dans l'introduction.
 
 2024-05-14
 : Ajout de la section [Déprotéger](#deproteger).
