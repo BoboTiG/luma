@@ -318,7 +318,7 @@ Si nécessaire, repartir de zéro :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
-:lines: 45-50
+:lines: 86-88
 :language: shell
 ```
 
@@ -384,6 +384,10 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 - [Statistiques avec carte des nœuds](https://explorer.dusk.network/charts)
 
 ## 📜 Historique
+
+2024-10-10
+: Simplification de la commande pour [Repartir de Zéro](#repartir-de-zero).
+: Mise à jour de la version du script d'installation de Dusk (`0.2.0` → `0.3.2`).
 
 2024-03-25
 : Mise à jour de la version du script d'installation de Dusk (`0.1.9` → `0.2.0`) pour la migration depuis l'ITN vers le *testnet* "Nocturne".
