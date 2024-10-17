@@ -1,0 +1,44 @@
+version: 4.37.21582
+in: src/kobo-update-4.37.21582.zip
+out: out/KoboRoot.tgz
+log: out/log.txt
+
+patchFormat: kobopatch
+
+patches:
+  src/nickel.yaml: usr/local/Kobo/nickel
+  src/libadobe.so.yaml: usr/local/Kobo/libadobe.so
+  src/libnickel.so.1.0.0.yaml: usr/local/Kobo/libnickel.so.1.0.0
+  src/librmsdk.so.1.0.0.yaml: usr/local/Kobo/librmsdk.so.1.0.0
+
+overrides:
+  src/nickel.yaml:
+    Dictionary pop-up - increase available text area: yes
+    Increase library cover size: yes
+    Custom collection/author header title font: yes
+    Reduce new header/footer height: yes
+    Series list increase cover thumbnails: yes
+    New home screen subtitle custom font: yes
+    Remove footer (row3) and increase cover size on new home screen: yes
+    Change TOC level indentation: yes
+  src/libadobe.so.yaml:
+    Remove PDF map widget shown during panning: yes
+  src/libnickel.so.1.0.0.yaml:
+    Dictionary text font-family/font-size/line-height: yes # custom values inside
+    Custom navigation menu page number text: yes
+    Force user line spacing in ePubs (part 1 of 2): yes
+    Force user font-family in ePubs (Part 1 of 2): yes
+    # ePub uniform font scale: yes
+    Shorten dictionary entry not found message: yes
+    Replace adobe page numbers toggle with invert screen: yes
+    Allow USB storage even when device locked: yes
+    Remove beta features not supported text: yes
+    Disable all tutorial dialogs: yes
+    Remove recommendations (row1col2) from home screen: yes
+    Never show Kobo Plus, wishlist, and points SmartLinks: yes
+    Remove title from reading header/footer: yes
+    Don't uppercase header/footer text and change page number text: yes
+    FeatureSettings - BookSpecificStats: yes
+  src/librmsdk.so.1.0.0.yaml:
+    Force user line spacing in ePubs (Part 2 of 2): yes
+    Force user font-family in ePubs (Part 2 of 2): yes

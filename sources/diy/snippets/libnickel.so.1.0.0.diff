@@ -1,0 +1,16 @@
+@@ -467,7 +467,7 @@ Un-force link decoration in KePubs:
+ # The following patch(es) were made by jackie_w
+ 
+ Dictionary text font-family/font-size/line-height:
+-  - Enabled: no
++  - Enabled: yes
+   - Description: |
+       This patch allows you to to customise the appearance of the text
+       in the pop-up and full-screen dictionary widgets.
+@@ -531,5 +531,6 @@ Dictionary text font-family/font-size/li
+   #- ReplaceString: {Offset: 54, Find: "serif                 ", Replace: "'KBJ-TsukuMin Pr6N RB'", MustMatchLength: yes}
+   #- ReplaceString: {Offset: 54, Find: "serif                ",  Replace: "'KBJ-UDKakugo Pr6N M'",  MustMatchLength: yes}
+   #- ReplaceString: {Offset: 54, Find: "serif           ",       Replace: "'AR UDJingxihei'",       MustMatchLength: yes}
++  - ReplaceString: {Offset: 54, Find: "serif    ",              Replace: "FreeSerif",              MustMatchLength: yes}
+ 
+   # Un-comment and edit next line to change font-size
