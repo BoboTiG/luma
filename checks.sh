@@ -31,7 +31,7 @@ check_markdown_file() {
 check_markdown_files() {
     local disabled_rules
     local filename
-    
+
     check_markdown_file 'README.md'
 
     for file in $(/bin/find "${FOLDER}" -type f -name '*.md'); do
@@ -61,3 +61,4 @@ main() {
 }
 
 main
+exit 1
