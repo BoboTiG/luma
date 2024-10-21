@@ -235,7 +235,7 @@ C'est la dernière étape pour pouvoir créer des blocs et participer au réseau
 
 ### *Stake*
 
-Pour l'exemple, plaçons 1 000 nDUSK en *staking* (c'est le minimum requis, lien vers le [fausset](https://docs.dusk.network/itn/testnet-faucet/)) :
+Pour l'exemple, plaçons 1 000 nDUSK en *staking* (c'est le minimum requis, lien vers le [fausset](https://docs.dusk.network/operator/nocturne/testnet-faucet/)) :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
@@ -380,10 +380,13 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 ## 🔗 Liens Utiles
 
-- [Statistiques (API)](https://api.dusk.network/v1/stats)
-- [Statistiques avec carte des nœuds](https://explorer.dusk.network/charts)
+- [Explorateur de blocs](https://apps.dusk.network/explorer/)
 
 ## 📜 Historique
+
+2024-10-21
+: Mise à jour de la version du script d'installation de Dusk (`0.3.2` → `0.3.5`).
+: Correction du lien vers le fausset (`https://docs.dusk.network/itn/testnet-faucet/` → `https://docs.dusk.network/operator/nocturne/testnet-faucet/`)
 
 2024-10-10
 : Simplification de la commande pour [Repartir de Zéro](#repartir-de-zero).

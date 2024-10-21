@@ -20,7 +20,7 @@ apt install -y ufw \
     && echo 'OK'
 
 apt install -y jq net-tools unzip \
-    && curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.3.2/node-installer.sh | sh \
+    && curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.3.5/node-installer.sh | sh \
     && echo 'OK'
 
 rusk-wallet restore
@@ -73,13 +73,13 @@ cat << EOF >> ~/.profile
 
 # Dusk specific commands
 alias balance='rusk-wallet balance --spendable'
-alias stake-info='rusk-wallet stake-info'
-alias rewards='rusk-wallet stake-info --reward'
-alias logs='tail -f /var/log/rusk.log'
+alias blocks='echo "Current: \$(current)" ; echo "Latest : \$(latest)"'
 alias chosen='zgrep execute_state_transition /var/log/rusk.log-*.gz ; grep execute_state_transition /var/log/rusk.log'
 alias current='curl -s http://127.0.0.1:8080/02/Chain --data-raw '"'"'{"topic":"gql","data":"query{block(height:-1){header{height}}}"}'"'"' | jq .block.header.height'
-alias latest='curl -s https://api.dusk.network/v1/stats | jq .lastBlock'
-alias blocks='echo "Current: \$(current)" ; echo "Latest : \$(latest)"'
+alias latest='ruskquery block-height'
+alias logs='tail -f /var/log/rusk.log'
+alias rewards='rusk-wallet stake-info --reward'
+alias stake-info='rusk-wallet stake-info'
 EOF
 source "${HOME}/.profile"
 
