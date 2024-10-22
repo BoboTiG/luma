@@ -277,7 +277,7 @@ Staking address: [REDACTED]
 ```
 ````
 
-````{hint}
+````{caution}
 La commande précédente **ne peut pas** être utilisée à plusieurs reprises pour augmenter le nombre de *tokens* à *staker*.
 
 Voici la procédure pour *staker* plus de *tokens* (remplacer `AMOUNT` par le nombre de *tokens*) :
