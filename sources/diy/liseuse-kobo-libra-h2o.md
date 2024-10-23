@@ -186,6 +186,13 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 :class: dropdown
 
 ```{figure} images/dict-fez.png
+:figclass: light-only
+:alt: Wiktionnaire - fez
+:align: center
+```
+
+```{figure} images/dict-fez-dark.png
+:figclass: dark-only
 :alt: Wiktionnaire - fez
 :align: center
 ```
@@ -195,6 +202,12 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 :class: dropdown
 
 ```{figure} images/dict-zeus.png
+:figclass: light-only
+:alt: Wiktionnaire - Zeus
+:align: center
+```
+```{figure} images/dict-zeus-dark.png
+:figclass: dark-only
 :alt: Wiktionnaire - Zeus
 :align: center
 ```
