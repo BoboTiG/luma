@@ -4,7 +4,7 @@ export KOBO_ROOT="/media/${USERNAME}/KOBOeReader"
 export KOBO_DIR="${KOBO_ROOT}/.kobo"
 export KOBO_VERSION='4.37.21582'
 export KOBO_PATCH_VERSION='82'
-export KOBO_NM_VERSION='54'
+export KOBO_NM_VERSION='0.5.4'
 
 dd bs=4M conv=sync,noerror status=progress \
     if='/dev/sdc' \
