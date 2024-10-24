@@ -16,7 +16,7 @@ sqlite3 "${KOBO_DIR}/KoboReader.sqlite" \
     'DELETE FROM content WHERE ___UserID != "adobe_user" ; VACUUM'
 printf '[General]\naffiliate=Kobo\n' > "${KOBO_DIR}/affiliate.conf"
 
-wget "https://ereaderfiles.kobo.com/firmwares/kobo7/Jun2024/kobo-update-${KOBO_VERSION}.zip" \
+wget "https://ereaderfiles.kobo.com/firmwares/kobo7/Jul2023/kobo-update-${KOBO_VERSION}.zip" \
     && unzip "kobo-update-${KOBO_VERSION}.zip" -d "${KOBO_DIR}" \
     && sync
 
