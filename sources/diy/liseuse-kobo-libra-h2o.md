@@ -234,7 +234,7 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 : Mise à jour du firmware (`4.34.20097` → `4.37.21582`) et des patches (`v79` → `v82`).
 
 2022-11-10
-: Ajout de la section [NickelMenu](#nickelmenu).
+: Ajout de la section [NickelMenu](#nickelmenu) (via la variable d’environnement `KOBO_NM_VERSION`, en version `0.5.4`).
 
 2022-10-19
 : Mise à jour du firmware (`4.33.19759` → `4.34.20097`) et des patches (`v78` → `v79`).
