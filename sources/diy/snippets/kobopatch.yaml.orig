@@ -28,7 +28,6 @@ overrides:
     Custom navigation menu page number text: yes
     Force user line spacing in ePubs (part 1 of 2): yes
     Force user font-family in ePubs (Part 1 of 2): yes
-    # ePub uniform font scale: yes
     Shorten dictionary entry not found message: yes
     Replace adobe page numbers toggle with invert screen: yes
     Allow USB storage even when device locked: yes
