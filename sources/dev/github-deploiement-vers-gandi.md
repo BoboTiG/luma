@@ -61,6 +61,7 @@ Voici le script YAML complet :
 
 ```{literalinclude} snippets/github-deploiement-vers-gandi.yml
 :caption: .github/workflows/deploy.yml
+:lines: 2-
 :emphasize-lines: 6,25
 :language: yaml
 ```
