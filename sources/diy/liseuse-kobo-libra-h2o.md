@@ -74,11 +74,11 @@ Virer le logo du revendeur :
 
 ---
 
-## ⚙️ Mettre à Jour le Firmware
+## ⚙️ Mettre à Jour le *Firmware*
 
-Voici la procédure pour mettre à jour le firmware de la Kobo.
+Voici la procédure pour mettre à jour le *firmware* de la Kobo.
 
-1. Télécharger et installer le firmware :
+1. Télécharger et installer le *firmware* :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
    :lines: 19-22
@@ -94,7 +94,7 @@ Voici la procédure pour mettre à jour le firmware de la Kobo.
 Il y a possibilité de personnaliser quelques [options et comportements](https://www.mobileread.com/forums/forumdisplay.php?f=247) de la liseuse.
 
 1. Suivre l’[étape précédente](mettre-a-jour-le-firmware) en entier et conserver les fichiers pour la suite.
-2. Télécharger le patcheur et copier le firmware :
+2. Télécharger le patcheur et copier le *firmware* :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
    :lines: 23-25
@@ -114,14 +114,14 @@ Il y a possibilité de personnaliser quelques [options et comportements](https:/
    :language: diff
    ```
 
-   Afin d'appliquer ces modification à votre fichier, copier le code précédant dans le fichier **libnickel.so.1.0.0.diff**, puis :
+   Afin d'appliquer ces modification à votre fichier, copier le code précédent dans le fichier **libnickel.so.1.0.0.diff**, puis :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
    :lines: 50
    :language: shell
    ```
 
-4. Patcher et installer le firmware modifié :
+4. Patcher et installer le *firmware* modifié :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
    :lines: 26-28
@@ -137,7 +137,7 @@ Il y a possibilité de personnaliser quelques [options et comportements](https:/
 En option, vous pouvez installer un menu supplémentaire, [NickelMenu](https://pgaskin.net/NickelMenu/), qui permet d’ajouter des actions spécifiques intéressantes. Le menu se trouvera en bas à droite de l’écran.
 Je m’en sers notamment pour (dés)activer les captures d’écran, inverser les couleurs, enregistrer les logs ou encore démarrer une application de prise de notes/dessins assez cool (voici la liste des [options disponibles](https://github.com/pgaskin/NickelMenu/blob/v0.5.4/res/doc)).
 
-1. Télécharger le fichier et copier le firmware :
+1. Télécharger le fichier et copier le *firmware*:
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
    :lines: 30-32
