@@ -70,7 +70,7 @@ Exemple d'utilisation avec la récupération du n° de série de l'onduleur :
 J'ai rendu publique le code pour lire les métriques de l'onduleur, car le n° de série est facile à récupérer en comparaison des informations techniques envoyées en bloc, et ça se passe par là : [BoboTiG/python-wks-com](https://github.com/BoboTiG/python-wks-com). Un aperçu :
 
 ```{code-block} shell
-python -m pip install 'git+https://github.com/BoboTiG/python-wks-com.git@v1.0.1'
+python -m pip install 'git+https://github.com/BoboTiG/python-wks-com.git@v1.2.0'
 ```
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
@@ -91,6 +91,9 @@ Toutes les informations utiles se trouvent dans le dépôt GitHub ☺
 ---
 
 ## 📜 Historique
+
+2024-10-26
+: Mise à jour du module Python WKS COM (`1.0.1` → `1.2.0`).
 
 2024-01-27
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/12/07/21/34/37-python-communiquer-avec-un-onduleur-wks-evo-circle-via-le-port-serie).
