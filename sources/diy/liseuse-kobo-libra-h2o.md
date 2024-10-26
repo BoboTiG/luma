@@ -89,7 +89,7 @@ Voici la procédure pour mettre à jour le *firmware* de la Kobo.
 
 ---
 
-## 🎛️ Hacker le Firmware
+## 🎛️ Hacker le *Firmware*
 
 Il y a possibilité de personnaliser quelques [options et comportements](https://www.mobileread.com/forums/forumdisplay.php?f=247) de la liseuse.
 
