@@ -57,6 +57,13 @@ Afin de ne pas modifier l'état du message, préférer les commandes `(BODY.PEEK
 :language: python
 ```
 
+### Récupérer seulement l'UID des messages sans modifier l'état
+
+```{literalinclude} snippets/imap-exemples-concrets.py
+:lines: 71-73
+:language: python
+```
+
 ### Récupérer les messages non lus et ayant un sujet particulier
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
@@ -132,6 +139,7 @@ La commande `MOVE` n'existe pas ; pour l'émuler, if faut faire une copie puis s
 
 2024-10-29
 : Ajout de plus d'informations dans l'avertissement quant à l'état du message après utilisation de la commande {py:func}`imaplib.IMAP4.fetch`.
+: Ajout de l'exemple [Récupérer seulement l’UID des messages sans modifier l’état](#recuperer-seulement-l-uid-des-messages-sans-modifier-l-etat).
 
 2024-02-01
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/01/21/16/35/09-imap-exemple-concret).

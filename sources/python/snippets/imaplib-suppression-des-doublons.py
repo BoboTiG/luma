@@ -6,75 +6,115 @@ from socket import gaierror
 def get_emails(conn: IMAP) -> list[str]:
     """Récupérer la liste des identifiants uniques (UID) des messages."""
 
-    emails = []
     # On cherche les messages marqués comme "non supprimés"
     ret, uids = conn.uid("search", "", "UNDELETED")
-    if ret == "OK":
-        emails = uids[0].split()
-    return emails
+    return [uid.decode() for uid in uids[0].split()] if ret == "OK" else []
+
+
+def get_folder(raw_line: bytes | None) -> str:
+    r"""
+    Détermine le dossier depuis les données renvoyées par la fonction IMAP.
+
+    >>> get_folder(None)
+    ''
+    >>> get_folder(b'(\\Noselect) "/" "Perso"')
+    ''
+    >>> get_folder(b'() "/" "inbox"')
+    '"inbox"'
+    >>> get_folder(b'() "/" "[Gmail]/Tous les messages"')
+    '"[Gmail]/Tous les messages"'
+    """
+    # Certains dossiers ne sont pas sélectionnables
+    if not raw_line or b"Noselect" in raw_line:
+        return ""
+
+    folder = raw_line.decode().split('"')[3]
+
+    # Il faut échapper le nom du dossier par des double-quotes pour éviter les erreurs.
+    # Ça protège les noms de dossier qui contiennent des espaces.
+    return f'"{folder}"'
+
+
+def get_msg_id(raw_line: bytes) -> str:
+    r"""
+    Détermine le Message-ID depuis les données renvoyées par la fonction IMAP.
+
+    >>> get_msg_id(b"\r\n")
+    ''
+    >>> get_msg_id(b"Message-ID: <CACqWxT1rjTZ7Y-43F=nWUfMa5pkRB5VJSFUkhuRtsE4a9da2Rw@mail.gmail.com>\r\n")
+    '<CACqWxT1rjTZ7Y-43F=nWUfMa5pkRB5VJSFUkhuRtsE4a9da2Rw@mail.gmail.com>'
+    """
+    return line.split()[1] if raw_line and (line := raw_line.decode().strip()) else ""
+
+
+def get_uid(raw_line: bytes) -> str:
+    """
+    Détermine l'UID du message depuis les données renvoyées par la fonction IMAP.
+
+    >>> get_uid(b"2 (UID 15309 BODY[HEADER.FIELDS (MESSAGE-ID)] {82}")
+    '15309'
+    """
+    return line.split()[2] if raw_line and (line := raw_line.decode()) else ""
 
 
 def purge(conn: IMAP, folder: str) -> None:
     """Supprimer les doublons dans un dossier."""
 
-    print(folder)
-    # Il faut entourer le nom du dossier par des double-quotes pour éviter les erreurs.
-    # Ça protège les noms de dossier qui contiennent des espaces.
-    path = f'"{folder}"'
+    print(">>>", folder.strip('"'))
+
     # Et on se rend dans ledit dossier
-    ret, data = conn.select(path)
+    ret, data = conn.select(folder)
     if ret != "OK":
         raise IMAP.error(ret)
 
     # Récupérer la liste des courriels
-    uids = get_emails(conn)
-    total = len(uids)
-    if not total:
+    if not (uids := get_emails(conn)):
         return
 
-    print(f"{total:>6} messages")
+    print(f"{len(uids):>6} messages")
 
     # Recherchons les doublons
-    uniq_msgs = []
-    duplicata = []
-    # La méthode IMAP.uid() peut traiter plusieurs messages à la fois, ce qui économise
+    uniq_msgs: set[str] = set()
+    duplicates: set[str] = set()
+
+    # La méthode `IMAP.uid()` peut traiter plusieurs messages à la fois, ce qui économise
     # temps et ressources. On concatène tous les UID des messages avec une virgule.
     # Le gain de temps est phénoménal.
-    all_uids = ",".join(uids)
-    # On ne récupère que le champ Message-ID de chaque message, universellement unique.
-    # BODY.PEEK permet de ne pas modifier l'état du message.
-    # Sinon, le message serait marqué comme lu.
+    all_uids = ",".join(sorted(uids))
+
+    # On ne récupère que l'entête Message-ID de chaque message, universellement unique.
+    # `BODY.PEEK` permet de ne pas modifier l'état du message, sinon le message serait marqué comme lu.
     ret, data = conn.uid("fetch", all_uids, "(BODY.PEEK[HEADER.FIELDS (MESSAGE-ID)])")
     if ret != "OK":
         raise IMAP.error(ret)
 
-    # data est une liste contenant UID, taille et Message-ID, entre autres.
+    # `data` est une liste contenant UID, taille et Message-ID, entre autres.
     # Pour chaque message…
-    for idx in range(0, len(data), 2):
+    for line in data:
+        if not isinstance(line, tuple):
+            continue
+        data_uid, data_msg_id = line
+
         # Il se peut que le message n'aie pas de Message-ID, c'est souvent le cas
-        # de ceux envoyés par la fonction PHP mail() ou Python smtplib.
-        # Du coup, on zappe. Pour y remédier, voyez en bas de page.
-        if not data[idx][1].strip():  # type: ignore[index,union-attr]
+        # de ceux envoyés par la fonction PHP `mail()` ou Python `smtplib`.
+        # Du coup, on zappe. Pour y remédier, voyez l'avertissement sur la page de l'article :
+        #     https://www.tiger-222.fr/luma/python/imaplib-suppression-des-doublons.html
+        if not (msg_id := get_msg_id(data_msg_id)):
             continue
 
-        # On en déduit le Message-ID
-        msg_id = data[idx][1].split(" ")[1].replace("\r\n", "")  # type: ignore[index,union-attr]
-
-        # Si le Message-ID a déjà été traité, alors il s'agit d'un doublon
+        # Si le Message-ID a déjà été traité, alors il s'agit d'un doublon…
         if msg_id in uniq_msgs:
-            # On ajoute son UID à la liste des messages à supprimer
-            uid = data[idx][0].split()[2]  # type: ignore[index,union-attr]
-            duplicata.append(uid)
+            # … et on ajoute son UID à la liste des messages à supprimer
+            duplicates.add(get_uid(data_uid))
         else:
-            uniq_msgs.append(msg_id)
+            uniq_msgs.add(msg_id)
 
     # Suppression des doublons
-    if duplicata:
-        print(f"{len(duplicata):>6} doublons")
-        # Idem, en faisant une seule requête contenant tous les messages à supprimer,
-        # le gain de temps est énorme.
-        all_uids = ",".join(duplicata)
+    if duplicates:
+        print(f"{len(duplicates):>6} doublons")
+        all_uids = ",".join(sorted(duplicates))
         conn.uid("store", all_uids, "+FLAGS", "\\Deleted")
+
     conn.close()
 
 
@@ -96,16 +136,10 @@ def main(server: str, user: str) -> int:
         return 1
 
     try:
-        # Pour chaque dossier…
         for infos in data:
-            # infos contient plusieurs informations plus ou moins utiles.
-            # Cependant, certains dossiers ne sont pas sélectionnables, on zappe.
-            if "Noselect" in infos:  # type: ignore[operator]
-                continue
-
-            # On ne prend que ce qui nous intéresse, le nom du dossier.
-            folder = str(infos).split('"')[3]
-            purge(conn, folder)
+            assert isinstance(infos, bytes)  # Pour Mypy
+            if folder := get_folder(infos):
+                purge(conn, folder)
     except IMAP.error as ex:
         print(ex)
         return 1
@@ -118,14 +152,7 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) < 3:
-        print("python IMAP-delete-duplicate.py SERVER USER")
-        exit(1)
+        print(f"python {sys.argv[0]} SERVER USER")
+        sys.exit(1)
 
-    exit(main(sys.argv[1], sys.argv[2]))
-
-
-def msg_id() -> None:
-    """
-    >>> from email.utils import make_msgid
-    >>> msg["Message-ID"] = make_msgid()
-    """
+    sys.exit(main(sys.argv[1], sys.argv[2]))

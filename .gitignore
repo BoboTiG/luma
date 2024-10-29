@@ -3,6 +3,7 @@ _build/
 _live/
 luma/
 .mypy_cache/
+__pycache__/
 .ruff_cache/
 venv/
 

@@ -67,3 +67,7 @@ conn.expunge()
 
 folder = "archives-personal"
 conn.uid("copy", uids, folder)
+
+ret, data = conn.uid("fetch", uids, "(BODY.PEEK[HEADER.FIELDS (MESSAGE-ID)])")
+if ret == "OK":
+    uids = data[0].split()

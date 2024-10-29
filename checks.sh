@@ -7,6 +7,7 @@ check_python_files() {
     python -m ruff format "${FOLDER}" ./*.py
     python -m ruff check --fix "${FOLDER}" ./*.py
     python -m mypy "${FOLDER}" ./*.py
+    python -m doctest 'sources/python/snippets/imaplib-suppression-des-doublons.py'
 }
 
 check_shell_file() {
