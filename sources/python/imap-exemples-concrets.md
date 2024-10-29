@@ -29,6 +29,7 @@ Pour finir, avec ces identifiants, téléchargeons le contenu des messages :
 
 ```{attention}
 Du moment que la commande {py:func}`imaplib.IMAP4.fetch` est utilisée, le message concerné est marqué comme lu.
+Afin de ne pas modifier l'état du message, préférer les commandes `(BODY.PEEK[HEADER])` ou encore `(BODY.PEEK[TEXT])` (et plus généralement [`BODY.PEEK[<section>]<<partial>>`](https://www.rfc-editor.org/rfc/rfc3501#page-57)).
 ```
 
 ---
@@ -128,6 +129,9 @@ La commande `MOVE` n'existe pas ; pour l'émuler, if faut faire une copie puis s
 - [Python — imaplib IMAP example with Gmail](https://yuji.wordpress.com/2011/06/22/python-imaplib-imap-example-with-gmail/)
 
 ## 📜 Historique
+
+2024-10-29
+: Ajout de plus d'informations dans l'avertissement quant à l'état du message après utilisation de la commande {py:func}`imaplib.IMAP4.fetch`.
 
 2024-02-01
 : Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/01/21/16/35/09-imap-exemple-concret).
