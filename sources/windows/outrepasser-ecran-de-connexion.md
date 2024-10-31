@@ -28,7 +28,7 @@ Monter la bonne partition :
 Enfin, la substitution :
 
 ```{literalinclude} snippets/outrepasser-ecran-de-connexion.sh
-:lines: 7-10
+:lines: 7-9
 :language: shell
 ```
 
