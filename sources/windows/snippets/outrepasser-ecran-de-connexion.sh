@@ -2,8 +2,9 @@
 
 fdisk -l
 
-ntfs-3g /dev/sdaX /mnt/windows
+mount -t ntfs3 /dev/sdaX /mnt/windows
 
 cd /mnt/windows/Windows/System32 \
     && mv -v Utilman.exe Utilman.exe.or \
-    && cp cmd.exe Utilman.exe
+    && cp cmd.exe Utilman.exe \
+    && echo 'OK'
