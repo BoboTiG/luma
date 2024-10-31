@@ -75,7 +75,7 @@ Password:
 
 ## 📧 Message-ID
 
-Parfois, un message n'aura pas le Message-ID dans ses entêtes. Assuez-vous d'utiliser ces morceaux de code lorsque vous envoyez des courriels.
+Parfois, un message n’aura pas le Message-ID dans ses entêtes. Assuez-vous d’utiliser ces morceaux de code lorsque vous envoyez des courriels.
 
 ### 🐍 Python
 
@@ -101,16 +101,19 @@ Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`]
 
 ## 🎣 Sources
 
-- [What's the issue with `Message-Id` in email sent by PHP?](https://stackoverflow.com/q/14483861/1117028)
+- [What’s the issue with `Message-Id` in email sent by PHP?](https://stackoverflow.com/q/14483861/1117028)
 
 ## 📜 Historique
 
+2024-10-31
+: Utilisation de regexps pour trouver les Message-ID et UID d’un courriel.
+
 2024-10-29
-: Revue de code pour supprimer les commentaires `type: ignore[…]`, moderniser, et corriger/retester l'ensemble'.
+: Revue de code pour supprimer les commentaires `type: ignore[…]`, moderniser, et corriger/retester l’ensemble.
 : Ajout des sections.
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/02/05/18/00/41-imaplib-suppression-des-doublons).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2016/02/05/18/00/41-imaplib-suppression-des-doublons).
 
 2016-02-08
 : Optimisation et correction, certains dossiers sont inaccessibles ("[Gmail]" par exemple).

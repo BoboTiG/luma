@@ -1,6 +1,10 @@
+import re
 from getpass import getpass
 from imaplib import IMAP4_SSL as IMAP
 from socket import gaierror
+
+PATTERN_MSG_ID = re.compile(rb"Message-ID: (<[^>]+>)").search
+PATTERN_UID = re.compile(rb"UID (\d+)").search
 
 
 def get_emails(conn: IMAP) -> list[str]:
@@ -41,10 +45,14 @@ def get_msg_id(raw_line: bytes) -> str:
 
     >>> get_msg_id(b"\r\n")
     ''
+    >>> get_msg_id(b"Message-ID: \r\n")
+    ''
+    >>> get_msg_id(b"Message-ID: something\r\n")
+    ''
     >>> get_msg_id(b"Message-ID: <CACqWxT1rjTZ7Y-43F=nWUfMa5pkRB5VJSFUkhuRtsE4a9da2Rw@mail.gmail.com>\r\n")
     '<CACqWxT1rjTZ7Y-43F=nWUfMa5pkRB5VJSFUkhuRtsE4a9da2Rw@mail.gmail.com>'
     """
-    return line.split()[1] if raw_line and (line := raw_line.decode().strip()) else ""
+    return msg_id[1].decode() if (msg_id := PATTERN_MSG_ID(raw_line)) else ""
 
 
 def get_uid(raw_line: bytes) -> str:
@@ -54,7 +62,7 @@ def get_uid(raw_line: bytes) -> str:
     >>> get_uid(b"2 (UID 15309 BODY[HEADER.FIELDS (MESSAGE-ID)] {82}")
     '15309'
     """
-    return line.split()[2] if raw_line and (line := raw_line.decode()) else ""
+    return uid[1].decode() if (uid := PATTERN_UID(raw_line)) else ""
 
 
 def purge(conn: IMAP, folder: str) -> None:
