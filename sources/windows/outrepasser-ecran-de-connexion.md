@@ -50,7 +50,7 @@ Vous voilà dans l’invite de commande. Voici les commandes pour créer un nouv
 Vous pouvez assigner Bob au groupe *administrateurs*.
 
 ```{caution}
-`administrateurs` est le nom du groupe sur une version en français de Windows. À adapter suivant la langue du système.
+`administrateurs` est le nom du groupe sur une version française de Windows. À adapter suivant la langue du système.
 
 Autres langues :
 - anglais : *administrators*
