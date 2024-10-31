@@ -159,8 +159,10 @@ def main(server: str, user: str) -> int:
 if __name__ == "__main__":
     import sys
 
-    if len(sys.argv) < 3:
-        print(f"python {sys.argv[0]} SERVER USER")
-        sys.exit(1)
+    try:
+        ret = main(*sys.argv[1:])
+    except TypeError:
+        print(f"Usage: python {sys.argv[0]} SERVER USER")
+        ret = 1
 
-    sys.exit(main(sys.argv[1], sys.argv[2]))
+    sys.exit(ret)

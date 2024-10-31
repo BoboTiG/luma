@@ -107,6 +107,7 @@ Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`]
 
 2024-10-31
 : Utilisation de regexps pour trouver les Message-ID et UID d’un courriel.
+: Refactorisation de la partie appelant `main()`.
 
 2024-10-29
 : Revue de code pour supprimer les commentaires `type: ignore[…]`, moderniser, et corriger/retester l’ensemble.
