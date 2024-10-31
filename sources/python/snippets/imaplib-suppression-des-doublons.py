@@ -105,8 +105,8 @@ def purge(conn: IMAP, folder: str) -> None:
 
         # Il se peut que le message n'aie pas de Message-ID, c'est souvent le cas
         # de ceux envoyés par la fonction PHP `mail()` ou Python `smtplib`.
-        # Du coup, on zappe. Pour y remédier, voyez l'avertissement sur la page de l'article :
-        #     https://www.tiger-222.fr/luma/python/imaplib-suppression-des-doublons.html
+        # Du coup, on zappe. Pour y remédier, les codes Python et PHP se trouvent sur la page de l'article :
+        #     https://www.tiger-222.fr/luma/python/imaplib-suppression-des-doublons.html#message-id
         if not (msg_id := get_msg_id(data_msg_id)):
             continue
 
