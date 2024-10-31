@@ -2,11 +2,11 @@
 
 [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit) est un outil puissant pour la manipulation de fichiers PDF.
 
-Il existe aussi un service en ligne, avec possibilité d'auto-hébergement, se nommant [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) et qui propose une vaste panoplie d'actions sur les fichiers PDF, comme l'ajout d'une signature ou d'un filigrane, par exemple. Voici une instance disponible : [3n1 Tech Solutions](https://pdf.3n1tech.com/?lang=fr_FR).
+Il existe aussi un service en ligne, avec possibilité d’auto-hébergement, se nommant [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) et qui propose une vaste panoplie d’actions sur les fichiers PDF, comme l’ajout d’une signature ou d’un filigrane, par exemple. Voici une instance disponible : [3n1 Tech Solutions](https://pdf.3n1tech.com/?lang=fr_FR).
 
 ## Sécuriser
 
-Avant toute chose, si un document provient d'une source douteuse, [Dangerzone](https://dangerzone.rocks) permettra de l'assainir.
+Avant toute chose, si un document provient d’une source douteuse, [Dangerzone](https://dangerzone.rocks) permettra de l’assainir.
 
 ## Déprotéger
 
@@ -19,7 +19,7 @@ Admettons que le fichier PDF soit protégé par mot de passe, et que celui-ci es
 
 ## Orienter
 
-Pour l'exemple, disons que les pages 301, 302 et 303 du fichier source sont en mode paysage alors que toutes les autres sont en mode portrait. Voici comment réorienter ces 3 pages :
+Pour l’exemple, disons que les pages 301, 302 et 303 du fichier source sont en mode paysage alors que toutes les autres sont en mode portrait. Voici comment réorienter ces 3 pages :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
 :lines: 3-10
@@ -140,13 +140,13 @@ Générer un nouveau PDF comportant les nouvelles méta-données :
 
 2024-08-30
 : Ajout de la section [Sécuriser](#securiser).
-: Ajout des informations sur Stirling-PDF dans l'introduction.
+: Ajout des informations sur Stirling-PDF dans l’introduction.
 
 2024-05-14
 : Ajout de la section [Déprotéger](#deproteger).
 
 2024-02-07
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2019/12/07/14/59/33-manipulation-de-fichiers-pdf).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2019/12/07/14/59/33-manipulation-de-fichiers-pdf).
 
 2020-04-09
 : Ajout de la section [Personnaliser les Méta-données](#personnaliser-les-meta-donnees).

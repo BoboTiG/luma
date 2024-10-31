@@ -1,9 +1,9 @@
-# Python, Web3 : Décoder les logs d'un transfert
+# Python, Web3 : Décoder les logs d’un transfert
 
-Prenons l'exemple d'un transfert sur le réseau [Avalanche Mainnet](https://www.avax.network) via le routeur [Trader Joe](https://traderjoexyz.com/).
+Prenons l’exemple d’un transfert sur le réseau [Avalanche Mainnet](https://www.avax.network) via le routeur [Trader Joe](https://traderjoexyz.com/).
 Comment savoir le nombre exact de *tokens* qui ont été transférés (envoyés et reçus) ?
 
-Voici une solution, en prenant pour l'exemple [cette transaction](https://snowtrace.io/tx/0x5270f284b2a5432e264be7a173fd5f187983a86d80e7f65cf2e9125b7fde1e51) (⚠ ceci n'est pas mon portefeuille).
+Voici une solution, en prenant pour l’exemple [cette transaction](https://snowtrace.io/tx/0x5270f284b2a5432e264be7a173fd5f187983a86d80e7f65cf2e9125b7fde1e51) (⚠ ceci n’est pas mon portefeuille).
 
 Imports et constantes :
 
@@ -41,14 +41,14 @@ Amounts:
 
 Et voilà !
 
-PS : J'avais partagé ces infos sur [cette issue](https://github.com/ethereum/web3.py/issues/1061#issuecomment-1049177039) en anglais.
+PS : J’avais partagé ces infos sur [cette issue](https://github.com/ethereum/web3.py/issues/1061#issuecomment-1049177039) en anglais.
 
 ---
 
 ## 📜 Historique
 
 2024-01-27
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/23/21/24/20-python-web3-decoder-les-logs-dun-transfert).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/23/21/24/20-python-web3-decoder-les-logs-dun-transfert).
 
 2022-03-07
 : Simplification du code : utilisation de `web3.logs.DISCARD` plutôt que de filtrer les avertissements.

@@ -67,10 +67,10 @@ Et créé le compte :
 ```
 
 ```{caution}
-Garde bien les informations en sécurité (le mot de passe et le fichier contenant la clef privée).
+Garde bien les informations en sécurité (le mot de passe et le fichier contenant la clé privée).
 ```
 
-Le fichier de la clef privée se trouve dans le dossier **keystore** et se nomme quelque chose comme **UTC--xxx** (où "xxx" est spécifique à chacun).
+Le fichier de la clé privée se trouve dans le dossier **keystore** et se nomme quelque chose comme **UTC--xxx** (où "xxx" est spécifique à chacun).
 
 ---
 
@@ -99,7 +99,7 @@ Quand tu auras pris connaissance de l'adresse IP du serveur, configure l'accès 
 
 ### Sauvegarde la Clef Privée
 
-Envoie le fichier de la clef privée depuis ton ordinateur vers le serveur :
+Envoie le fichier de la clé privée depuis ton ordinateur vers le serveur :
 
 ```{literalinclude} snippets/node-nulink.sh
 :caption: 🖥️ Ordinateur (PC)
@@ -209,7 +209,7 @@ exit
 :language: shell
 ```
 
-Initialise NuLink (remplace `FICHIER_CLEF_PRIVEE` par le nom du fichier contenant la clef privée du compte *worker* ["UTC--xxx"] et `ADRESSE_WORKER` par l'adresse publique du compte *worker*) :
+Initialise NuLink (remplace `FICHIER_CLEF_PRIVEE` par le nom du fichier contenant la clé privée du compte *worker* ["UTC--xxx"] et `ADRESSE_WORKER` par l'adresse publique du compte *worker*) :
 
 ```{literalinclude} snippets/node-nulink.sh
 :caption: ☁️ Serveur (VPS) ✍️
@@ -219,10 +219,10 @@ Initialise NuLink (remplace `FICHIER_CLEF_PRIVEE` par le nom du fichier contenan
 ```
 
 ```{caution}
-Garde bien les informations en sécurité (les douze mots de la *seed phrase* et le fichier contenant la clef privée).
+Garde bien les informations en sécurité (les douze mots de la *seed phrase* et le fichier contenant la clé privée).
 ```
 
-Depuis ton PC, récupère une copie de la clef privée :
+Depuis ton PC, récupère une copie de la clé privée :
 
 ```{literalinclude} snippets/node-nulink.sh
 :caption: 🖥️ Ordinateur (PC)

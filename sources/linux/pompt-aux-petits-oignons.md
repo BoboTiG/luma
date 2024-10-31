@@ -30,7 +30,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.profile
 ```
 
-Télécharger et installer les 4 polices d'écriture : [MesloLGS NF](https://github.com/romkatv/powerlevel10k#manual-font-installation).
+Télécharger et installer les 4 polices d’écriture : [MesloLGS NF](https://github.com/romkatv/powerlevel10k#manual-font-installation).
 Penser à configurer le terminal pour utiliser cette fonte.
 
 Relancer le shell :
@@ -39,7 +39,7 @@ Relancer le shell :
 exec $SHELL
 ```
 
-Le configurateur de Powerlevel10k devrait se lancer, ensuite, c'est terminé.
+Le configurateur de Powerlevel10k devrait se lancer, ensuite, c’est terminé.
 
 Pour information, le contenu final du fichier `$HOME/.zshrc` serait quelque chose comme :
 
@@ -70,7 +70,7 @@ source $HOME/.profile
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 
-Dernières touches, j'ai modifié ces options dans `$HOME/.p10k.zsh` :
+Dernières touches, j’ai modifié ces options dans `$HOME/.p10k.zsh` :
 
 ```{code-block} shell
 :caption: ~/.p10k.zsh
@@ -95,7 +95,7 @@ typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION='🐍'
 ## 📜 Historique
 
 2024-01-27
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/11/26/11/00/16-un-prompt-aux-petits-oignons).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2023/11/26/11/00/16-un-prompt-aux-petits-oignons).
 
 2023-11-26
 : Premier jet.

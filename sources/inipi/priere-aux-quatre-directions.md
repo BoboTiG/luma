@@ -11,17 +11,17 @@ layout: simple
 </figure>
 
 ```{pull-quote}
-Ce'kiyay**o**, ce'kiyay**o**<br>
-ahi'tonwan yanke<br>
+Ce’kiyay**o**, ce’kiyay**o**<br>
+ahi’tonwan yanke<br>
 oha e **o**…
 
 *(<small>Ouest</small>)*<br>
 Wiyoḣpetakiyahe tonwanyo<br>
 &nbsp;&nbsp;&nbsp; *<small>(corps à répéter après chaque direction)</small>*<br>
 &nbsp;&nbsp;&nbsp; ni Ṫunkăsila<br>
-&nbsp;&nbsp;&nbsp; ahi'tonwan yankel**o**<br>
-&nbsp;&nbsp;&nbsp; ce'kiyay**o**, ce'kiyay**o**<br>
-&nbsp;&nbsp;&nbsp; ahi'tonwan yanke<br>
+&nbsp;&nbsp;&nbsp; ahi’tonwan yankel**o**<br>
+&nbsp;&nbsp;&nbsp; ce’kiyay**o**, ce’kiyay**o**<br>
+&nbsp;&nbsp;&nbsp; ahi’tonwan yanke<br>
 &nbsp;&nbsp;&nbsp; oha e **o**…
 
 *(<small>Nord</small>)*<br>
@@ -44,7 +44,7 @@ Wakăntakiyahe tonwanyo<br>
 Makătakiyahe tonwanyo<br>
 &nbsp;&nbsp;&nbsp;&nbsp;…
 
--- Enseignement d'Archie Fire Lame Deer
+-- Enseignement d’Archie Fire Lame Deer
 ```
 
 ```{include} _note-lakota.md

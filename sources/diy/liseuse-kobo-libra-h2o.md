@@ -4,7 +4,7 @@
 :alt: Dusk Logo
 :align: center
 
-La liseuse Kobo Libra H2O, en mode nuit, affichant "<u>Seconde Fondation</u>", d'Isaac Asimov.
+La liseuse Kobo Libra H2O, en mode nuit, affichant "<u>Seconde Fondation</u>", d’Isaac Asimov.
 ```
 
 Ayant fait l’acquisition de cette liseuse, il fallait passer par quelques étapes avant de pouvoir réellement m’en servir.
@@ -114,7 +114,7 @@ Il y a possibilité de personnaliser quelques [options et comportements](https:/
    :language: diff
    ```
 
-   Afin d'appliquer ces modification à votre fichier, copier le code précédent dans le fichier **libnickel.so.1.0.0.diff**, puis :
+   Afin d’appliquer ces modification à votre fichier, copier le code précédent dans le fichier **libnickel.so.1.0.0.diff**, puis :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
    :lines: 50

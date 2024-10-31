@@ -1,6 +1,6 @@
 # Script de mise à jour de Gogs
 
-Voici un script qui permet de mettre à jour [Gogs](https://gogs.io), un serveur Git à installer chez soi, en l'occurrence sur un Raspberry Pi 2.
+Voici un script qui permet de mettre à jour [Gogs](https://gogs.io), un serveur Git à installer chez soi, en l’occurrence sur un Raspberry Pi 2.
 
 ```{literalinclude} snippets/script-de-mise-a-jour-de-gogs.sh
 :caption: update-gogs.sh
@@ -27,10 +27,10 @@ Rendre le script exécutable :
 ## 📜 Historique
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/03/31/15/25/19-script-de-mise-a-jour-de-gogs).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2016/03/31/15/25/19-script-de-mise-a-jour-de-gogs).
 
 2023-02-25
-: Téléchargement de l'archive ZIP depuis [GitHub](https://github.com/gogs/gogs/releases) au lieu de [dl.gogs.io](https://dl.gogs.io/).
+: Téléchargement de l’archive ZIP depuis [GitHub](https://github.com/gogs/gogs/releases) au lieu de [dl.gogs.io](https://dl.gogs.io/).
 
 2021-04-10
 : Support de Gogs 0.12.0+.

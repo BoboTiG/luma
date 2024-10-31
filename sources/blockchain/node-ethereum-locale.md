@@ -4,7 +4,7 @@ Voyons comment mettre en place un nœud Ethereum local avec [Go Ethereum](https:
 
 ## Installation
 
-Il vous faudra un système d'exploitation sous GNU/Linux, puis :
+Il vous faudra un système d’exploitation sous GNU/Linux, puis :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
 :lines: 3-12
@@ -30,7 +30,7 @@ Vous pouvez aussi importer un compte existant :
 ````
 
 Un fichier *UTC--…* sera créé dans le dossier *dev/node/keystore*.
-À partir de celui-ci, vous pouvez utiliser ce script Python pour récupérer la clef privée :
+À partir de celui-ci, vous pouvez utiliser ce script Python pour récupérer la clé privée :
 
 ```{literalinclude} snippets/node-ethereum-locale.py
 :caption: dev/get-private-key.py
@@ -49,7 +49,7 @@ Où `FILE` est un des fichiers *UTC--…* du dossier *dev/node/keystore*.
 Pour la suite, admettons que nous ayons créé ce compte :
 
 - adresse publique : `0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC`
-- clef privée : `56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027`
+- clé privée : `56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027`
 
 ## Initialisation
 
@@ -120,7 +120,7 @@ Ensuite, lancez cette commande pour initialiser (ou réinitialiser) le nœud :
 
 ## Démarrage
 
-Démarrez le nœud (pensez à adapter l'adresse publique du compte) :
+Démarrez le nœud (pensez à adapter l’adresse publique du compte) :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
 :lines: 20-34
@@ -129,8 +129,8 @@ Démarrez le nœud (pensez à adapter l'adresse publique du compte) :
 ```
 
 ```{note}
-- `dev/account-pwd.txt` est un fichier qui contient le mot de passe (en l'occurrence, il est vide) ;
-- `--httpi.api` : j'ai ajouté `net` pour faire plaisir à Metamask, mais sinon `eth,web3` suffit ;
+- `dev/account-pwd.txt` est un fichier qui contient le mot de passe (en l’occurrence, il est vide) ;
+- `--httpi.api` : j’ai ajouté `net` pour faire plaisir à Metamask, mais sinon `eth,web3` suffit ;
 - `--mine*`: requis pour la validation des transactions.
 ```
 
@@ -148,11 +148,11 @@ Et voilà !
 ## 📜 Historique
 
 2024-02-04
-: Revue de l'article.
-: Simplification du script Python pour récupérer la clef privée du compte.
+: Revue de l’article.
+: Simplification du script Python pour récupérer la clé privée du compte.
 
 2024-01-31
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/28/15/49/31-noeud-ethereum-local).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2022/02/28/15/49/31-noeud-ethereum-local).
 : Mise à jour de Geth (`1.10.17-25c9b49` → `1.13.11-8f7eb9cc`).
 
 2022-04-21

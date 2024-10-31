@@ -8,8 +8,8 @@
 
 ## Installation
 
-- raccorder le câble série fourni avec l'adaptateur USB/série
-- brancher le câble dans le port **COM** de l'onduleur, puis l'autre côté dans un port USB de la machine
+- raccorder le câble série fourni avec l’adaptateur USB/série
+- brancher le câble dans le port **COM** de l’onduleur, puis l’autre côté dans un port USB de la machine
 
 ## Code
 
@@ -19,7 +19,7 @@ Nous aurons besoin du module [pyserial](https://pypi.org/project/pyserial) :
 python -m pip install pyserial
 ```
 
-Et très certainement des droits d'accès au port TTY émulé :
+Et très certainement des droits d’accès au port TTY émulé :
 
 ```{code-block} shell
 sudo gpasswd -a $USER dialout && exit
@@ -27,14 +27,14 @@ sudo gpasswd -a $USER dialout && exit
 # sudo chmod a+rw /dev/ttyUSB0
 ```
 
-Cette fonction établit la connexion avec l'onduleur :
+Cette fonction établit la connexion avec l’onduleur :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
 :lines: 1-11
 :language: python
 ```
 
-Celle-ci permet d'envoyer une commande à l'onduleur (comme vu dans le PDF partagé plus haut, une commande est une succession de 3 blocs : `COMMANDE+CRC+CR`, où `COMMANDE` est un mot clef comme « QID », `CRC` est la somme de contrôle de la commande envoyée, et `CR` est le caractère permettant de dire à l'onduleur que c'est la fin de l'instruction) :
+Celle-ci permet d’envoyer une commande à l’onduleur (comme vu dans le PDF partagé plus haut, une commande est une succession de 3 blocs : `COMMANDE+CRC+CR`, où `COMMANDE` est un mot clé comme « QID », `CRC` est la somme de contrôle de la commande envoyée, et `CR` est le caractère permettant de dire à l’onduleur que c’est la fin de l’instruction) :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
 :pyobject: send_command
@@ -48,7 +48,7 @@ Pour calculer la somme de contrôle :
 :language: python
 ```
 
-Enfin, nous pouvons récupérer la réponse de l'onduleur via cette dernière fonction :
+Enfin, nous pouvons récupérer la réponse de l’onduleur via cette dernière fonction :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
 :pyobject: get_response
@@ -57,7 +57,7 @@ Enfin, nous pouvons récupérer la réponse de l'onduleur via cette dernière fo
 
 ### Exemple
 
-Exemple d'utilisation avec la récupération du n° de série de l'onduleur :
+Exemple d’utilisation avec la récupération du n° de série de l’onduleur :
 
 ```{literalinclude} snippets/communication-onduleur-wks-eko.py
 :lines: 45-49
@@ -67,7 +67,7 @@ Exemple d'utilisation avec la récupération du n° de série de l'onduleur :
 
 ## Module Spécifique
 
-J'ai rendu publique le code pour lire les métriques de l'onduleur, car le n° de série est facile à récupérer en comparaison des informations techniques envoyées en bloc, et ça se passe par là : [BoboTiG/python-wks-com](https://github.com/BoboTiG/python-wks-com). Un aperçu :
+J’ai rendu publique le code pour lire les métriques de l’onduleur, car le n° de série est facile à récupérer en comparaison des informations techniques envoyées en bloc, et ça se passe par là : [BoboTiG/python-wks-com](https://github.com/BoboTiG/python-wks-com). Un aperçu :
 
 ```{code-block} shell
 python -m pip install 'git+https://github.com/BoboTiG/python-wks-com.git@v1.2.0'
@@ -96,7 +96,7 @@ Toutes les informations utiles se trouvent dans le dépôt GitHub ☺
 : Mise à jour du module Python WKS COM (`1.0.1` → `1.2.0`).
 
 2024-01-27
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/12/07/21/34/37-python-communiquer-avec-un-onduleur-wks-evo-circle-via-le-port-serie).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2023/12/07/21/34/37-python-communiquer-avec-un-onduleur-wks-evo-circle-via-le-port-serie).
 
 2023-12-07
 : Premier jet.

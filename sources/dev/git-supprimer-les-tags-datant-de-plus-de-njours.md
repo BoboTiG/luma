@@ -24,7 +24,7 @@ Ce morceau de code supprimera tous les tags datant de plus de 21 jours.
 ## 📜 Historique
 
 2024-01-31
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2020/08/03/11/02/46-git-supprimer-les-tags-datant-de-plus-de-n-jours).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2020/08/03/11/02/46-git-supprimer-les-tags-datant-de-plus-de-n-jours).
 
 2020-08-08
 : Premier jet.

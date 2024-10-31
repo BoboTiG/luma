@@ -2,7 +2,7 @@
 layout: simple
 ---
 
-# La Nation Bison s'avance…
+# La Nation Bison s’avance…
 
 <!-- pyml disable-next-line no-inline-html -->
 <figure class="no-print">
@@ -11,25 +11,25 @@ layout: simple
 </figure>
 
 ```{pull-quote}
-Tȧtanka wa ma'niye *<small>(x3)</small>*<br>
+Tȧtanka wa ma’niye *<small>(x3)</small>*<br>
 Ate heyel**o**, Ate heyel**o**<br>
 Canunpa wan ci cupi ca<br>
 yanipi ktel**o**<br>
 Ate heyel**o**, Ate heyel**o**
 
-Tȧtanka wa ma'niye *<small>(x2)</small>*<br>
+Tȧtanka wa ma’niye *<small>(x2)</small>*<br>
 Ate heyel**o**, Ate heyel**o**<br>
 Canunpa wan ci cupi ca<br>
 yanipi ktel**o**<br>
 Ate heyel**o**, Ate heyel**o**
 
-Tȧtanka wa ma'niye *<small>(x2)</small>*<br>
+Tȧtanka wa ma’niye *<small>(x2)</small>*<br>
 Ate heyel**o**, Ate heyel**o**<br>
-Mako'ce wan waste ci cupi ca<br>
+Mako’ce wan waste ci cupi ca<br>
 yanipi ktel**o**<br>
 Ate heyel**o**, Ate heyel**o**
 
--- Enseignement d'Archie Fire Lame Deer
+-- Enseignement d’Archie Fire Lame Deer
 ```
 
 ```{include} _note-lakota.md

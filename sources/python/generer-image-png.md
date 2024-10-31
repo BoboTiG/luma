@@ -1,6 +1,6 @@
 # Générer des images PNG
 
-Voici une fonction bien pratique pour créer une image au format PNG. La valeur ajoutée ici, c'est qu'on utilise seulement du Python pur, sans passer par de module tierce.
+Voici une fonction bien pratique pour créer une image au format PNG. La valeur ajoutée ici, c’est qu’on utilise seulement du Python pur, sans passer par de module tierce.
 
 ## Imports
 
@@ -37,7 +37,7 @@ Pour vérifier la validité des fichiers générés :
 ## 📜 Historique
 
 2024-02-07
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2017/04/13/10/20/59-creer-des-images-png-valides-pour-vos-tests).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2017/04/13/10/20/59-creer-des-images-png-valides-pour-vos-tests).
 
 2017-05-17
 : Le fichier généré contenait une erreur `IDAT:_uncompressed_data_too_small`.

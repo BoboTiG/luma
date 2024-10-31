@@ -8,7 +8,7 @@ Site web complet pour le partage de connaissances.
 
 La qualité, et la fiabilité des morceaux de code, sont garanties grâce à plusieurs outils spécialisés, et ça se passe dans le fichier [checks.sh](checks.sh).
 
-Les fautes de frappe et de grammaire sont corrigées en temps réel grâce à [LanguageTool](https://languagetool.org). Pour ce faire, installer l'extension VS Code `davidlday.languagetool-linter` et démarrer ce conteneur :
+Les fautes de frappe et de grammaire sont corrigées en temps réel grâce à [LanguageTool](https://languagetool.org). Pour ce faire, installer l’extension VS Code `davidlday.languagetool-linter` et démarrer ce conteneur :
 
 ```shell
 docker run -p 8081:8010 silviof/docker-languagetool
@@ -50,5 +50,5 @@ Le déploiement est 100% automatisé.
 
 - moteur : [Sphinx](https://www.sphinx-doc.org)
 - thème : [Shibuya](https://shibuya.lepture.com)
-- police d'écriture : [Monaspace Argon](https://monaspace.githubnext.com)
+- police d’écriture : [Monaspace Argon](https://monaspace.githubnext.com)
 - logo : [OpenClipart n° 302148](https://openclipart.org/detail/302148) (le favicon est un dérivé de la même image)

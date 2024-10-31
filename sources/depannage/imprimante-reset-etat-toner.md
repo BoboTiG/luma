@@ -1,7 +1,7 @@
-# Imprimante : Remettre à zéro l'état du toner
+# Imprimante : Remettre à zéro l’état du toner
 
-Lors du changement de toner, il se peut que l'imprimante garde en mémoire l'état du toner précédent.
-Voici la procédure à suivre pour lui indiquer qu'un nouveau toner vient d'être installé.
+Lors du changement de toner, il se peut que l’imprimante garde en mémoire l’état du toner précédent.
+Voici la procédure à suivre pour lui indiquer qu’un nouveau toner vient d’être installé.
 
 ## Brother
 

@@ -33,7 +33,7 @@ Idem pour les {py:obj}`f-string` :
 
 ## {py:func}`re.sub`
 
-{py:func}`re.sub` peut être utilisée pour remplacer plusieurs caractères dans un texte (évitant ainsi d'avoir à enchaîner les appels à {py:obj}`str.replace` ou au plus coûteux {py:obj}`str.translate`) :
+{py:func}`re.sub` peut être utilisée pour remplacer plusieurs caractères dans un texte (évitant ainsi d’avoir à enchaîner les appels à {py:obj}`str.replace` ou au plus coûteux {py:obj}`str.translate`) :
 
 ```{literalinclude} snippets/tricks.py
 :lines: 1,3,28-30
@@ -110,7 +110,7 @@ Vous pouvez supprimer les zéros ajoutés pour les différentes fonctions du mod
 ## 📜 Historique
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2017/10/09/09/46/44-tricks).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2017/10/09/09/46/44-tricks).
 
 2019-12-13
 : Ajout de [`re.sub()`](#re-sub).

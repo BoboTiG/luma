@@ -1,7 +1,7 @@
 <!-- pyml disable-next-line first-line-heading -->
 ```{figure} images/arbre-rouge.png
 :width: 96
-:alt: L'arbre rouge
+:alt: L’arbre rouge
 :align: center
 
 Site web : [larbrerouge.org](https://www.larbrerouge.org)
@@ -10,7 +10,7 @@ Site web : [larbrerouge.org](https://www.larbrerouge.org)
 `````{admonition} Notes à propos de la prononciation
 :class: toggle
 
-Dans l'usage des dictionnaires *lakota* modernes, la prononciation s'entend comme suit :
+Dans l’usage des dictionnaires *lakota* modernes, la prononciation s’entend comme suit :
 
 ````{grid} 2
 
@@ -29,6 +29,6 @@ Dans l'usage des dictionnaires *lakota* modernes, la prononciation s'entend comm
 ````
 
 Les femmes prononcent les finales **o** en "é", exemples :
-- *ce'kiyay**o*** → *ce'kiyay**e***
+- *ce’kiyay**o*** → *ce’kiyay**e***
 - *yankel**o*** → *yankel**e***
 `````

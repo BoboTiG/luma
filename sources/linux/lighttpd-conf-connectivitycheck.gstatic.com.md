@@ -4,7 +4,7 @@ Voici une configuration pour [Lighttpd](https://www.lighttpd.net) couplée à [P
 
 ## Pré-requis
 
-Du côté du système, nous aurons besoin d'installer ce paquet :
+Du côté du système, nous aurons besoin d’installer ce paquet :
 
 ```{code-block} shell
 sudo apt install lighttpd-modules-lua
@@ -31,7 +31,7 @@ $HTTP["host"] == "connectivitycheck.gstatic.com" {
 server.modules += ( "mod_magnet" )
 ```
 
-Pour terminer, il va falloir activer ce nouveau site web, puis créer d'autres fichiers contenant les réponses HTTP :
+Pour terminer, il va falloir activer ce nouveau site web, puis créer d’autres fichiers contenant les réponses HTTP :
 
 ```{code-block} shell
 sudo ln -s \
@@ -46,7 +46,7 @@ sudo ln -s \
 ### Pi-hole
 
 - Rendez-vous dans le menu {menuselection}`Local DNS --> DNS Records` ;
-- Ajouter le domaine `connectivitycheck.gstatic.com` avec l'adresse IP de Pi-hole (par exemple `192.168.2.12`) ;
+- Ajouter le domaine `connectivitycheck.gstatic.com` avec l’adresse IP de Pi-hole (par exemple `192.168.2.12`) ;
 - Cliquer sur « Add ».
 
 ## Test
@@ -78,7 +78,7 @@ Exemple de sortie console lorsque tout est correctement en place :
 ## 📜 Historique
 
 2024-01-27
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2024/01/09/09/59/17-configuration-lighttpd-pour-contenir-le-trafic-vers-connectivitycheckgstaticcom).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2024/01/09/09/59/17-configuration-lighttpd-pour-contenir-le-trafic-vers-connectivitycheckgstaticcom).
 
 2024-01-09
 : Premier jet.

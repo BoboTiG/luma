@@ -4,7 +4,7 @@ Gandi permet de déployer un site web via git ou SFTP. Voyons comment automatise
 
 ## Prérequis
 
-Nous utiliserons [lftp](https://lftp.yar.ru/lftp-man.html) pour l'envoi des fichiers :
+Nous utiliserons [lftp](https://lftp.yar.ru/lftp-man.html) pour l’envoi des fichiers :
 
 ```{literalinclude} snippets/github-deploiement-vers-gandi.sh
 :lines: 3
@@ -13,11 +13,11 @@ Nous utiliserons [lftp](https://lftp.yar.ru/lftp-man.html) pour l'envoi des fich
 
 ## Manuel
 
-Les étapes suivantes peuvent servir à déployer depuis n'importe quelle machine et ne sont pas liées à GitHub.
+Les étapes suivantes peuvent servir à déployer depuis n’importe quelle machine et ne sont pas liées à GitHub.
 
 ### Constantes
 
-D'abord, nous aurons besoin de définir ces constantes :
+D’abord, nous aurons besoin de définir ces constantes :
 
 ```{literalinclude} snippets/github-deploiement-vers-gandi.sh
 :lines: 5-8
@@ -27,10 +27,10 @@ D'abord, nous aurons besoin de définir ces constantes :
 ### ⚠️ Approuver la Connexion
 
 ```{hint}
-Bien que nécessaire, cette étape est à ne faire qu'une seule fois par machine.
+Bien que nécessaire, cette étape est à ne faire qu’une seule fois par machine.
 ```
 
-Approuver la connexion au serveur pour éviter l'erreur "*Fatal error: Host key verification failed*" :
+Approuver la connexion au serveur pour éviter l’erreur "*Fatal error: Host key verification failed*" :
 
 ```{literalinclude} snippets/github-deploiement-vers-gandi.sh
 :lines: 10-11
@@ -39,7 +39,7 @@ Approuver la connexion au serveur pour éviter l'erreur "*Fatal error: Host key 
 
 ### Répliquer
 
-Voici la dernière étape qui permet de faire un miroir d'un dossier local vers un dossier distant (remplacer `FOLDER` par le dossier local) :
+Voici la dernière étape qui permet de faire un miroir d’un dossier local vers un dossier distant (remplacer `FOLDER` par le dossier local) :
 
 ```{literalinclude} snippets/github-deploiement-vers-gandi.sh
 :lines: 13-16

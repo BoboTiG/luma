@@ -1,4 +1,4 @@
-# Lister les auteurs et coauteurs d'un dépôt git
+# Lister les auteurs et coauteurs d’un dépôt git
 
 ```{literalinclude} snippets/git-lister-auteurs.sh
 :lines: 3-

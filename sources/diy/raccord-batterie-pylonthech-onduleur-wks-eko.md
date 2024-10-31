@@ -1,14 +1,14 @@
-# Raccord d'une batterie Pylontech vers un onduleur WKS EKO Circle
+# Raccord d’une batterie Pylontech vers un onduleur WKS EKO Circle
 
-Un câblage incorrect ou un câble défectueux peuvent mener à voir une `Erreur 61` sur l'écran de l'onduleur. Il s'agit du code d'erreur spécifiant que la **liaison avec la batterie est perdue**.
+Un câblage incorrect ou un câble défectueux peuvent mener à voir une `Erreur 61` sur l’écran de l’onduleur. Il s’agit du code d’erreur spécifiant que la **liaison avec la batterie est perdue**.
 
 ---
 
 ## Liaison
 
-Pour que l'onduleur ([WKS EKO Circle](https://www.wattuneed.com/fr/onduleurs-et-convertisseurs/25678-onduleur-hybride-wks-evo-56kva-48v-0768563819193.html)) puisse communiquer avec la ou les batteries ([Pylontech US5000](https://en.pylontech.com.cn/products/c23/134.html)), nous modifierons un [câble RJ45](images/rj45.svg).
+Pour que l’onduleur ([WKS EKO Circle](https://www.wattuneed.com/fr/onduleurs-et-convertisseurs/25678-onduleur-hybride-wks-evo-56kva-48v-0768563819193.html)) puisse communiquer avec la ou les batteries ([Pylontech US5000](https://en.pylontech.com.cn/products/c23/134.html)), nous modifierons un [câble RJ45](images/rj45.svg).
 
-Ci-dessous, le schéma d'installation concentré sur la connexion ([cliquer ici pour télécharger le schéma complet](images/schema-communication-onduleur-wks-eko-circle-vers-batterie-pylontech-complet.jpg)) :
+Ci-dessous, le schéma d’installation concentré sur la connexion ([cliquer ici pour télécharger le schéma complet](images/schema-communication-onduleur-wks-eko-circle-vers-batterie-pylontech-complet.jpg)) :
 
 ```{figure} images/schema-communication-onduleur-wks-circle-vers-batterie-pylontech-zoom.jpg
 :align: center
@@ -16,7 +16,7 @@ Ci-dessous, le schéma d'installation concentré sur la connexion ([cliquer ici 
 
 ### Côté Onduleur
 
-Sur l'onduleur (*inverter* en anglais), le câble se branche dans le port **BMS**, et il ne comporte que deux pins : les n° **3** (marron) et **5** (blanc marron) :
+Sur l’onduleur (*inverter* en anglais), le câble se branche dans le port **BMS**, et il ne comporte que deux pins : les n° **3** (marron) et **5** (blanc marron) :
 
 ```{figure} images/rj45-rs485-inverter.svg
 :align: center
@@ -31,7 +31,7 @@ Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS
 ```
 
 ```{tip}
-De ce côté-là, il est possible de laisser un câble RJ45 d'origine avec les 8 pins.
+De ce côté-là, il est possible de laisser un câble RJ45 d’origine avec les 8 pins.
 ```
 
 ---
@@ -67,10 +67,10 @@ Si batterie(s) *slave* il y a, mettre tous leurs DIP en position haute (OFF) :
 ## 📜 Historique
 
 2024-02-27
-: Les fichiers SVG des câbles RJ45 s'adaptent automatiquement au thème sombre.
+: Les fichiers SVG des câbles RJ45 s’adaptent automatiquement au thème sombre.
 
 2024-01-27
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2023/12/16/23/12/04-raccord-dune-batterie-pylontech-vers-un-onduleur-wks-eko-circle).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2023/12/16/23/12/04-raccord-dune-batterie-pylontech-vers-un-onduleur-wks-eko-circle).
 
 2023-12-16
 : Premier jet.

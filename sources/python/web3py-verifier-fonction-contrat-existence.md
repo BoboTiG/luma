@@ -23,7 +23,7 @@ Utilisation :
 ## 📜 Historique
 
 2024-01-27
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2022/03/11/17/29/46-python-web3-determiner-si-un-contrat-contient-une-fonction-donnee).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2022/03/11/17/29/46-python-web3-determiner-si-un-contrat-contient-une-fonction-donnee).
 
 2022-04-23
 : Code plus rapide et supportant Web3.py v6+ :

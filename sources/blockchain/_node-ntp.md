@@ -1,7 +1,7 @@
 <!-- pyml disable-next-line first-line-heading -->
-Pour être compétitif, le nœud doit rester synchronisé par rapport à ses pairs. Voyons comment faire en sorte d'utiliser un service NTP efficace.
+Pour être compétitif, le nœud doit rester synchronisé par rapport à ses pairs. Voyons comment faire en sorte d’utiliser un service NTP efficace.
 
-D'abord, vérifier que le fuseau horaire est correct :
+D’abord, vérifier que le fuseau horaire est correct :
 
 ```{literalinclude} snippets/_node-ntp.sh
 :caption: ☁️ Serveur (VPS)
@@ -28,7 +28,7 @@ System clock synchronized: yes
 ````{admonition} Si le fuseau horaire est incorrect...
 :class: toggle
 
-[Time.is](https://time.is) est un service en ligne qui permet de trouver le nom du fuseau horaire d'une ville donnée. Dans le champ de recherche, entrer "Paris", par exemple, puis valider en appuyant sur {kbd}`Entrée`. Dans la page résultante, rechercher le texte "*The IANA time zone identifier*" ; en l'occurrence ça donne "*The IANA time zone identifier for Paris is Europe/Paris*".
+[Time.is](https://time.is) est un service en ligne qui permet de trouver le nom du fuseau horaire d’une ville donnée. Dans le champ de recherche, entrer "Paris", par exemple, puis valider en appuyant sur {kbd}`Entrée`. Dans la page résultante, rechercher le texte "*The IANA time zone identifier*" ; en l’occurrence ça donne "*The IANA time zone identifier for Paris is Europe/Paris*".
 Le fuseau horaire est *Europe/Paris*, et voici comment spécifier cette valeur au serveur :
 
 ```{literalinclude} snippets/_node-ntp.sh
@@ -46,7 +46,7 @@ Puis, installer le service NTP :
 :language: shell
 ```
 
-Et vérifier qu'il est fonctionnel :
+Et vérifier qu’il est fonctionnel :
 
 ```{literalinclude} snippets/_node-ntp.sh
 :caption: ☁️ Serveur (VPS)

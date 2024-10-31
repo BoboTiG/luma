@@ -9,7 +9,7 @@
 
 ## Compiler
 
-La partie importante permettant d'activer le débogage est `CPPFLAGS=-DPNG_DEBUG=2` :
+La partie importante permettant d’activer le débogage est `CPPFLAGS=-DPNG_DEBUG=2` :
 
 ```{literalinclude} snippets/libpng-compiler-une-version-de-debogage.sh
 :lines: 6-8
@@ -30,7 +30,7 @@ Remplacer `IMAGE` par un fichier PNG :
 ## 📜 Historique
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2016/04/11/13/42/33-libpng-compiler-une-version-de-debogage).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2016/04/11/13/42/33-libpng-compiler-une-version-de-debogage).
 
 2016-04-11
 : Premier jet.

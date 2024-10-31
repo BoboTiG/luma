@@ -1,8 +1,8 @@
-# RegExp d'extraction d'URL
+# RegExp d’extraction d’URL
 
 Voici la RegExp en question : `https?://[^\s<"]+`.
 
-L'astuce réside dans le fait qu'il ne peut pas avoir d'espace dans une URL. L'expression ci-dessus va rechercher tous les caractères et s'arrêtera lorsqu'elle tombera sur un "espace blanc" (c'est-à-dire un espace, un retour chariot, une tabulation, un saut de ligne ou un saut de page). Il ne peut pas avoir non plus ni de guillemet anglais (`"`), ni de signe inférieur, qui signifie l'ouverture d'une balise HTML.
+L’astuce réside dans le fait qu’il ne peut pas avoir d’espace dans une URL. L’expression ci-dessus va rechercher tous les caractères et s’arrêtera lorsqu’elle tombera sur un "espace blanc" (c’est-à-dire un espace, un retour chariot, une tabulation, un saut de ligne ou un saut de page). Il ne peut pas avoir non plus ni de guillemet anglais (`"`), ni de signe inférieur, qui signifie l’ouverture d’une balise HTML.
 
 `````{tabs}
 
@@ -38,7 +38,7 @@ text = re.sub(r'(https?://[^\s<"]+)', r'<a href="\1">\1</a>', text)
 ## 📜 Historique
 
 2024-04-06
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2015/02/16/10/17/49-code-url-to-link).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2015/02/16/10/17/49-code-url-to-link).
 
 2015-05-11
 : Amélioration de la RegExp (`https?://[^\s]+` → `https?://[^\s<"]+`).
