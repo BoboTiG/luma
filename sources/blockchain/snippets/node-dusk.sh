@@ -20,7 +20,7 @@ apt install -y ufw \
     && echo 'OK'
 
 apt install -y jq net-tools unzip \
-    && curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.3.5/node-installer.sh | sh \
+    && curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.4.0/node-installer.sh | sh \
     && echo 'OK'
 
 rusk-wallet restore

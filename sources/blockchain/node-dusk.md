@@ -13,10 +13,10 @@ Ce guide est une traduction libre et légèrement modifiée de la [documentation
 
 ## [Configuration Requise](https://docs.dusk.network/getting-started/node-setup/node-requirements#provisioner-specifications)
 
-- système d’exploitation : **Debian** GNU/Linux
-- architecture : x86-64
-- espace disque : 50 Gio NVMe
-- mémoire : 4 Gio de RAM
+- Système d’exploitation : **Ubuntu 24.04**
+- Architecture : x86-64
+- Espace disque : 50 Gio NVMe
+- Mémoire : 4 Gio de RAM
 
 ---
 
@@ -39,7 +39,7 @@ Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
 
 ## Hébergement
 
-Créé un compte sur Contabo, et utiliser [ce lien](https://contabo.com/en/vps/cloud-vps-2/?addons=1634&image=debian.329&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
+Créé un compte sur Contabo, et utiliser [ce lien](https://contabo.com/en/vps/cloud-vps-2/?addons=1634&image=ubuntu.332&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
 À l’heure où j’écris ces lignes, la première facture est de 21,12 €, puis 15,06 €/mois.
 
 Vérifier la configuration sélectionnée :
@@ -48,7 +48,7 @@ Vérifier la configuration sélectionnée :
 - RAM : 16 GB RAM
 - *Region* : United Kingdom
 - *Storage Type* : 200 GB NVMe
-- *Image*: Debian 12
+- *Image*: Ubuntu 24.04
 
 ```{attention}
 Ne pas choisir la région *European Union (Germany)* car il y a des soucis avec leur DNS et la synchonisation du nœud sera problématique voire impossible.
@@ -383,6 +383,10 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 - [Explorateur de blocs](https://apps.dusk.network/explorer/)
 
 ## 📜 Historique
+
+2024-12-12
+: Mise à jour de la version du script d’installation de Dusk (`0.3.5` → `0.4.0`).
+: Changement du système d'exploitation du serveur VPS pour supporter la nouvelle version de Dusk (`Debian 12` → `Ubuntu 24.04`).
 
 2024-10-21
 : Mise à jour de la version du script d’installation de Dusk (`0.3.2` → `0.3.5`).
