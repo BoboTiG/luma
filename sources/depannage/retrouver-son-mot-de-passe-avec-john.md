@@ -26,8 +26,7 @@ fatal: fetch-pack: invalid index-pack output
 
 Alors désactiver la compression, puis relancer la commande de clônage :
 
-```{code-block}
-:language: shell
+```{code-block} shell
 git config --global core.compression 0
 ```
 ````
@@ -71,7 +70,7 @@ Pour l’exemple, je me souviens du format du mot de passe :
 Cela se traduit par cette commande :
 
 ```{literalinclude} snippets/retrouver-son-mot-de-passe-avec-john.sh
-:lines: 14-19
+:lines: 14-17
 :language: shell
 ```
 
