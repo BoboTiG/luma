@@ -67,12 +67,17 @@ Lorsque le serveur sera opérationnel et que son adresse IP sera connue, configu
 
 ### Connexion
 
-Se connecter en SSH au serveur (utiliser le mot de passe que défini sur Contabo) :
+Se connecter en SSH au serveur (utiliser le mot de passe défini sur Contabo) :
 
 ```{code-block} shell
 :caption: 🖥️ Ordinateur (PC)
 
 ssh dusk
+```
+
+```{important}
+Il est vivement recommandé de désactiver l'accès SSH par mot de passe pour favoriser l'utilisation d'une clé.
+Un mini guide est disponible ici : [Comment paramétrer SSH pour un accès par clé](<../linux/parametrer-ssh-cle.md>).
 ```
 
 ---
@@ -383,6 +388,9 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 - [Explorateur de blocs](https://apps.dusk.network/explorer/)
 
 ## 📜 Historique
+
+2024-12-15
+: Ajout de l'avertissement quant à l'utilisation d'un mot de passe pour accéder au serveur via SSH.
 
 2024-12-12
 : Mise à jour de la version du script d’installation de Dusk (`0.3.5` → `0.4.0`).
