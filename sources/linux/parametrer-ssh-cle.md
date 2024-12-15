@@ -12,7 +12,7 @@ Que `fail2ban` soit en place ou non, il est possible de se rendre compte à quel
 :language: shell
 ```
 
-Autre point intéressant pour les personnes fénéantes : l'utilisation d'une clé fait gagner du temps car plus besoin de se souvenir et taper de mot de passe.
+Autre point intéressant pour les personnes fainéantes : l'utilisation d'une clé fait gagner du temps, car plus besoin de se souvenir et taper de mot de passe.
 
 ---
 
@@ -49,6 +49,18 @@ Depuis la machine sur laquelle la connexion par clé est souhaitée (remplacer, 
 :caption: ☁️ Serveur
 :lines: 15-17
 :emphasize-lines: 2
+:language: shell
+```
+
+```{important}
+Vérifier maintenant que l'accès par clé fonctionne avant d'aller plus loin.
+```
+
+Dernière étape, désactiver l'accès par mot de passe :
+
+```{literalinclude} snippets/parametrer-ssh-cle.sh
+:caption: ☁️ Serveur
+:lines: 22-24
 :language: shell
 ```
 

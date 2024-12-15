@@ -18,3 +18,7 @@ chmod 0644 ~/.ssh/authorized_keys
 
 lastb | head
 service ssh status
+
+find /etc/ssh -type f -print0 | xargs -0 \
+    sed -i 's/#*[[:space:]]*PasswordAuthentication[[:space:]]*yes/PasswordAuthentication no/'
+service ssh restart
