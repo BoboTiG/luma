@@ -80,7 +80,7 @@ html_context = {
 exclude_patterns = ["**/_*"]
 
 # Do not include drafts when deploying to production
-if "sphinx_autobuild" in sys.argv:
+if "_live" not in sys.argv:
     exclude_patterns.append("brouillons/**")
 
 # sphinx-last-updated-by-git
