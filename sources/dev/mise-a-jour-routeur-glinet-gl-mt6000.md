@@ -2,7 +2,7 @@
 
 ## Liens
 
-- [La fiche OpenWrt](https://openwrt.org/toh/gl.inet/gl-mt6000) ;
+- [La fiche du routeur sur OpenWrt](https://openwrt.org/toh/gl.inet/gl-mt6000) ;
 
 ## Première Installation
 
