@@ -18,13 +18,14 @@ language = "fr"
 
 extensions = [
     "myst_parser",
+    "notfound.extension",
     "sphinx_contributors",
     "sphinx_copybutton",
+    "sphinx_design",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
-    "sphinx_design",
     "sphinx_last_updated_by_git",
-    "notfound.extension",
+    "sphinx_reredirects",
     "sphinx_tabs.tabs",
     "sphinx_togglebutton",
 ]
@@ -93,3 +94,9 @@ notfound_context = {
     "body": '<h1><a href="https://www.youtube.com/watch?v=wV4wepiucf4" target="_blank">Elle est où la page ?</a></h1><p>¯\\_(ツ)_/¯</p><p>La page en question ne semble pas, ou plus, exister.</p>',
 }
 notfound_urls_prefix = None
+
+# Redirections of old pages
+redirects = {
+    # 2024-12-17
+    "dev/mise-a-jour-routeur-tenda-ac18.html": "../reseau/mise-a-jour-routeur-tenda-ac18.html",
+}
