@@ -85,6 +85,7 @@ Base de Connaissances du `Luma`_
 
 .. contributors:: BoboTiG/luma
     :avatars:
+    :contributions:
     :exclude: dependabot[bot]
 
 
