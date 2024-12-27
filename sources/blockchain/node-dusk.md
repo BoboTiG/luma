@@ -143,7 +143,7 @@ Charger les commandes :
 
 ### `balance`
 
-Affiche le nombre de nDUSK disponible sur le *wallet*.
+Affiche le nombre de DUSK disponible sur le *wallet*.
 
 ### `blocks`
 
@@ -220,7 +220,7 @@ Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun *
 
 ## Exécution
 
-Et c’est parti, démarrons le nœud :
+Et c’est parti, démarrer le nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
@@ -240,7 +240,7 @@ C’est la dernière étape pour pouvoir créer des blocs et participer au rése
 
 ### *Stake*
 
-Pour l’exemple, plaçons 1 000 nDUSK en *staking* (c’est le minimum requis, lien vers le [fausset](https://docs.dusk.network/operator/nocturne/testnet-faucet/)) :
+Pour l’exemple, plaçons 1 000 DUSK en *staking* (c’est le minimum requis) :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
@@ -393,6 +393,7 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 : Mise à jour de la version du script d’installation de Dusk (`0.4.0` → `0.5.0`) pour la migration depuis le *testnet* "Nocturne" vers le *mainnet*.
 : Adaptation du lien vers la documentation (`https://docs.dusk.network/itn/node-running-guide` → `https://docs.dusk.network/operator/guides/mainnet-node/`).
 : Correction de la commande d’installation de Dusk (`sh` → `bash`).
+: Suppression du lien vers le fausset du *testnet*.
 
 2024-12-15
 : Ajout de l’avertissement quant à l’utilisation d’un mot de passe pour accéder au serveur via SSH.
