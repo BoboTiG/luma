@@ -11,10 +11,6 @@ Installer `nut` (*Network UPS Tools*) :
 :language: shell
 ```
 
-```{note}
-La version de `nut` actuellement disponible dans les dépôts est la `v2.8.1`. 
-```
-
 ---
 
 ## 🔭 Découverte
