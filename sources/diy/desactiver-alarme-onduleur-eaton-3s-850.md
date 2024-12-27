@@ -30,7 +30,7 @@ Brancher l’onduleur à l’ordinateur, puis démarrer le scanner :
 :class: toggle
 
 ```{code-block}
-:emphasize-lines: 8-10
+:emphasize-lines: 10
 Cannot load SNMP library (libnetsnmp.so) : file not found. SNMP search disabled.
 Cannot load XML library (libneon.so) : file not found. XML search disabled.
 Cannot load AVAHI library (libavahi-client.so) : file not found. AVAHI search disabled.
@@ -70,7 +70,7 @@ Le fait est que `nut` fonctionne en mode client-serveur, malgré le fait que nou
 :language: shell
 ```
 
-Maintenant, ajouter de l’onduleur au fichier de configuration de `nut` (adapter la ligne surlignée) :
+Maintenant, ajouter l’onduleur au fichier de configuration de `nut` (adapter la ligne surlignée) :
 
 ```{literalinclude} snippets/desactiver-alarme-onduleur-eaton-3s-850.sh
 :lines: 9-15
