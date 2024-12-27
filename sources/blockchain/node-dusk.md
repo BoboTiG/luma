@@ -1,4 +1,4 @@
-# [testnet] Comment déployer un nœud Dusk ?
+# [mainnet] Comment déployer un nœud Dusk ?
 
 ```{figure} images/dusk-logo.svg
 :width: 96
@@ -9,7 +9,7 @@
 Site web : [dusk.network](https://dusk.network)
 ```
 
-Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/itn/node-running-guide) pour le déploiement d’un nœud Dusk, plus communément appelé *node provisioner*.
+Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/operator/guides/mainnet-node/) pour le déploiement d’un nœud Dusk, plus communément appelé *node provisioner*.
 
 ## [Configuration Requise](https://docs.dusk.network/getting-started/node-setup/node-requirements#provisioner-specifications)
 
@@ -76,7 +76,7 @@ ssh dusk
 ```
 
 ```{important}
-Il est vivement recommandé de désactiver l'accès SSH par mot de passe pour favoriser l'utilisation d'une clé.
+Il est vivement recommandé de désactiver l’accès SSH par mot de passe pour favoriser l’utilisation d’une clé.
 Un mini guide est disponible ici : [Comment paramétrer SSH pour un accès par clé](<../linux/parametrer-ssh-cle.md>).
 ```
 
@@ -389,16 +389,21 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 ## 📜 Historique
 
+2024-12-27
+: Mise à jour de la version du script d’installation de Dusk (`0.4.0` → `0.5.0`) pour la migration depuis le *testnet* "Nocturne" vers le *mainnet*.
+: Adaptation du lien vers la documentation (`https://docs.dusk.network/itn/node-running-guide` → `https://docs.dusk.network/operator/guides/mainnet-node/`).
+: Correction de la commande d’installation de Dusk (`sh` → `bash`).
+
 2024-12-15
-: Ajout de l'avertissement quant à l'utilisation d'un mot de passe pour accéder au serveur via SSH.
+: Ajout de l’avertissement quant à l’utilisation d’un mot de passe pour accéder au serveur via SSH.
 
 2024-12-12
 : Mise à jour de la version du script d’installation de Dusk (`0.3.5` → `0.4.0`).
-: Changement du système d'exploitation du serveur VPS pour supporter la nouvelle version de Dusk (`Debian 12` → `Ubuntu 24.04`).
+: Changement du système d’exploitation du serveur VPS pour supporter la nouvelle version de Dusk (`Debian 12` → `Ubuntu 24.04`).
 
 2024-10-21
 : Mise à jour de la version du script d’installation de Dusk (`0.3.2` → `0.3.5`).
-: Correction du lien vers le fausset (`https://docs.dusk.network/itn/testnet-faucet/` → `https://docs.dusk.network/operator/nocturne/testnet-faucet/`)
+: Correction du lien vers le fausset (`https://docs.dusk.network/itn/testnet-faucet/` → `https://docs.dusk.network/operator/nocturne/testnet-faucet/`).
 
 2024-10-10
 : Simplification de la commande pour [Repartir de Zéro](#repartir-de-zero).
