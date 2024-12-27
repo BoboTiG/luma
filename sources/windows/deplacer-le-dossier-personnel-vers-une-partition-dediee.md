@@ -2,9 +2,9 @@
 
 ## Le Script
 
-Pour un gain de place ou pour séparer les données utilisateur du système d'exploitation, ce script batch peut être utile.
+Pour un gain de place ou pour séparer les données utilisateur du système d’exploitation, ce script batch peut être utile.
 
-Voici ce qu'il fait :
+Voici ce qu’il fait :
 
 - Création des nouveaux dossiers dans la partition de données ;
 - **Déplacement** des données personnelles depuis les anciens dossiers vers les nouveaux ;
@@ -21,11 +21,11 @@ Pensez à adapter la partition à la ligne spécifiant `set new_folder=…` (ici
 
 ## Utilisation
 
-Pour l'utiliser :
+Pour l’utiliser :
 
 - Copiez-le à la racine de la nouvelle partition ;
 - Double-cliquez & patientez ;
-- Redémarrez l'ordinateur.
+- Redémarrez l’ordinateur.
 
 ## Testé et Approuvé
 
@@ -44,7 +44,7 @@ Windows 11
 ## 📜 Historique
 
 2024-02-01
-: Déplacement de l'article depuis le [blog](https://www.tiger-222.fr/?d=2015/03/06/10/49/14-deplacer-le-dossier-personnel-vers-une-partition-dediee).
+: Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2015/03/06/10/49/14-deplacer-le-dossier-personnel-vers-une-partition-dediee).
 
 2015-03-06
 : Premier jet.
