@@ -5,6 +5,7 @@
 - un onduleur WKS EVO Circle et le câble série fourni
 - un adaptateur USB vers série DB9 RS232 - Mâle / Mâle (ICUSB232V2)
 - une machine pour exécuter le code Python (PC portable, Raspberry Pi, etc.)
+- le fichier PDF technique : [HS-MS-MSX RS232 Protocol 20240822](../_static/hs-ms-msx-communication-protocol-old.pdf)
 
 ## Installation
 
@@ -91,6 +92,9 @@ Toutes les informations utiles se trouvent dans le dépôt GitHub ☺
 ---
 
 ## 📜 Historique
+
+2024-12-27
+: Ajout du fichier PDF contenant les informations techniques.
 
 2024-11-02
 : Le module Python WKS COM étant maintenant disponible sur PyPI, mise à jour du code d’installation.
