@@ -111,7 +111,7 @@ Installer et configurer le pare-feu pour autoriser **seulement** les connexions 
 ```{include} _node-ntp.md
 ```
 
-### Dusk
+### 📍 Dusk
 
 Télécharger et exécuter le script d’installation automatique pour Dusk :
 
@@ -388,6 +388,9 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 - [Explorateur de blocs](https://apps.dusk.network/explorer/)
 
 ## 📜 Historique
+
+2024-12-28
+: Mise à jour de la version du script d’installation de Dusk (`0.5.0` → `0.5.1`).
 
 2024-12-27
 : Mise à jour de la version du script d’installation de Dusk (`0.4.0` → `0.5.0`) pour la migration depuis le *testnet* "Nocturne" vers le *mainnet*.
