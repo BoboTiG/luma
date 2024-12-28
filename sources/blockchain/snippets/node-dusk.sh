@@ -19,9 +19,9 @@ apt install -y ufw \
     && ufw enable \
     && echo 'OK'
 
-apt install -y jq net-tools unzip \
-    && curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.1/node-installer.sh | bash \
-    && echo 'OK'
+apt install -y jq net-tools unzip
+curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.1/node-installer.sh | bash
+    
 
 rusk-wallet restore
 
