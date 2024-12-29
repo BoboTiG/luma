@@ -11,7 +11,7 @@ Site web : [dusk.network](https://dusk.network)
 
 Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/operator/guides/mainnet-node/) pour le déploiement d’un nœud Dusk, plus communément appelé *node provisioner*.
 
-## [Configuration Requise](https://docs.dusk.network/getting-started/node-setup/node-requirements#provisioner-specifications)
+## ✅ [Configuration Requise](https://docs.dusk.network/operator/provisioner/#provisioner-specifications)
 
 - Système d’exploitation : **Ubuntu 24.04**
 - Architecture : x86-64
@@ -20,14 +20,14 @@ Ce guide est une traduction libre et légèrement modifiée de la [documentation
 
 ---
 
-## Avant-propos
+## 🪧 Avant-propos
 
 ```{include} _node-avant-propos.md
 ```
 
 ---
 
-## Créer un Compte
+## 🪪 Créer un Compte
 
 Rendez-vous sur le [wallet Dusk](https://wallet.dusk.network) pour créer un compte.
 
@@ -37,7 +37,7 @@ Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
 
 ---
 
-## Hébergement
+## 🏪 Hébergement
 
 Créé un compte sur Contabo, et utiliser [ce lien](https://contabo.com/en/vps/cloud-vps-2/?addons=1634&image=ubuntu.332&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
 À l’heure où j’écris ces lignes, la première facture est de 21,12 €, puis 15,06 €/mois.
@@ -82,7 +82,7 @@ Un mini guide est disponible ici : [Comment paramétrer SSH pour un accès par c
 
 ---
 
-## Installation
+## 🛠️ Installation
 
 ### Mise à Jour
 
@@ -123,7 +123,7 @@ Télécharger et exécuter le script d’installation automatique pour Dusk :
 
 ---
 
-## Commandes
+## 🎛️ Commandes
 
 Ces commandes seront pratiques plus tard afin de déterminer l’état du nœud :
 
@@ -175,7 +175,7 @@ Affiche le nombre de *tokens* en *staking*.
 
 ---
 
-## Configuration
+## ⚙️ Configuration
 
 ### Mot de Passe
 
@@ -218,7 +218,7 @@ Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun *
 
 ---
 
-## Exécution
+## 🚀 Exécution
 
 Et c’est parti, démarrer le nœud :
 
@@ -230,7 +230,7 @@ Et c’est parti, démarrer le nœud :
 
 ---
 
-## Staking
+## 🪙 Staking
 
 ```{attention}
 Lors du premier lancement, ne commencer à *staker* des *tokens* que lorsque le nœud approche la fin de sa [synchronisation](#synchronisation) (quand il reste moins de 4 320 blocs à récupérer).
@@ -309,7 +309,7 @@ Dans l’immédiat, la seule raison connue est quand un pair trouve que le nœud
 
 ---
 
-## Débogage
+## 🐛 Débogage
 
 Section pour les cas où le système ne fonctionne pas comme prévu.
 
@@ -387,7 +387,12 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 - [Explorateur de blocs](https://apps.dusk.network/explorer/)
 
+---
+
 ## 📜 Historique
+
+```{admonition} Historique complet
+:class: toggle
 
 2024-12-28
 : Mise à jour de la version du script d’installation de Dusk (`0.5.0` → `0.5.1`).
@@ -456,3 +461,4 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 2024-02-16
 : Premier jet.
+```
