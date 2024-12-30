@@ -69,12 +69,12 @@ rusk-wallet unstake \
 
 rusk-wallet --state 'http://127.0.0.1:8080' balance
 
-cat << EOF >> ~/.profile
+cat << 'EOF' >> ~/.profile
 
 # Dusk specific commands
 alias balance='rusk-wallet balance --spendable'
 alias blocks='echo "Current: \$(current)" ; echo "Latest : \$(latest)"'
-alias chosen='zgrep "Block generated" /var/log/rusk.log*'
+alias chosen='i=1; zgrep "Block generated" /var/log/rusk.log* | while read -r line; do printf "%3d %s\\n" $i "$line"; i=$((i+1)); done'
 alias current='curl -s http://127.0.0.1:8080/02/Chain --data-raw '"'"'{"topic":"gql","data":"query{block(height:-1){header{height}}}"}'"'"' | jq .block.header.height'
 alias latest='ruskquery block-height'
 alias logs='tail -f /var/log/rusk.log'
