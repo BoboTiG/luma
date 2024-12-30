@@ -394,6 +394,9 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 ```{admonition} Historique complet
 :class: toggle
 
+2024-12-30
+: Amélioration de l’alias `chosen` ([diff](https://github.com/BoboTiG/luma/commit/0907b1467c25a6e88ede070f3de3bef324d5ddec)).
+
 2024-12-28
 : Mise à jour de la version du script d’installation de Dusk (`0.5.0` → `0.5.1`).
 : Simplification de la commande d’installation de Dusk.
