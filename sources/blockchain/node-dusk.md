@@ -39,20 +39,13 @@ Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
 
 ## 🏪 Hébergement
 
-Créé un compte sur Contabo, et utiliser [ce lien](https://contabo.com/en/vps/cloud-vps-2/?addons=1634&image=ubuntu.332&qty=1&contract=1&storage-type=vps-2-200-gb-nvme) vers le serveur à louer avec la bonne configuration présélectionnée.
-À l’heure où j’écris ces lignes, la première facture est de 21,12 €, puis 15,06 €/mois.
+La documentation officielle traite de Digital Ocean, et il est possible d'utiliser Hetzner ou encore [Vultr](https://www.vultr.com/?ref=9703379). Ici, nous parlerons de ce dernier.
 
-Vérifier la configuration sélectionnée :
+Créé un compte sur [Vultr](https://www.vultr.com/?ref=9703379) et déployer un nouveau produit avec ces caractéristiques :
 
-- CPU : 6 vCPU Cores
-- RAM : 16 GB RAM
-- *Region* : United Kingdom
-- *Storage Type* : 200 GB NVMe
-- *Image*: Ubuntu 24.04
-
-```{attention}
-Ne pas choisir la région *European Union (Germany)* car il y a des soucis avec leur DNS et la synchonisation du nœud sera problématique voire impossible.
-```
+- Type : {menuselection}`Shared CPU --> High Performance --> vhp-2c-4gb` (2 vCPU, 4 GB RAM, 100 GB NVMe)
+- *Location* : selon les préférences, j'ai opté pour {menuselection}`Europe --> Amsterdam`
+- *Operating System*: Ubuntu 24.04 x64
 
 ### Configuration SSH
 
@@ -104,11 +97,6 @@ Installer et configurer le pare-feu pour autoriser **seulement** les connexions 
 :caption: ☁️ Serveur (VPS)
 :lines: 15-20
 :language: shell
-```
-
-### Serveur NTP
-
-```{include} _node-ntp.md
 ```
 
 ### 📍 Dusk
@@ -220,7 +208,7 @@ Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun *
 
 ## 🚀 Exécution
 
-Et c’est parti, démarrer le nœud :
+Pour démarrer le nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
@@ -231,10 +219,6 @@ Et c’est parti, démarrer le nœud :
 ---
 
 ## 🪙 Staking
-
-```{attention}
-Lors du premier lancement, ne commencer à *staker* des *tokens* que lorsque le nœud approche la fin de sa [synchronisation](#synchronisation) (quand il reste moins de 4 320 blocs à récupérer).
-```
 
 C’est la dernière étape pour pouvoir créer des blocs et participer au réseau.
 
@@ -299,9 +283,18 @@ Voici la procédure pour *staker* plus de *tokens* (remplacer `AMOUNT` par le no
 Plus il y a de *tokens* en *staking*, plus il y a de chances d’être sélectionné.
 ```
 
+### 💰 Récompenses
+
+Il y a deux moyens de récupérer des récompenses :
+
+1. Lorsque le nœud est sélectionné pour générer un bloc : récupération de 80% des *tokens* émis + une part variable suivant le nombre de voteurs inclus (non modifiable).
+2. Lorsque le nœud est sélectionné en tant que voteur et inclus dans le bloc généré : récupération d'une fraction des *tokens* réservés aux voteurs.
+
+Pour des informations techniques complètes, lire [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_protocol-security-review_oak-security.pdf) (section *Incentives goals*).
+
 ### *Slashing*
 
-Le *slashing* est un système de protection qui pénalise les mauvais comportements. Lorsque ça [arrive](https://github.com/dusk-network/rusk/issues/1415) au nœud, une partie des récompenses est perdue, et s’il n’y en a pas, alors la participation au réseau est stoppée jusqu’à l’époque suivante.
+Le *slashing* est un système de protection qui pénalise les mauvais comportements. Quand ça [arrive](https://github.com/dusk-network/rusk/issues/1415) au nœud, une partie des récompenses est perdue, et s’il n’y en a pas, alors la participation au réseau est stoppée jusqu’à l’époque suivante.
 
 #### Raisons
 
@@ -393,6 +386,11 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-01-01
+: Changement d'hébergeur pour cause de mauvaises performances (Contabo → Vultr).
+: Ajout de la section [Récompenses](recompenses).
+: Suppression de la section traitant du serveur NTP (obsolète depuis le passage à Vultr).
 
 2024-12-30
 : Amélioration de l’alias `chosen` ([0907b14](https://github.com/BoboTiG/luma/commit/0907b1467c25a6e88ede070f3de3bef324d5ddec) → [53f84d7](https://github.com/BoboTiG/luma/commit/53f84d74bbfc1f6313ec58914f5af497cea9cb1f)).
