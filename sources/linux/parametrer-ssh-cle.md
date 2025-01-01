@@ -74,7 +74,7 @@ Bien que cet article ne traite pas de la sécurité de SSH, il est fortement rec
 
 ```{literalinclude} snippets/parametrer-ssh-cle.sh
 :caption: ☁️ Serveur (contenu du fichier `/etc/fail2ban/jail.local`)
-:lines: 30-43
+:lines: 30-42
 :language: ini
 ```
 ````
