@@ -39,12 +39,12 @@ Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
 
 ## 🏪 Hébergement
 
-La documentation officielle traite de Digital Ocean, et il est possible d'utiliser Hetzner ou encore [Vultr](https://www.vultr.com/?ref=9703379). Ici, nous parlerons de ce dernier.
+La documentation officielle traite de Digital Ocean, et il est possible d’utiliser Hetzner ou encore [Vultr](https://www.vultr.com/?ref=9703379). Ici, nous parlerons de ce dernier.
 
 Créé un compte sur [Vultr](https://www.vultr.com/?ref=9703379) et déployer un nouveau produit avec ces caractéristiques :
 
 - Type : {menuselection}`Shared CPU --> High Performance --> vhp-2c-4gb` (2 vCPU, 4 GB RAM, 100 GB NVMe)
-- *Location* : selon les préférences, j'ai opté pour {menuselection}`Europe --> Amsterdam`
+- *Location* : selon les préférences, j’ai opté pour {menuselection}`Europe --> Amsterdam`
 - *Operating System*: Ubuntu 24.04 x64
 
 ### Configuration SSH
@@ -288,7 +288,7 @@ Plus il y a de *tokens* en *staking*, plus il y a de chances d’être sélectio
 Il y a deux moyens de récupérer des récompenses :
 
 1. Lorsque le nœud est sélectionné pour générer un bloc : récupération de 80% des *tokens* émis + une part variable suivant le nombre de voteurs inclus (non modifiable).
-2. Lorsque le nœud est sélectionné en tant que voteur et inclus dans le bloc généré : récupération d'une fraction des *tokens* réservés aux voteurs.
+2. Lorsque le nœud est sélectionné en tant que voteur et inclus dans le bloc généré : récupération d’une fraction des *tokens* réservés aux voteurs.
 
 Pour des informations techniques complètes, lire [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_protocol-security-review_oak-security.pdf) (section *Incentives goals*).
 
@@ -387,8 +387,11 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 ```{admonition} Historique complet
 :class: toggle
 
+2025-01-02
+: L’alias `latest` utilise désormais une requête HTTP vers l’URL officielle du nœud plutôt que le nœud local ([59d594e](https://github.com/BoboTiG/luma/commit/59d594e9bc1e2ccdbd4023ba48e366ec174884e4)).
+
 2025-01-01
-: Changement d'hébergeur pour cause de mauvaises performances (Contabo → Vultr).
+: Changement d’hébergeur pour cause de mauvaises performances (Contabo → Vultr).
 : Ajout de la section [Récompenses](recompenses).
 : Suppression de la section traitant du serveur NTP (obsolète depuis le passage à Vultr).
 
