@@ -44,7 +44,7 @@ La documentation officielle traite de Digital Ocean, et il est possible d’util
 Créé un compte sur [Vultr](https://www.vultr.com/?ref=9703379) et déployer un nouveau produit avec ces caractéristiques :
 
 - Type : {menuselection}`Shared CPU --> High Performance --> vhp-2c-4gb-intel` (Intel, 2 vCPU, 4 GB RAM, 100 GB NVMe)
-- *Location* : selon les préférences, j’ai opté pour {menuselection}`Europe --> Amsterdam`
+- *Location* : selon les préférences
 - *Operating System*: Ubuntu 24.04 x64
 
 ### Configuration SSH
@@ -60,7 +60,7 @@ Lorsque le serveur sera opérationnel et que son adresse IP sera connue, configu
 
 ### Connexion
 
-Se connecter en SSH au serveur (utiliser le mot de passe défini sur Contabo) :
+Se connecter en SSH au serveur (utiliser le mot de passe fourni sur Vultr) :
 
 ```{code-block} shell
 :caption: 🖥️ Ordinateur (PC)
@@ -305,10 +305,6 @@ Pour des informations techniques complètes, lire [Economic Protocol Design](htt
 
 Le *slashing* est un système de protection qui pénalise les mauvais comportements. Quand ça [arrive](https://github.com/dusk-network/rusk/issues/1415) au nœud, une partie des récompenses est perdue, et s’il n’y en a pas, alors la participation au réseau est stoppée jusqu’à l’époque suivante.
 
-#### Raisons
-
-Dans l’immédiat, la seule raison connue est quand un pair trouve que le nœud a mis trop de temps pour valider un bloc. Il n’y a rien à faire pour éviter ça, juste espérer qu’avoir un [serveur NTP](#serveur-ntp) performant aide à prévenir cela.
-
 ---
 
 ## 🐛 Débogage
@@ -354,31 +350,6 @@ To                         Action      From
 22/tcp (v6)                LIMIT IN    Anywhere (v6)
 9000/udp (v6)              ALLOW IN    Anywhere (v6)
 ```
-
-Liste des ports réellement ouverts :
-
-```{literalinclude} snippets/node-dusk.sh
-:caption: ☁️ Serveur (VPS)
-:lines: 52
-:language: shell
-```
-
-````{admonition} Exemple de sortie
-:class: toggle
-
-```{code-block}
-:emphasize-lines: 8
-
-COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-sshd      530    root    3u  IPv4   2288      0t0  TCP *:22 (LISTEN)
-sshd      530    root    4u  IPv6   2290      0t0  TCP *:22 (LISTEN)
-chronyd 37323 _chrony    5u  IPv4 264489      0t0  UDP 127.0.0.1:323
-chronyd 37323 _chrony    6u  IPv6 264490      0t0  UDP [::1]:323
-rusk    38995    dusk   23u  IPv4 269825      0t0  UDP *:46317
-rusk    38995    dusk   24u  IPv6 269826      0t0  UDP *:41981
-rusk    38995    dusk   25u  IPv4 269827      0t0  UDP ADRESSE_IP:9000
-```
-````
 
 ---
 
