@@ -43,7 +43,7 @@ La documentation officielle traite de Digital Ocean, et il est possible d’util
 
 Créé un compte sur [Vultr](https://www.vultr.com/?ref=9703379) et déployer un nouveau produit avec ces caractéristiques :
 
-- Type : {menuselection}`Shared CPU --> High Performance --> vhp-2c-4gb` (2 vCPU, 4 GB RAM, 100 GB NVMe)
+- Type : {menuselection}`Shared CPU --> High Performance --> vhp-2c-4gb-intel` (Intel, 2 vCPU, 4 GB RAM, 100 GB NVMe)
 - *Location* : selon les préférences, j’ai opté pour {menuselection}`Europe --> Amsterdam`
 - *Operating System*: Ubuntu 24.04 x64
 
@@ -68,10 +68,19 @@ Se connecter en SSH au serveur (utiliser le mot de passe défini sur Contabo) :
 ssh dusk
 ```
 
-```{important}
+````{important}
 Il est vivement recommandé de désactiver l’accès SSH par mot de passe pour favoriser l’utilisation d’une clé.
 Un mini guide est disponible ici : [Comment paramétrer SSH pour un accès par clé](<../linux/parametrer-ssh-cle.md>).
+
+```{code-block}
+ _______             .___       ________               __
+ \      \   ____   __| _/____   \______ \  __ __ _____|  | __
+ /   |   \ /  _ \ / __ _/ __ \   |    |  \|  |  /  ___|  |/ /
+/    |    (  <_> / /_/ \  ___/   |    `   |  |  \___ \|    <
+\____|__  /\____/\____ |\___  > /_______  |____/____  |__|_ \
+        \/            \/    \/          \/          \/     \/
 ```
+````
 
 ---
 
@@ -341,10 +350,8 @@ New profiles: skip
 To                         Action      From
 --                         ------      ----
 22/tcp                     LIMIT IN    Anywhere
-8080/tcp                   ALLOW IN    Anywhere
 9000/udp                   ALLOW IN    Anywhere
 22/tcp (v6)                LIMIT IN    Anywhere (v6)
-8080/tcp (v6)              ALLOW IN    Anywhere (v6)
 9000/udp (v6)              ALLOW IN    Anywhere (v6)
 ```
 
@@ -360,7 +367,7 @@ Liste des ports réellement ouverts :
 :class: toggle
 
 ```{code-block}
-:emphasize-lines: 8-9
+:emphasize-lines: 8
 
 COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 sshd      530    root    3u  IPv4   2288      0t0  TCP *:22 (LISTEN)
@@ -370,7 +377,6 @@ chronyd 37323 _chrony    6u  IPv6 264490      0t0  UDP [::1]:323
 rusk    38995    dusk   23u  IPv4 269825      0t0  UDP *:46317
 rusk    38995    dusk   24u  IPv6 269826      0t0  UDP *:41981
 rusk    38995    dusk   25u  IPv4 269827      0t0  UDP ADRESSE_IP:9000
-rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 ```
 ````
 
@@ -386,6 +392,11 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-01-03
+: Mise à jour de la version du script d’installation de Dusk (`0.5.1` → `0.5.2`) pour le second *dry-run* du *mainnet*.
+: Suppression de l’ouverture du port 8080/TCP (utile seulement pour les node de type *archive*).
+: Simplification de l’alias `latest`.
 
 2025-01-02
 : L’alias `latest` utilise désormais une requête HTTP vers l’URL officielle du nœud plutôt que le nœud local ([59d594e](https://github.com/BoboTiG/luma/commit/59d594e9bc1e2ccdbd4023ba48e366ec174884e4)).
@@ -403,7 +414,7 @@ rusk    38995    dusk   27u  IPv4 269831      0t0  TCP 127.0.0.1:8080 (LISTEN)
 : Simplification de la commande d’installation de Dusk.
 
 2024-12-27
-: Mise à jour de la version du script d’installation de Dusk (`0.4.0` → `0.5.0`) pour la migration depuis le *testnet* "Nocturne" vers le *mainnet*.
+: Mise à jour de la version du script d’installation de Dusk (`0.4.0` → `0.5.0`) pour la migration depuis le *testnet* "Nocturne" vers le premier *dry-run* du *mainnet*.
 : Adaptation du lien vers la documentation (`https://docs.dusk.network/itn/node-running-guide` → `https://docs.dusk.network/operator/guides/mainnet-node/`).
 : Correction de la commande d’installation de Dusk (`sh` → `bash`).
 : Suppression du lien vers le fausset du *testnet*.

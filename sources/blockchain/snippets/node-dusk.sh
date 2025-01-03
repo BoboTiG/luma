@@ -20,7 +20,7 @@ apt install -y ufw \
 
 
 apt install -y jq net-tools unzip
-curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.1/node-installer.sh | bash
+curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.2/node-installer.sh | bash
     
 
 rusk-wallet restore
@@ -76,7 +76,7 @@ alias balance='rusk-wallet balance --spendable'
 alias blocks='echo "Current: $(current)" ; echo "Latest : $(latest)"'
 alias chosen='i=1; zgrep "Block generated" /var/log/rusk.log* | while read -r line; do printf "\\e[30;1;43m %d \\e[0m %s\\n" $i "$line"; i=$((i+1)); done'
 alias current='ruskquery block-height'
-alias latest='curl -s https://nodes.dusk.network/02/Chain --data-raw '"'"'{"topic":"gql","data":"query{block(height:-1){header{height}}}"}'"'"' | jq .block.header.height'
+alias latest='API_ENDPOINT="https://nodes.dusk.network" ruskquery block-height'
 alias logs='tail -f /var/log/rusk.log'
 alias rewards='rusk-wallet stake-info --reward'
 alias stake-info='rusk-wallet stake-info'
