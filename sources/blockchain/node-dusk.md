@@ -95,7 +95,7 @@ Installer et configurer le pare-feu pour autoriser **seulement** les connexions 
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
-:lines: 15-20
+:lines: 15-19
 :language: shell
 ```
 
