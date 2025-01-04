@@ -231,6 +231,10 @@ Pour démarrer le nœud :
 
 C’est la dernière étape pour pouvoir créer des blocs et participer au réseau.
 
+```{caution}
+À chaque fois que des *tokens* sont ajoutés en *staking*, le nœud sera incorporé à la *blockchain* **2 époques** plus tard, cette opération n’est pas immédiate.
+```
+
 ### *Stake*
 
 Pour l’exemple, plaçons 1 000 DUSK en *staking* (c’est le minimum requis) :
@@ -241,55 +245,35 @@ Pour l’exemple, plaçons 1 000 DUSK en *staking* (c’est le minimum requis) :
 :language: shell
 ```
 
-````{admonition} Exemple de sortie
-:class: toggle
-
-```{code-block}
-✔ Please enter wallet password: · [hidden]
-2024-02-16T06:42:38.853692Z  INFO rusk_wallet::io::status: status="Opening notes database"
-2024-02-16T06:42:39.410372Z  INFO rusk_wallet::io::status: status="Getting cached note position..."
-2024-02-16T06:42:39.410540Z  INFO rusk_wallet::io::status: status="Fetching fresh notes..."
-2024-02-16T06:42:39.486784Z  INFO rusk_wallet::io::status: status="Connection established..."
-2024-02-16T06:42:39.490624Z  INFO rusk_wallet::io::status: status="Streaming notes..."
-2024-02-16T06:42:40.226524Z  INFO rusk_wallet::io::status: status="Fetching stake..."
-2024-02-16T06:42:40.294510Z  INFO rusk_wallet::io::status: status="Stake received!"
-Staking address: [REDACTED]
-2024-02-16T06:42:40.298475Z  INFO rusk_wallet::io::status: status="Requesting stct proof..."
-2024-02-16T06:42:45.970020Z  INFO rusk_wallet::io::status: status="Stct proof success!"
-2024-02-16T06:42:45.974639Z  INFO rusk_wallet::io::status: status="Fetching opening notes..."
-2024-02-16T06:42:47.099239Z  INFO rusk_wallet::io::status: status="Opening notes received!"
-2024-02-16T06:42:47.099421Z  INFO rusk_wallet::io::status: status="Fetching anchor..."
-2024-02-16T06:42:47.204651Z  INFO rusk_wallet::io::status: status="Anchor received!"
-2024-02-16T06:42:47.227090Z  INFO rusk_wallet::io::status: status="Proving tx, please wait..."
-2024-02-16T06:43:08.214350Z  INFO rusk_wallet::io::status: status="Proof success!"
-2024-02-16T06:43:08.219467Z  INFO rusk_wallet::io::status: status="Attempt to preverify tx..."
-2024-02-16T06:43:08.427675Z  INFO rusk_wallet::io::status: status="Preverify success!"
-2024-02-16T06:43:08.427721Z  INFO rusk_wallet::io::status: status="Propagating tx..."
-2024-02-16T06:43:08.527562Z  INFO rusk_wallet::io::status: status="Transaction propagated!"
-2024-02-16T06:43:08.597338Z  INFO rusk_wallet::io::status: status="Waiting for confirmation... (1/30)"
-2024-02-16T06:43:09.685356Z  INFO rusk_wallet::io::status: status="Waiting for confirmation... (2/30)"
-2024-02-16T06:43:10.810684Z  INFO rusk_wallet::io::status: status="Waiting for confirmation... (3/30)"
-2024-02-16T06:43:11.896795Z  INFO rusk_wallet::io::status: status="Waiting for confirmation... (4/30)"
-2024-02-16T06:43:13.002293Z  INFO rusk_wallet::io::status: status="Waiting for confirmation... (5/30)"
-[TRANSACTION HASH REDACTED]
+```{astuce}
+Plus il y a de *tokens* en *staking*, plus il y a de chances d’être sélectionné.
 ```
-````
 
-````{caution}
-La commande précédente **ne peut pas** être utilisée à plusieurs reprises pour augmenter le nombre de *tokens* à *staker*.
+### *Stake More*
 
-Voici la procédure pour *staker* plus de *tokens* (remplacer `AMOUNT` par le nombre de *tokens*) :
+Une fois que des *tokens* sont en *staking*, il est possible d’en rajouter de deux manières.
+
+#### Avec Pénalité
+
+Augmenter le nombre de *tokens* "à la volée" donnera lieu à une pénalité (*soft slashing* en anglais) de 10% : soit 10% du montant sera bloqué et récupérable seulement quand la commande `unstake` sera utilisée.
+
+Voici la procédure pour *staker* plus de *tokens* avec *soft slashing* (remplacer `AMOUNT` par le nombre de *tokens*) :
+
+```{literalinclude} snippets/node-dusk.sh
+:caption: ☁️ Serveur (VPS) ✍️
+:lines: 66
+:language: shell
+```
+
+#### Sans Pénalité
+
+Voici la procédure pour *staker* plus de *tokens* sans *soft slashing* (remplacer `AMOUNT` par le nombre de *tokens*) :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS) ✍️
 :lines: 67-68
 :emphasize-lines: 2
 :language: shell
-```
-````
-
-```{astuce}
-Plus il y a de *tokens* en *staking*, plus il y a de chances d’être sélectionné.
 ```
 
 ### 💰 Récompenses
@@ -363,6 +347,9 @@ To                         Action      From
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-01-04
+: Ajout de la section [*Stake More*](#stake-more).
 
 2025-01-03
 : Mise à jour de la version du script d’installation de Dusk (`0.5.1` → `0.5.2`) pour le second *dry-run* du *mainnet*.

@@ -21,7 +21,7 @@ apt install -y ufw \
 
 apt install -y jq net-tools unzip
 curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.2/node-installer.sh | bash
-    
+
 
 rusk-wallet restore
 
@@ -63,7 +63,7 @@ curl -s 'http://127.0.0.1:8080/02/Chain' \
     | jq '.block.header.height'
 
 curl -s 'https://api.dusk.network/v1/stats' | jq '.lastBlock'
-
+rusk-wallet stake --amt AMOUNT
 rusk-wallet unstake \
     && rusk-wallet stake --amt AMOUNT
 
