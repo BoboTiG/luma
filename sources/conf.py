@@ -1,6 +1,7 @@
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from pygments.lexers.web import PhpLexer
 from sphinx.highlighting import lexers
@@ -85,8 +86,8 @@ if "_live" not in sys.argv:
     exclude_patterns.append("brouillons/**")
 
 # sphinx-last-updated-by-git
-git_last_updated_timezone = UTC
-html_last_updated_fmt = "%Y-%m-%d %H:%M:%S UTC"
+git_last_updated_timezone = ZoneInfo("Europe/Paris")
+html_last_updated_fmt = "%Y-%m-%d %H:%M:%S UTC%Z"
 
 # sphinx-notfound-page
 notfound_context = {
