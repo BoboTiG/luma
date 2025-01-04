@@ -23,14 +23,9 @@ strict_equality = true
 plugins.md013.enabled = false
 
 [tool.ruff]
-exclude = [
-    ".git",
-    ".ruff_cache",
-    "venv",
-]
 line-length = 120
 indent-width = 4
-target-version = "py311"
+target-version = "py313"
 
 [tool.ruff.lint]
 extend-select = ["ALL"]
