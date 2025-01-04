@@ -99,5 +99,6 @@ notfound_urls_prefix = None
 # Redirections of old pages
 redirects = {
     # 2024-12-17
+    "dev/mise-a-jour-router-tenda-ac18.html": "../reseau/mise-a-jour-routeur-tenda-ac18.html",
     "dev/mise-a-jour-routeur-tenda-ac18.html": "../reseau/mise-a-jour-routeur-tenda-ac18.html",
 }
