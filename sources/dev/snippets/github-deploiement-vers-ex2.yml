@@ -18,6 +18,6 @@ jobs:
       - name: Mirror
         run: |
           lftp \
-            -e 'mirror --delete --transfer-all --reverse --verbose=1 ./FOLDER . ; quit' \
+            -e 'set ssl:verify-certificate false ; mirror --delete --transfer-all --reverse --verbose=1 ./FOLDER . ; quit' \
             -u '${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }}' \
             'ftp://${{ secrets.FTP_URL }}'
