@@ -89,7 +89,7 @@ msg["Message-ID"] = make_msgid()
 
 ### 🐘 PHP
 
-Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`](https://www.php.net/manual/function.mail.php) :
+Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`](https://www.php.net/manual/fr/function.mail.php) :
 
 ```{literalinclude} snippets/imaplib-suppression-des-doublons.php
 :lines: 2-

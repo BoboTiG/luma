@@ -1,6 +1,6 @@
 # Python, Web3 : Décoder les logs d’un transfert
 
-Prenons l’exemple d’un transfert sur le réseau [Avalanche Mainnet](https://www.avax.network) via le routeur [Trader Joe](https://traderjoexyz.com/).
+Prenons l’exemple d’un transfert sur le réseau [Avalanche Mainnet](https://www.avax.network) via le routeur [Trader Joe](https://lfj.gg/avalanche).
 Comment savoir le nombre exact de *tokens* qui ont été transférés (envoyés et reçus) ?
 
 Voici une solution, en prenant pour l’exemple [cette transaction](https://snowtrace.io/tx/0x5270f284b2a5432e264be7a173fd5f187983a86d80e7f65cf2e9125b7fde1e51) (⚠ ceci n’est pas mon portefeuille).

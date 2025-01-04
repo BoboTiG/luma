@@ -6,7 +6,7 @@ Un câblage incorrect ou un câble défectueux peuvent mener à voir une `Erreur
 
 ## Liaison
 
-Pour que l’onduleur ([WKS EKO Circle](https://www.wattuneed.com/fr/onduleurs-et-convertisseurs/25678-onduleur-hybride-wks-evo-56kva-48v-0768563819193.html)) puisse communiquer avec la ou les batteries ([Pylontech US5000](https://en.pylontech.com.cn/products/c23/134.html)), nous modifierons un [câble RJ45](images/rj45.svg).
+Pour que l’onduleur ([WKS EKO Circle](https://www.wattuneed.com/fr/onduleurs-et-convertisseurs/25678-onduleur-hybride-wks-evo-56kva-48v-0768563819193.html)) puisse communiquer avec la ou les batteries ([Pylontech US5000](https://en.pylontech.com.cn/products/us5000)), nous modifierons un [câble RJ45](images/rj45.svg).
 
 Ci-dessous, le schéma d’installation concentré sur la connexion ([cliquer ici pour télécharger le schéma complet](images/schema-communication-onduleur-wks-eko-circle-vers-batterie-pylontech-complet.jpg)) :
 

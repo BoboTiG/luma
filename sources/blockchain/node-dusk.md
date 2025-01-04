@@ -9,7 +9,7 @@
 Site web : [dusk.network](https://dusk.network)
 ```
 
-Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/operator/guides/mainnet-node/) pour le déploiement d’un nœud Dusk, plus communément appelé *node provisioner*.
+Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/operator/guides/provisioner-node/) pour le déploiement d’un nœud Dusk, plus communément appelé *node provisioner*.
 
 ## ✅ [Configuration Requise](https://docs.dusk.network/operator/provisioner/#provisioner-specifications)
 
@@ -29,7 +29,7 @@ Ce guide est une traduction libre et légèrement modifiée de la [documentation
 
 ## 🪪 Créer un Compte
 
-Rendez-vous sur le [wallet Dusk](https://wallet.dusk.network) pour créer un compte.
+Rendez-vous sur le [wallet Dusk](https://apps.dusk.network/wallet/) pour créer un compte.
 
 ```{caution}
 Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
@@ -176,7 +176,7 @@ Affiche le nombre de *tokens* en *staking*.
 
 ### Mot de Passe
 
-Stocker le mot de passe du *wallet* Dusk afin de ne plus avoir à la taper pour toutes les futures commandes `rusk-wallet …` ([source](https://github.com/dusk-network/wallet-cli/blob/v0.21.0/src/bin/README.md#headless-mode)) :
+Stocker le mot de passe du *wallet* Dusk afin de ne plus avoir à la taper pour toutes les futures commandes `rusk-wallet …` ([source](https://github.com/dusk-network/wallet-cli/blob/v0.22.1/src/bin/README.md#headless-mode)) :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS) ✍️
@@ -373,7 +373,6 @@ To                         Action      From
 
 2024-12-27
 : Mise à jour de la version du script d’installation de Dusk (`0.4.0` → `0.5.0`) pour la migration depuis le *testnet* "Nocturne" vers le premier *dry-run* du *mainnet*.
-: Adaptation du lien vers la documentation (`https://docs.dusk.network/itn/node-running-guide` → `https://docs.dusk.network/operator/guides/mainnet-node/`).
 : Correction de la commande d’installation de Dusk (`sh` → `bash`).
 : Suppression du lien vers le fausset du *testnet*.
 
