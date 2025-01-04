@@ -17,7 +17,7 @@ MINIFIER = {
 }
 REGEXP_CSS = re.compile(r"(<link href=([^ ]+)(?: media=print)? rel=stylesheet>)").findall
 REGEXP_JS = re.compile(r"(<script src=([^>]+)></script>)").findall
-CURRENT_COMMIT = check_output(["git", "rev-parse", "HEAD"], text=True)[:8]
+CURRENT_COMMIT = check_output(["git", "rev-parse", "HEAD"], text=True)[:8]  # noqa: S603,S607
 CSS_FILES = [
     "pygments",
     "shibuya",

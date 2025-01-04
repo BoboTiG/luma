@@ -12,7 +12,7 @@ def generate_random_png(filename: str = "", size: int = 0) -> bytes | None:
     :return mixed: None if given filename else bytes
     """
 
-    size = max(1, size) if size else random.randint(1, 1024)
+    size = max(1, size) if size else random.randint(1, 1024)  # noqa: S311
 
     pack = struct.pack
 

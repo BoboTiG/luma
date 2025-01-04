@@ -145,7 +145,7 @@ def main(server: str, user: str) -> int:
 
     try:
         for infos in data:
-            assert isinstance(infos, bytes)  # Pour Mypy
+            assert isinstance(infos, bytes)  # noqa: S101 # Pour Mypy
             if folder := get_folder(infos):
                 purge(conn, folder)
     except IMAP.error as ex:

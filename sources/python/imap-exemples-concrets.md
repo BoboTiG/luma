@@ -3,7 +3,7 @@
 Commençons par nous connecter à la boîte de messagerie :
 
 ```{literalinclude} snippets/imap-exemples-concrets.py
-:lines: 2-21
+:lines: 2-7
 :language: python
 ```
 
@@ -18,7 +18,7 @@ Nous allons maintenant récupérer les identifiants des messages non lus. Pour f
 :language: python
 ```
 
-`uids` contiendra, par exemple, `[b'9263', b'9264', b'9265']`{l=python}.
+La liste `uids` contiendra, par exemple, `[b'9263', b'9264', b'9265']`{l=python}.
 
 Pour finir, avec ces identifiants, téléchargeons le contenu des messages :
 

@@ -18,7 +18,7 @@ def get_from_cache(cache_key: str) -> str | None:
     return None
 
 
-def store_in_cache(cache_key: str, response: str, info: bool = True) -> None:
+def store_in_cache(cache_key: str, response: str, *, info: bool = True) -> None:
     """Store a HTTP response into a compressed cache file."""
     from zlib import compress
 

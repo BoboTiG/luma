@@ -1,24 +1,24 @@
 from datetime import datetime
 from imaplib import IMAP4_SSL as IMAP
-from socket import gaierror
-
-# Configuration
-server = "mail.gandi.net"
-user = "username@domain"
-password = "password"
 
 # Connexion au serveur
-try:
-    conn = IMAP(server)
-    conn.login(user, password)
-    conn.select()
-except gaierror:
-    # Le serveur est erroné ou injoignable
-    raise
-except IMAP.error:
-    # Problème d'identification !
-    # L'utilisateur et mot de passe sont-ils corrects ?
-    raise
+conn = IMAP("hostname")
+conn.login("user", "password")
+conn.select()
+
+"""
+Padding
+Padding
+Padding
+Padding
+Padding
+Padding
+Padding
+Padding
+Padding
+Padding
+Padding
+"""
 
 ret, data = conn.uid("search", "", "(UNSEEN)")
 if ret == "OK":
