@@ -21,7 +21,7 @@ Toutes les contributions sont bienvenues.
 ### Prérequis
 
 ```shell
-python3.12 -m venv venv
+python3.13 -m venv venv
 . venv/bin/activate
 ```
 
