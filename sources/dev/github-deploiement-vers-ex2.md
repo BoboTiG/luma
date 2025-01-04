@@ -26,25 +26,12 @@ D’abord, nous aurons besoin de définir ces constantes :
 :language: shell
 ```
 
-### ⚠️ Approuver la Connexion
-
-```{hint}
-Bien que nécessaire, cette étape est à ne faire qu’une seule fois par machine.
-```
-
-Approuver la connexion au serveur pour éviter l’erreur "*Fatal error: Host key verification failed*" :
-
-```{literalinclude} snippets/github-deploiement-vers-ex2.sh
-:lines: 9-10
-:language: shell
-```
-
 ### Répliquer
 
 Voici la dernière étape qui permet de faire un miroir d’un dossier local vers un dossier distant (remplacer `FOLDER` par le dossier local) :
 
 ```{literalinclude} snippets/github-deploiement-vers-ex2.sh
-:lines: 12-15
+:lines: 9-12
 :emphasize-lines: 2
 :language: shell
 ```
@@ -64,7 +51,7 @@ Voici le script YAML complet :
 ```{literalinclude} snippets/github-deploiement-vers-ex2.yml
 :caption: .github/workflows/deploy.yml
 :lines: 2-
-:emphasize-lines: 6,25
+:emphasize-lines: 6,20
 :language: yaml
 ```
 

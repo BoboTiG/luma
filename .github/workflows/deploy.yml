@@ -29,11 +29,6 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Generate
         run: ./build.sh
-      - name: Setup SSH
-        # Prevent "Fatal error: Host key verification failed"
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.FTP_URL }} >> ~/.ssh/known_hosts
       - name: Mirror
         run: |
           lftp \

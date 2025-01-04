@@ -15,11 +15,6 @@ jobs:
       - name: Install dependencies
         run: sudo apt install -y lftp
 
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.FTP_URL }} >> ~/.ssh/known_hosts
-
       - name: Mirror
         run: |
           lftp \
