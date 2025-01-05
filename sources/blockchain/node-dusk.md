@@ -356,6 +356,7 @@ To                         Action      From
 :class: toggle
 
 2025-01-05
+: Mise à jour de la version du script d’installation de Dusk (`0.5.2` → `0.5.3`) pour le *kick-off* du *mainnet* !
 : Ajout des alias [`accepted`](#accepted) et [`generated`](#generated).
 : L’alias `blocks` affiche désormais toutes les informations utiles pour connaître les statisriques du nœud.
 : Suppression des alias `chosen`, `current` et `latest`.

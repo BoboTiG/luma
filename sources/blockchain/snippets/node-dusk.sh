@@ -20,7 +20,7 @@ apt install -y ufw \
 
 
 apt install -y jq net-tools unzip
-curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.2/node-installer.sh | bash
+curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.3/node-installer.sh | bash
 
 
 rusk-wallet restore
@@ -110,8 +110,8 @@ function blocks() {
     local a="$(accepted | wc -l)"
     local g="$(generated | wc -l)"
     local r=$(echo "scale=2 ; $a / $g * 100" | bc)
-    # printf '[%d/%d] %d|%d (%s%%)\n' $l $c $g $a $r
-    printf '[\e[34m%d\e[0m/\e[31m%d\e[0m] \e[33m%d\e[0m|\e[32m%d\e[0m (\e[39m%s%%\e[0m)\n' $l $c $g $a $r
+    # printf '[%d/%d] %d|%d (%s%%)\n' $c $l $g $a $r
+    printf '[\e[34m%d\e[0m/\e[31m%d\e[0m] \e[33m%d\e[0m|\e[32m%d\e[0m (\e[39m%s%%\e[0m)\n' $c $l $g $a $r
 }
 
 alias accepted='grep_logs accepted-only'
