@@ -79,12 +79,15 @@ cat << 'EOF' >> ~/.profile
 
 # Dusk
 function grep_logs() {
-    local color=42
+    local color
     local idx=1
     local pattern='0'
     local round
 
-    if [ "${1:-accepted-only}" != "accepted-only" ]; then
+    if [ "${1:-accepted-only}" = "accepted-only" ]; then
+        pattern='0'
+        color=42
+    else
         pattern='[^0]'
         color=43
     fi

@@ -122,12 +122,11 @@ Télécharger et exécuter le script d’installation automatique pour Dusk :
 
 ## 🎛️ Commandes
 
-Ces commandes seront pratiques de déterminer l’état du nœud (ajuster la ligne surlignée avec les 16 premiers caractères de l’adresse publique du compte) :
+Ces commandes seront pratiques de déterminer l’état du nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS) ✍️
 :lines: 78-
-:emphasize-lines: 4
 :language: shell
 ```
 
