@@ -91,7 +91,7 @@ function chosen() {
     local g="$(generated | wc -l)"
     local a="$(accepted | wc -l)"
     local r=$(echo "scale=2 ; $a / $g * 100" | bc)
-    printf 'Generated: %d / Accepted: %d / Ratio: %s %%\n' $g $a $r
+    printf 'Generated: %d / Accepted: %d (%s %%)\n' $g $a $r
 }
 
 function generated() {
