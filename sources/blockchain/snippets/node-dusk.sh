@@ -78,15 +78,26 @@ source ~/.profile
 cat << 'EOF' >> ~/.profile
 
 # Dusk
-export PROVISIONER='0123456789abcdef'
-
-function accepted() {
+function grep_logs() {
+    local color=42
     local idx=1
-    zgrep 'block accepted' /var/log/rusk.log* | grep -E "${PROVISIONER}*" | \
-        while read -r line ; do \
-            printf '\e[30;1;43m %d \e[0m %s\n' ${idx} "${line}"
-            idx=$(( idx + 1 ))
-        done
+    local pattern='0'
+    local round
+
+    if [ "${1:-accepted-only}" != "accepted-only" ]; then
+        pattern='[^0]'
+        color=43
+    fi
+
+    zgrep 'Block generated' /var/log/rusk.log* \
+        | awk '{print $4 $5}' \
+        | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
+        | grep -E "iter=${pattern}" | \
+            while read -r line ; do \
+                round="$(echo "${line}" | grep -Eo 'round=([[:digit:]]+)' | cut -d= -f2)"
+                printf '\e[30;1;%dm %d \e[0m %s\n' ${color} ${idx} "${round}"
+                idx=$(( idx + 1 ))
+            done
 }
 
 function blocks() {
@@ -99,16 +110,9 @@ function blocks() {
     printf '[\e[34m%d\e[0m/\e[31m%d\e[0m] \e[33m%d\e[0m|\e[32m%d\e[0m (\e[39m%s%%\e[0m)\n' $l $c $g $a $r
 }
 
-function generated() {
-    local idx=1
-    zgrep 'Block generated' /var/log/rusk.log* | \
-        while read -r line ; do \
-            printf '\e[30;1;43m %d \e[0m %s\n' ${idx} "${line}"
-            idx=$(( idx + 1 ))
-        done
-}
-
+alias accepted='grep_logs accepted-only'
 alias balance='rusk-wallet balance --spendable'
+alias generated='grep_logs all'
 alias logs='tail -f /var/log/rusk.log'
 alias rewards='rusk-wallet stake-info --reward'
 alias stake-info='rusk-wallet stake-info'
