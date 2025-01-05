@@ -53,7 +53,7 @@ lsof -i -P -n
 ufw status verbose
 
 echo "export RUSK_WALLET_PWD='MOT_DE_PASSE_DU_WALLET'" >> ~/.profile \
-    && source "${HOME}/.profile"
+    && source ~/.profile
 
 echo "${RUSK_WALLET_PWD}" \
     && echo 'OK'
@@ -73,6 +73,8 @@ echo 'Y' | ruskreset \
     && service rusk start \
     && echo 'OK'
 
+source ~/.profile
+
 cat << 'EOF' >> ~/.profile
 
 # Dusk
@@ -87,11 +89,14 @@ function accepted() {
         done
 }
 
-function chosen() {
-    local g="$(generated | wc -l)"
+function blocks() {
+    local c="$(ruskquery block-height)"
+    local l="$(API_ENDPOINT=https://nodes.dusk.network ruskquery block-height)"
     local a="$(accepted | wc -l)"
+    local g="$(generated | wc -l)"
     local r=$(echo "scale=2 ; $a / $g * 100" | bc)
-    printf 'Generated: %d / Accepted: %d (%s %%)\n' $g $a $r
+    # printf '[%d/%d] %d|%d (%s%%)\n' $l $c $g $a $r
+    printf '[\e[34m%d\e[0m/\e[31m%d\e[0m] \e[33m%d\e[0m|\e[32m%d\e[0m (\e[39m%s%%\e[0m)\n' $l $c $g $a $r
 }
 
 function generated() {
@@ -104,33 +109,7 @@ function generated() {
 }
 
 alias balance='rusk-wallet balance --spendable'
-alias blocks='echo "$(current) / $(latest)"'
-alias current='ruskquery block-height'
-alias latest='API_ENDPOINT="https://nodes.dusk.network" ruskquery block-height'
 alias logs='tail -f /var/log/rusk.log'
 alias rewards='rusk-wallet stake-info --reward'
 alias stake-info='rusk-wallet stake-info'
 EOF
-source "${HOME}/.profile"
-
-# install rusk
-# apt install clang gcc git libssl-dev make pkg-config rustc \
-#     && git clone https://github.com/dusk-network/rusk.git \
-#     && echo 'OK'
-
-# compiler
-# [Option, select a commit or tagged release]
-
-# cd rusk \
-#     && rm -rfv target \
-#     && make keys wasm \
-#     && cargo b --release -p rusk \
-#     && target/release/rusk --version \
-#     && read -p 'Continue (CTRL+C to cancel)? ' \
-#     && service rusk stop \
-#     && mv -v /opt/dusk/bin/rusk/opt/dusk/bin/rusk.old \
-#     && cp -v target/release/rusk /opt/dusk/bin/rusk \
-#     && service rusk start \
-#     && echo 'OK'
-
-# installer rusk-wallet

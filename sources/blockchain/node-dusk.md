@@ -126,7 +126,7 @@ Ces commandes seront pratiques de déterminer l’état du nœud (ajuster la lig
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS) ✍️
-:lines: 76-113
+:lines: 78-
 :emphasize-lines: 4
 :language: shell
 ```
@@ -135,7 +135,7 @@ Charger les commandes :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
-:lines: 114
+:lines: 76
 :language: shell
 ```
 
@@ -149,23 +149,22 @@ Affiche le nombre de DUSK disponible sur le *wallet*.
 
 ### `blocks`
 
-Affiche l’avancée de synchronisation des blocs (il s’agit du résultat des commandes [`latest`](#latest) et [`current`](#current)).
+Affiche l’avancée de synchronisation des blocs et les statistiques des blocs générés (utilisation implicite des alias [`generated`](#generated) et [`accepted`](#accepted)).
 
-### `chosen`
+```{code-block}
+:caption: 🔎 Exemple de sortie
 
-Affiche les statistiques des blocs générés/acceptés et le ratio.
-
-### `current`
-
-Cette commande renvoie le dernier bloc de la *blockchain*.
+[6965/6965] 60|30 (50.00%)
+ ^-------------------------- dernier bloc synchronisé par le nœud
+      ^--------------------- dernier bloc existant sur la blockchain
+            ^--------------- nombre de blocs générés
+               ^------------ nombre de blocs acceptés sur la blockchain
+                   ^-------- ratio
+```
 
 ### `generated`
 
 Affiche un décompte des lignes de *log* des blocs générés.
-
-### `latest`
-
-Retourne le dernier bloc synchronisé par le nœud.
 
 ### `logs`
 
@@ -358,15 +357,16 @@ To                         Action      From
 :class: toggle
 
 2025-01-05
-: Ajout des alias `accepted` et `generated`.
-: Meilleur affichage pour les alias `blocks` et `chosen`.
+: Ajout des alias [`accepted`](#accepted) et [`generated`](#generated).
+: L’alias `blocks` affiche désormais toutes les informations utiles pour connaître les statisriques du nœud.
+: Suppression des alias `chosen`, `current` et `latest`.
 
 2025-01-04
 : Ajout de la section [*Stake More*](#stake-more).
 
 2025-01-03
 : Mise à jour de la version du script d’installation de Dusk (`0.5.1` → `0.5.2`) pour le second *dry-run* du *mainnet*.
-: Suppression de l’ouverture du port 8080/TCP (utile seulement pour les node de type *archive*).
+: Suppression de l’ouverture du port 8080/TCP (utile seulement pour les nœuds de type *archive*).
 : Simplification de l’alias `latest`.
 
 2025-01-02

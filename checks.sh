@@ -11,7 +11,7 @@ check_python_files() {
 }
 
 check_shell_file() {
-    shellcheck -e SC1091,SC2164 "${1}"
+    shellcheck -e SC1090,SC1091,SC2164 "${1}"
 }
 
 check_shell_files() {
