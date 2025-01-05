@@ -80,24 +80,25 @@ cat << 'EOF' >> ~/.profile
 # Dusk
 function grep_logs() {
     local color
-    local idx=1
-    local pattern='0'
+    local idx
+    local pattern
     local round
 
     if [ "${1:-accepted-only}" = "accepted-only" ]; then
         pattern='0'
         color=42
     else
-        pattern='[^0]'
+        pattern='[[:digit:]]'
         color=43
     fi
 
+    idx=1
     zgrep 'Block generated' /var/log/rusk.log* \
         | awk '{print $4 $5}' \
         | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
         | grep -E "iter=${pattern}" | \
             while read -r line ; do \
-                round="$(echo "${line}" | grep -Eo 'round=([[:digit:]]+)' | cut -d= -f2)"
+                round="$(echo "${line}" | grep -Eo 'round=[[:digit:]]+' | cut -d= -f2)"
                 printf '\e[30;1;%dm %d \e[0m %s\n' ${color} ${idx} "${round}"
                 idx=$(( idx + 1 ))
             done
