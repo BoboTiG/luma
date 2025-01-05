@@ -122,11 +122,12 @@ Télécharger et exécuter le script d’installation automatique pour Dusk :
 
 ## 🎛️ Commandes
 
-Ces commandes seront pratiques plus tard afin de déterminer l’état du nœud :
+Ces commandes seront pratiques de déterminer l’état du nœud (ajuster la ligne surlignée avec les 16 premiers caractères de l’adresse publique du compte) :
 
 ```{literalinclude} snippets/node-dusk.sh
-:caption: ☁️ Serveur (VPS)
-:lines: 72-83
+:caption: ☁️ Serveur (VPS) ✍️
+:lines: 76-113
+:emphasize-lines: 4
 :language: shell
 ```
 
@@ -134,9 +135,13 @@ Charger les commandes :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
-:lines: 84
+:lines: 114
 :language: shell
 ```
+
+### `accepted`
+
+Affiche un décompte des lignes de *log* des blocs acceptés, c’est-à-dire quand le nœud a généré un bloc pris en compte par la *blockchain* (et qu’une récompense a été récupérée).
 
 ### `balance`
 
@@ -144,15 +149,19 @@ Affiche le nombre de DUSK disponible sur le *wallet*.
 
 ### `blocks`
 
-Affiche le résultat des commandes [`latest`](#latest) et [`current`](#current).
+Affiche l’avancée de synchronisation des blocs (il s’agit du résultat des commandes [`latest`](#latest) et [`current`](#current)).
 
 ### `chosen`
 
-Lorsque le nœud est à jour, que les *tokens* sont en *staking* et qu’au minimum 2 époques sont passées, cette commande permet de voir quand le nœud est sélectionné pour créer un bloc.
+Affiche les statistiques des blocs générés/acceptés et le ratio.
 
 ### `current`
 
 Cette commande renvoie le dernier bloc de la *blockchain*.
+
+### `generated`
+
+Affiche un décompte des lignes de *log* des blocs générés.
 
 ### `latest`
 
@@ -305,7 +314,7 @@ Si nécessaire, repartir de zéro :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
-:lines: 86-88
+:lines: 72-74
 :language: shell
 ```
 
@@ -347,6 +356,10 @@ To                         Action      From
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-01-05
+: Ajout des alias `accepted` et `generated`.
+: Meilleur affichage pour les alias `blocks` et `chosen`.
 
 2025-01-04
 : Ajout de la section [*Stake More*](#stake-more).

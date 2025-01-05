@@ -69,12 +69,42 @@ rusk-wallet unstake \
 
 rusk-wallet --state 'http://127.0.0.1:8080' balance
 
+echo 'Y' | ruskreset \
+    && service rusk start \
+    && echo 'OK'
+
 cat << 'EOF' >> ~/.profile
 
-# Dusk specific commands
+# Dusk
+export PROVISIONER='0123456789abcdef'
+
+function accepted() {
+    local idx=1
+    zgrep 'block accepted' /var/log/rusk.log* | grep -E "${PROVISIONER}*" | \
+        while read -r line ; do \
+            printf '\e[30;1;43m %d \e[0m %s\n' ${idx} "${line}"
+            idx=$(( idx + 1 ))
+        done
+}
+
+function chosen() {
+    local g="$(generated | wc -l)"
+    local a="$(accepted | wc -l)"
+    local r=$(echo "scale=2 ; $a / $g * 100" | bc)
+    printf 'Generated: %d / Accepted: %d / Ratio: %s %%\n' $g $a $r
+}
+
+function generated() {
+    local idx=1
+    zgrep 'Block generated' /var/log/rusk.log* | \
+        while read -r line ; do \
+            printf '\e[30;1;43m %d \e[0m %s\n' ${idx} "${line}"
+            idx=$(( idx + 1 ))
+        done
+}
+
 alias balance='rusk-wallet balance --spendable'
-alias blocks='echo "Current: $(current)" ; echo "Latest : $(latest)"'
-alias chosen='i=1; zgrep "Block generated" /var/log/rusk.log* | while read -r line; do printf "\\e[30;1;43m %d \\e[0m %s\\n" $i "$line"; i=$((i+1)); done'
+alias blocks='echo "$(current) / $(latest)"'
 alias current='ruskquery block-height'
 alias latest='API_ENDPOINT="https://nodes.dusk.network" ruskquery block-height'
 alias logs='tail -f /var/log/rusk.log'
@@ -82,10 +112,6 @@ alias rewards='rusk-wallet stake-info --reward'
 alias stake-info='rusk-wallet stake-info'
 EOF
 source "${HOME}/.profile"
-
-echo 'Y' | ruskreset \
-    && service rusk start \
-    && echo 'OK'
 
 # install rusk
 # apt install clang gcc git libssl-dev make pkg-config rustc \
