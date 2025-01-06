@@ -108,6 +108,11 @@ Installer et configurer le pare-feu pour autoriser **seulement** les connexions 
 :language: shell
 ```
 
+### Serveur NTP
+
+```{include} _node-ntp.md
+```
+
 ### 📍 Dusk
 
 Télécharger et exécuter le script d’installation automatique pour Dusk :
@@ -126,7 +131,7 @@ Ces commandes seront pratiques de déterminer l’état du nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS) ✍️
-:lines: 78-
+:lines: 200-
 :language: shell
 ```
 
@@ -375,7 +380,6 @@ To                         Action      From
 2025-01-01
 : Changement d’hébergeur pour cause de mauvaises performances (Contabo → Vultr).
 : Ajout de la section [Récompenses](recompenses).
-: Suppression de la section traitant du serveur NTP (obsolète depuis le passage à Vultr).
 
 2024-12-30
 : Amélioration de l’alias `chosen` ([0907b14](https://github.com/BoboTiG/luma/commit/0907b1467c25a6e88ede070f3de3bef324d5ddec) → [53f84d7](https://github.com/BoboTiG/luma/commit/53f84d74bbfc1f6313ec58914f5af497cea9cb1f)).
