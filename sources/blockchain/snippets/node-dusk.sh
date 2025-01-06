@@ -94,7 +94,7 @@ function grep_logs() {
 
     idx=1
     zgrep 'Block generated' /var/log/rusk.log* \
-        | awk '{print $4 $5}' \
+        | awk '{print $3 $4}' \
         | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
         | grep -E "iter=${pattern}" | \
             while read -r line ; do \
@@ -112,18 +112,6 @@ function blocks() {
     local r=$(echo "scale=2 ; $a / $g * 100" | bc)
     # printf '[%d/%d] %d|%d (%s%%)\n' $c $l $g $a $r
     printf '[\e[34m%d\e[0m/\e[31m%d\e[0m] \e[33m%d\e[0m|\e[32m%d\e[0m (\e[39m%s%%\e[0m)\n' $c $l $g $a $r
-}
-
-function list_rejected_blocks() {
-    # Used in https://github.com/BoboTiG/dusk-monitor
-    zgrep 'Block generated' /var/log/rusk.log* \
-        | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
-        | awk '{print $4 $5}' \
-        | grep -E 'iter=[^0]' | \
-            while read -r line ; do \
-                printf '%s ' "$(echo "${line}" | grep -Eo 'round=[[:digit:]]+' | cut -d= -f2)"
-            done
-    echo ""
 }
 
 alias accepted='grep_logs accepted-only'

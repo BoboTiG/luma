@@ -346,6 +346,8 @@ To                         Action      From
 ## 🔗 Liens Utiles
 
 - [Explorateur de blocs](https://apps.dusk.network/explorer/)
+- [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf)
+- [Succinct Attestation Consensus](https://docs.dusk.network/learn/deep-dive/succinct-attestation/)
 
 ## 📜 Historique
 
