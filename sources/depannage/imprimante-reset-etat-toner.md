@@ -24,8 +24,6 @@ Les choix du menu suivent le format `<COULEUR>.TRN-<TYPE>` :
 
 Exemple pour le toner noir standard : `K.TRN-STD`.
 
----
-
 ## 📜 Historique
 
 2024-08-15

@@ -36,8 +36,6 @@ Finalement, redémarrez sur Windows et cliquez sur l’icône "*Option d’ergon
 
 Voilà, vous avez **un accès privilégié à l’invite de commande** !
 
----
-
 ## 🕵️‍♂️ Créer un Utilisateur
 
 Vous voilà dans l’invite de commande. Voici les commandes pour créer un nouvel utilisateur, disons Bob :
@@ -62,8 +60,6 @@ Autres langues :
 ```
 
 Il ne reste plus qu’à vous connecter à l’aide de l’identifiant Bob.
-
----
 
 ## 📜 Historique
 

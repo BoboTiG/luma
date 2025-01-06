@@ -18,8 +18,6 @@ Pour la suite de l’article, la Kobo est vue par le système (GNU/Linux) en tan
 :language: shell
 ```
 
----
-
 ## 🚀 Premier Démarrage
 
 Quelques étapes que j’ai préféré faire, mais dont aucune n’est indispensable.
@@ -72,8 +70,6 @@ Virer le logo du revendeur :
 :language: shell
 ```
 
----
-
 ## ⚙️ Mettre à Jour le *Firmware*
 
 Voici la procédure pour mettre à jour le *firmware* de la Kobo.
@@ -86,8 +82,6 @@ Voici la procédure pour mettre à jour le *firmware* de la Kobo.
    ```
 
 2. Éjecter la liseuse et patienter.
-
----
 
 ## 🎛️ Hacker le *Firmware*
 
@@ -130,8 +124,6 @@ Il y a possibilité de personnaliser quelques [options et comportements](https:/
 
 5. Éjecter la liseuse. C’est terminé.
 
----
-
 ## 🍽️ NickelMenu
 
 En option, vous pouvez installer un menu supplémentaire, [NickelMenu](https://pgaskin.net/NickelMenu/), qui permet d’ajouter des actions spécifiques intéressantes. Le menu se trouvera en bas à droite de l’écran.
@@ -156,8 +148,6 @@ Je m’en sers notamment pour (dés)activer les captures d’écran, inverser le
 
 5. Éjecter la liseuse. C’est terminé.
 
----
-
 ## 📘 Dictionnaire
 
 Installons le dictionnaire [basé sur le Wiktionnaire](https://www.tiger-222.fr/?d=2020/04/17/22/14/21-un-dictionnaire-alternatif-et-complet-pour-la-votre-liseuse):
@@ -170,8 +160,6 @@ Installons le dictionnaire [basé sur le Wiktionnaire](https://www.tiger-222.fr/
 ```{tip}
 D’autres langues sont disponibles dans le dépôt officiel : [BoboTiG/ebook-reader-dict](https://github.com/BoboTiG/ebook-reader-dict).
 ```
-
----
 
 ## 🔤 Police de caractères
 
@@ -213,16 +201,12 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 ```
 ````
 
----
-
 ## 🎣 Sources
 
 - Un grand merci à [BoboTraX](http://www.bobotrax.fr) pour le coup de main.
 - [Kobo Firmware Downloads](https://pgaskin.net/KoboStuff/kobofirmware.html).
 - [Kobo Firmware Releases](https://wiki.mobileread.com/wiki/Kobo_Firmware_Releases#Mark_7).
 - [Kobo Reader - MobileRead Forums](https://www.mobileread.com/forums/forumdisplay.php?s=d5e0bc4615a00d5065ab7258b883f68c&f=223).
-
----
 
 ## 📜 Historique
 

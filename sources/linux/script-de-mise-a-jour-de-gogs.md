@@ -22,8 +22,6 @@ Rendre le script exécutable :
 :language: shell
 ```
 
----
-
 ## 📜 Historique
 
 2024-02-01

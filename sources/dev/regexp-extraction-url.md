@@ -33,8 +33,6 @@ text = re.sub(r'(https?://[^\s<"]+)', r'<a href="\1">\1</a>', text)
 
 `````
 
----
-
 ## 📜 Historique
 
 2024-04-06

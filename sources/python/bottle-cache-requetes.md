@@ -26,8 +26,6 @@ Et voyons que ça fonctionne :
 <b>Hello Mickaël</b>
 ```
 
----
-
 ## Le Cache
 
 L’idée est la suivante : lorsqu’une requête est faite sur `/hello/NAME`, la réponse doit être enregistrée pour un usage ultérieur. La prochaine fois que ce même appel aura lieu, la version en cache sera servie directement.
@@ -90,8 +88,6 @@ Dernière étape, utiliser le décorateur :
      return bottle.template("<b>Hello {{name}}</b>!", name=name)
 ```
 
----
-
 ## Résultat
 
 Le premier appel n’est pas en cache :
@@ -110,8 +106,6 @@ Et les suivants le sont :
 <b>Hello Mickaël</b>
 <!-- Cached: 2023-10-17 07:08:41.510318+00:00 -->
 ```
-
----
 
 ## 📜 Historique
 

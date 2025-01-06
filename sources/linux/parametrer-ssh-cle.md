@@ -14,8 +14,6 @@ Que [`fail2ban`](https://doc.ubuntu-fr.org/fail2ban) soit en place ou non, il es
 
 Autre point intéressant pour les personnes fainéantes : l’utilisation d’une clé fait gagner du temps, car plus besoin de se souvenir et taper de mot de passe.
 
----
-
 ## 🔑 Générer la clé locale
 
 Depuis l’ordinateur d’où l’on souhaite se connecter :
@@ -41,8 +39,6 @@ Adapter les lignes surlignées, ou, en cas de configuration existante, le nouvea
 :language: shell
 ```
 ````
-
----
 
 ## 🔒 Importer la clé sur la machine distante
 
@@ -82,8 +78,6 @@ Bien que cet article ne traite pas de la sécurité de SSH, il est fortement rec
 ### 🍰 Bonus
 
 Pour que ça en jette plus (et/ou pour s’y retrouver plus facilement lorsqu’il y a plusieurs machines distantes), générer un super {abbr}`MOTD (Message Of The Day)` grâce à [Text to ASCII Art Generator (TAAG)](https://patorjk.com/software/taag/). Copier le résultat dans le fichier `/etc/motd`.
-
----
 
 ## 📜 Historique
 

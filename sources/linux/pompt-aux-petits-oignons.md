@@ -90,8 +90,6 @@ typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION='🐍'
 :align: center
 ```
 
----
-
 ## 📜 Historique
 
 2024-01-27

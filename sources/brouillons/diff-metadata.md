@@ -22,8 +22,6 @@ Voyons de quoi se compose la ligne n° 2 :
 :language: c
 ```
 
----
-
 ## 🎣 Sources
 
 - [git/git diff.c](https://github.com/git/git/blob/v2.43.0/diff.c#L4480-L4484)

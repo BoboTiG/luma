@@ -39,8 +39,6 @@ Pour l’utiliser :
 Windows 11
 ```
 
----
-
 ## 📜 Historique
 
 2024-02-01

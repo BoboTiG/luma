@@ -11,8 +11,6 @@ Installer `nut` (*Network UPS Tools*) :
 :language: shell
 ```
 
----
-
 ## 🔭 Découverte
 
 Brancher l’onduleur à l’ordinateur, puis démarrer le scanner :
@@ -48,8 +46,6 @@ Scanning USB bus.
 ```
 ````
 
----
-
 ## ⚙️ Configuration
 
 Configurer `nut` en mode utilitaire :
@@ -80,8 +76,6 @@ Enfin, redémarrer le service :
 :lines: 24
 :language: shell
 ```
-
----
 
 ## 👀 État de l’Alarme
 
@@ -168,8 +162,6 @@ ups.vendorid: 0463
 ```
 `````
 
----
-
 ## 🔕 Désactiver l’Alarme
 
 La commande utilise les informations de l’utilisateur crée en amont :
@@ -182,8 +174,6 @@ La commande utilise les informations de l’utilisateur crée en amont :
 La sortie devrait afficher *OK*.
 
 Vérifier l’[état de l’alarme](#etat-de-lalarme), c’est terminé !
-
----
 
 ## 📜 Historique
 

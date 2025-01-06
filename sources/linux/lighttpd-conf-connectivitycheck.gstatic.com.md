@@ -73,8 +73,6 @@ Exemple de sortie console lorsque tout est correctement en place :
 * Connection #0 to host connectivitycheck.gstatic.com left intact
 ```
 
----
-
 ## 📜 Historique
 
 2024-01-27

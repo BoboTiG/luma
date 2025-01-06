@@ -32,8 +32,6 @@ Pour vérifier la validité des fichiers générés :
 :language: shell
 ```
 
----
-
 ## 📜 Historique
 
 2024-02-07

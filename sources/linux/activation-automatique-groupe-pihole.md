@@ -27,8 +27,6 @@ Et insérer ces lignes (à adapter selon les besoins, [Crontab.guru](https://cro
 
 Étant donné que le dernier cronjob se lancera le vendredi à 19h, l’accès sera coupé tout le week-end, jusqu’au lundi matin suivant, à 9h.
 
----
-
 ## 📜 Historique
 
 2024-01-27

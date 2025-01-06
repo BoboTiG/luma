@@ -143,8 +143,6 @@ Détails de notre blockchain locale :
 
 Et voilà !
 
----
-
 ## 📜 Historique
 
 2024-02-04

@@ -24,8 +24,6 @@ Pour effectuer une mise à jour et repartir sur des bases saines, c’est-à-dir
 4. Cliquer sur le bouton "Upgrade" ;
 5. Quand le redémarrage du routeur est terminé, réimporter la configuration depuis [192.168.1.1](http://192.168.1.1/) (`root:admin`).
 
----
-
 ## 📜 Historique
 
 2024-08-10

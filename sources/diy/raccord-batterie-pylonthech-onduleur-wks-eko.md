@@ -2,8 +2,6 @@
 
 Un câblage incorrect ou un câble défectueux peuvent mener à voir une `Erreur 61` sur l’écran de l’onduleur. Il s’agit du code d’erreur spécifiant que la **liaison avec la batterie est perdue**.
 
----
-
 ## Liaison
 
 Pour que l’onduleur ([WKS EKO Circle](https://www.wattuneed.com/fr/onduleurs-et-convertisseurs/25678-onduleur-hybride-wks-evo-56kva-48v-0768563819193.html)) puisse communiquer avec la ou les batteries ([Pylontech US5000](https://en.pylontech.com.cn/products/us5000)), nous modifierons un [câble RJ45](images/rj45.svg).
@@ -34,8 +32,6 @@ Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS
 De ce côté-là, il est possible de laisser un câble RJ45 d’origine avec les 8 pins.
 ```
 
----
-
 #### DIP
 
 Dernier point, sur la batterie *master*, bien vérifier que les DIP 4, 3 et 2 sont en position haute (OFF), et 1 en position basse (ON) :
@@ -49,8 +45,6 @@ Si batterie(s) *slave* il y a, mettre tous leurs DIP en position haute (OFF) :
 ```{figure} images/battery-pylontech-dip-slave.svg
 :align: center
 ```
-
----
 
 ## 🎣 Sources
 

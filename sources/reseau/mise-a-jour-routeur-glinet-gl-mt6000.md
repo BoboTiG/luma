@@ -19,8 +19,6 @@ Le routeur contient déjà une version modifiée d’OpenWrt, nous allons pouvoi
 
 TBD lors de la première fois.
 
----
-
 ## 📜 Historique
 
 2024-12-16

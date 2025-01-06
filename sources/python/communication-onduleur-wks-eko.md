@@ -89,8 +89,6 @@ wks-read serial-no
 
 Toutes les informations utiles se trouvent dans le dépôt GitHub ☺
 
----
-
 ## 📜 Historique
 
 2024-12-27

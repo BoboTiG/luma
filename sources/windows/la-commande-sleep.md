@@ -29,8 +29,6 @@ Un correctif possible est d’utiliser le chemin complet de l’exécutable :
 :language: batch
 ```
 
----
-
 ## `ping`
 
 Il existe une alternative universelle : `ping`. C’est une astuce vieille comme Windows, mais qu’il fallait connaître :
@@ -51,8 +49,6 @@ L’implémentation de [ReactOS](https://reactos.org) permet de le vérifier :
 :caption: ping.c
 :language: c
 ```
-
----
 
 ## 🎣 Source
 

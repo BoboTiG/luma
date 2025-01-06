@@ -38,8 +38,6 @@ git config --global core.compression 0
 :language: shell
 ```
 
----
-
 ## 🌓 Faire la Lumière
 
 Générer le fichier contenant le hash qui nous intéresse :
@@ -56,8 +54,6 @@ Générer le fichier contenant le hash qui nous intéresse :
 alice:$6$xxx.:1000:1000::/home/alice:/bin/zsh
 ```
 ````
-
----
 
 ## 🔓 Cracker
 
@@ -91,8 +87,6 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed.
 ```
 ````
-
----
 
 ## 📜 Historique
 

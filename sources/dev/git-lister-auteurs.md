@@ -5,8 +5,6 @@
 :language: shell
 ```
 
----
-
 ## 📜 Historique
 
 2024-02-07

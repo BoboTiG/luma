@@ -14,8 +14,6 @@ Ce morceau de code supprimera tous les tags datant de plus de 21 jours.
 :language: shell
 ```
 
----
-
 ## 🎣 Sources
 
 - [Remove remote git tags older than X months](https://stackoverflow.com/a/48669841/1117028)

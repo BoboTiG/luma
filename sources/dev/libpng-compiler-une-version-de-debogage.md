@@ -25,8 +25,6 @@ Remplacer `IMAGE` par un fichier PNG :
 :language: shell
 ```
 
----
-
 ## 📜 Historique
 
 2024-02-01

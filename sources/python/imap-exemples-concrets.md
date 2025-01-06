@@ -32,8 +32,6 @@ Du moment que la commande {py:func}`imaplib.IMAP4.fetch` est utilisée, le messa
 Afin de ne pas modifier l’état du message, préférer les commandes `(BODY.PEEK[HEADER])` ou encore `(BODY.PEEK[TEXT])` (et plus généralement [`BODY.PEEK[<section>]<<partial>>`](https://www.rfc-editor.org/rfc/rfc3501#page-57)).
 ```
 
----
-
 ## Commandes en Vrac
 
 ### Marquer un message comme lu
@@ -128,8 +126,6 @@ La commande `MOVE` n’existe pas ; pour l’émuler, if faut faire une copie pu
 :lines: 68-69,65-66
 :language: python
 ```
-
----
 
 ## 🎣 Sources
 

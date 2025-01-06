@@ -17,31 +17,27 @@ section#base-de-connaissances-du-luma h1 {
     font-size: 2em;
 }
 
+/* Tweak titles. */
+section h2 {
+    padding-top: 1em;
+    border-bottom: 1px solid var(--sy-c-border);
+    font-variant: small-caps;
+}
+section h3 {
+    padding-top: .8em;
+    border-bottom: 1px dashed var(--sy-c-border);
+    font-variant: small-caps;
+}
+
 /* Article last updated. */
 #last-updated {
     margin-top: 2em;
     text-align: right;
     padding: .1em .5em;
-    border-right: 2px solid var(--yue-c-link-border-1);
+    border-right: 2px solid var(--sy-c-border);
     border-radius: 5px;
     cursor: help;
     font-size: .8em;
-}
-
-/* Home page contributors. */
-.sphinx-contributors img {
-    border-radius: 50%;
-    margin-bottom: 1em;
-    box-shadow:
-        0 1px 1px hsl(0deg 0% 0% / 0.075),
-        0 2px 2px hsl(0deg 0% 0% / 0.075),
-        0 4px 4px hsl(0deg 0% 0% / 0.075),
-        0 8px 8px hsl(0deg 0% 0% / 0.075),
-        0 16px 16px hsl(0deg 0% 0% / 0.075);
-}
-
-.sphinx-contributors p {
-    margin: 0;
 }
 
 @media print {

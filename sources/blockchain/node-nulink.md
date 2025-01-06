@@ -29,14 +29,10 @@ Ce guide est une traduction libre et simplifiée de la [documentation officielle
 1. un compte *staker* qui *stake* ses [NLK](https://testnet.bscscan.com/token/0x06a0f0fa38ae42b7b3c8698e987862afa58e90d9), n’importe quel compte Metamask ou Rabby fait l’affaire ;
 2. un compte *worker* qui sera lié au compte *staker* (on parle de *bond* en anglais), et nous verrons comment le créer par la suite.
 
----
-
 ## Avant-propos
 
 ```{include} _node-avant-propos.md
 ```
-
----
 
 ## Créer un Compte *Worker*
 
@@ -71,8 +67,6 @@ Garde bien les informations en sécurité (le mot de passe et le fichier contena
 ```
 
 Le fichier de la clé privée se trouve dans le dossier **keystore** et se nomme quelque chose comme **UTC--xxx** (où "xxx" est spécifique à chacun).
-
----
 
 ## Hébergement
 
@@ -116,8 +110,6 @@ Connecte-toi en SSH au serveur (utilise le mot de passe que tu as défini sur Co
 
 ssh nulink
 ```
-
----
 
 ### Installation
 
@@ -170,8 +162,6 @@ Enfin, installe NuLink :
 :lines: 42-43
 :language: shell
 ```
-
----
 
 ### Configuration
 
@@ -230,8 +220,6 @@ Depuis ton PC, récupère une copie de la clé privée :
 :language: shell
 ```
 
----
-
 ### Exécution
 
 Et c’est parti, démarre le nœud :
@@ -254,8 +242,6 @@ Pour suivre ce qu’il se passe sur le nœud :
 
 Si tu vois « *Working ~ Keep Ursula Online!* » et/ou « *learn_from_teacher_node stop now RELAX.* », ça veut dire que tout fonctionne nickel. Félicitations !
 
----
-
 ### Mises à Jour
 
 Ceci est à effectuer seulement lors d’une [mise à jour du conteneur](https://hub.docker.com/r/nulink/nulink/tags).
@@ -273,14 +259,10 @@ Action à faire dans l’ordre sur le serveur :
 
 1. enfin, relance le [nœud](#execution).
 
----
-
 ## Lier les Comptes
 
 Le site web pour la gestion du staking est [https://dashboard.testnet.nulink.org/staking](https://dashboard.testnet.nulink.org/staking).
 Plus bas dans cette page, il y a un bouton « *Bond worker* », clique dessus et renseigne l’adresse du compte *worker*. Et voilà !
-
----
 
 ## 📜 Historique
 

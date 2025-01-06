@@ -43,8 +43,6 @@ Et voilà !
 
 PS : J’avais partagé ces infos sur [cette issue](https://github.com/ethereum/web3.py/issues/1061#issuecomment-1049177039) en anglais.
 
----
-
 ## 📜 Historique
 
 2024-01-27

@@ -86,8 +86,6 @@ success
 * Connection #0 to host detectportal.firefox.com left intact
 ```
 
----
-
 ## 📜 Historique
 
 2024-01-27

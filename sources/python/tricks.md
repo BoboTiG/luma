@@ -18,8 +18,6 @@ Idem pour les {py:obj}`f-string` :
 :language: python
 ```
 
----
-
 ## {py:func}`pow`
 
 {py:func}`pow` peut prendre un 3{sup}`ème` argument pour calculer `pow(x, y) % z`{l=python} :
@@ -28,8 +26,6 @@ Idem pour les {py:obj}`f-string` :
 :lines: 19-25
 :language: python
 ```
-
----
 
 ## {py:func}`re.sub`
 
@@ -63,8 +59,6 @@ Résultats :
 
 ````
 
----
-
 ## {py:obj}`str.startswith` & {py:obj}`str.endswith`
 
 {py:obj}`str.startswith` et {py:obj}`str.endswith` peuvent prendre un {py:obj}`tuple` en paramètre :
@@ -93,8 +87,6 @@ Option 2: 0.186 usec
 
 ````
 
----
-
 ## {py:mod}`time` & {py:mod}`datetime`
 
 Vous pouvez supprimer les zéros ajoutés pour les différentes fonctions du module {py:mod}`time` qui prennent un format en entrée (valable pour {py:mod}`datetime` également) :
@@ -104,8 +96,6 @@ Vous pouvez supprimer les zéros ajoutés pour les différentes fonctions du mod
 :dedent:
 :language: python
 ```
-
----
 
 ## 📜 Historique
 

@@ -29,8 +29,6 @@
 - [ ] ! 50 flèches (adulte, Épona) : Forteresse Gérudo : faire un score de 1500 au stand d’archerie montée
 - [ ] Épée de Biggoron : finir la [quête de l’épée](#epee-de-biggoron)
 
----
-
 ## 💗 Quarts de Cœur
 
 1. [ ] Bois perdus : droite puis jouer de l’ocarina sur le tronc
@@ -70,8 +68,6 @@
 35. [ ] ! Village Cocorico : Cimetière, il faut faire moins de 1 minute contre Igor
 36. [ ] ! Lac Hylia : la pêche
 
----
-
 ## 🪲 Trous pour Insectes
 
 1. [ ] Village Kokiri
@@ -84,8 +80,6 @@
 8. [ ] Vallée Gérudo : sauter avec la poule vers la droite en face
 9. [ ] Cratère du Péril
 10. [ ] Colosse du Désert
-
----
 
 ## 🕷️ Skulltulas d’Or
 
@@ -190,16 +184,12 @@
 99. [ ] Temple de l’Esprit (épouvantail)
 100. [ ] Fontaine Zora (Gantelets d’argent)
 
----
-
 ## 🥛 Bouteilles
 
 1. [ ] Village Cocorico : terminer la quête des poules
 2. [ ] Ranch Lon Lon : terminer la quête des poules
 3. [ ] Lac Hylia : au fond de l’eau entre tous les piliers
 4. [ ] Finir la quête des [Âmes](#ames)
-
----
 
 ## 🪄 Sortilèges
 
@@ -208,8 +198,6 @@
 3. [ ] Flèche de Feu (adulte, temple de l’eau fini) : décocher une flèche en direction du soleil levant
 4. [ ] Amour de Nayru (adulte, bombes) : Fontaine Royale des Fées au Colosse du Désert
 5. [ ] Flèche de Glace (adulte, Gantelets d’argent, Monocle de Vérité) : terminer le Gymnase Gérudo
-
----
 
 ## 🥸 Masques
 
@@ -221,8 +209,6 @@
 ```{todo}
 À compléter.
 ```
-
----
 
 ## 👻 Âmes
 
@@ -241,8 +227,6 @@ Il faut être adulte, monter Epona et se balader sur la Plaine d’Hyrule.
 9. [ ] À l’entrée des terres rouges à l’ouest
 10. [ ] Tout au Sud-est, entre les arbres
 
----
-
 ## 🗡️ Épée de Biggoron
 
 1. [ ] Parler à la dame aux cocottes qui te file un oeuf
@@ -258,8 +242,6 @@ Il faut être adulte, monter Epona et se balader sur la Plaine d’Hyrule.
 11. [ ] Se rendre au Laboratoire Zora et donner le Crapaud-qui-louche au scientifique
 12. [ ] Donner les Super Gouttes à Biggoron
 13. [ ] Attendre 3 jours et donner le Certificat à Biggoron
-
----
 
 ## 📜 Historique
 

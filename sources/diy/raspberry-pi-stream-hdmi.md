@@ -21,8 +21,6 @@ http://USER:PASSWORD@IP/live/0/mjpeg.jpg
 ```
 ````
 
----
-
 ## Mise en Place
 
 Une [Raspbian minimale](https://www.tiger-222.fr/?d=2016/01/04/17/25/32-raspbian-installation-minimale) fera l’affaire sur votre Rpi. Nous allons installer [OMXPlayer](https://github.com/popcornmix/omxplayer), un lecteur vidéo spécialement conçu pour le processeur graphique (GPU) du Rpi :
@@ -38,8 +36,6 @@ Ensuite, voici la ligne de commande pour lire le flux vidéo vers la sortie HDMI
 :lines: 28
 :language: shell
 ```
-
----
 
 ## Script Complet
 
@@ -57,8 +53,6 @@ Ci-dessous est le script complet qui lancera automatiquement l’affichage de la
 - `--aidx`{l=shell} permet de choisir la piste audio (**-1** pour désactiver l’audio) ;
 - l’utilité du `while true`{l=shell} est de relancer OMXPlayer en cas de rupture du flux vidéo de la part de la caméra.
 ```
-
----
 
 ## Exemple
 
@@ -78,8 +72,6 @@ Le flux choisi est le profile n°2, configuré comme tel :
 - *View window area* : 1280x720 ;
 - *Maximum frame rate* : 25 (ou 30 suivant le modèle) ;
 - *Video quality* : Excellent.
-
----
 
 ## Lancement au Démarrage
 
@@ -102,8 +94,6 @@ Plusieurs solutions s’offrent à nous :
 :lines: 40-42
 :language: shell
 ```
-
----
 
 ## 📜 Historique
 

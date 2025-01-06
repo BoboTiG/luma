@@ -97,8 +97,6 @@ Pour ajouter le bon Message-ID aux courriels envoyés par la fonction [`mail()`]
 :language: php
 ```
 
----
-
 ## 🎣 Sources
 
 - [What’s the issue with `Message-Id` in email sent by PHP?](https://stackoverflow.com/q/14483861/1117028)

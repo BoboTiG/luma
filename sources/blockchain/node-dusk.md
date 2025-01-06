@@ -18,14 +18,10 @@ Ce guide est une traduction libre et légèrement modifiée de la [documentation
 - Espace disque : 50 Gio NVMe
 - Mémoire : 4 Gio de RAM
 
----
-
 ## 🪧 Avant-propos
 
 ```{include} _node-avant-propos.md
 ```
-
----
 
 ## 🪪 Créer un Compte
 
@@ -34,8 +30,6 @@ Rendez-vous sur le [wallet Dusk](https://apps.dusk.network/wallet/) pour créer 
 ```{caution}
 Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
 ```
-
----
 
 ## 🏪 Hébergement
 
@@ -82,8 +76,6 @@ Un mini guide est disponible ici : [Comment paramétrer SSH pour un accès par c
 ```
 ````
 
----
-
 ## 🛠️ Installation
 
 ### Mise à Jour
@@ -122,8 +114,6 @@ Télécharger et exécuter le script d’installation automatique pour Dusk :
 :lines: 23
 :language: shell
 ```
-
----
 
 ## 🎛️ Commandes
 
@@ -182,8 +172,6 @@ Connaître le montant des récompenses accumulées.
 
 Affiche le nombre de *tokens* en *staking*.
 
----
-
 ## ⚙️ Configuration
 
 ### Mot de Passe
@@ -225,8 +213,6 @@ Les 12 mots de la *seed phrase* doivent être entrés en **minuscule**, chacun *
 :language: shell
 ```
 
----
-
 ## 🚀 Exécution
 
 Pour démarrer le nœud :
@@ -236,8 +222,6 @@ Pour démarrer le nœud :
 :lines: 32
 :language: shell
 ```
-
----
 
 ## 🪙 Staking
 
@@ -315,8 +299,6 @@ La commande suivante permet de récupérer les récompenses (remplacer `AMOUNT` 
 
 Le *slashing* est un système de protection qui pénalise les mauvais comportements. Quand ça [arrive](https://github.com/dusk-network/rusk/issues/1415) au nœud, une partie des récompenses est perdue, et s’il n’y en a pas, alors la participation au réseau est stoppée jusqu’à l’époque suivante.
 
----
-
 ## 🐛 Débogage
 
 Section pour les cas où le système ne fonctionne pas comme prévu.
@@ -361,13 +343,9 @@ To                         Action      From
 9000/udp (v6)              ALLOW IN    Anywhere (v6)
 ```
 
----
-
 ## 🔗 Liens Utiles
 
 - [Explorateur de blocs](https://apps.dusk.network/explorer/)
-
----
 
 ## 📜 Historique
 

@@ -134,8 +134,6 @@ Générer un nouveau PDF comportant les nouvelles méta-données :
 :language: shell
 ```
 
----
-
 ## 📜 Historique
 
 2024-08-30

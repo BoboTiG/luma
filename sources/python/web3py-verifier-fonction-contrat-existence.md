@@ -18,8 +18,6 @@ Utilisation :
 
 [Version anglaise](https://ethereum.stackexchange.com/a/123607/95322) très courte.
 
----
-
 ## 📜 Historique
 
 2024-01-27
