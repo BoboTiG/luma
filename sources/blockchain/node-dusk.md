@@ -131,7 +131,7 @@ Ces commandes seront pratiques de déterminer l’état du nœud :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS) ✍️
-:lines: 200-
+:lines: 78-
 :language: shell
 ```
 
@@ -244,12 +244,14 @@ Pour démarrer le nœud :
 C’est la dernière étape pour pouvoir créer des blocs et participer au réseau.
 
 ```{caution}
-À chaque fois que des *tokens* sont ajoutés en *staking*, le nœud sera incorporé à la *blockchain* **2 époques** plus tard, cette opération n’est pas immédiate.
+À chaque fois que des *tokens* sont ajoutés en *staking*, le nœud sera incorporé à la *blockchain* **2 époques** plus tard (c’est-à-dire [4 320](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/core/src/stake.rs#L29) blocs), cette opération n’est pas immédiate.
+
+Pendant cette période d’attente, il est toutefois possible d’augmenter le nombre de *tokens* en *staking* [sans pénalité](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L183-L187).
 ```
 
 ### *Stake*
 
-Pour l’exemple, plaçons 1 000 DUSK en *staking* (c’est le minimum requis) :
+Pour l’exemple, plaçons 1 000 DUSK en *staking* (c’est le [minimum requis](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/core/src/stake.rs#L42)) :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
@@ -267,7 +269,7 @@ Une fois que des *tokens* sont en *staking*, il est possible d’en rajouter de 
 
 #### Avec Pénalité
 
-Augmenter le nombre de *tokens* "à la volée" donnera lieu à une pénalité (*soft slashing* en anglais) de 10% : soit 10% du montant sera bloqué et récupérable seulement quand la commande `unstake` sera utilisée.
+Augmenter le nombre de *tokens* "à la volée" donnera lieu à une pénalité (*soft slashing* en anglais) de [10%](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L124-L128) : soit 10% du montant sera bloqué et récupérable seulement quand la commande `unstake` sera utilisée.
 
 Voici la procédure pour *staker* plus de *tokens* avec *soft slashing* (remplacer `AMOUNT` par le nombre de *tokens*) :
 
@@ -295,7 +297,19 @@ Il y a deux moyens de récupérer des récompenses :
 1. Lorsque le nœud est sélectionné pour générer un bloc : récupération de 80% des *tokens* émis + une part variable suivant le nombre de voteurs inclus (non modifiable).
 2. Lorsque le nœud est sélectionné en tant que voteur et inclus dans le bloc généré : récupération d’une fraction des *tokens* réservés aux voteurs.
 
-Pour des informations techniques complètes, lire [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf) (section *Incentives goals*).
+Pour des informations techniques complètes, lire [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf) (section *Incentives goals*) et le [code source](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/rusk/src/lib/node.rs#L103-L109).
+
+```{caution}
+Afin de pouvoir retirer ses récompenses, il faut qu'il y [ait des *tokens* en *staking*](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L351).
+```
+
+La commande suivante permet de récupérer les récompenses (remplacer `AMOUNT` par le nombre de *tokens*) :
+
+```{literalinclude} snippets/node-dusk.sh
+:caption: ☁️ Serveur (VPS)
+:lines: 35
+:language: shell
+```
 
 ### *Slashing*
 
