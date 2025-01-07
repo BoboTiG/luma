@@ -126,7 +126,5 @@ sed -i 's/mtu = [0-9]*/mtu = 8192/' /opt/dusk/conf/rusk.toml \
     && sed -i 's/udp_recv_buffer_size = [0-9]*/udp_recv_buffer_size = 50000000/' /opt/dusk/conf/rusk.toml \
     && sed -i 's/max_inv_entries = [0-9]*/max_inv_entries = 500/' /opt/dusk/conf/rusk.toml \
     && sed -i 's/max_udp_len = [0-9]*/max_udp_len = 20971520/' /opt/dusk/conf/rusk.toml \
-    && sed -i "s/# log_type = 'co.*/log_type = 'plain'/" /opt/dusk/conf/rusk.toml \
-    && sed -i "s/# log_level = .*/log_level = 'warn'/" /opt/dusk/conf/rusk.toml \
-    && sed -i "s/# log_filter = .*/log_filter = 'dusk_consensus=info'/" /opt/dusk/conf/rusk.toml
+    && sed -i "s/# log_type = 'co.*/log_type = 'plain'/" /opt/dusk/conf/rusk.toml
 EOF
