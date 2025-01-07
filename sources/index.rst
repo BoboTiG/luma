@@ -83,10 +83,12 @@ Base de Connaissances du `Luma`_
         <p class="caption" role="heading"><span class="caption-text">💖 Contributeurs & Contributrices</span></p>
     </div>
 
-.. contributors:: BoboTiG/luma
-    :avatars:
-    :contributions:
-    :exclude: dependabot[bot]
+.. container:: rounded-image
+
+    .. contributors:: BoboTiG/luma
+        :avatars:
+        :contributions:
+        :exclude: dependabot[bot]
 
 
 .. _Luma: https://fr.wiktionary.org/wiki/luma
