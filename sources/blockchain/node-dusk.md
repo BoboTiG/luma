@@ -11,6 +11,15 @@ Site web : [dusk.network](https://dusk.network)
 
 Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/operator/guides/provisioner-node/) pour le déploiement d’un nœud Dusk, plus communément appelé *node provisioner*.
 
+## 🔗 Liens Utiles
+
+- [Explorateur de blocs](https://apps.dusk.network/explorer/)
+- [Run a Provisioner on Dusk](https://docs.dusk.network/operator/guides/provisioner-node/)
+- [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf)
+- [Staking on Dusk](https://docs.dusk.network/learn/guides/staking-basics/)
+- [Slashing mechanism](https://docs.dusk.network/learn/deep-dive/slashing/)
+- [Succinct Attestation Consensus](https://docs.dusk.network/learn/deep-dive/succinct-attestation/)
+
 ## ✅ [Configuration Requise](https://docs.dusk.network/operator/provisioner/#provisioner-specifications)
 
 - Système d’exploitation : **Ubuntu 24.04**
@@ -342,13 +351,6 @@ To                         Action      From
 22/tcp (v6)                LIMIT IN    Anywhere (v6)
 9000/udp (v6)              ALLOW IN    Anywhere (v6)
 ```
-
-## 🔗 Liens Utiles
-
-- [Explorateur de blocs](https://apps.dusk.network/explorer/)
-- [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf)
-- [Slashing mechanism](https://docs.dusk.network/learn/deep-dive/slashing/)
-- [Succinct Attestation Consensus](https://docs.dusk.network/learn/deep-dive/succinct-attestation/)
 
 ## 📜 Historique
 
