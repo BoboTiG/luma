@@ -284,7 +284,7 @@ Il y a deux moyens de récupérer des récompenses :
 Pour des informations techniques complètes, lire [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf) (section *Incentives goals*) et le [code source](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/rusk/src/lib/node.rs#L103-L109).
 
 ```{caution}
-Afin de pouvoir retirer ses récompenses, il faut qu'il y [ait des *tokens* en *staking*](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L351).
+Afin de pouvoir retirer ses récompenses, il faut qu’il y [ait des *tokens* en *staking*](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L351).
 ```
 
 La commande suivante permet de récupérer les récompenses (remplacer `AMOUNT` par le nombre de *tokens*) :
@@ -297,7 +297,7 @@ La commande suivante permet de récupérer les récompenses (remplacer `AMOUNT` 
 
 ### *Slashing*
 
-Le *slashing* est un système de protection qui pénalise les mauvais comportements. Quand ça [arrive](https://github.com/dusk-network/rusk/issues/1415) au nœud, une partie des récompenses est perdue, et s’il n’y en a pas, alors la participation au réseau est stoppée jusqu’à l’époque suivante.
+Le *slashing* est un système de protection qui pénalise les mauvais comportements. Quand ça [arrive](https://github.com/dusk-network/rusk/issues/1415) au nœud, une partie des récompenses est perdue, et s’il n’y en a pas, alors la participation au réseau est stoppée jusqu’à l’époque suivante. Plus d’information sur [Slashing mechanism](https://docs.dusk.network/learn/deep-dive/slashing/).
 
 ## 🐛 Débogage
 
@@ -347,6 +347,7 @@ To                         Action      From
 
 - [Explorateur de blocs](https://apps.dusk.network/explorer/)
 - [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf)
+- [Slashing mechanism](https://docs.dusk.network/learn/deep-dive/slashing/)
 - [Succinct Attestation Consensus](https://docs.dusk.network/learn/deep-dive/succinct-attestation/)
 
 ## 📜 Historique
