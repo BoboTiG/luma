@@ -78,45 +78,31 @@ source ~/.profile
 cat << 'EOF' >> ~/.profile
 
 # Dusk
-function grep_logs() {
-    local color
-    local idx
-    local pattern
-    local round
+function blocks() {
+    local c="$(ruskquery block-height)"
+    local l="$(API_ENDPOINT=https://nodes.dusk.network ruskquery block-height)"
+    local g="$(generated | wc -l)"
+    # printf '[%d/%d] %d\n' $c $l $g
+    printf '[\e[34m%d\e[0m/\e[31m%d\e[0m] \e[32m%d\e[0m\n' $c $l $g
+}
 
-    if [ "${1:-accepted-only}" = "accepted-only" ]; then
-        pattern='0'
-        color=42
-    else
-        pattern='[[:digit:]]'
-        color=43
-    fi
+function generated() {
+    local idx
+    local round
 
     idx=1
     zgrep 'Block generated' /var/log/rusk.log* \
         | awk '{print $3 $4}' \
         | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
-        | grep -E "iter=${pattern}" | \
+        | grep -E 'iter=0' | \
             while read -r line ; do \
                 round="$(echo "${line}" | grep -Eo 'round=[[:digit:]]+' | cut -d= -f2)"
-                printf '\e[30;1;%dm %d \e[0m %s\n' ${color} ${idx} "${round}"
+                printf '\e[30;1;42m %d \e[0m %s\n' ${idx} "${round}"
                 idx=$(( idx + 1 ))
             done
 }
 
-function blocks() {
-    local c="$(ruskquery block-height)"
-    local l="$(API_ENDPOINT=https://nodes.dusk.network ruskquery block-height)"
-    local a="$(accepted | wc -l)"
-    local g="$(generated | wc -l)"
-    local r=$(echo "scale=2 ; $a / $g * 100" | bc)
-    # printf '[%d/%d] %d|%d (%s%%)\n' $c $l $g $a $r
-    printf '[\e[34m%d\e[0m/\e[31m%d\e[0m] \e[33m%d\e[0m|\e[32m%d\e[0m (\e[39m%s%%\e[0m)\n' $c $l $g $a $r
-}
-
-alias accepted='grep_logs accepted-only'
 alias balance='rusk-wallet balance --spendable'
-alias generated='grep_logs all'
 alias logs='tail -f /var/log/rusk.log'
 alias rewards='rusk-wallet stake-info --reward'
 alias stake-info='rusk-wallet stake-info'

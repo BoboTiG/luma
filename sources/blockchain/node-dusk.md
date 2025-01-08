@@ -142,27 +142,21 @@ Charger les commandes :
 :language: shell
 ```
 
-### `accepted`
-
-Affiche un décompte des lignes de *log* des blocs acceptés, c’est-à-dire quand le nœud a généré un bloc pris en compte par la *blockchain* (et qu’une récompense a été récupérée).
-
 ### `balance`
 
 Affiche le nombre de DUSK disponible sur le *wallet*.
 
 ### `blocks`
 
-Affiche l’avancée de synchronisation des blocs et les statistiques des blocs générés (utilisation implicite des alias [`generated`](#generated) et [`accepted`](#accepted)).
+Affiche l’avancée de synchronisation des blocs et le nombre de blocs générés (utilisation implicite de l’alias [`generated`](#generated)).
 
 ```{code-block}
 :caption: 🔎 Exemple de sortie
 
-[6965/6965] 60|30 (50.00%)
+[6965/6965] 60
  ^-------------------------- dernier bloc synchronisé par le nœud
       ^--------------------- dernier bloc existant sur la blockchain
             ^--------------- nombre de blocs générés
-               ^------------ nombre de blocs acceptés sur la blockchain
-                   ^-------- ratio
 ```
 
 ### `generated`
@@ -356,6 +350,9 @@ To                         Action      From
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-01-08
+: Suppression des alias `accepted` et simplification des alias `blocks` et `generated`.
 
 2025-01-05
 : Mise à jour de la version du script d’installation de Dusk (`0.5.2` → `0.5.3`) pour le *kick-off* du *mainnet* !
