@@ -352,7 +352,8 @@ To                         Action      From
 :class: toggle
 
 2025-01-08
-: Suppression des alias `accepted` et simplification des alias `blocks` et `generated`.
+: Suppression de l’alias `accepted`. La notion de blocs générés versus blocs acceptés était erronée, il n’y a en réalité que des blocs générés. Dans le cas ou le bloc généré est à une itération supérieure à zéro, il s’agit d’une action permettant de proposer un bloc quand l’autre nœud sélectionné n'arriverait pas à fournir le bloc à temps.
+: Simplification des alias `blocks` et `generated`.
 
 2025-01-05
 : Mise à jour de la version du script d’installation de Dusk (`0.5.2` → `0.5.3`) pour le *kick-off* du *mainnet* !
