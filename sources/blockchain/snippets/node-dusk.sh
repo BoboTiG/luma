@@ -39,7 +39,7 @@ rusk-wallet stake-info
 rusk-wallet stake-info --reward
 
 tail -F /var/log/rusk.log | grep 'execute_state_transition'
-grep 'execute_state_transition' /var/log/rusk.log
+zgrep 'execute_state_transition' /var/log/rusk.log*
 grep -A 100 -C 100 'execute_state_transition' /var/log/rusk.log | sed -r 's/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g'
 
 service rusk stop \
@@ -102,8 +102,8 @@ function generated() {
             done
 }
 
-alias balance='rusk-wallet balance --spendable'
+alias balance='rusk-wallet balance --spendable 2>/dev/null'
 alias logs='tail -f /var/log/rusk.log'
-alias rewards='rusk-wallet stake-info --reward'
-alias stake-info='rusk-wallet stake-info'
+alias rewards='rusk-wallet stake-info --reward 2>/dev/null'
+alias stake-info='rusk-wallet stake-info 2>/dev/null'
 EOF
