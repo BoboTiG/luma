@@ -91,7 +91,7 @@ function generated() {
     local round
 
     idx=1
-    zgrep 'Block generated' /var/log/rusk.log* \
+    ls /var/log/rusk.log* | sort -rn | xargs -d '\n' zgrep 'Block generated' \
         | awk '{print $3 $4}' \
         | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
         | grep -E 'iter=0' | \
