@@ -1,4 +1,4 @@
-# [mainnet] Comment déployer un nœud Dusk ?
+# Comment déployer un nœud Dusk ?
 
 ```{figure} images/dusk-logo.svg
 :width: 96
