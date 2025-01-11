@@ -87,19 +87,26 @@ function blocks() {
 }
 
 function generated() {
-    local idx
+    local files=()
+    local idx=1
     local round
 
-    idx=1
-    ls /var/log/rusk.log* | sort -rn | xargs -d '\n' zgrep 'Block generated' \
-        | awk '{print $3 $4}' \
-        | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
-        | grep -E 'iter=0' | \
-            while read -r line ; do \
+    for file in $(ls /var/log/rusk.log-* | sort -n); do
+        files+=("${file}")
+    done
+    files+=('/var/log/rusk.log')
+
+    for file in ${files[@]}; do
+        zgrep 'Block generated' "${file}" \
+            | awk '{print $3 $4}' \
+            | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
+            | grep -E 'iter=0' \
+            | while read -r line ; do \
                 round="$(echo "${line}" | grep -Eo 'round=[[:digit:]]+' | cut -d= -f2)"
                 printf '\e[30;1;42m %d \e[0m %s\n' ${idx} "${round}"
                 idx=$(( idx + 1 ))
             done
+    done
 }
 
 alias balance='rusk-wallet balance --spendable 2>/dev/null'

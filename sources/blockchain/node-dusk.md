@@ -357,6 +357,7 @@ To                         Action      From
 
 2025-01-11
 : Ajout de la section [supervision](#supervision).
+: Correction du code de l’alias [generated](#generated) pour trier correctement les fichiers de log.
 
 2025-01-08
 : Suppression de l’alias `accepted`. La notion de blocs générés versus blocs acceptés était erronée, il n’y a en réalité que des blocs générés. Dans le cas ou le bloc généré est à une itération supérieure à zéro, il s’agit d’une action permettant de proposer un bloc quand l’autre nœud sélectionné n’arriverait pas à fournir le bloc à temps.
