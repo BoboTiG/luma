@@ -302,6 +302,10 @@ La commande suivante permet de récupérer les récompenses (remplacer `AMOUNT` 
 
 Le *slashing* est un système de protection qui pénalise les mauvais comportements. Quand ça [arrive](https://github.com/dusk-network/rusk/issues/1415) au nœud, une partie des récompenses est perdue, et s’il n’y en a pas, alors la participation au réseau est stoppée jusqu’à l’époque suivante. Plus d’information sur [Slashing mechanism](https://docs.dusk.network/learn/deep-dive/slashing/).
 
+## 🌡️ Supervision
+
+J’ai ouvert au public un projet minimaliste qui permet de suivre l’état du nœud : [BoboTiG/dusk-monitor](https://github.com/BoboTiG/dusk-monitor).
+
 ## 🐛 Débogage
 
 Section pour les cas où le système ne fonctionne pas comme prévu.
@@ -351,8 +355,11 @@ To                         Action      From
 ```{admonition} Historique complet
 :class: toggle
 
+2025-01-11
+: Ajout de la section [supervision](#supervision).
+
 2025-01-08
-: Suppression de l’alias `accepted`. La notion de blocs générés versus blocs acceptés était erronée, il n’y a en réalité que des blocs générés. Dans le cas ou le bloc généré est à une itération supérieure à zéro, il s’agit d’une action permettant de proposer un bloc quand l’autre nœud sélectionné n'arriverait pas à fournir le bloc à temps.
+: Suppression de l’alias `accepted`. La notion de blocs générés versus blocs acceptés était erronée, il n’y a en réalité que des blocs générés. Dans le cas ou le bloc généré est à une itération supérieure à zéro, il s’agit d’une action permettant de proposer un bloc quand l’autre nœud sélectionné n’arriverait pas à fournir le bloc à temps.
 : Simplification des alias `blocks` et `generated`.
 : Amélioration de l’alias `generated` pour trier par numéro de bloc.
 
