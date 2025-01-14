@@ -14,13 +14,13 @@ Voici la procédure à suivre pour lui indiquer qu’un nouveau toner vient d’
 Les choix du menu suivent le format `<COULEUR>.TRN-<TYPE>` :
 
 - `<COULEUR>` est une lettre :
-  - "K" pour noir ;
   - "C" pour cyan ;
+  - "K" pour noir ;
   - "M" pour magenta ;
   - "Y" pour jaune.
 - `<TYPE>` peut être :
-  - "STD" pour capacité standarde ;
-  - "HC" pour grande capacité.
+  - "HC" pour grande capacité ;
+  - "STD" pour capacité standarde.
 
 Exemple pour le toner noir standard : `K.TRN-STD`.
 
