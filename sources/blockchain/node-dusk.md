@@ -13,6 +13,7 @@ Ce guide est une traduction libre et légèrement modifiée de la [documentation
 
 ## 🔗 Liens Utiles
 
+- [Node Dashboard](https://github.com/BoboTiG/dusk-monitor)
 - [Explorateur de blocs](https://apps.dusk.network/explorer/)
 - [Run a Provisioner on Dusk](https://docs.dusk.network/operator/guides/provisioner-node/)
 - [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf)
