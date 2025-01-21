@@ -70,7 +70,7 @@ Bien que cet article ne traite pas de la sécurité de SSH, il est fortement rec
 
 ```{literalinclude} snippets/parametrer-ssh-cle.sh
 :caption: ☁️ Serveur (contenu du fichier `/etc/fail2ban/jail.local`)
-:lines: 30-42
+:lines: 30-43
 :language: ini
 ```
 ````
@@ -80,6 +80,9 @@ Bien que cet article ne traite pas de la sécurité de SSH, il est fortement rec
 Pour que ça en jette plus (et/ou pour s’y retrouver plus facilement lorsqu’il y a plusieurs machines distantes), générer un super {abbr}`MOTD (Message Of The Day)` grâce à [Text to ASCII Art Generator (TAAG)](https://patorjk.com/software/taag/). Copier le résultat dans le fichier `/etc/motd`.
 
 ## 📜 Historique
+
+2025-01-21
+: Bannissement pendant 1 an dans la configuration `fail2ban`, et activation de la prison `sshd`.
 
 2024-12-16
 : Ajout de l’indication pour recommander l’installation de `fail2ban`.
