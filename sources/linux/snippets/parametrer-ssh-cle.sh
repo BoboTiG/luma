@@ -29,13 +29,14 @@ service ssh restart
 cat << EOF
 [DEFAULT]
 
-# Banni pendant 24h...
-bantime = 24h
+# Banni pendant 1 an...
+bantime = 365d
 # ... Suite à la première tentative.
 maxretry = 1
 
 [sshd]
 
+enabled = true
 mode    = aggressive
 port    = ssh
 logpath = %(sshd_log)s
