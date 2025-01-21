@@ -30,7 +30,7 @@ cat << EOF
 [DEFAULT]
 
 # Banni pendant 1 an...
-bantime = 365d
+bantime = 1y
 # ... Suite à la première tentative.
 maxretry = 1
 
