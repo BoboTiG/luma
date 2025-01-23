@@ -395,7 +395,7 @@ Erreurs connues :
 
 2025-01-23
 : Correction des chiffres liés aux [récompenses](#recompenses).
-: Suppression des alias `blocks` et `generated`. Ils n’étaient plus vraiment pertinents depuis l’arrivée des outils de [supervision](#supervision).
+: Suppression des alias `blocks` et `generated`. Ils n’étaient plus vraiment pertinents depuis l’arrivée des outils de [supervision](#supervision) ([f03701d](https://github.com/BoboTiG/luma/commit/f03701d6ffe047f7939d30595a558db45f261841)).
 : Ajout des commandes [`ruskquery block-height`](#ruskquery-block-height) et [`ruskquery peers`](#ruskquery-peers).
 : Ajout du projet *DuskMan* dans la section [Supervision](#supervision).
 : Ajout de la section [Avertissements dans les logs](#avertissements-dans-les-logs).
