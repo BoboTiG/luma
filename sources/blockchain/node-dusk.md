@@ -11,6 +11,14 @@ Site web : [dusk.network](https://dusk.network)
 
 Ce guide est une traduction libre et légèrement modifiée de la [documentation officielle](https://docs.dusk.network/operator/guides/provisioner-node/) pour le déploiement d’un nœud Dusk, plus communément appelé *node provisioner*.
 
+````{tip}
+🫶 Adresse Dusk pour les pourboires :
+
+```{code-block}
+VKZpBrNtEeTobMgYkkdcGiZn8fK2Ve2yez429yRXrH4nUUDTuvr7Tv74xFA2DKNVegtF6jaom2uacZMm8Z2Lg2J
+```
+````
+
 ## 🔗 Liens Utiles
 
 - [Node Dashboard](https://github.com/BoboTiG/dusk-monitor)
