@@ -147,23 +147,6 @@ Charger les commandes :
 
 Affiche le nombre de DUSK disponible sur le *wallet*.
 
-### `blocks`
-
-Affiche l’avancée de synchronisation des blocs et le nombre de blocs générés (utilisation implicite de l’alias [`generated`](#generated)).
-
-```{code-block}
-:caption: 🔎 Exemple de sortie
-
-[6965/6965] 60
- ^-------------------------- dernier bloc synchronisé par le nœud
-      ^--------------------- dernier bloc existant sur la blockchain
-            ^--------------- nombre de blocs générés
-```
-
-### `generated`
-
-Affiche un décompte des lignes de *log* des blocs générés.
-
 ### `logs`
 
 Affiche les *logs* pour suivre l’avancée de la synchronisation du nœud.
@@ -175,6 +158,14 @@ Connaître le montant des récompenses accumulées.
 ### `stake-info`
 
 Affiche le nombre de *tokens* en *staking*.
+
+### `ruskquery block-height`
+
+Affiche le dernier bloc synchronisé.
+
+### `ruskquery peers`
+
+Affiche le nombre de connexions à d’autres nœuds.
 
 ## ⚙️ Configuration
 
@@ -282,8 +273,8 @@ Voici la procédure pour *staker* plus de *tokens* sans *soft slashing* (remplac
 
 Il y a deux moyens de récupérer des récompenses :
 
-1. Lorsque le nœud est sélectionné pour générer un bloc : récupération de 80% des *tokens* émis + une part variable suivant le nombre de voteurs inclus (non modifiable).
-2. Lorsque le nœud est sélectionné en tant que voteur et inclus dans le bloc généré : récupération d’une fraction des *tokens* réservés aux voteurs.
+1. Lorsque le nœud est sélectionné pour générer un bloc : récupération de 70% des *tokens* émis + une part variable suivant le nombre de voteurs inclus (non modifiable).
+2. Lorsque le nœud est sélectionné en tant que voteur et inclus dans le bloc généré : récupération d’une fraction des 10% des *tokens* réservés aux voteurs.
 
 Pour des informations techniques complètes, lire [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf) (section *Incentives goals*) et le [code source](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/rusk/src/lib/node.rs#L103-L109).
 
@@ -305,7 +296,10 @@ Le *slashing* est un système de protection qui pénalise les mauvais comporteme
 
 ## 🌡️ Supervision
 
-J’ai ouvert au public un projet minimaliste qui permet de suivre l’état du nœud : [BoboTiG/dusk-monitor](https://github.com/BoboTiG/dusk-monitor).
+Il existe plusieurs projets permettant de suivre l’état du nœud :
+
+- 🌟 [BoboTiG/dusk-monitor](https://github.com/BoboTiG/dusk-monitor)
+- [wolfrage76/DuskMan](https://github.com/wolfrage76/DuskMan)
 
 ## 🐛 Débogage
 
@@ -351,13 +345,64 @@ To                         Action      From
 9000/udp (v6)              ALLOW IN    Anywhere (v6)
 ```
 
+### Avertissements dans les logs
+
+Pour les trouver, utiliser cette commande :
+
+```{literalinclude} snippets/node-dusk.sh
+:caption: ☁️ Serveur (VPS)
+:lines: 30
+:language: shell
+```
+
+Avertissements connus :
+
+1. ```{code-block}
+   2025-01-22T23:07:33.710209Z  WARN node::databroker: error on handling msg: could not find locator block
+   ```
+   Cet avertissement n’est pas important et peut être ignoré.
+1. ```{code-block}
+   2025-01-22T23:26:14.069521Z  WARN node::chain::acceptor: event="missed iteration" height=133665 iter=0 generator="REDACTED"
+   ```
+   Peut être ignoré si exceptionnel. Cela veut dire que le nœud a temporairement pris du retard dans la synchronisation. Peut donner lieu à un *[soft slash](#slashing)* si le nœud est sélectionné tout en état en retard à plusieurs reprises.
+
+### Erreurs dans les logs
+
+Pour les trouver, utiliser cette commande :
+
+```{literalinclude} snippets/node-dusk.sh
+:caption: ☁️ Serveur (VPS)
+:lines: 31
+:language: shell
+```
+
+Erreurs connues :
+
+1. ```{code-block}
+   2025-01-13T11:01:23.140197Z ERROR kadcast::handling: Invalid Id Header { binary_id: BinaryID { bytes: [173, 236, 205, 149, 2, 31, 24, 69, 160, 37, 18, 19, 190, 133, 175, 232], nonce: [118, 0, 0, 0] }, sender_port: 9000, network_id: 1, reserved: [0, 0] } - from REDACTED
+   ```
+   Cette erreur n’est pas importante et peut être ignorée.
+1. ```{code-block}
+   2025-01-22T00:13:52.189187Z ERROR main{round=125324 iter=0 name=Ratification pk="REDACTED"}: dusk_consensus::execution_ctx: phase handler err: VoteAlreadyCollected
+   ```
+   D’après le [développeur principal](https://github.com/herr-seppia), cette erreur n’est pas importante et peut être ignorée.
+
+
 ## 📜 Historique
 
 ```{admonition} Historique complet
 :class: toggle
 
+2025-01-23
+: Correction des chiffres liés aux [récompenses](#recompenses).
+: Suppression des alias `blocks` et `generated`. Ils n’étaient plus vraiment pertinents depuis l’arrivée des outils de [supervision](#supervision).
+: Ajout des commandes [`ruskquery block-height`](#ruskquery-block-height) et [`ruskquery peers`](#ruskquery-peers).
+: Ajout du projet *DuskMan* dans la section [Supervision](#supervision).
+: Ajout de la section [Avertissements dans les logs](#avertissements-dans-les-logs).
+: Ajout de la section [Erreurs dans les logs](#erreurs-dans-les-logs).
+
 2025-01-11
-: Ajout de la section [supervision](#supervision).
+: Ajout de la section [Supervision](#supervision).
 : Correction du code de l’alias [generated](#generated) pour trier correctement les fichiers de log.
 
 2025-01-08
@@ -384,7 +429,7 @@ To                         Action      From
 
 2025-01-01
 : Changement d’hébergeur pour cause de mauvaises performances (Contabo → Vultr).
-: Ajout de la section [Récompenses](recompenses).
+: Ajout de la section [Récompenses](#recompenses).
 
 2024-12-30
 : Amélioration de l’alias `chosen` ([0907b14](https://github.com/BoboTiG/luma/commit/0907b1467c25a6e88ede070f3de3bef324d5ddec) → [53f84d7](https://github.com/BoboTiG/luma/commit/53f84d74bbfc1f6313ec58914f5af497cea9cb1f)).
@@ -427,7 +472,7 @@ To                         Action      From
 : Amélioration de la commande [`chosen`](#chosen) pour prendre en compte les fichiers de *log* archivés.
 
 2024-03-06
-: Ajout de la section [commandes](#commandes).
+: Ajout de la section [Commandes](#commandes).
 : Mise à jour de la version du script d’installation de Dusk (`0.1.6` → `0.1.7`).
 
 2024-03-03

@@ -27,8 +27,8 @@ rusk-wallet restore
 
 rusk-wallet export -d /opt/dusk/conf -n consensus.keys \
     && echo "DUSK_CONSENSUS_KEYS_PASS=${RUSK_WALLET_PWD}" > /opt/dusk/services/dusk.conf
-
-
+zgrep WARN /var/log/rusk*.log
+zgrep ERROR /var/log/rusk*.log
 service rusk start
 
 tail -f /var/log/rusk.log
@@ -78,37 +78,6 @@ source ~/.profile
 cat << 'EOF' >> ~/.profile
 
 # Dusk
-function blocks() {
-    local c="$(ruskquery block-height)"
-    local l="$(API_ENDPOINT=https://nodes.dusk.network ruskquery block-height)"
-    local g="$(generated | wc -l)"
-    # printf '[%d/%d] %d\n' $c $l $g
-    printf '[\e[34m%d\e[0m/\e[31m%d\e[0m] \e[32m%d\e[0m\n' $c $l $g
-}
-
-function generated() {
-    local files=()
-    local idx=1
-    local round
-
-    for file in $(ls /var/log/rusk.log-* | sort -n); do
-        files+=("${file}")
-    done
-    files+=('/var/log/rusk.log')
-
-    for file in ${files[@]}; do
-        zgrep 'Block generated' "${file}" \
-            | awk '{print $3 $4}' \
-            | sed 's/[[:cntrl:]]\[[[:digit:]][a-z]//g' \
-            | grep -E 'iter=0' \
-            | while read -r line ; do \
-                round="$(echo "${line}" | grep -Eo 'round=[[:digit:]]+' | cut -d= -f2)"
-                printf '\e[30;1;42m %d \e[0m %s\n' ${idx} "${round}"
-                idx=$(( idx + 1 ))
-            done
-    done
-}
-
 alias balance='rusk-wallet balance --spendable 2>/dev/null'
 alias logs='tail -f /var/log/rusk.log'
 alias rewards='rusk-wallet stake-info --reward 2>/dev/null'
