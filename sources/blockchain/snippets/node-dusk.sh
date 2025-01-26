@@ -32,7 +32,7 @@ zgrep ERROR /var/log/rusk*.log
 service rusk start
 
 tail -f /var/log/rusk.log
-rusk-wallet withdraw AMOUNT
+rusk-wallet withdraw [AMOUNT]
 rusk-wallet balance --spendable
 rusk-wallet stake --amt 1000
 rusk-wallet stake-info
