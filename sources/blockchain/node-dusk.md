@@ -289,7 +289,7 @@ Pour des informations techniques complètes, lire [Economic Protocol Design](htt
 Afin de pouvoir retirer ses récompenses, il faut qu’il y [ait des *tokens* en *staking*](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L351).
 ```
 
-La commande suivante permet de récupérer les récompenses (remplacer `AMOUNT` par le nombre de *tokens*) :
+La commande suivante permet de récupérer les récompenses (remplacer `AMOUNT` par le nombre de *tokens*, en option) :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
