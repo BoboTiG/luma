@@ -50,9 +50,9 @@ Bien garder les 12 mots de la *seed phrase* quelque part en sécurité.
 
 ## 🏪 Hébergement
 
-La documentation officielle traite de Digital Ocean, et il est possible d’utiliser Hetzner ou encore [Vultr](https://www.vultr.com/?ref=9703379). Ici, nous parlerons de ce dernier.
+La documentation officielle traite de Digital Ocean, et il est possible d’utiliser Hetzner ou encore [Vultr](https://www.vultr.com/?ref=9703380-9J). Ici, nous parlerons de ce dernier.
 
-Créé un compte sur [Vultr](https://www.vultr.com/?ref=9703379) et déployer un nouveau produit avec ces caractéristiques :
+Créé un compte sur [Vultr](https://www.vultr.com/?ref=9703380-9J) et déployer un nouveau produit avec ces caractéristiques :
 
 - Type : {menuselection}`Shared CPU --> High Performance --> vhp-2c-4gb-intel` (Intel, 2 vCPU, 4 GB RAM, 100 GB NVMe)
 - *Location* : selon les préférences
