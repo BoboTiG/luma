@@ -245,3 +245,39 @@ cat << 'EOF'
 EOF
 
 python listen.py 'PROVISIONER_PUBLIC_KEY'
+cat << 'EOF'
+b'k\x00\x00\x00{"Content-Location":"/on/blocks:a9e42d231967df49dba9ab1fdf5d40d68287c3af715b53cff841c7a8703bf6d2/accepted"}{"header":{"event_bloom":"000...","failed_iterations":[],"faultroot":"000...","gas_limit":3000000000,"generator_bls_pubkey":"22JbHtrL93fhFDvY...","hash":"a9e...","height":191574,"iteration":0,"prev_block_cert":{"ratification":{"aggregate_signature":"ac5...","bitset":106597789095414875},"result":{"Valid":"7e1..."},"validation":{"aggregate_signature":"844...","bitset":2232142576123535}},"prev_block_hash":"7e1...","seed":"942...","signature":"a32...","state_hash":"be8...","timestamp":1738167716,"txroot":"000...","version":1},"transactions":[]}'
+{
+    "header": {
+        "event_bloom": "000...",
+        "failed_iterations": [],
+        "faultroot": "000...",
+        "gas_limit": 3000000000,
+        "generator_bls_pubkey": "22JbHtrL93fhFDvY...",
+        "hash": "a9e...",
+        "height": 191574,
+        "iteration": 0,
+        "prev_block_cert": {
+            "ratification": {
+                "aggregate_signature": "ac5...",
+                "bitset": 106597789095414875
+            },
+            "result": {
+                "Valid": "7e1..."
+            },
+            "validation": {
+                "aggregate_signature": "844...",
+                "bitset": 2232142576123535
+            }
+        },
+        "prev_block_hash": "7e1...",
+        "seed": "942...",
+        "signature": "a32...",
+        "state_hash": "be8...",
+        "timestamp": 1738167716,
+        "txroot": "000...",
+        "version": 1
+    },
+    "transactions": []
+}
+EOF

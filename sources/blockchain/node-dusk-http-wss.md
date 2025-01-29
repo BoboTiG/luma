@@ -196,6 +196,19 @@ Une fois le script en fonctionnement, les numéros de blocs générés par le n�
 :language: shell
 ```
 
+Exemple de réponse brute (il s’agit du contenu de la variable `raw` dans le script) :
+
+```{literalinclude} snippets/node-dusk-http-wss.sh
+:lines: 249
+```
+
+Et une fois parsée, l’objet JSON suivant apparait (il s’agit du contenu de la variable `block` dans le script) :
+
+```{literalinclude} snippets/node-dusk-http-wss.sh
+:lines: 250-282
+:language: json
+```
+
 ## 📜 Historique
 
 2025-01-29
