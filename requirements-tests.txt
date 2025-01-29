@@ -3,5 +3,4 @@ mypy==1.14.1
 pymarkdownlnt==0.9.26
 ruff==0.9.3
 sphinx-autobuild==2024.10.3
-types-requests
 yamllint==1.35.1

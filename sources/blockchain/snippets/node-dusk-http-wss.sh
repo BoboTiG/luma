@@ -243,3 +243,5 @@ cat << 'EOF'
     }
 }
 EOF
+
+python listen.py 'PROVISIONER_PUBLIC_KEY'

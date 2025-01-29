@@ -28,7 +28,7 @@ VKZpBrNtEeTobMgYkkdcGiZn8fK2Ve2yez429yRXrH4nUUDTuvr7Tv74xFA2DKNVegtF6jaom2uacZMm
 ## 1️⃣ GraphQL
 
 ```{hint}
-Les requêtes GraphQL utilisent des données définies dans le code de [rusk](https://github.com/dusk-network/rusk/blob/master/explorer/src/lib/services/gql-queries.js), et il y a d'autres possibilités qu'il reste à découvrir.
+Les requêtes GraphQL utilisent des données définies dans le code de [rusk](https://github.com/dusk-network/rusk/blob/master/explorer/src/lib/services/gql-queries.js), et il y a d’autres possibilités qu’il reste à découvrir.
 ```
 
 ### Récupérer le dernier numéro de bloc
@@ -47,7 +47,7 @@ Exemple de réponse :
 
 ### Récupérer les N derniers blocs
 
-Plutôt que de récupérer trop d'informations, ici, nous ne voulons que le numéro du bloc (`height`) et l'adresse du nœud (`generatorBlsPubkey`) qui l'a validé.
+Plutôt que de récupérer trop d’informations, ici, nous ne voulons que le numéro du bloc (`height`) et l’adresse du nœud (`generatorBlsPubkey`) qui l’a validé.
 
 Vous pouvez modifier le nombre de blocs à la ligne `last: 100` (pour les 100 derniers blocs, par exemple).
 
@@ -143,7 +143,7 @@ Exemple de réponse :
 :language: json
 ```
 
-### Récupérer toutes les données d'un bloc, détails des transactions inclus, pour un bloc donné
+### Récupérer toutes les données d’un bloc, détails des transactions inclus, pour un bloc donné
 
 Le bloc en question est le numéro 189314.
 
@@ -178,19 +178,23 @@ Exemple de réponse :
 
 ## 3️⃣ RUES
 
-[RUES](https://docs.dusk.network/developer/integrations/rues/) pour *Rusk Universal Event System* est un système permettant d'écouter la *blockchain* pour récupérer les évènements en temps réel.
+[RUES](https://docs.dusk.network/developer/integrations/rues/) pour *Rusk Universal Event System* est un système permettant d’écouter la *blockchain* pour récupérer les évènements en temps réel.
 
-Voici un code écrit en Python qui s'intéresse aux blocs validés par un certain nœud :
+Voici du code écrit en Python, et il est nécessaire d’installer les modules [niquests](https://pypi.org/project/niquests/) et [websockets](https://pypi.org/project/websockets/) avant d’aller plus loin.
+
+### Lister les blocs validés par un nœud spécifique
 
 ```{literalinclude} snippets/node-dusk-http-wss.py
 :caption: Fichier : listen.py
-:emphasize-lines: 12
 :language: python
 ```
 
-Afin de pouvoir exécuter le script, il est nécessaire d'installer les modules [requests](https://pypi.org/project/requests/) et [websockets](https://pypi.org/project/websockets/).
+Une fois le script en fonctionnement, les numéros de blocs générés par le nœud apparaitront en temps réel :
 
-Enfin, une fois le script en fonctionnement, les numéros de blocs générés par le nœud apparaitrons en temps réel.
+```{literalinclude} snippets/node-dusk-http-wss.sh
+:lines: 247
+:language: shell
+```
 
 ## 📜 Historique
 
