@@ -57,7 +57,7 @@ Vous pouvez modifier le nombre de blocs à la ligne `last: 100` (pour les 100 de
 :language: shell
 ```
 
-Le même type de requête peut être effectué en spécifiant le nombre de blocs dans un entête HTTP spécial `rusk-gqlvar-XXX` (où `XXX` est le nom de la variable) :
+Le même type de requête peut être effectué en spécifiant le nombre de blocs dans un entête HTTP spécial [`rusk-gqlvar-XXX`](https://github.com/dusk-network/rusk/blob/2db27ecdd9614605ca2fd83a5a7370a0d0900706/rusk/src/lib/http/chain.rs#L35) (où `XXX` est le nom de la variable) :
 
 ```{literalinclude} snippets/node-dusk-http-wss.sh
 :lines: 22-26

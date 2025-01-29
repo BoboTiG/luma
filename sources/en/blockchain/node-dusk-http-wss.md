@@ -23,7 +23,7 @@ VKZpBrNtEeTobMgYkkdcGiZn8fK2Ve2yez429yRXrH4nUUDTuvr7Tv74xFA2DKNVegtF6jaom2uacZMm
 ## 1️⃣ GraphQL
 
 ```{hint}
-GraphQL requests use predefined data from within [rusk](https://github.com/dusk-network/rusk/blob/master/explorer/src/lib/services/gql-queries.js), and more capabilities are to be found.
+GraphQL requests use predefined data from within [rusk](https://github.com/dusk-network/rusk/blob/master/explorer/src/lib/services/gql-queries.js), and more capabilities are to be discovered yet.
 ```
 
 ### Fetch the latest block height
@@ -52,7 +52,7 @@ You can tweak the blocks count at the line `last: 100` (latest 100 blocks for in
 :language: shell
 ```
 
-Same as above, but using a special HTTP header to pass the number of blocks to fetch as a variable: `rusk-gqlvar-XXX` (where `XXX` is the vairable name).
+Same as above, but using a special HTTP header to pass the number of blocks to fetch as a variable: [`rusk-gqlvar-XXX`](https://github.com/dusk-network/rusk/blob/2db27ecdd9614605ca2fd83a5a7370a0d0900706/rusk/src/lib/http/chain.rs#L35) (where `XXX` is the vairable name).
 
 ```{literalinclude} ../../blockchain/snippets/node-dusk-http-wss.sh
 :lines: 22-26
