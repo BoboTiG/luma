@@ -32,7 +32,7 @@ zgrep ERROR /var/log/rusk*.log
 service rusk start
 
 tail -f /var/log/rusk.log
-rusk-wallet withdraw [AMOUNT]
+rusk-wallet withdraw [--amt AMOUNT]
 rusk-wallet balance --spendable
 rusk-wallet stake --amt 1000
 rusk-wallet stake-info
@@ -64,7 +64,7 @@ curl -s 'http://127.0.0.1:8080/02/Chain' \
 
 curl -s 'https://api.dusk.network/v1/stats' | jq '.lastBlock'
 rusk-wallet stake --amt AMOUNT
-rusk-wallet unstake \
+rusk-wallet unstake [--amt AMOUNT] \
     && rusk-wallet stake --amt AMOUNT
 
 rusk-wallet --state 'http://127.0.0.1:8080' balance
