@@ -71,6 +71,10 @@ html_theme_options = {
     ],
 }
 html_context = {
+    "languages": [
+        ("Français", "/" if "_live" in sys.argv else f"{url}/luma/"),
+        ("English", "/en/" if "_live" in sys.argv else f"{url}/luma/en/"),
+    ],
     "source_type": "github",
     "source_user": "BoboTiG",
     "source_repo": "luma",

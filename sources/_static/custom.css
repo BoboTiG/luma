@@ -12,7 +12,8 @@ article a[href^="http"]::after {
 }
 
 /* Home page title. */
-section#base-de-connaissances-du-luma h1 {
+section#base-de-connaissances-du-luma h1,
+section#knowledge-base-of-the-luma h1 {
     text-align: center;
     font-size: 2em;
 }
