@@ -12,7 +12,7 @@ Site web : [dusk.network](https://dusk.network)
 Voici différentes manières de questionner votre nœud Dusk : [GraphQL](#graphql), [RPC](#rpc) et [RUES](#rues).
 
 ````{tip}
-🇬🇧 Version anglaise : [How to query your Dusk node?](../en/blockchain/node-dusk-http-wss.md).
+🇬🇧 Version anglaise : [How to query your Dusk node?](../en/blockchain/node-dusk-http-wss.md)
 
 ```{code-block}
 :caption: 🫶 Adresse Dusk pour les pourboires
