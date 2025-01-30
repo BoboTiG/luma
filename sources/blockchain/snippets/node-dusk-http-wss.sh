@@ -281,3 +281,46 @@ b'k\x00\x00\x00{"Content-Location":"/on/blocks:a9e42d231967df49dba9ab1fdf5d40d68
     "transactions": []
 }
 EOF
+
+# Overview of all available GraphQL functions and their data structures
+curl 'https://nodes.dusk.network/on/graphql/query' -X POST
+
+# Fetch full history for a given address
+curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+    'query { fullMoonlightHistory(address: "PUBLIC_KEY", ord: "desc") { json } }'
+cat << 'EOF'
+{
+    "fullMoonlightHistory": {
+        "json": [
+            {
+                "block_height": 188242,
+                "events": [
+                    {
+                        "data": {
+                            "receiver": "66RS7dEhVtDgd11j...",
+                            "sender": "uTmRVArYPTGpBiuW...",
+                            "value": 580885000000000
+                        },
+                        "target": "0100000000000000000000000000000000000000000000000000000000000000",
+                        "topic": "convert"
+                    },
+                    {
+                        "data": {
+                            "gas_spent": 25614038,
+                            "memo": "",
+                            "receiver": null,
+                            "refund_info": null,
+                            "sender": "uTmRVArYPTGpBiuW...",
+                            "value": 0
+                        },
+                        "target": "0100000000000000000000000000000000000000000000000000000000000000",
+                        "topic": "moonlight"
+                    }
+                ],
+                "origin": "f689d1948dfcd541e9038ab98a709390849332c2091aca42afd1bd667c69e469"
+            },
+            // (...)
+        ]
+    }
+}
+EOF

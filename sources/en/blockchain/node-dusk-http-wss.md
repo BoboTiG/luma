@@ -22,8 +22,11 @@ VKZpBrNtEeTobMgYkkdcGiZn8fK2Ve2yez429yRXrH4nUUDTuvr7Tv74xFA2DKNVegtF6jaom2uacZMm
 
 ## 1️⃣ GraphQL
 
-```{hint}
-GraphQL requests use predefined data from within [rusk](https://github.com/dusk-network/rusk/blob/master/explorer/src/lib/services/gql-queries.js), and more capabilities are to be discovered yet.
+### Overview of all available GraphQL functions and their data structures
+
+```{literalinclude} ../../blockchain/snippets/node-dusk-http-wss.sh
+:lines: 286
+:language: shell
 ```
 
 ### Fetch the latest block height
@@ -155,6 +158,21 @@ Output example:
 :language: json
 ```
 
+### Fetch full history for a given address
+
+```{literalinclude} ../../blockchain/snippets/node-dusk-http-wss.sh
+:lines: 289-290
+:emphasize-lines: 2
+:language: shell
+```
+
+Output example:
+
+```{literalinclude} ../../blockchain/snippets/node-dusk-http-wss.sh
+:lines: 292-325
+:language: json
+```
+
 ## 2️⃣ RPC
 
 ### Get the list of all provisioners
@@ -205,6 +223,10 @@ And when parsed, this JSON object is made available (it is the `block` variable 
 ```
 
 ## 📜 Changelog
+
+2025-01-30
+: Add the GraphQL section [Overview of all available GraphQL functions and their data structures](#overview-of-all-available-graphql-functions-and-their-data-structures).
+: Add the GraphQL section [Fetch full history for a given address](#fetch-full-history-for-a-given-address).
 
 2025-01-29
 : First draft.

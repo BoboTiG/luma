@@ -27,8 +27,11 @@ VKZpBrNtEeTobMgYkkdcGiZn8fK2Ve2yez429yRXrH4nUUDTuvr7Tv74xFA2DKNVegtF6jaom2uacZMm
 
 ## 1️⃣ GraphQL
 
-```{hint}
-Les requêtes GraphQL utilisent des données définies dans le code de [rusk](https://github.com/dusk-network/rusk/blob/master/explorer/src/lib/services/gql-queries.js), et il y a d’autres possibilités qu’il reste à découvrir.
+### Lister les fonctions GraphQL disponibles et leurs structures de données
+
+```{literalinclude} snippets/node-dusk-http-wss.sh
+:lines: 286
+:language: shell
 ```
 
 ### Récupérer le dernier numéro de bloc
@@ -160,6 +163,21 @@ Exemple de réponse :
 :language: json
 ```
 
+### Récupérer tout l'historique d'une adresse
+
+```{literalinclude} snippets/node-dusk-http-wss.sh
+:lines: 289-290
+:emphasize-lines: 2
+:language: shell
+```
+
+Exemple de réponse :
+
+```{literalinclude} snippets/node-dusk-http-wss.sh
+:lines: 292-325
+:language: json
+```
+
 ## 2️⃣ RPC
 
 ### Récupérer la liste des nœuds validateurs
@@ -210,6 +228,10 @@ Et une fois parsée, l’objet JSON suivant apparait (il s’agit du contenu de 
 ```
 
 ## 📜 Historique
+
+2025-01-30
+: Ajout de la section GraphQL [Lister les fonctions GraphQL disponibles et leurs structures de données](#lister-les-fonctions-graphql-disponibles-et-leurs-structures-de-donnees).
+: Ajout de la section GraphQL [Récupérer tout l'historique d'une adresse](#recuperer-tout-l-historique-d-une-adresse).
 
 2025-01-29
 : Premier jet.
