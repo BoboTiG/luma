@@ -303,7 +303,7 @@ Le *slashing* est un système de protection qui pénalise les mauvais comporteme
 
 ## 🌡️ Supervision
 
-Il existe plusieurs projets permettant de suivre l’état du nœud, voici celle que j'utilise : [BoboTiG/dusk-monitor](https://github.com/BoboTiG/dusk-monitor).
+Il existe plusieurs projets permettant de suivre l’état du nœud, voici celui que j'utilise : [BoboTiG/dusk-monitor](https://github.com/BoboTiG/dusk-monitor).
 
 ## 🐛 Débogage
 

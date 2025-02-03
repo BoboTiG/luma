@@ -93,7 +93,7 @@ net.ipv4.icmp_echo_ignore_broadcasts = 1
 net.ipv4.icmp_echo_ignore_all = 1
 net.ipv4.icmp_ignore_bogus_error_responses = 1
 net.core.somaxconn = 65535
-net.core.netdev_max_backlog = 1000
+net.core.netdev_max_backlog = 2000
 net.core.rmem_default = 65536
 net.core.wmem_default = 65536
 net.core.rmem_max = 50000000
@@ -125,6 +125,5 @@ cat << 'EOF' > ~/perfs.sh
 sed -i 's/mtu = [0-9]*/mtu = 8192/' /opt/dusk/conf/rusk.toml \
     && sed -i 's/udp_recv_buffer_size = [0-9]*/udp_recv_buffer_size = 50000000/' /opt/dusk/conf/rusk.toml \
     && sed -i 's/max_inv_entries = [0-9]*/max_inv_entries = 500/' /opt/dusk/conf/rusk.toml \
-    && sed -i 's/max_udp_len = [0-9]*/max_udp_len = 20971520/' /opt/dusk/conf/rusk.toml \
-    && sed -i "s/# log_type = 'co.*/log_type = 'plain'/" /opt/dusk/conf/rusk.toml
+    && sed -i 's/max_udp_len = [0-9]*/max_udp_len = 20971520/' /opt/dusk/conf/rusk.toml
 EOF
