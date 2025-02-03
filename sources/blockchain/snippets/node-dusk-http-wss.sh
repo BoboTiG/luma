@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fetch the latest block height
-curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+curl 'https://nodes.dusk.network/on/graphql/query' --json \
    'query { block(height: -1) { header { height } } }'
 cat << 'EOF'
 {
@@ -15,13 +15,13 @@ EOF
 
 # Fetch latest N blocks (here: 100 blocks, and only the bloc height, and provisioner)
 # You can find more retreivable data from `BlockInfo`: https://github.com/dusk-network/rusk/blob/835bc6f57d3f1edb06f45266b9005018772b0561/explorer/src/lib/services/gql-queries.js#L27
-curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+curl 'https://nodes.dusk.network/on/graphql/query' --json \
    'fragment BlockInfo on Block { header { height, generatorBlsPubkey } }
     query() { blocks(last: 100) {...BlockInfo} }'
 # Same as above, but using HTTP headers to pass the number of blocks to fetch as a variable
 curl 'https://nodes.dusk.network/on/graphql/query' \
     -H 'rusk-gqlvar-count: 100' \
-    --data-raw \
+    --json \
         'fragment BlockInfo on Block { header { height, generatorBlsPubkey } }
          query($count: Int!) { blocks(last: $count) {...BlockInfo} }'
 cat << 'EOF'
@@ -45,7 +45,7 @@ cat << 'EOF'
 EOF
 
 # Fetch latest 100 blocks (include the height, provisioner, and transactions data)
-curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+curl 'https://nodes.dusk.network/on/graphql/query' --json \
    'fragment TransactionInfo on SpentTransaction { tx { callData { contractId, data, fnName }, txType }}
     fragment BlockInfo on Block { header { height, generatorBlsPubkey }, transactions {...TransactionInfo} }
     query() { blocks(last: 100) {...BlockInfo} }'
@@ -78,7 +78,7 @@ EOF
 
 
 # Same as above, but get a JSON serialization of transactions data
-curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+curl 'https://nodes.dusk.network/on/graphql/query' --json \
    'fragment TransactionInfo on SpentTransaction { tx { json } }
     fragment BlockInfo on Block { header { height, generatorBlsPubkey }, transactions {...TransactionInfo} }
     query() { blocks(last: 100) {...BlockInfo} }'
@@ -127,7 +127,7 @@ cat << 'EOF'
 EOF
 
 # Fetch transaction details on a given block
-curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+curl 'https://nodes.dusk.network/on/graphql/query' --json \
    'fragment TransactionInfo on SpentTransaction { tx { json } }
     fragment BlockInfo on Block { transactions {...TransactionInfo} }
     query() { block(height: 189314) {...BlockInfo} }'
@@ -146,7 +146,7 @@ cat << 'EOF'
 EOF
 
 # Fetch a range of blocks (here, from blocks at height 10 until 12)
-curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+curl 'https://nodes.dusk.network/on/graphql/query' --json \
    'fragment BlockInfo on Block { header { height, generatorBlsPubkey } }
     query() { blocks(range: [10, 12]) {...BlockInfo} }'
 cat << 'EOF'
@@ -195,7 +195,7 @@ cat << 'EOF'
 EOF
 
 # Fetch full block, and transaction, details on a given block
-curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+curl 'https://nodes.dusk.network/on/graphql/query' --json \
     'fragment TransactionInfo on SpentTransaction { blockHash, blockHeight, blockTimestamp, err, gasSpent, id, tx { callData { contractId, data, fnName }, gasLimit, gasPrice, id, isDeploy, json, memo, txType } }
      fragment BlockInfo on Block { header { hash, gasLimit, height, generatorBlsPubkey, prevBlockHash, seed, stateHash, timestamp, version }, fees, gasSpent, reward, transactions {...TransactionInfo} }
      query() { block(height: 189314) {...BlockInfo} }'
@@ -286,7 +286,7 @@ EOF
 curl 'https://nodes.dusk.network/on/graphql/query' -X POST
 
 # Fetch full history for a given address
-curl 'https://nodes.dusk.network/on/graphql/query' --data-raw \
+curl 'https://nodes.dusk.network/on/graphql/query' --json \
     'query { fullMoonlightHistory(address: "PUBLIC_KEY", ord: "desc") { json } }'
 cat << 'EOF'
 {
