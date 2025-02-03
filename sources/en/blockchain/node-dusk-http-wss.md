@@ -224,6 +224,9 @@ And when parsed, this JSON object is made available (it is the `block` variable 
 
 ## 📜 Changelog
 
+2025-02-03
+: Prefer using the `--json` argument for `curl` calls instead of `--data-raw`.
+
 2025-01-30
 : Add the GraphQL section [Overview of all available GraphQL functions and their data structures](#overview-of-all-available-graphql-functions-and-their-data-structures).
 : Add the GraphQL section [Fetch full history for a given address](#fetch-full-history-for-a-given-address).
