@@ -163,7 +163,7 @@ Exemple de réponse :
 :language: json
 ```
 
-### Récupérer tout l'historique d'une adresse
+### Récupérer tout l’historique d’une adresse
 
 ```{literalinclude} snippets/node-dusk-http-wss.sh
 :lines: 289-290
@@ -229,9 +229,12 @@ Et une fois parsée, l’objet JSON suivant apparait (il s’agit du contenu de 
 
 ## 📜 Historique
 
+2025-02-03
+: Remplacement de l’argument `--data-raw` par `--json` pour les appels à `curl`.
+
 2025-01-30
 : Ajout de la section GraphQL [Lister les fonctions GraphQL disponibles et leurs structures de données](#lister-les-fonctions-graphql-disponibles-et-leurs-structures-de-donnees).
-: Ajout de la section GraphQL [Récupérer tout l'historique d'une adresse](#recuperer-tout-l-historique-d-une-adresse).
+: Ajout de la section GraphQL [Récupérer tout l’historique d’une adresse](#recuperer-tout-l-historique-d-une-adresse).
 
 2025-01-29
 : Premier jet.
