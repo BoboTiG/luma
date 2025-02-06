@@ -14,7 +14,7 @@ Ci-dessous, le schéma d’installation concentré sur la connexion ([cliquer ic
 
 ### Côté Onduleur
 
-Sur l’onduleur (*inverter* en anglais), le câble se branche dans le port **BMS**, et il ne comporte que deux pins : les n° **3** (marron) et **5** (blanc marron) :
+Sur l’onduleur (*inverter*, en anglais), le câble se branche dans le port **BMS**, et il ne comporte que deux pins : les n° **3** (marron) et **5** (blanc marron) :
 
 ```{figure} images/rj45-rs485-inverter.svg
 :align: center
@@ -22,7 +22,7 @@ Sur l’onduleur (*inverter* en anglais), le câble se branche dans le port **BM
 
 ### Côté Batterie
 
-Sur la batterie (*battery* en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que deux pins : les n° **7** (blanc marron) et **8** (marron) :
+Sur la batterie (*battery*, en anglais), le câble se branche dans le port **B/RS485**, et il ne comporte que deux pins : les n° **7** (blanc marron) et **8** (marron) :
 
 ```{figure} images/rj45-rs485-battery.svg
 :align: center
@@ -59,6 +59,9 @@ Si batterie(s) *slave* il y a, mettre tous leurs DIP en position haute (OFF) :
 - [Connecteurs RJ45](https://www.amazon.fr/dp/B0857FL8G6).
 
 ## 📜 Historique
+
+2025-02-06
+: Amélioration du support du thème sombre pour les fichiers SVG.
 
 2024-02-27
 : Les fichiers SVG des câbles RJ45 s’adaptent automatiquement au thème sombre.
