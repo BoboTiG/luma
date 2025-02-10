@@ -391,7 +391,7 @@ Erreurs connues :
    2025-01-13T11:01:23.140197Z ERROR kadcast::handling: Invalid Id Header { binary_id: BinaryID { bytes: [173, 236, 205, 149, 2, 31, 24, 69, 160, 37, 18, 19, 190, 133, 175, 232], nonce: [118, 0, 0, 0] }, sender_port: 9000, network_id: 1, reserved: [0, 0] } - from REDACTED
    ```
 
-2. D’après le [développeur principal](https://github.com/herr-seppia), cette erreur n’est pas importante et peut être ignorée :
+2. Cette erreur n’est pas importante et peut être ignorée (elle sera bientôt de l’[histoire ancienne](https://github.com/dusk-network/rusk/issues/3478)) :
 
    ```{code-block}
    2025-01-22T00:13:52.189187Z ERROR main{round=125324 iter=0 name=Ratification pk="REDACTED"}: dusk_consensus::execution_ctx: phase handler err: VoteAlreadyCollected
