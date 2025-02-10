@@ -16,6 +16,7 @@ apt install btop \
         byobu \
         cloud-guest-utils \
         cmake \
+        command-not-found \
         cracklib-runtime \
         dbus \
         dosfstools \
