@@ -1,5 +1,5 @@
 minify-html==0.15.0
-myst-parser==4.0.0
+myst-parser==4.0.1
 rcssmin==1.2.0
 rjsmin==1.2.3
 shibuya==2025.2.11
