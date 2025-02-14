@@ -245,7 +245,7 @@ Pour l’exemple, plaçons 1 000 DUSK en *staking* (c’est le [minimum requis](
 :language: shell
 ```
 
-```{astuce}
+```{tip}
 Plus il y a de *tokens* en *staking*, plus il y a de chances d’être sélectionné.
 ```
 
@@ -401,6 +401,9 @@ Erreurs connues :
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-02-14
+: Mise à jour de la version du script d’installation de Dusk (`0.5.3` → `0.5.4`).
 
 2025-01-23
 : Correction des chiffres liés aux [récompenses](#recompenses).

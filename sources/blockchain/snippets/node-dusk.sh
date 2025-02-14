@@ -20,7 +20,7 @@ apt install -y ufw \
 
 
 apt install -y jq net-tools unzip
-curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.3/node-installer.sh | bash
+curl -sL https://github.com/dusk-network/node-installer/releases/download/v0.5.4/node-installer.sh | bash
 
 
 rusk-wallet restore
