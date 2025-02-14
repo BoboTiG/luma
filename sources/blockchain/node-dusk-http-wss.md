@@ -178,6 +178,23 @@ Exemple de réponse :
 :language: json
 ```
 
+### Récupérer la balance et le nonce d’un compte
+
+```{versionadded} 1.0.2
+```
+
+```{literalinclude} snippets/node-dusk-http-wss.sh
+:lines: 329
+:language: shell
+```
+
+Output example:
+
+```{literalinclude} snippets/node-dusk-http-wss.sh
+:lines: 331-334
+:language: json
+```
+
 ## 2️⃣ RPC
 
 ### Récupérer la liste des nœuds validateurs
@@ -228,6 +245,9 @@ Et une fois parsée, l’objet JSON suivant apparait (il s’agit du contenu de 
 ```
 
 ## 📜 Historique
+
+2025-02-14
+:  Ajout de la section GraphQL [Récupérer la balance et le nonce d’un compte](#recuperer-la-balance-et-le-nonce-dun-compte) (rusk `1.0.2`).
 
 2025-02-03
 : Remplacement de l’argument `--data-raw` par `--json` pour les appels à `curl`.

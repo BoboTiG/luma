@@ -324,3 +324,12 @@ cat << 'EOF'
     }
 }
 EOF
+
+# Fetch account balance & nonce
+curl -X POST 'https://nodes.dusk.network/on/account:PUBLIC_KEY/status'
+cat << 'EOF'
+{
+    "balance": 260292192764359648,
+    "nonce": 260
+}
+EOF

@@ -173,6 +173,23 @@ Output example:
 :language: json
 ```
 
+### Fetch Account Balance & Nonce
+
+```{versionadded} 1.0.2
+```
+
+```{literalinclude} ../../blockchain/snippets/node-dusk-http-wss.sh
+:lines: 329
+:language: shell
+```
+
+Output example:
+
+```{literalinclude} ../../blockchain/snippets/node-dusk-http-wss.sh
+:lines: 331-334
+:language: json
+```
+
 ## 2️⃣ RPC
 
 ### Get the list of all provisioners
@@ -223,6 +240,9 @@ And when parsed, this JSON object is made available (it is the `block` variable 
 ```
 
 ## 📜 Changelog
+
+2025-02-14
+: Add the GraphQL section [Fetch Account Balance & Nonce](#fetch-account-balance-nonce) (rusk `1.0.2`).
 
 2025-02-03
 : Prefer using the `--json` argument for `curl` calls instead of `--data-raw`.
