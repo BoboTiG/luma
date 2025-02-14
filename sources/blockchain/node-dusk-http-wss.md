@@ -215,7 +215,7 @@ Exemple de réponse :
 
 [RUES](https://docs.dusk.network/developer/integrations/rues/) pour *Rusk Universal Event System* est un système permettant d’écouter la *blockchain* pour récupérer les évènements en temps réel.
 
-Voici du code écrit en Python, et il est nécessaire d’installer les modules [niquests](https://pypi.org/project/niquests/) et [websockets](https://pypi.org/project/websockets/) avant d’aller plus loin.
+Voici du code écrit en Python, et il est nécessaire d’installer les modules [requests](https://pypi.org/project/requests/) et [websockets](https://pypi.org/project/websockets/) avant d’aller plus loin.
 
 ### Lister les blocs validés par un nœud spécifique
 

@@ -210,7 +210,7 @@ Output example:
 
 [RUES](https://docs.dusk.network/developer/integrations/rues/) for *Rusk Universal Event System* is a mechanism for handling real-time communication with an event-driven approach.
 
-This is some Python code, and you will need to install [niquests](https://pypi.org/project/requests/), and [websockets](https://pypi.org/project/websockets/), modules first.
+This is some Python code, and you will need to install [requests](https://pypi.org/project/requests/), and [websockets](https://pypi.org/project/websockets/), modules first.
 
 ### Look for generated blocks of a given provisioner
 

@@ -5,7 +5,7 @@ Source: https://github.com/BoboTiG/dusk-monitor
 
 import json
 
-import niquests
+import requests
 import websockets
 
 
@@ -18,7 +18,7 @@ async def listen_to_accepted_blocks(provisioner: str) -> None:
         session_id = await wss.recv()
 
         # Subscribe to the accepted blocks topic
-        with niquests.get(blocks_accepted_url, headers={"Rusk-Session-Id": session_id}) as req:
+        with requests.get(blocks_accepted_url, headers={"Rusk-Session-Id": session_id}) as req:
             req.raise_for_status()
 
         while "listening":
