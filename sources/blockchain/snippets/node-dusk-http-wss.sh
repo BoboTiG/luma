@@ -175,7 +175,7 @@ cat << 'EOF'
 EOF
 
 # Get the list of all provisioners
-curl 'https://nodes.dusk.network/on/node/provisioners' -X POST
+curl -X POST 'https://nodes.dusk.network/on/node/provisioners'
 cat << 'EOF'
 [
     {
@@ -283,7 +283,7 @@ b'k\x00\x00\x00{"Content-Location":"/on/blocks:a9e42d231967df49dba9ab1fdf5d40d68
 EOF
 
 # Overview of all available GraphQL functions and their data structures
-curl 'https://nodes.dusk.network/on/graphql/query' -X POST
+curl -X POST 'https://nodes.dusk.network/on/graphql/query'
 
 # Fetch full history for a given address
 curl 'https://nodes.dusk.network/on/graphql/query' --json \
