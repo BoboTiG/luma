@@ -210,6 +210,9 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 
 ## 📜 Historique
 
+```{admonition} Historique complet
+:class: toggle
+
 2024-10-17
 : Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2020/04/04/13/17/31-la-liseuse-kobo-libra-h2o).
 : Adaptation du nom du domaine pour le téléchargement du firmware (*kbdownload1-a.akamaihd.net* → *ereaderfiles.kobo.com*).
@@ -247,3 +250,7 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 : Mise à jour du firmware (`4.20.14622` → `4.25.15875`) et des patches (`v59` → `v69`).
 : Adaptation de l’emplacement du dictionnaire (*.kobo/dict/* → *.kobo/custom-dict/*).
 : Ajout de la section [police de caractères](#police-de-caracteres).
+
+2020-04-04
+: Premier jet.
+```
