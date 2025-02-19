@@ -37,12 +37,14 @@ docstring-code-format = true
 [tool.ruff.lint]
 extend-select = ["ALL"]
 ignore = [
-    "ANN401",  # typing.Any disallowed in `*args`
-    "COM812",  # conflict
-    "D",       # docstrings
-    "ERA001",  # commented code
-    "INP001",  # xxx is part of an implicit namespace package
-    "ISC001",  # conflict
-    "T201",    # print()
+    "ANN401",    # typing.Any disallowed in `*args`
+    "ASYNC210",  # async functions should not call blocking HTTP methods
+    "COM812",    # conflict
+    "D",         # docstrings
+    "ERA001",    # commented code
+    "INP001",    # xxx is part of an implicit namespace package
+    "ISC001",    # conflict
+    "S113",      # probable use of `requests` call without timeout
+    "T201",      # `print()`
 ]
 fixable = ["ALL"]
