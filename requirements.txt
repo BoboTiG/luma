@@ -1,7 +1,7 @@
 minify-html==0.15.0
 myst-parser==4.0.1
 rcssmin==1.2.1
-rjsmin==1.2.3
+rjsmin==1.2.4
 shibuya==2025.2.14
 sphinx==8.1.3
 sphinx-contributors==0.2.7
