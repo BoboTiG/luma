@@ -89,6 +89,12 @@ exclude_patterns = ["**/_*"]
 if "_live" not in sys.argv:
     exclude_patterns.append("brouillons/**")
 
+# sphinx-copybutton (content to be skipped when copying)
+#   - .linenos is the Sphinx default for line numbers
+#   - .gp is the Pygments class for the prompts
+#   - .go is the class for console outputs
+copybutton_exclude = ".linenos, .gp, .go"
+
 # sphinx-last-updated-by-git
 git_last_updated_timezone = ZoneInfo("Europe/Paris")
 html_last_updated_fmt = "%Y-%m-%d %H:%M:%S UTC%Z"
