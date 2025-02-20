@@ -79,7 +79,6 @@ html_context = {
     "source_user": "BoboTiG",
     "source_repo": "luma",
     "source_docs_path": "/sources/",
-    "source_version": "main",
 }
 
 # Do not include shared files
