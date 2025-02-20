@@ -8,6 +8,7 @@ Il vous faudra un système d’exploitation sous GNU/Linux, puis :
 
 ```{literalinclude} snippets/node-ethereum-locale.sh
 :lines: 3-12
+:emphasize-lines: 1
 :language: shell
 ```
 
