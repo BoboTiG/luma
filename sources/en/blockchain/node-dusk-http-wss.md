@@ -242,7 +242,7 @@ And when parsed, this JSON object is made available (it is the `block` variable 
 ## 📜 Changelog
 
 2025-02-14
-: Add the GraphQL section [Fetch Account Balance & Nonce](#fetch-account-balance-nonce) (rusk `1.0.2`).
+: Add the GraphQL section [Fetch Account Balance & Nonce](#fetch-account-balance-nonce) (rusk [`1.0.2`](https://github.com/dusk-network/rusk/releases/tag/dusk-rusk-1.1.0)).
 
 2025-02-03
 : Prefer using the `--json` argument for `curl` calls instead of `--data-raw`.
