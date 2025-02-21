@@ -81,7 +81,7 @@ Output example:
 Output example:
 
 ```{literalinclude} ../../blockchain/snippets/node-dusk-http-wss.sh
-:lines: 53-76
+:lines: 53-75
 :language: json
 ```
 
@@ -96,7 +96,7 @@ Output example:
 Output example:
 
 ```{literalinclude} ../../blockchain/snippets/node-dusk-http-wss.sh
-:lines: 86-104
+:lines: 86-103
 :language: json
 ```
 

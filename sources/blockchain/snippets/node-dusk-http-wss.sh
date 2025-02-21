@@ -52,7 +52,6 @@ curl 'https://nodes.dusk.network/on/graphql/query' --json \
 cat << 'EOF'
 {
     "blocks": [
-        // (...)
         {
             "header": {
                 "generatorBlsPubkey": "24e5SaodhsLnTpHW...",
@@ -77,6 +76,7 @@ cat << 'EOF'
 EOF
 
 
+
 # Same as above, but get a JSON serialization of transactions data
 curl 'https://nodes.dusk.network/on/graphql/query' --json \
    'fragment TransactionInfo on SpentTransaction { tx { json } }
@@ -85,7 +85,6 @@ curl 'https://nodes.dusk.network/on/graphql/query' --json \
 cat << 'EOF'
 {
     "blocks": [
-        // (...)
         {
             "header": {
                 "generatorBlsPubkey": "24e5SaodhsLnTpHW...",
@@ -103,6 +102,7 @@ cat << 'EOF'
     ]
 }
 EOF
+
 cat << 'EOF'
 {
     "call": {
