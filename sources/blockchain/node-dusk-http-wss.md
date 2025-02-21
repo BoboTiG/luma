@@ -247,7 +247,7 @@ Et une fois parsée, l’objet JSON suivant apparait (il s’agit du contenu de 
 ## 📜 Historique
 
 2025-02-14
-:  Ajout de la section GraphQL [Récupérer la balance et le nonce d’un compte](#recuperer-la-balance-et-le-nonce-dun-compte) (rusk `1.0.2`).
+:  Ajout de la section GraphQL [Récupérer la balance et le nonce d’un compte](#recuperer-la-balance-et-le-nonce-dun-compte) (rusk [`1.0.2`](https://github.com/dusk-network/rusk/releases/tag/dusk-rusk-1.1.0)).
 
 2025-02-03
 : Remplacement de l’argument `--data-raw` par `--json` pour les appels à `curl`.
