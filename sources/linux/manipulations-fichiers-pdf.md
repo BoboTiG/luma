@@ -58,6 +58,15 @@ Pour fusionner plusieurs fichiers PDF en un seul :
 :language: shell
 ```
 
+## Extraire
+
+Pour extraire une ou plusieurs pages d’un fichier PDF :
+
+```{literalinclude} snippets/manipulations-fichiers-pdf.sh
+:lines: 44
+:language: shell
+```
+
 ## Optimiser
 
 `GhostScript` permet de réduire grandement le poids du fichier final :
@@ -135,6 +144,9 @@ Générer un nouveau PDF comportant les nouvelles méta-données :
 ```
 
 ## 📜 Historique
+
+2025-02-22
+: Ajout de la section [Extraire](#extraire).
 
 2024-08-30
 : Ajout de la section [Sécuriser](#securiser).
