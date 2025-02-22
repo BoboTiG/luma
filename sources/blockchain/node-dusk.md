@@ -402,6 +402,9 @@ Erreurs connues :
 ```{admonition} Historique complet
 :class: toggle
 
+2025-02-22
+: Mise à jour définitive de la version du script d’installation de Dusk (`0.5.4` → `latest`).
+
 2025-02-14
 : Mise à jour de la version du script d’installation de Dusk (`0.5.3` → `0.5.4`).
 
