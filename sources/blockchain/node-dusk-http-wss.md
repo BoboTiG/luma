@@ -20,11 +20,6 @@ VKZpBrNtEeTobMgYkkdcGiZn8fK2Ve2yez429yRXrH4nUUDTuvr7Tv74xFA2DKNVegtF6jaom2uacZMm
 ```
 ````
 
-## 🔗 Liens Utiles
-
-- [Comment déployer un nœud Dusk ?](./node-dusk.md)
-- [RUES](https://docs.dusk.network/developer/integrations/rues/)
-
 ## 1️⃣ GraphQL
 
 ### Lister les fonctions GraphQL disponibles et leurs structures de données
