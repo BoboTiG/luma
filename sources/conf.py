@@ -66,8 +66,9 @@ html_theme_options = {
     "github_url": "https://github.com/BoboTiG",
     "globaltoc_expand_depth": 2,
     "nav_links": [
-        {"title": "Blog", "url": url},
-        {"title": "Liens", "url": f"{url}/links"},
+        {"title": "🏠 Blog", "url": url},
+        {"title": "🔗 Liens", "url": f"{url}/links"},
+        {"title": "🎖️ Patreon", "url": "https://www.patreon.com/mschoentgen"},
     ],
 }
 html_context = {
