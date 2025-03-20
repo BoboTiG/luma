@@ -1,5 +1,7 @@
 # Base de Connaissances du [Luma](https://fr.wiktionary.org/wiki/luma)
 
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/mschoentgen)
+
 ![Logo](sources/_static/logo.svg)
 
 Site web complet pour le partage de connaissances.
