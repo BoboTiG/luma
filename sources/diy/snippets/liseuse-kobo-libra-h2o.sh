@@ -47,4 +47,8 @@ wget 'http://ftp.gnu.org/gnu/freefont/freefont-ttf-20120503.zip' \
     && cp -v FreeSerif*.ttf "${KOBO_ROOT}/fonts" \
     && sync
 
-patch --binary src/libnickel.so.1.0.0.yaml libnickel.so.1.0.0.diff
+sed -i '470s/no/yes/' src/libnickel.so.1.0.0.yaml \
+    && patch src/libnickel.so.1.0.0.yaml <<'EOF'
+533a534
+>   - ReplaceString: {Offset: 54, Find: "serif    ",              Replace: "FreeSerif",              MustMatchLength: yes}
+EOF

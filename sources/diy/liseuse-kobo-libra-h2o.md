@@ -108,10 +108,10 @@ Il y a possibilité de personnaliser quelques [options et comportements](https:/
    :language: diff
    ```
 
-   Afin d’appliquer ces modification à votre fichier, copier le code précédent dans le fichier **libnickel.so.1.0.0.diff**, puis :
+   Afin d’appliquer ces modification à votre fichier, voici deux commandes :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
-   :lines: 50
+   :lines: 50-54
    :language: shell
    ```
 
@@ -212,6 +212,9 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-03-24
+: Mise à jour de la commande pour patcher le fichier `src/libnickel.so.1.0.0.yaml`.
 
 2024-10-17
 : Déplacement de l’article depuis le [blog](https://www.tiger-222.fr/?d=2020/04/04/13/17/31-la-liseuse-kobo-libra-h2o).
