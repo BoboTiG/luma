@@ -1,4 +1,4 @@
-minify-html==0.15.0
+minify-html==0.16.4
 myst-parser==4.0.1
 rcssmin==1.2.1
 rjsmin==1.2.4
