@@ -1,6 +1,9 @@
 # Base de Connaissances du [Luma](https://fr.wiktionary.org/wiki/luma)
 
-[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/mschoentgen)
+> [!TIP]
+> Deviens **mon boss**, ou **ma bosse**, pour m'aider à améliorer ce projet, et le monde par ailleurs :
+> 
+> [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/mschoentgen)
 
 ![Logo](sources/_static/logo.svg)
 
