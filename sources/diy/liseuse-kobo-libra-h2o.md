@@ -7,10 +7,9 @@
 La liseuse Kobo Libra H2O, en mode nuit, affichant "<u>Seconde Fondation</u>", d’Isaac Asimov.
 ```
 
-Ayant fait l’acquisition de cette liseuse, il fallait passer par quelques étapes avant de pouvoir réellement m’en servir.
-Voici une petite liste des choses à faire.
+Ayant fait l’acquisition de cette liseuse, il fallait passer par quelques étapes avant de pouvoir réellement m’en servir (compter 171 € pour la liseuse et 16,99 € pour la coque, toutes deux neuves).
 
-Pour la suite de l’article, la Kobo est vue par le système (GNU/Linux) en tant que */dev/sdc* et ces variables d’environnement sont définies suivant l’emplacement du dossier dans lequel elle est montée :
+Pour la suite de l’article, la Kobo est vue par le système (GNU/Linux) en tant que `/dev/sdc` et ces variables d’environnement sont définies suivant l’emplacement du dossier dans lequel elle est montée :
 
 ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
 :lines: 3-7
@@ -25,8 +24,8 @@ Quelques étapes que j’ai préféré faire, mais dont aucune n’est indispens
 ### 💿 Sauvegarde
 
 1. Brancher le cordon USB à l’ordinateur.
-2. Lorsque la liseuse démarre, choisir "Vous n’avez pas de réseau Wi-Fi ?".
-3. La liseuse est détectée et montée, la démonter.
+2. Lorsque la liseuse démarre, choisir "*Vous n’avez pas de réseau Wi-Fi ?*".
+3. La liseuse est détectée et montée. La démonter.
 4. Faire la sauvegarde :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
@@ -36,7 +35,7 @@ Quelques étapes que j’ai préféré faire, mais dont aucune n’est indispens
    ```
 
 5. Remonter la liseuse.
-6. Faire une copie du dossier **.kobo**:
+6. Faire une copie du dossier `.kobo` :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
    :lines: 12
@@ -95,14 +94,14 @@ Il y a possibilité de personnaliser quelques [options et comportements](https:/
    :language: shell
    ```
 
-3. Éditer les fichiers **src/*.yaml** pour activer les patches désirés. Ou éditez le fichier **kobopatch.yaml**. Voici mes options :
+3. Éditer les fichiers `src/*.yaml` pour activer les patches désirés. Ou éditez le fichier `kobopatch.yaml`. Voici mes options :
 
    ```{literalinclude} snippets/kobopatch.yaml.orig
    :caption: Fichier : kobopatch.yaml
    :language: yaml
    ```
   
-   Modifications apportées à **src/libnickel.so.1.0.0.yaml** :
+   Modifications apportées à `src/libnickel.so.1.0.0.yaml` :
 
    ```{literalinclude} snippets/libnickel.so.1.0.0.diff
    :language: diff
@@ -129,7 +128,7 @@ Il y a possibilité de personnaliser quelques [options et comportements](https:/
 En option, vous pouvez installer un menu supplémentaire, [NickelMenu](https://pgaskin.net/NickelMenu/), qui permet d’ajouter des actions spécifiques intéressantes. Le menu se trouvera en bas à droite de l’écran.
 Je m’en sers notamment pour (dés)activer les captures d’écran, inverser les couleurs, enregistrer les logs ou encore démarrer une application de prise de notes/dessins assez cool (voici la liste des [options disponibles](https://github.com/pgaskin/NickelMenu/blob/v0.5.4/res/doc)).
 
-1. Télécharger le fichier et copier le firmware:
+1. Télécharger le fichier et copier le firmware :
 
    ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
    :lines: 30-32
@@ -150,7 +149,7 @@ Je m’en sers notamment pour (dés)activer les captures d’écran, inverser le
 
 ## 📘 Dictionnaire
 
-Installons le dictionnaire [basé sur le Wiktionnaire](https://www.tiger-222.fr/?d=2020/04/17/22/14/21-un-dictionnaire-alternatif-et-complet-pour-la-votre-liseuse):
+Installons le dictionnaire [basé sur le Wiktionnaire](https://www.tiger-222.fr/?d=2020/04/17/22/14/21-un-dictionnaire-alternatif-et-complet-pour-la-votre-liseuse) :
 
 ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
 :lines: 34-37
@@ -163,7 +162,7 @@ D’autres langues sont disponibles dans le dépôt officiel : [BoboTiG/ebook-re
 
 ## 🔤 Police de caractères
 
-Un police de caractères supportant un grand nombre de langues est préférable pour l’affichage des étymologies. FreeSerif en est une, du projet [FreeFont](https://www.gnu.org/software/freefont/) :
+Un police de caractères supportant un grand nombre de langues est préférable pour l’affichage des étymologies. **FreeSerif** en est une, du projet [FreeFont](https://www.gnu.org/software/freefont/) :
 
 ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
 :lines: 39-48
@@ -212,6 +211,10 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-03-27
+: Ajout du prix d'achat.
+: Petites corrections sémantiques par-ci, par-là.
 
 2025-03-24
 : Mise à jour de la commande pour patcher le fichier `src/libnickel.so.1.0.0.yaml`.
