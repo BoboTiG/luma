@@ -149,7 +149,7 @@ Je m’en sers notamment pour (dés)activer les captures d’écran, inverser le
 
 ## 📘 Dictionnaire
 
-Installons le dictionnaire [basé sur le Wiktionnaire](https://www.tiger-222.fr/?d=2020/04/17/22/14/21-un-dictionnaire-alternatif-et-complet-pour-la-votre-liseuse) :
+Installons le meilleur dictionnaire du marché, basé ur [le Wiktionnaire](https://www.tiger-222.fr/?d=2020/04/17/22/14/21-un-dictionnaire-alternatif-et-complet-pour-la-votre-liseuse) :
 
 ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
 :lines: 34-37
@@ -157,7 +157,7 @@ Installons le dictionnaire [basé sur le Wiktionnaire](https://www.tiger-222.fr/
 ```
 
 ```{tip}
-D’autres langues sont disponibles dans le dépôt officiel : [BoboTiG/ebook-reader-dict](https://github.com/BoboTiG/ebook-reader-dict).
+D’autres langues sont disponibles sur [la page du projet](https://github.com/BoboTiG/ebook-reader-dict).
 ```
 
 ## 🔤 Police de caractères
