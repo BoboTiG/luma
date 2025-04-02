@@ -29,8 +29,8 @@ server.modules += ( "mod_magnet" )
 
 Il va falloir activer ce nouveau site web, puis créer le dossier pour stocker le script Lua qui contiendra la logique de traitement de la requête :
 
-```{code-block} shell
-sudo ln -s \
+```{code-block} console
+$ sudo ln -s \
     /etc/lighttpd/conf-available/16-detectportal.conf \
     /etc/lighttpd/conf-enabled/16-detectportal.conf \
     && sudo mkdir -p /etc/lighttpd/scripts
@@ -62,8 +62,8 @@ sudo systemctl restart lighttpd
 
 Exemple de sortie console lorsque tout est correctement en place :
 
-```{code-block} text
-:caption: $ curl -v detectportal.firefox.com
+```{code-block} console
+$ curl -v detectportal.firefox.com
 
 * Host detectportal.firefox.com:80 was resolved.
 * IPv6: 2600:1901:0:38d7::

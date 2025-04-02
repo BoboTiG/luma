@@ -24,7 +24,7 @@ Et très certainement des droits d’accès au port TTY émulé :
 
 ```{code-block} shell
 sudo gpasswd -a $USER dialout && exit
-# or
+# ou
 # sudo chmod a+rw /dev/ttyUSB0
 ```
 

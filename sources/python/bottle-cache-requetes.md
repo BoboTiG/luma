@@ -20,8 +20,8 @@ python app.py
 
 Et voyons que ça fonctionne :
 
-```{code-block} html
-:caption: $ curl 'http://localhost:8080/hello/Mickaël'
+```{code-block} console
+$ curl 'http://localhost:8080/hello/Mickaël'
 
 <b>Hello Mickaël</b>
 ```
@@ -92,16 +92,16 @@ Dernière étape, utiliser le décorateur :
 
 Le premier appel n’est pas en cache :
 
-```{code-block} html
-:caption: $ curl 'http://localhost:8080/hello/Mickaël'
+```{code-block} console
+$ curl 'http://localhost:8080/hello/Mickaël'
 
 <b>Hello Mickaël</b>
 ```
 
 Et les suivants le sont :
 
-```{code-block} html
-:caption: $ curl 'http://localhost:8080/hello/Mickaël'
+```{code-block} console
+$ curl 'http://localhost:8080/hello/Mickaël'
 
 <b>Hello Mickaël</b>
 <!-- Cached: 2023-10-17 07:08:41.510318+00:00 -->

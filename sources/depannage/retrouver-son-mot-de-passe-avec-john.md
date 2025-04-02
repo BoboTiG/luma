@@ -26,8 +26,8 @@ fatal: fetch-pack: invalid index-pack output
 
 Alors désactiver la compression, puis relancer la commande de clônage :
 
-```{code-block} shell
-git config --global core.compression 0
+```{code-block} console
+$ git config --global core.compression 0
 ```
 ````
 

@@ -105,10 +105,10 @@ Envoie le fichier de la clé privée depuis ton ordinateur vers le serveur :
 
 Connecte-toi en SSH au serveur (utilise le mot de passe que tu as défini sur Contabo) :
 
-```{code-block} shell
+```{code-block} console
 :caption: 🖥️ Ordinateur (PC)
 
-ssh nulink
+$ ssh nulink
 ```
 
 ### Installation
@@ -185,10 +185,10 @@ Enregistre les mots de passe pour plus tard :
 
 Tu dois te déconnecter pour prendre en compte les changements :
 
-```{code-block} shell
+```{code-block} console
 :caption: ☁️ Serveur (VPS)
 
-exit
+$ exit
 ```
 
 [Reconnecte-toi](#connexion), et teste que les mots de passe sont visibles (tu devrais voir 3 lignes avec les 2 mots de passe et "OK") :

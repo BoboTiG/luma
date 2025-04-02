@@ -33,8 +33,8 @@ server.modules += ( "mod_magnet" )
 
 Pour terminer, il va falloir activer ce nouveau site web, puis créer d’autres fichiers contenant les réponses HTTP :
 
-```{code-block} shell
-sudo ln -s \
+```{code-block} console
+$ sudo ln -s \
     /etc/lighttpd/conf-available/16-connectivitycheck.conf \
     /etc/lighttpd/conf-enabled/16-connectivitycheck.conf \
     && sudo mkdir -p /etc/lighttpd/scripts \
@@ -53,8 +53,8 @@ sudo ln -s \
 
 Exemple de sortie console lorsque tout est correctement en place :
 
-```{code-block} text
-:caption: $ curl -v connectivitycheck.gstatic.com/generate_204
+```{code-block} console
+$ curl -v connectivitycheck.gstatic.com/generate_204
 
 * Host connectivitycheck.gstatic.com:80 was resolved.
 * IPv6: 2a00:1450:4007:80d::2003

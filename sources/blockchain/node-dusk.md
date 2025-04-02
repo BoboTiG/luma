@@ -73,10 +73,10 @@ Lorsque le serveur sera opérationnel et que son adresse IP sera connue, configu
 
 Se connecter en SSH au serveur (utiliser le mot de passe fourni sur Vultr) :
 
-```{code-block} shell
+```{code-block} console
 :caption: 🖥️ Ordinateur (PC)
 
-ssh dusk
+$ ssh dusk
 ```
 
 ````{important}

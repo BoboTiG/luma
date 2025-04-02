@@ -7,15 +7,15 @@ Rendez-vous dans le dossier contenant les fichiers à partager et exécutez une 
 `````{tabs}
 
 ````{tab} Python
-```{code-block} shell
-python -m http.server 8080 [-d FOLDER]
+```{code-block} console
+$ python -m http.server 8080 [-d FOLDER]
 ```
 ````
 
 ````{tab} PHP
-```{code-block} shell
-# apt install php-cli
-php -S 0.0.0.0:8080 [-t FOLDER]
+```{code-block} console
+$ # sudo apt install php-cli
+$ php -S 0.0.0.0:8080 [-t FOLDER]
 ```
 ````
 

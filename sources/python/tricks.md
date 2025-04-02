@@ -49,8 +49,8 @@ Script :
 
 Résultats :
 
-```{code-block} shell
-:caption: $ python3.8 bench.py
+```{code-block} console
+$ python3.8 bench.py
 
 0.041965347016230226  # str.replace()
 0.10586143494583666  # re.sub()
