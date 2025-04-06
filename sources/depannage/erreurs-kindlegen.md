@@ -1,9 +1,9 @@
 # Les erreurs de kindlegen
 
-Bien qu'abandonné depuis 2014 par Amazon, `kindlegen` reste le meilleur outil, à cette date, pour créer un dictionnaire au format *Mobipocket* (`.mobi`).
+Bien qu’abandonné depuis 2014 par Amazon, `kindlegen` reste le meilleur outil, à cette date, pour créer un dictionnaire au format *Mobipocket* (`.mobi`).
 
 ````{hint}
-Ces arguments *cachés* peuvent être utiles lors de l'utilisation de `kindlegen` :
+Ces arguments *cachés* peuvent être utiles lors de l’utilisation de `kindlegen` :
 
 ```{code-block} console
 $ kindlegen -gen_ff_mobi7 -dont_append_source -verbose ...
@@ -14,13 +14,13 @@ $ kindlegen -gen_ff_mobi7 -dont_append_source -verbose ...
 
 ### W14010: Media file not found
 
-````{card} L'image n'est pas trouvée :
+````{card} L’image n’est pas trouvée :
 ```{code-block}
 Warning(prcgen):W14010: media file not found  /.../OEBPS/xxx.gif
 ```
 +++
 {bdg-danger}`Solution`
-Inconnue, je n'ai aucune idée où sont stockées les images.
+Inconnue, je n’ai aucune idée où sont stockées les images.
 ````
 
 ### W14024: Unrecognized language code
@@ -31,19 +31,21 @@ Warning(prcgen):W14024: Unrecognized language code in dc:Language metadata field
 ```
 +++
 {bdg-success}`Solution`
-Remplacer le code langue inconnu par une langue supportée. Par exemple, l'Esperanto (`eo`) n'est pas reconnu et peut-être remplacé par le Français (`fr`) car c'est la seule langue qui est à la fois supportée et proche de l'Esperanto.
+Remplacer le code langue inconnu par une [langue supportée](https://github.com/kovidgoyal/calibre/blob/v8.2.1/src/calibre/ebooks/mobi/langcodes.py#L171-L313).
+
+Par exemple, l’espéranto (`eo`) n’est pas reconnu et peut-être remplacé par le français (`fr`) car c’est la seule langue qui est à la fois supportée et proche de l’Esperanto.
 ````
 
 ### W14215: Nested tags are not supported
 
-````{card} L'imbrication des balises HTML n'est pas supportée :
+````{card} L’imbrication des balises HTML n’est pas supportée :
 ```{code-block}
  Warning(prcgen):W14215: nested <FORM> tags are not supported
       in file: /.../OEBPS/g000002.xhtml     line: 0005725
 ```
 +++
 {bdg-success}`Solution`
-Généralement du à un mauvais code HTML, ou à des accolades (`{` et/ou `}`) présentes dans ledit code. Ouvrir le fichier `/.../OEBPS/g000002.xhtml` à la ligne `5725` pour voir de quel mot il s'agit, puis corriger l'origine du problème débouchant sur du code HTML erroné.
+Généralement du à un mauvais code HTML, ou à des accolades (`{` et/ou `}`) présentes dans ledit code. Ouvrir le fichier `/.../OEBPS/g000002.xhtml` à la ligne `5725` pour voir de quel mot il s’agit, puis corriger l’origine du problème débouchant sur du code HTML erroné.
 
 Voici une ligne de commande pratique pour afficher les 10 lignes pertinentes :
 ```{code-block} console
@@ -52,14 +54,14 @@ $ awk 'NR >= 5775-10 && NR <= 5775' /.../OEBPS/g000002.xhtml
 
 ### W14216: Tag does not have a name attribute
 
-````{card} La balise HTML n'a pas d'attribut :
+````{card} La balise HTML n’a pas d’attribut :
 ```{code-block}
 Warning(prcgen):W14216: tag does not have a name attribute : tag will be ignored
       in file: /.../OEBPS/g000002.xhtml     line: 0005725
 ```
 +++
 {bdg-success}`Solution`
-Généralement du à un mauvais code HTML, ou à des accolades (`{` et/ou `}`) présentes dans ledit code. Ouvrir le fichier `/.../OEBPS/g000002.xhtml` à la ligne `5725` pour voir de quel mot il s'agit, puis corriger l'origine du problème débouchant sur du code HTML erroné.
+Généralement du à un mauvais code HTML, ou à des accolades (`{` et/ou `}`) présentes dans ledit code. Ouvrir le fichier `/.../OEBPS/g000002.xhtml` à la ligne `5725` pour voir de quel mot il s’agit, puis corriger l’origine du problème débouchant sur du code HTML erroné.
 
 Voici une ligne de commande pratique pour afficher les 10 lignes pertinentes :
 ```{code-block} console
@@ -79,14 +81,14 @@ Tronquer, voire supprimer, les mots de plus de 127 caractères.
 
 ### W29004: Forcefully closed opened tag
 
-````{card} Fermeture forcée d'une balise HTML :
+````{card} Fermeture forcée d’une balise HTML :
 ```{code-block}
 Warning(inputpreprocessor):W29004: Forcefully closed opened Tag: <p>
       in file: /.../OEBPS/g000002.xhtml     line: 0005725
 ```
 +++
 {bdg-success}`Solution`
-Généralement du à un mauvais code HTML, ou à des accolades (`{` et/ou `}`) présentes dans ledit code. Ouvrir le fichier `/.../OEBPS/g000002.xhtml` à la ligne `5725` pour voir de quel mot il s'agit, puis corriger l'origine du problème débouchant sur du code HTML erroné.
+Généralement du à un mauvais code HTML, ou à des accolades (`{` et/ou `}`) présentes dans ledit code. Ouvrir le fichier `/.../OEBPS/g000002.xhtml` à la ligne `5725` pour voir de quel mot il s’agit, puis corriger l’origine du problème débouchant sur du code HTML erroné.
 
 Voici une ligne de commande pratique pour afficher les 10 lignes pertinentes :
 ```{code-block} console
@@ -113,6 +115,17 @@ $ awk 'NR >= 5775-10 && NR <= 5775' /.../OEBPS/g000002.xhtml
 
 ## 😱 Erreurs
 
+### E23006: Language not recognized in metadata
+
+````{card} Code langue inconnu :
+```{code-block}
+Error(prcgen):E23006: Language not recognized in metadata. The dc:Language field is mandatory. Aborting.
+```
++++
+{bdg-success}`Solution`
+Voir [W14024: Unrecognized language code](#w14024-unrecognized-language-code).
+````
+
 ### E25002: Single entry exceeds record size
 
 ````{card} Erreur interne critique :
@@ -134,8 +147,8 @@ Error(index build):E25006: overflowing character table in UNICODE: in indexes, y
 {bdg-success}`Solution`
 Pour la totalité du dictionnaire, répertorier quels mots utilisent quels caractères.
 Ensuite, en démarrant avec les caractères les moins utilisés, supprimer les mots correspondants.
-À chaque itération, vérifier que le nombre total de caractères n'excède pas `256`, sinon supprimer les mots du second caractère le moins utilisé.
-Et ainsi de suite jusqu'à ce que le nombre total de caractères arrive à **`256` maximum**.
+À chaque itération, vérifier que le nombre total de caractères n’excède pas `256`, sinon supprimer les mots du second caractère le moins utilisé.
+Et ainsi de suite jusqu’à ce que le nombre total de caractères arrive à **`256` maximum**.
 
 Les caractères comptabilisés sont dans le mot en lui-même, ses étymologies et ses définitions.
 
@@ -172,6 +185,10 @@ Aucune.
 ````
 
 ## 📜 Historique
+
+2025-04-06
+: Ajout d’un lien vers les langues supportés dans la solution de l’avertissement [W14024](#w14024-unrecognized-language-code).
+: Ajout de l’erreur [E23006](#e23006-language-not-recognized-in-metadata).
 
 2025-04-02
 : Premier jet.
