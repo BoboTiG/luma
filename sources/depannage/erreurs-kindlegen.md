@@ -68,6 +68,17 @@ Voici une ligne de commande pratique pour afficher les 10 lignes pertinentes :
 $ awk 'NR >= 5775-10 && NR <= 5775' /.../OEBPS/g000002.xhtml
 ````
 
+### W15001: Inflection rule or rule group too long
+
+````{card} Trop de variantes :
+```{code-block}
+Warning(index build):W15001: inflection rule or rule group too long (max=255). Discarded.
+```
++++
+{bdg-success}`Solution`
+Trouver quel(s) mot(s) ont trop de variantes et faire le ménage dans celles-ci.
+````
+
 ### W15003: Unicode string too long
 
 ````{card} Au moins un mot contient plus de 127 caractères :
@@ -124,6 +135,17 @@ Error(prcgen):E23006: Language not recognized in metadata. The dc:Language field
 +++
 {bdg-success}`Solution`
 Voir [W14024: Unrecognized language code](#w14024-unrecognized-language-code).
+````
+
+### E23026: The maximum book size we support is 650 MB
+
+````{card} Code langue inconnu :
+```{code-block}
+Error(prcgen):E23026: The maximum book size we support is 650 MB. Please reduce the overall size of the book and re-compile.
+```
++++
+{bdg-success}`Solution`
+Supprimer des mots du dictionnaire.
 ````
 
 ### E25002: Single entry exceeds record size
@@ -185,6 +207,10 @@ Aucune.
 ````
 
 ## 📜 Historique
+
+2025-05-21
+: Ajout de l’avertissement [W15001](#w15001-inflection-rule-or-rule-group-too-long).
+: Ajout de l’erreur [E23026](#e23026-the-maximum-book-size-we-support-is-650-mb).
 
 2025-04-06
 : Ajout d’un lien vers les langues supportés dans la solution de l’avertissement [W14024](#w14024-unrecognized-language-code).
