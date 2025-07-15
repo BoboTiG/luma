@@ -213,7 +213,7 @@ Aucune.
 : Ajout de l’erreur [E23026](#e23026-the-maximum-book-size-we-support-is-650-mb).
 
 2025-04-06
-: Ajout d’un lien vers les langues supportés dans la solution de l’avertissement [W14024](#w14024-unrecognized-language-code).
+: Ajout d’un lien vers les langues supportées dans la solution de l’avertissement [W14024](#w14024-unrecognized-language-code).
 : Ajout de l’erreur [E23006](#e23006-language-not-recognized-in-metadata).
 
 2025-04-02
