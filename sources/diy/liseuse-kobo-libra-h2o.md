@@ -149,7 +149,7 @@ Je m’en sers notamment pour (dés)activer les captures d’écran, inverser le
 
 ## 📘 Dictionnaire
 
-Installons le meilleur dictionnaire du marché, du projet [Reader Dict](https://www.reader-dict.com/fr), qui est basé sur le Wiktionnaire :
+Installons le meilleur dictionnaire du marché, du projet [reader.dict](https://www.reader-dict.com), qui est basé sur le Wiktionnaire :
 
 ```{literalinclude} snippets/liseuse-kobo-libra-h2o.sh
 :lines: 34-37
@@ -157,7 +157,7 @@ Installons le meilleur dictionnaire du marché, du projet [Reader Dict](https://
 ```
 
 ```{tip}
-D’autres langues sont disponibles sur la page du projet [Reader Dict](https://www.reader-dict.com/fr).
+D’autres langues sont disponibles sur la page du projet [reader.dict](https://www.reader-dict.com).
 ```
 
 ## 🔤 Police de caractères
