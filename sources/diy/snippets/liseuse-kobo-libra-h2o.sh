@@ -38,13 +38,14 @@ mkdir -pv "${KOBO_DIR}/custom-dict/" \
 
 wget 'http://ftp.gnu.org/gnu/freefont/freefont-ttf-20120503.zip' \
     && unzip freefont-ttf-20120503.zip \
-    && cd freefont-20120503 \
+    && pushd freefont-20120503 \
     && mv -v FreeSerif.ttf FreeSerif-Regular.ttf \
     && mv -v FreeSerifBold.ttf FreeSerif-Bold.ttf \
     && mv -v FreeSerifBoldItalic.ttf FreeSerif-BoldItalic.ttf \
     && mv -v FreeSerifItalic.ttf FreeSerif-Italic.ttf \
     && mkdir -pv "${KOBO_ROOT}/fonts" \
     && cp -v FreeSerif*.ttf "${KOBO_ROOT}/fonts" \
+    && popd \
     && sync
 
 sed -i '470s/no/yes/' src/libnickel.so.1.0.0.yaml \
