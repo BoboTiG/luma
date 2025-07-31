@@ -2,9 +2,9 @@
 
 export KOBO_ROOT="/media/${USERNAME}/KOBOeReader"
 export KOBO_DIR="${KOBO_ROOT}/.kobo"
-export KOBO_VERSION=4.37.21582
-export KOBO_PATCH_VERSION=82
-export KOBO_NM_VERSION=0.5.4
+export KOBO_VERSION='4.38.21908'
+export KOBO_PATCH_VERSION='84'
+export KOBO_NM_VERSION='0.5.4'
 
 dd bs=4M conv=sync,noerror status=progress \
     if=/dev/sdc \
@@ -16,7 +16,7 @@ sqlite3 "${KOBO_DIR}/KoboReader.sqlite" \
     'DELETE FROM content WHERE ___UserID != "adobe_user" ; VACUUM'
 printf '[General]\naffiliate=Kobo\n' > "${KOBO_DIR}/affiliate.conf"
 
-wget "https://ereaderfiles.kobo.com/firmwares/kobo7/Jul2023/kobo-update-${KOBO_VERSION}.zip" \
+wget "https://ereaderfiles.kobo.com/firmwares/kobo7/Aug2023/kobo-update-${KOBO_VERSION}.zip" \
     && unzip "kobo-update-${KOBO_VERSION}.zip" -d "${KOBO_DIR}" \
     && sync
 
