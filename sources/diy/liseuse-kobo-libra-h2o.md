@@ -1,7 +1,7 @@
 # La liseuse Kobo Libra H2O
 
 ```{figure} images/kobo-libra-h2o.jpg
-:alt: Dusk Logo
+:alt: Photo de la liseuse Kobo Libra H2O
 :align: center
 
 La liseuse Kobo Libra H2O, en mode nuit, affichant "<u>Seconde Fondation</u>", d’Isaac Asimov.
@@ -211,6 +211,9 @@ Un police de caractères supportant un grand nombre de langues est préférable 
 
 ```{admonition} Historique complet
 :class: toggle
+
+2025-07-31
+: Mise à jour du firmware (`4.37.21582` → `4.38.21908`) et des patches (`v82` → `v84`).
 
 2025-05-16
 : Mise à jour du lien de téléchargement du [dictionnaire](#dictionnaire).
