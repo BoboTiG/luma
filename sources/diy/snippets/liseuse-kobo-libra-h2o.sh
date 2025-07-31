@@ -33,7 +33,7 @@ wget "https://github.com/pgaskin/NickelMenu/releases/download/v${KOBO_NM_VERSION
 
 mkdir -pv "${KOBO_DIR}/custom-dict/" \
     && wget 'https://www.reader-dict.com/fr/file/fr/dicthtml-fr-fr.zip' \
-        -O "${KOBO_DIR}/custom-dict/" \
+        -O "${KOBO_DIR}/custom-dict/dicthtml-fr.zip" \
     && sync
 
 wget 'http://ftp.gnu.org/gnu/freefont/freefont-ttf-20120503.zip' \
