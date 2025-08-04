@@ -1,5 +1,5 @@
 -r requirements.txt
-mypy==1.16.1
+mypy==1.17.1
 pymarkdownlnt==0.9.31
 ruff==0.11.10
 sphinx-autobuild==2024.10.3
