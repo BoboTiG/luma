@@ -32,7 +32,7 @@ wget "https://github.com/pgaskin/NickelMenu/releases/download/v${KOBO_NM_VERSION
     && sync
 
 mkdir -pv "${KOBO_DIR}/custom-dict/" \
-    && wget 'https://www.reader-dict.com/fr/file/fr/dicthtml-fr-fr.zip' \
+    && wget 'https://www.reader-dict.com/file/fr/dicthtml-fr-fr.zip' \
         -O "${KOBO_DIR}/custom-dict/dicthtml-fr-fr.zip" \
     && sync
 
