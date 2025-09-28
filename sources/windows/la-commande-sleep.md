@@ -39,7 +39,7 @@ Il existe une alternative universelle : `ping`. C’est une astuce vieille comme
 ```
 
 L’idée, c’est de *pinger* l’adresse locale N fois pour une pause de N secondes.
-Comme `ping` utilise un [intervalle de une seconde](seconde-d-intervalle) entre chaque essai, il faut utiliser `-n N+1` pour simuler une pause de N secondes. Dans cet exemple, `-n 6` permet donc de faire une pause de 5 secondes.
+Comme `ping` utilise un [intervalle de une seconde](une-seconde-dintervalle) entre chaque essai, il faut utiliser `-n N+1` pour simuler une pause de N secondes. Dans cet exemple, `-n 6` permet donc de faire une pause de 5 secondes.
 
 ### Une Seconde d’Intervalle ?
 
