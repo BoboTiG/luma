@@ -48,3 +48,8 @@ ignore = [
     "T201",      # `print()`
 ]
 fixable = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"sources/python/snippets/bottle-cache-requetes.py" = [
+    "PLC0415",   # `import` should be at the top-level of a file
+]

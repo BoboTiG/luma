@@ -83,7 +83,7 @@ def php_crc32(value: str) -> str:
     # Convert from big endian to little endian:
     crc = int.from_bytes(crc.to_bytes(4, "big"), byteorder="little")
 
-    return hex(crc)[2:].rjust(8, "0")
+    return f"{crc:x}".rjust(8, "0")
 
 
 def small_hash(value: str) -> str:
