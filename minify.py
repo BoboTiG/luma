@@ -13,7 +13,7 @@ STATIC = PATH / "_static"
 MINIFIER = {
     ".css": rcssmin.cssmin,
     ".js": rjsmin.jsmin,
-    ".html": partial(minify_html.minify, minify_css=True, minify_js=True),
+    # ".html": partial(minify_html.minify, minify_css=True, minify_js=True),
 }
 REGEXP_CSS = re.compile(r"(<link href=([^ ]+)(?: media=print)? rel=stylesheet>)").findall
 REGEXP_JS = re.compile(r"(<script src=([^>]+)></script>)").findall
