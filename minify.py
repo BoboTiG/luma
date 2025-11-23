@@ -142,7 +142,7 @@ def main() -> None:
         for line, fname in REGEXP_CSS(content):
             if not injected_css:
                 path = "/".join(fname.split("/")[:-1])
-                final_css = f"<link href={path}/styles.css?v={CURRENT_COMMIT} rel=stylesheet>"
+                final_css = f'<link href={path}/styles.css?v={CURRENT_COMMIT}" rel=stylesheet>'
                 merged = merged.replace(line, final_css, 1)
                 injected_css = True
             else:
@@ -151,7 +151,7 @@ def main() -> None:
         for line, fname in REGEXP_JS(content):
             if not injected_js:
                 path = "/".join(fname.split("/")[:-1])
-                final_js = f"<script src={path}/scripts.js?v={CURRENT_COMMIT}></script>"
+                final_js = f'<script src={path}/scripts.js?v={CURRENT_COMMIT}"></script>'
                 merged += final_js
                 injected_js = True
             merged = merged.replace(line, "", 1)
