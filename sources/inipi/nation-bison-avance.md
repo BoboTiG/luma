@@ -1,5 +1,6 @@
 ---
 layout: simple
+---
 # La Nation Bison s’avance…
 
 <!-- pyml disable-next-line no-inline-html -->
