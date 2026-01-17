@@ -64,6 +64,7 @@ html_theme_options = {
     "twitter_site": "__tiger222__",
     "twitter_url": "https://twitter.com/__tiger222__",
     "github_url": "https://github.com/BoboTiG",
+    "show_ai_links": False,
     "globaltoc_expand_depth": 2,
     "nav_links": [
         {"title": "🏠 Blog", "url": url},
@@ -80,7 +81,6 @@ html_context = {
     "source_user": "BoboTiG",
     "source_repo": "luma",
     "source_docs_path": "/sources/",
-    "show_ai_links": False,
 }
 
 # Do not include shared files
