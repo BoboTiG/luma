@@ -80,8 +80,8 @@ html_context = {
     "source_user": "BoboTiG",
     "source_repo": "luma",
     "source_docs_path": "/sources/",
+    "show_ai_links": False,
 }
-html_copy_source = False
 
 # Do not include shared files
 exclude_patterns = ["**/_*"]
