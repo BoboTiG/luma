@@ -81,6 +81,7 @@ html_context = {
     "source_repo": "luma",
     "source_docs_path": "/sources/",
 }
+html_copy_source = False
 
 # Do not include shared files
 exclude_patterns = ["**/_*"]
