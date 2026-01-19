@@ -4,4 +4,4 @@ pymarkdownlnt==0.9.34
 ruff==0.14.11
 sphinx-autobuild==2025.8.25
 types-requests
-yamllint==1.37.1
+yamllint==1.38.0
