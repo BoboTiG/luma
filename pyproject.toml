@@ -53,3 +53,10 @@ fixable = ["ALL"]
 "sources/python/snippets/bottle-cache-requetes.py" = [
     "PLC0415",   # `import` should be at the top-level of a file
 ]
+"sources/python/snippets/valider-webhook-btcpay.py" = [
+    "S101",  # use of `assert` detected
+    "S105",  # possible hardcoded password
+]
+"sources/python/snippets/valider-webhook-stripe.py" = [
+    "S105",  # possible hardcoded password
+]
