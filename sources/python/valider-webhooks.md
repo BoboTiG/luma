@@ -51,7 +51,6 @@ def api_webhook():
 
 `````
 
-
 ## BTCPay Server
 
 ```{literalinclude} snippets/valider-webhook-btcpay.py
