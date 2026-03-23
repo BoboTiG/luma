@@ -4,7 +4,7 @@ rcssmin==1.2.2
 rjsmin==1.2.5
 shibuya==2026.1.9
 sphinx==8.2.3
-sphinx-contributors==0.2.7
+sphinx-contributors==0.3.0
 sphinx-copybutton==0.5.2
 sphinx-design==0.7.0
 sphinx-last-updated-by-git==0.3.8
