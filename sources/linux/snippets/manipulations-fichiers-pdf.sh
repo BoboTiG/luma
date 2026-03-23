@@ -42,3 +42,4 @@ pdftk 'FILE_SOURCE.pdf' update_info_utf8 'metadata.txt' output 'NEW_FILE.pdf'
 pdftk 'FILE_SOURCE.pdf' input_pw PROMPT output 'NEW_FILE.pdf'
 
 pdftk 'FILE_SOURCE.pdf' cat 2-5 output 'NEW_FILE.pdf'
+pdftk 'FILE_SOURCE.pdf' cat 2-5 7-10 15-end output 'NEW_FILE.pdf'

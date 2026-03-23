@@ -2,7 +2,7 @@
 
 [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit) est un outil puissant pour la manipulation de fichiers PDF.
 
-Il existe aussi un service en ligne, avec possibilité d’auto-hébergement, se nommant [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) et qui propose une vaste panoplie d’actions sur les fichiers PDF, comme l’ajout d’une signature ou d’un filigrane, par exemple. Voici une instance disponible : [3n1 Tech Solutions](https://pdf.3n1tech.com/?lang=fr_FR).
+Il existe aussi un service en ligne, avec possibilité d’auto-hébergement, se nommant [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) et qui propose une vaste panoplie d’actions sur les fichiers PDF, comme l’ajout d’une signature ou d’un filigrane, par exemple. Voici une instance disponible : [FramaPDF avancé](https://stirling.framapdf.org/).
 
 ## Sécuriser
 
@@ -64,6 +64,13 @@ Pour extraire une ou plusieurs pages d’un fichier PDF :
 
 ```{literalinclude} snippets/manipulations-fichiers-pdf.sh
 :lines: 44
+:language: shell
+```
+
+Syntaxe possible pour extraire des pages à différents emplacements :
+
+```{literalinclude} snippets/manipulations-fichiers-pdf.sh
+:lines: 45
 :language: shell
 ```
 
@@ -144,6 +151,10 @@ Générer un nouveau PDF comportant les nouvelles méta-données :
 ```
 
 ## 📜 Historique
+
+2026-03-23
+: Utilisation de l’instance de Framasoft pour Stirling PDF.
+: Émancipation de la section [Extraire](#extraire).
 
 2025-02-22
 : Ajout de la section [Extraire](#extraire).
