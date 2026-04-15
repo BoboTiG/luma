@@ -230,14 +230,14 @@ Pour démarrer le nœud :
 C’est la dernière étape pour pouvoir créer des blocs et participer au réseau.
 
 ```{caution}
-À chaque fois que des *tokens* sont ajoutés en *staking*, le nœud sera incorporé à la *blockchain* **2 époques** plus tard (c’est-à-dire [4 320](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/core/src/stake.rs#L29) blocs), cette opération n’est pas immédiate.
+À chaque fois que des *tokens* sont ajoutés en *staking*, le nœud sera incorporé à la *blockchain* **2 époques** plus tard (c’est-à-dire [4 320](https://github.com/dusk-network/rusk/blob/dusk-rusk-1.6.0/core/src/stake.rs#L33) blocs), cette opération n’est pas immédiate.
 
-Pendant cette période d’attente, il est toutefois possible d’augmenter le nombre de *tokens* en *staking* [sans pénalité](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L183-L187).
+Pendant cette période d’attente, il est toutefois possible d’augmenter le nombre de *tokens* en *staking* [sans pénalité](https://github.com/dusk-network/contracts/blob/144c6e0e26122663bdf7378c61a3e37213b80292/genesis/stake/src/state.rs#L183-L187).
 ```
 
 ### *Stake*
 
-Pour l’exemple, plaçons 1 000 DUSK en *staking* (c’est le [minimum requis](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/core/src/stake.rs#L42)) :
+Pour l’exemple, plaçons 1 000 DUSK en *staking* (c’est le [minimum requis](https://github.com/dusk-network/rusk/blob/dusk-rusk-1.6.0/core/src/stake.rs#L46)) :
 
 ```{literalinclude} snippets/node-dusk.sh
 :caption: ☁️ Serveur (VPS)
@@ -255,7 +255,7 @@ Une fois que des *tokens* sont en *staking*, il est possible d’en rajouter de 
 
 #### Avec Pénalité
 
-Augmenter le nombre de *tokens* "à la volée" donnera lieu à une pénalité (*soft slashing* en anglais) de [10%](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L124-L128) : soit 10% du montant sera bloqué et récupérable seulement quand la commande `unstake` sera utilisée.
+Augmenter le nombre de *tokens* "à la volée" donnera lieu à une pénalité (*soft slashing* en anglais) de [10%](https://github.com/dusk-network/contracts/blob/144c6e0e26122663bdf7378c61a3e37213b80292/genesis/stake/src/state.rs#L124-L128) : soit 10% du montant sera bloqué et récupérable seulement quand la commande `unstake` sera utilisée.
 
 Voici la procédure pour *staker* plus de *tokens* avec *soft slashing* (remplacer `AMOUNT` par le nombre de *tokens*) :
 
@@ -283,10 +283,10 @@ Il y a deux moyens de récupérer des récompenses :
 1. Lorsque le nœud est sélectionné pour générer un bloc : récupération de 70% des *tokens* émis + une part variable suivant le nombre de voteurs inclus (non modifiable).
 2. Lorsque le nœud est sélectionné en tant que voteur et inclus dans le bloc généré : récupération d’une fraction des 10% des *tokens* réservés aux voteurs.
 
-Pour des informations techniques complètes, lire [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf) (section *Incentives goals*) et le [code source](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/rusk/src/lib/node.rs#L103-L109).
+Pour des informations techniques complètes, lire [Economic Protocol Design](https://github.com/dusk-network/audits/blob/main/core-audits/2024-09_economic-protocol-design_pol-finance.pdf) (section *Incentives goals*) et le [code source](https://github.com/dusk-network/rusk/blob/dusk-rusk-1.6.0/rusk/src/lib/node.rs#L126-L132).
 
 ```{caution}
-Afin de pouvoir retirer ses récompenses, il faut qu’il y [ait des *tokens* en *staking*](https://github.com/dusk-network/rusk/blob/rusk-1.0.0/contracts/stake/src/state.rs#L351).
+Afin de pouvoir retirer ses récompenses, il faut qu’il y [ait des *tokens* en *staking*](https://github.com/dusk-network/contracts/blob/144c6e0e26122663bdf7378c61a3e37213b80292/genesis/stake/src/state.rs#L351)<sup><small>[à confirmer]</small></sup>.
 ```
 
 La commande suivante permet de récupérer les récompenses (remplacer `AMOUNT` par le nombre de *tokens*, en option) :
@@ -402,6 +402,10 @@ Erreurs connues :
 ```{admonition} Historique complet
 :class: toggle
 
+2026-04-15
+: Utilisation de la commande `claim-rewards` à la place de `withdraw` (dépréciée) pour récupérer les récompenses.
+: Mise à jour de la version de `rusk` (`1.0.0` → `1.6.0`) pour les liens pointant vers du code source.
+
 2025-02-22
 : Mise à jour définitive de la version du script d’installation de Dusk (`0.5.4` → `latest`).
 
@@ -412,7 +416,6 @@ Erreurs connues :
 : Correction des chiffres liés aux [récompenses](#recompenses).
 : Suppression des alias `blocks` et `generated`. Ils n’étaient plus vraiment pertinents depuis l’arrivée des outils de [supervision](#supervision) ([f03701d](https://github.com/BoboTiG/luma/commit/f03701d6ffe047f7939d30595a558db45f261841)).
 : Ajout des commandes [`ruskquery block-height`](#ruskquery-block-height) et [`ruskquery peers`](#ruskquery-peers).
-: Ajout du projet *DuskMan* dans la section [Supervision](#supervision).
 : Ajout de la section [Avertissements dans les logs](#avertissements-dans-les-logs).
 : Ajout de la section [Erreurs dans les logs](#erreurs-dans-les-logs).
 

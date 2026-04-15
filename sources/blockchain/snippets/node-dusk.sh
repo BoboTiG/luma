@@ -32,7 +32,7 @@ zgrep ERROR /var/log/rusk*.log
 service rusk start
 
 tail -f /var/log/rusk.log
-rusk-wallet withdraw [--amt AMOUNT]
+rusk-wallet claim-rewards [--amt AMOUNT]
 rusk-wallet balance --spendable
 rusk-wallet stake --amt 1000
 rusk-wallet stake-info
@@ -58,8 +58,8 @@ echo "export RUSK_WALLET_PWD='MOT_DE_PASSE_DU_WALLET'" >> ~/.profile \
 echo "${RUSK_WALLET_PWD}" \
     && echo 'OK'
 
-curl -s 'http://127.0.0.1:8080/02/Chain' \
-    --data-raw '{"topic":"gql","data":"query{block(height:-1){header{height}}}"}' \
+curl -s 'http://127.0.0.1:8080/on/graphql/query' \
+    --json 'query { block(height: -1) { header { height } } }' \
     | jq '.block.header.height'
 
 curl -s 'https://api.dusk.network/v1/stats' | jq '.lastBlock'
