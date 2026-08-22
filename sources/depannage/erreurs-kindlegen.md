@@ -1,5 +1,16 @@
 # Les erreurs de kindlegen
 
+<a id="kindling"></a>
+
+````{warning}
+<u>Note du 22 août 2026</u> : cette page est obsolète suite à la venue d’un nouvel outil permettant d’outrepasser, corriger et améliorer grandement ce que kindlegen pouvait nous apporter. J'ai nommé [Kindling](https://github.com/ciscoriordan/kindling) !
+
+Son utilisation est transparente avec les options de kindlegen identiques :
+```{code-block} console
+$ kindling -gen_ff_mobi7 -dont_append_source -verbose ...
+```
+````
+
 Bien qu’abandonné depuis 2014 par Amazon, `kindlegen` reste le meilleur outil, à cette date, pour créer un dictionnaire au format *Mobipocket* (`.mobi`).
 
 ````{hint}
@@ -19,8 +30,8 @@ $ kindlegen -gen_ff_mobi7 -dont_append_source -verbose ...
 Warning(prcgen):W14010: media file not found  /.../OEBPS/xxx.gif
 ```
 +++
-{bdg-danger}`Solution`
-Inconnue, je n’ai aucune idée où sont stockées les images.
+{bdg-success}`Solution`
+Utiliser [Kindling](#kindling).
 ````
 
 ### W14024: Unrecognized language code
@@ -155,8 +166,8 @@ Supprimer des mots du dictionnaire.
 Error(index build):E25002: single entry exceeds record size (max=64k): aborting index build.
 ```
 +++
-{bdg-danger}`Solution`
-Recherche en cours...
+{bdg-success}`Solution`
+Utiliser [Kindling](#kindling).
 ````
 
 ### E25006: Overflowing character table in Unicode
@@ -202,11 +213,14 @@ f7fb1000-f7fb3000 r-xp 00000000 00:00 0                                  [vdso]
 ffa64000-ffa87000 rw-p 00000000 00:00 0                                  [stack]
 ```
 +++
-{bdg-danger}`Solution`
-Aucune.
+{bdg-success}`Solution`
+Utiliser [Kindling](#kindling).
 ````
 
 ## 📜 Historique
+
+2026-08-22
+: kindlegen est enfin enterré, paix à lui ; et long vie à Kindling !
 
 2025-05-21
 : Ajout de l’avertissement [W15001](#w15001-inflection-rule-or-rule-group-too-long).
