@@ -1,5 +1,6 @@
 # Les erreurs de kindlegen
 
+<!-- pyml disable-next-line no-inline-html -->
 <a id="kindling"></a>
 
 ````{warning}
