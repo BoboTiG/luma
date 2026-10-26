@@ -1,5 +1,6 @@
 # Mise à jour du routeur GL.iNet GL-MT6000
 
+<!-- pyml disable link-fragments -->
 ## Liens
 
 - [La fiche du routeur sur OpenWrt](https://openwrt.org/toh/gl.inet/gl-mt6000) ;

@@ -1,5 +1,6 @@
 # Python tricks
 
+<!-- pyml disable link-fragments -->
 ## {py:func}`format`
 
 Vous pouvez spécifier un séparateur des milliers pour {py:func}`format` :

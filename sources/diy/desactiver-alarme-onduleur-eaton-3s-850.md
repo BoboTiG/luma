@@ -1,5 +1,6 @@
 # Désactiver l’alarme d’un onduleur Eaton 3S 850
 
+<!-- pyml disable link-fragments -->
 Commandes exécutées sur un système Debian GNU/Linux trixie/sid.
 
 ## 🛠️ Installation

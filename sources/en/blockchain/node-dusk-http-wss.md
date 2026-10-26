@@ -1,5 +1,6 @@
 # How to query your Dusk node?
 
+<!-- pyml disable link-fragments -->
 ```{figure} ../../blockchain/images/dusk-logo.svg
 :width: 96
 :height: 96

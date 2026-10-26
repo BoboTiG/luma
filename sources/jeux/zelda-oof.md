@@ -1,5 +1,6 @@
 # The Legend of Zelda: Ocarina of Time
 
+<!-- pyml disable link-fragments -->
 ```{figure} images/the-legend-of-zelda-ocarina-of-time.svg
 :width: 500
 :height: 240

@@ -1,5 +1,6 @@
 # [testnet] Comment déployer un nœud NuLink ?
 
+<!-- pyml disable link-fragments -->
 ```{figure} images/nulink-logo.svg
 :width: 340
 :height: 96

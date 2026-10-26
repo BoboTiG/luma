@@ -1,5 +1,6 @@
 # Python et IMAP : Exemples concrets
 
+<!-- pyml disable link-fragments -->
 Commençons par nous connecter à la boîte de messagerie :
 
 ```{literalinclude} snippets/imap-exemples-concrets.py

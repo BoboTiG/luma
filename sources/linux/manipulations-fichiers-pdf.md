@@ -1,5 +1,6 @@
 # Manipulation de fichiers PDF
 
+<!-- pyml disable link-fragments -->
 [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit) est un outil puissant pour la manipulation de fichiers PDF.
 
 Il existe aussi un service en ligne, avec possibilité d’auto-hébergement, se nommant [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) et qui propose une vaste panoplie d’actions sur les fichiers PDF, comme l’ajout d’une signature ou d’un filigrane, par exemple. Voici une instance disponible : [FramaPDF avancé](https://stirling.framapdf.org/).

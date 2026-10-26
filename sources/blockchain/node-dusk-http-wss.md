@@ -1,5 +1,6 @@
 # Communiquer avec votre nœud Dusk
 
+<!-- pyml disable link-fragments -->
 ```{figure} images/dusk-logo.svg
 :width: 96
 :height: 96
